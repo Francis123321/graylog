@@ -57,6 +57,3 @@ We mainly develop using IntelliJ or WebStorm. If you also decide to use them to 
         * Yarn also supports upgrading packages matching a pattern, so you can execute `yarn upgrade --pattern <pattern>`
         * You could execute `yarn upgrade` if you really want to upgrade all packages
     * After doing the upgrade, remember to commit both the `package.json` and `yarn.lock` files
-
-
-张明岐123
