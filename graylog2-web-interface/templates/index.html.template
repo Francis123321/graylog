@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <title><%=htmlWebpackPlugin.options.title || 'Webpack App'%></title>
     <%= htmlWebpackPlugin.tags.headTags %>
+    <style>
+        /*yangzy_缩小到90%*/
+        body{
+            zoom: 0.9;
+            height: 110vh !important;
+        }
+    </style>
   </head>
   <body>
     <script src="/config.js"></script>
