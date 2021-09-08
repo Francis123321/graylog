@@ -220,9 +220,9 @@ class SavedSearchControls extends React.Component<Props, State> {
     let title: string;
 
     if (dirty) {
-      title = 'Unsaved changes';
+      title = '未保存的更改';
     } else {
-      title = loaded ? 'Saved search' : 'Save search';
+      title = loaded ? '保存搜索' : '保存搜索';
     }
 
     return (
@@ -235,7 +235,7 @@ class SavedSearchControls extends React.Component<Props, State> {
               {(loadNewView) => (
                 <ButtonGroup aria-label="Search Meta Buttons">
                   <Button title={title} ref={this.formTarget} onClick={this.toggleFormModal}>
-                    <Icon style={{ color: savedSearchColor }} name="star" type={loaded ? 'solid' : 'regular'} /> Save
+                    <Icon style={{ color: savedSearchColor }} name="star" type={loaded ? 'solid' : 'regular'} /> 保存
                   </Button>
                   {showForm && (
                     <SavedSearchForm onChangeTitle={this.onChangeTitle}
@@ -247,28 +247,28 @@ class SavedSearchControls extends React.Component<Props, State> {
                                      toggleModal={this.toggleFormModal}
                                      value={newTitle} />
                   )}
-                  <Button title="Load a previously saved search"
+                  <Button title="加载以前保存的搜索"
                           onClick={this.toggleListModal}>
-                    <Icon name="folder" type="regular" /> Load
+                    <Icon name="folder" type="regular" /> 加载
                   </Button>
                   {showList && (
                     <SavedSearchList deleteSavedSearch={this.deleteSavedSearch}
                                      toggleModal={this.toggleListModal}
                                      activeSavedSearchId={view.id} />
                   )}
-                  <ShareButton entityType="search"
-                               entityId={view.id}
-                               onClick={this.toggleShareSearch}
-                               bsStyle="default"
-                               disabledInfo={!view.id && 'Only saved searches can be shared.'} />
+                  {/*<ShareButton entityType="search"*/}
+                  {/*             entityId={view.id}*/}
+                  {/*             onClick={this.toggleShareSearch}*/}
+                  {/*             bsStyle="default"*/}
+                  {/*             disabledInfo={!view.id && 'Only saved searches can be shared.'} />*/}
                   <DropdownButton title={<Icon name="ellipsis-h" />} id="search-actions-dropdown" pullRight noCaret>
                     <MenuItem onSelect={this.toggleMetadataEdit} disabled={!isAllowedToEdit}>
-                      <Icon name="edit" /> Edit metadata
+                      <Icon name="edit" /> 编辑元数据
                     </MenuItem>
-                    <MenuItem onSelect={this._loadAsDashboard}><Icon name="tachometer-alt" /> Export to dashboard</MenuItem>
-                    <MenuItem onSelect={this.toggleExport}><Icon name="cloud-download-alt" /> Export</MenuItem>
+                    <MenuItem onSelect={this._loadAsDashboard}><Icon name="tachometer-alt" /> 导出到仪表板</MenuItem>
+                    <MenuItem onSelect={this.toggleExport}><Icon name="cloud-download-alt" /> 导出</MenuItem>
                     <MenuItem disabled={disableReset} onSelect={() => loadNewView()} data-testid="reset-search">
-                      <Icon name="eraser" /> Reset search
+                      <Icon name="eraser" /> 重置搜索
                     </MenuItem>
                     <MenuItem divider />
                   </DropdownButton>

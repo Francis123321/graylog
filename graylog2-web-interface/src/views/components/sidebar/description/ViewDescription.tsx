@@ -53,7 +53,7 @@ const ViewDescription = ({ results, viewMetadata }: Props) => {
   if (isAdHocSearch) {
     return (
       <>
-        <SectionInfo>Save the search or export it to a dashboard to add a custom summary and description.</SectionInfo>
+        <SectionInfo>保存搜索或将其导出到仪表板以添加自定义摘要和描述。</SectionInfo>
         {resultsSection}
       </>
     );

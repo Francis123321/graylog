@@ -94,7 +94,7 @@ const TabAbsoluteTimeRange = ({ disabled, limitDuration }: Props) => {
                        data-testid="absolute-time-ranges"
                        activeKey={activeAccordion}>
 
-        <AccordionItem name="Calendar">
+        <AccordionItem name="日历">
           <RangeWrapper>
             <AbsoluteCalendar disabled={disabled}
                               startDate={fromStartDate}
@@ -115,7 +115,7 @@ const TabAbsoluteTimeRange = ({ disabled, limitDuration }: Props) => {
           </RangeWrapper>
         </AccordionItem>
 
-        <AccordionItem name="Timestamp">
+        <AccordionItem name="时间戳">
           <TimestampContent>
             <p>Date should be formatted as <code>YYYY-MM-DD [HH:mm:ss[.SSS]]</code>.</p>
             <FlexWrap>

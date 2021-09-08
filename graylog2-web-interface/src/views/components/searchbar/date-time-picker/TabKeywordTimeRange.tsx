@@ -131,7 +131,7 @@ const TabKeywordTimeRange = ({ defaultValue, disabled, setValidatingKeyword }: P
                        style={{ marginRight: 5, width: '100%', marginBottom: 0 }}
                        validationState={error ? 'error' : null}>
 
-              <p><strong>Specify the time frame for the search in natural language.</strong></p>
+              <p><strong>以自然语言指定搜索的时间范围。</strong></p>
               <KeywordInput type="text"
                             className="input-sm mousetrap"
                             name={name}

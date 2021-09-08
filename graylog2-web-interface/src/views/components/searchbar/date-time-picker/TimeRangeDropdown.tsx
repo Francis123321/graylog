@@ -47,7 +47,7 @@ const timeRangeTypes = {
   keyword: TabKeywordTimeRange,
 };
 
-const allTimeRangeTypes = Object.keys(timeRangeTypes) as Array<TimeRangeType>;
+let allTimeRangeTypes = Object.keys(timeRangeTypes) as Array<TimeRangeType>;
 
 export type TimeRangeDropdownProps = {
   currentTimeRange: SearchBarFormValues['timerange'] | NoTimeRangeOverride,
@@ -334,15 +334,15 @@ const TimeRangeDropdown = ({
 
                 <Row className="row-sm">
                   <Col md={6}>
-                    <Timezone>All timezones using: <b>{DateTime.getUserTimezone()}</b></Timezone>
+                    <Timezone>所有时区使用: <b>{DateTime.getUserTimezone()}</b></Timezone>
                   </Col>
                   <Col md={6}>
                     <div className="pull-right">
                       {noOverride && (
-                        <Button bsStyle="link" onClick={handleNoOverride}>No Override</Button>
+                        <Button bsStyle="link" onClick={handleNoOverride}>无覆盖</Button>
                       )}
-                      <CancelButton bsStyle="default" onClick={handleCancel}>Cancel</CancelButton>
-                      <Button bsStyle="success" disabled={!isValid || validatingKeyword} type="submit">Apply</Button>
+                      <CancelButton bsStyle="default" onClick={handleCancel}>取消</CancelButton>
+                      <Button bsStyle="success" disabled={!isValid || validatingKeyword} type="submit">应用</Button>
                     </div>
                   </Col>
                 </Row>

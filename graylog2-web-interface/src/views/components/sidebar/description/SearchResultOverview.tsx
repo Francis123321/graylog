@@ -35,7 +35,7 @@ const SearchResultOverview = ({ results: { timestamp, duration } }: Props) => {
   const timezone = currentUser?.timezone ?? AppConfig.rootTimeZone();
 
   if (!timestamp || !duration) {
-    return <i>No query executed yet.</i>;
+    return <i>尚未执行任何查询。</i>;
   }
 
   return (

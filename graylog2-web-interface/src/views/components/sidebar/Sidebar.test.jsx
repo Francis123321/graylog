@@ -202,7 +202,7 @@ describe('<Sidebar />', () => {
 
     wrapper.find('SidebarNavigation NavItem').first().simulate('click');
 
-    expect(wrapper.find('h1').text()).toBe('Unsaved Search');
+    expect(wrapper.find('h1').text()).toBe('Unsaved Search ');
   });
 
   it('should render summary and description of a view', () => {
