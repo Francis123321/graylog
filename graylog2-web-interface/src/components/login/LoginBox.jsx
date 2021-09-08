@@ -21,6 +21,7 @@ import styled, { css } from 'styled-components';
 import { Col, Row } from 'components/graylog';
 
 import PublicNotifications from '../common/PublicNotifications';
+import logoinx from 'images/auth/logoinx.png';
 
 const Wrapper = styled.div`
   display: flex;
@@ -55,17 +56,18 @@ const LoginCol = styled(Col)(({ theme }) => css`
 
 const LoginBox = ({ children }) => {
   return (
-    <Wrapper className="container">
+    <Wrapper className="container myLogin">
+      {/*<Row>*/}
+        {/*<Col md={8} mdOffset={2}>*/}
+          {/*<PublicNotifications readFromConfig />*/}
+        {/*</Col>*/}
+      {/*</Row>*/}
       <Row>
-        <Col md={8} mdOffset={2}>
-          <PublicNotifications readFromConfig />
-        </Col>
-      </Row>
-      <Row>
-        <LoginCol md={4} mdOffset={4} xs={6} xsOffset={3}>
+        <LoginCol md={4} mdOffset={4} xs={6} xsOffset={3} className="bgColorDEEBF7">
           {children}
         </LoginCol>
       </Row>
+        <img src={logoinx} />
     </Wrapper>
   );
 };

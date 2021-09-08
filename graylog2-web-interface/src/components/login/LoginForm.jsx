@@ -72,19 +72,19 @@ const LoginForm = ({ onErrorChange }) => {
       <Input ref={(username) => { usernameInput = username; }}
              id="username"
              type="text"
-             placeholder="Username"
+             placeholder="账号"
              autoFocus
              required />
 
       <Input ref={(password) => { passwordInput = password; }}
              id="password"
              type="password"
-             placeholder="Password"
+             placeholder="密码"
              required />
 
       <StyledFormGroup>
-        <Button type="submit" bsStyle="info" disabled={isLoading}>
-          {isLoading ? 'Signing in...' : 'Sign in'}
+        <Button type="submit" bsStyle="info" disabled={isLoading} className="blockBox margin0_auto bgColor42BFEC padding5_30">
+          {isLoading ? '登录中...' : '登 录'}
         </Button>
       </StyledFormGroup>
     </form>

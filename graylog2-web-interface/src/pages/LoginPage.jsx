@@ -27,6 +27,7 @@ import authStyles from 'theme/styles/authStyles';
 import CombinedProvider from 'injection/CombinedProvider';
 import AuthenticationDomain from 'domainActions/authentication/AuthenticationDomain';
 import AppConfig from 'util/AppConfig';
+import bgImage from 'images/auth/pulse.png';
 
 import LoadingPage from './LoadingPage';
 
@@ -117,7 +118,11 @@ const LoginPage = () => {
   return (
     <DocumentTitle title="Sign in">
       <LoginBox>
-        <legend><Icon name="users" /> CloudPulse 云 脉</legend>
+        <div className="marginBottom15 flexBox flexStartCenter">
+          <img width="35" src={bgImage} className="marginRight15" />
+          <span className="marginRight15 fontSize18 fontWeightBlod color5E4040">CloudPulse 云 脉</span>
+          <div className="centerLine flexGrow1"></div>
+        </div>
         <LoginPageStyles />
         {formatLastError()}
         {renderLoginForm()}

@@ -9,6 +9,67 @@
         body{
             zoom: 0.9;
             height: 110vh !important;
+            font-family: "Microsoft YaHei", serif !important;
+        }
+        .marginRight15{
+            margin-right: 15px
+        }
+        .marginBottom15{
+            margin-bottom: 15px
+        }
+        .flexBox{
+            display: flex
+        }
+        .flexColumn{
+          flex-direction: column;
+        }
+        .flexCenterCenter{
+          justify-content: center;
+          align-items: center;
+        }
+        .flexStartCenter{
+          justify-content: flex-start;
+          align-items: center;
+        }
+        .centerLine{
+            height: 0;
+            border-bottom: 1px #A6A6A6 solid
+        }
+        .flexShrink0{
+          flex-shrink: 0;
+        }
+        .flexGrow1{
+          flex-grow: 1 !important;
+          min-width: 0;
+          min-height: 0;
+        }
+        .fontSize18{
+          font-size: 18px;
+        }
+        .fontWeightBlod{
+          font-weight: bold;
+        }
+        .blockBox{
+          display: block !important;
+        }
+        .margin0_auto{
+          margin: 0 auto !important;
+        }
+        .bgColor42BFEC {
+          background-color: #42BFEC !important;
+        }
+        .bgColorDEEBF7{
+            background-color: #DEEBF7 !important;
+        }
+        .padding5_30{
+            padding: 5px 30px
+        }
+        .color5E4040{
+            color: #5E4040
+        }
+        .myLogin{
+            justify-content: space-between !important;
+            padding-bottom: 15vh
         }
     </style>
   </head>
