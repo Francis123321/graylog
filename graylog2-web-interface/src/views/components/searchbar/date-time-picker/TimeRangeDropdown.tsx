@@ -273,7 +273,7 @@ const TimeRangeDropdown = ({
 
   const title = (
     <PopoverTitle>
-      <span>Search Time Range</span>
+      <span>搜索时间范围</span>
       {limitDuration > 0 && (
         <LimitLabel>
           <Icon name="exclamation-triangle" />

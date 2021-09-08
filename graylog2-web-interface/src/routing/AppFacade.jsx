@@ -56,7 +56,7 @@ const AppFacade = ({ currentUser, server, sessionId }) => {
   }
 
   if (!currentUser) {
-    return <LoadingPage text="We are preparing Graylog for you..." />;
+    return <LoadingPage text="我们正在为您准备 Graylog ..." />;
   }
 
   return <LoggedInPage />;

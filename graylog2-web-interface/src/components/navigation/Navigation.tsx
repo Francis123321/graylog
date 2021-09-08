@@ -95,7 +95,7 @@ const Navigation = ({ location }: Props) => {
     // no enterprise plugin menu, so we will add one
     pluginExports.push({
       path: Routes.SYSTEM.ENTERPRISE,
-      description: '企业',
+      description: '探针',
     });
   }
 

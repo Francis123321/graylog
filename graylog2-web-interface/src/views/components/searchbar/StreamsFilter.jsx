@@ -22,7 +22,7 @@ import { defaultCompare } from 'views/logic/DefaultCompare';
 
 const StreamsFilter = ({ disabled, value, streams, onChange }) => {
   const selectedStreams = value.join(',');
-  const placeholder = 'Select streams the search should include. Searches in all streams if empty.';
+  const placeholder = '选择搜索应包括的流。如果为空，则在所有流中搜索。';
   const options = streams.sort(({ key: key1 }, { key: key2 }) => defaultCompare(key1, key2));
 
   return (
