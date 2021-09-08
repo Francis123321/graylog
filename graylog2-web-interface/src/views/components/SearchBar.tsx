@@ -164,7 +164,7 @@ const SearchBar = ({
                       <Field name="queryString">
                         {({ field: { name, value, onChange } }) => (
                           <StyledQueryInput value={value}
-                                            placeholder={'Type your search query here and press enter. E.g.: ("not found" AND http) OR http_response_code:[400 TO 404]'}
+                                            placeholder={'在此处输入您的搜索查询，然后按 Enter。 例如：（“未找到”和 http）或 http_response_code:[400 TO 404]'}
                                             onChange={(newQuery) => {
                                               onChange({ target: { value: newQuery, name } });
 
@@ -176,7 +176,7 @@ const SearchBar = ({
 
                       <div className="search-help">
                         <DocumentationLink page={DocsHelper.PAGES.SEARCH_QUERY_LANGUAGE}
-                                           title="Search query syntax documentation"
+                                           title="搜索查询语法文档"
                                            text={<Icon name="lightbulb" />} />
                       </div>
                     </SearchButtonAndQuery>

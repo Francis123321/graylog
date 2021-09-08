@@ -68,7 +68,7 @@ ErrorWidget.propTypes = {
 };
 
 ErrorWidget.defaultProps = {
-  title: 'While retrieving data for this widget, the following error(s) occurred:',
+  title: '在为这个小部件检索数据时，发生了以下错误:',
 };
 
 export default ErrorWidget;
