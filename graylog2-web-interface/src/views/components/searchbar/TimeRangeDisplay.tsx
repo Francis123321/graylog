@@ -118,8 +118,8 @@ const TimeRangeDisplay = ({ timerange, toggleDropdownShow }: Props) => {
         ? <span><code>No Override</code></span>
         : (
           <>
-            <span data-testid="from"><strong>From</strong>: <code>{from}</code></span>
-            <span data-testid="to"><strong>Until</strong>: <code>{until}</code></span>
+            <span data-testid="from"><strong>从</strong>: <code>{from}</code></span>
+            <span data-testid="to"><strong>到</strong>: <code>{until}</code></span>
           </>
         )}
     </TimeRangeWrapper>
