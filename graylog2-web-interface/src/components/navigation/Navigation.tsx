@@ -95,7 +95,7 @@ const Navigation = ({ location }: Props) => {
     // no enterprise plugin menu, so we will add one
     pluginExports.push({
       path: Routes.SYSTEM.ENTERPRISE,
-      description: 'Enterprise',
+      description: '企业',
     });
   }
 
@@ -120,19 +120,19 @@ const Navigation = ({ location }: Props) => {
       <Navbar.Collapse>
         <Nav navbar>
           <LinkContainer to={Routes.SEARCH}>
-            <NavItem to="search">Search</NavItem>
+            <NavItem to="search">搜索</NavItem>
           </LinkContainer>
 
           <LinkContainer to={Routes.STREAMS}>
-            <NavItem>Streams</NavItem>
+            <NavItem>数据</NavItem>
           </LinkContainer>
           {/*yangzy_tabName*/}
           <LinkContainer to={Routes.ALERTS.LIST}>
-            <NavItem>Alerts12</NavItem>
+            <NavItem>弹窗</NavItem>
           </LinkContainer>
 
           <LinkContainer to={Routes.DASHBOARDS}>
-            <NavItem>Dashboards</NavItem>
+            <NavItem>仪表盘</NavItem>
           </LinkContainer>
 
           {pluginNavigations}
