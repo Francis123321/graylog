@@ -117,7 +117,7 @@ const LoginPage = () => {
   return (
     <DocumentTitle title="Sign in">
       <LoginBox>
-        <legend><Icon name="users" /> Welcome to Graylog</legend>
+        <legend><Icon name="users" /> CloudPulse 云 脉</legend>
         <LoginPageStyles />
         {formatLastError()}
         {renderLoginForm()}

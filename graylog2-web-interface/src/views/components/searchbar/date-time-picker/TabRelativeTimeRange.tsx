@@ -49,7 +49,7 @@ const TabRelativeTimeRange = ({ disabled, limitDuration }: Props) => {
   return (
     <RelativeWrapper>
       <RelativeRangeSelect disabled={disabled}
-                           title="From:"
+                           title="从:"
                            limitDuration={limitDuration}
                            unsetRangeLabel="All Time"
                            unsetRangeValue={RELATIVE_ALL_TIME}
@@ -63,7 +63,7 @@ const TabRelativeTimeRange = ({ disabled, limitDuration }: Props) => {
                            defaultRange={DEFAULT_RELATIVE_TO}
                            unsetRangeValue={undefined}
                            disableUnsetRange={disableUntil}
-                           title="Until:"
+                           title="到:"
                            unsetRangeLabel="Now"
                            fieldName="to" />
     </RelativeWrapper>

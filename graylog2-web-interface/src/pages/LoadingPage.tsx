@@ -35,7 +35,7 @@ const LoadingPage = ({ text }: Props) => {
     <DocumentTitle title="Loading...">
       <LoadingPageStyles />
       <LoginBox>
-        <legend><Icon name="users" /> Welcome to Graylog</legend>
+        <legend><Icon name="users" /> CloudPulse 云 脉</legend>
         <p>
           <Spinner text={text} delay={0} />
         </p>
@@ -49,7 +49,7 @@ LoadingPage.propTypes = {
 };
 
 LoadingPage.defaultProps = {
-  text: 'Loading, please wait...',
+  text: '加载中，请稍候...',
 };
 
 export default LoadingPage;
