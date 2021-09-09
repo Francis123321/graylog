@@ -38,8 +38,8 @@ export type PluginMetadata = {
 export type Requirements = { [key: string]: PluginMetadata };
 export type ViewStateMap = Immutable.Map<QueryId, ViewState>;
 
-export type SearchType = 'SEARCH';
-export type DashboardType = 'DASHBOARD';
+export type SearchType = '搜索';
+export type DashboardType = '仪表盘';
 export type ViewType = SearchType | DashboardType;
 
 type InternalState = {
@@ -72,8 +72,8 @@ export type ViewJson = {
 
 export default class View {
   static Type: { Search: SearchType, Dashboard: DashboardType } = {
-    Search: 'SEARCH',
-    Dashboard: 'DASHBOARD',
+    Search: '搜索',
+    Dashboard: '仪表盘',
   };
 
   _value: InternalState;

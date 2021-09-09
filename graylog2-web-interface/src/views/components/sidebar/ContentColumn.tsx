@@ -156,7 +156,7 @@ const toggleSidebarPinning = (searchPageLayout) => {
 
 const sidebarTitle = (viewMetadata: ViewMetadata, viewType: ViewType | undefined | null, viewIsNew: boolean) => {
   const viewTypeLabel = ViewTypeLabel({ type: viewType, capitalize: true });
-  const unsavedViewTitle = `Unsaved ${viewTypeLabel}`;
+  const unsavedViewTitle = `未保存${viewTypeLabel}`;
   const savedViewTitle = viewMetadata.title ?? `Untitled ${viewTypeLabel}`;
 
   if (viewIsNew) {
