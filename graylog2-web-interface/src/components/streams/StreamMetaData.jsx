@@ -35,11 +35,11 @@ const StreamMetaData = ({ isDefaultStream, stream, streamRuleTypes, permissions 
   const toggleText = expanded ? 'Hide' : 'Show';
 
   if (stream.is_default) {
-    return 'The default stream contains all messages.';
+    return '默认流包含所有消息。';
   }
 
   if (stream.rules.length === 0) {
-    return 'No configured rules.';
+    return '没有配置规则。';
   }
 
   switch (stream.matching_type) {

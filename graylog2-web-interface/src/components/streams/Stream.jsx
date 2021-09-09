@@ -185,7 +185,7 @@ class Stream extends React.Component {
         <OverlayElement overlay={defaultStreamTooltip} placement="top" useOverlay={isDefaultStream}>
           <LinkContainer disabled={isDefaultStream} to={Routes.stream_edit(stream.id)}>
             <Button bsStyle="info">
-              <Icon name="stream" /> Manage Rules
+              <Icon name="stream" /> 管理规则
             </Button>
           </LinkContainer>
         </OverlayElement>
@@ -194,7 +194,7 @@ class Stream extends React.Component {
       manageAlertsLink = (
         <LinkContainer to={Routes.stream_alerts(stream.id)}>
           <Button bsStyle="info">
-            <Icon name="bell" /> Manage Alerts
+            <Icon name="bell" /> 管理警报
           </Button>
         </LinkContainer>
       );
@@ -209,7 +209,7 @@ class Stream extends React.Component {
             <ToggleButton bsStyle="success"
                           onClick={this._onResume}
                           disabled={isDefaultStream || loading}>
-              <Icon name="play" /> {loading ? 'Starting...' : 'Start Stream'}
+              <Icon name="play" /> {loading ? '开始中...' : '开始流'}
             </ToggleButton>
           </OverlayElement>
         );
@@ -219,7 +219,7 @@ class Stream extends React.Component {
             <ToggleButton bsStyle="primary"
                           onClick={this._onPause}
                           disabled={isDefaultStream || loading}>
-              <Icon name="pause" /> {loading ? 'Pausing...' : 'Pause Stream'}
+              <Icon name="pause" /> {loading ? '暂停中...' : '暂停流'}
             </ToggleButton>
           </OverlayElement>
         );
@@ -284,7 +284,7 @@ class Stream extends React.Component {
           <EntityShareModal entityId={stream.id}
                             entityType="stream"
                             entityTitle={stream.title}
-                            description="Search for a User or Team to add as collaborator on this stream."
+                            description="搜索用户或团队以添加为此流的协作者。"
                             onClose={this._closeEntityShareModal} />
         )}
       </StreamListItem>

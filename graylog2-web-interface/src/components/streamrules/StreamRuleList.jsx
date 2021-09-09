@@ -63,7 +63,7 @@ class StreamRuleList extends React.Component {
       ));
     }
 
-    return <ListGroupItem>No rules defined.</ListGroupItem>;
+    return <ListGroupItem>没有定义规则。</ListGroupItem>;
   };
 
   render() {

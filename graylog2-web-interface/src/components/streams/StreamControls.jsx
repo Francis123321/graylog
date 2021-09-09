@@ -85,33 +85,33 @@ const StreamControls = createReactClass({
 
     return (
       <span>
-        <DropdownButton title="More Actions"
+        <DropdownButton title="更多操作"
                         pullRight
                         id={`more-actions-dropdown-${stream.id}`}>
           <IfPermitted permissions={`streams:edit:${stream.id}`}>
             <MenuItem key={`editStreams-${stream.id}`} onSelect={this._onEdit} disabled={isDefaultStream}>
-              Edit stream
+              编辑流
             </MenuItem>
           </IfPermitted>
           <IfPermitted permissions={`streams:edit:${stream.id}`}>
             <MenuItem key={`quickAddRule-${stream.id}`} onSelect={this._onQuickAdd} disabled={isDefaultStream}>
-              Quick add rule
+              快速添加规则
             </MenuItem>
           </IfPermitted>
           <IfPermitted permissions={['streams:create', `streams:read:${stream.id}`]}>
             <MenuItem key={`cloneStream-${stream.id}`} onSelect={this._onClone} disabled={isDefaultStream}>
-              Clone this stream
+              克隆此流
             </MenuItem>
           </IfPermitted>
           <HideOnCloud>
             <IfPermitted permissions="stream_outputs:read">
               <MenuItem key={`manageOutputs-${stream.id}`} href={Routes.stream_outputs(stream.id)}>
-                Manage Outputs
+                管理输出
               </MenuItem>
             </IfPermitted>
           </HideOnCloud>
           <MenuItem key={`setAsStartpage-${stream.id}`} onSelect={this._setStartpage} disabled={user.read_only}>
-            Set as startpage
+            设为起始页
           </MenuItem>
 
           <IfPermitted permissions={`streams:edit:${stream.id}`}>
@@ -119,12 +119,12 @@ const StreamControls = createReactClass({
           </IfPermitted>
           <IfPermitted permissions={`streams:edit:${stream.id}`}>
             <MenuItem key={`deleteStream-${stream.id}`} onSelect={this._onDelete} disabled={isDefaultStream}>
-              Delete this stream
+              删除此流
             </MenuItem>
           </IfPermitted>
         </DropdownButton>
-        <StreamForm ref={(streamForm) => { this.streamForm = streamForm; }} title="Editing Stream" onSubmit={onUpdate} stream={stream} indexSets={indexSets} />
-        <StreamForm ref={(cloneForm) => { this.cloneForm = cloneForm; }} title="Cloning Stream" onSubmit={this._onCloneSubmit} indexSets={indexSets} />
+        <StreamForm ref={(streamForm) => { this.streamForm = streamForm; }} title="编辑流" onSubmit={onUpdate} stream={stream} indexSets={indexSets} />
+        <StreamForm ref={(cloneForm) => { this.cloneForm = cloneForm; }} title="克隆流" onSubmit={this._onCloneSubmit} indexSets={indexSets} />
       </span>
     );
   },

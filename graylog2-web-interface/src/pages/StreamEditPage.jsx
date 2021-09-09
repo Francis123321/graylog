@@ -72,7 +72,7 @@ const StreamEditPage = createReactClass({
         <div className="row content">
           <div className="col-md-12">
             <Alert bsStyle="danger">
-              The default stream cannot be edited.
+              无法编辑默认流。
             </Alert>
           </div>
         </div>
@@ -82,10 +82,9 @@ const StreamEditPage = createReactClass({
     return (
       <DocumentTitle title={`Rules of Stream ${stream.title}`}>
         <div>
-          <PageHeader title={<span>Rules of Stream &raquo;{stream.title}&raquo;</span>}>
+          <PageHeader title={<span>流规则 &raquo;{stream.title}&raquo;</span>}>
             <span>
-              This screen is dedicated to an easy and comfortable creation and manipulation of stream rules. You can{' '}
-              see the effect configured stream rules have on message matching here.
+              此屏幕专用于轻松舒适地创建和操作流规则。 您可以在此处查看配置的流规则对消息匹配的影响。
             </span>
           </PageHeader>
 

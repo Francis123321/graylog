@@ -85,12 +85,12 @@ class MatchingTypeSwitcher extends React.Component {
         <div>
           <Input id="streamrule-and-connector"
                  type="radio"
-                 label="A message must match all of the following rules"
+                 label="消息必须符合以下所有规则 "
                  checked={stream.matching_type === 'AND'}
                  onChange={this.handleTypeChangeToAnd} />
           <Input id="streamrule-or-connector"
                  type="radio"
-                 label="A message must match at least one of the following rules"
+                 label="消息必须至少符合以下规则之一"
                  checked={stream.matching_type === 'OR'}
                  onChange={this.handleTypeChangeToOr} />
         </div>

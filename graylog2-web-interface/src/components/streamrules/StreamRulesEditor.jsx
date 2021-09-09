@@ -136,21 +136,21 @@ class StreamRulesEditor extends React.Component {
       if (matchData.matches) {
         return (
           <>
-            <MatchIcon matches name="check" /> This message would be routed to this stream!
+            <MatchIcon matches name="check" /> 此消息将路由到此流！
           </>
         );
       }
 
       return (
         <>
-          <MatchIcon name="times" /> This message would not be routed to this stream.
+          <MatchIcon name="times" /> 此消息不会路由到此流。
         </>
       );
     }
 
     return (
       <>
-        <MatchIcon empty name="exclamation-circle" /> Please load a message in Step 1 above to check if it would match against these rules.
+        <MatchIcon empty name="exclamation-circle" /> 请在上面的步骤 1 中加载一条消息，以检查它是否符合这些规则。
       </>
     );
   };
@@ -164,7 +164,7 @@ class StreamRulesEditor extends React.Component {
       return (
         <Row className="content">
           <Col md={12} className="streamrule-sample-message">
-            <h2>1. Load a message to test rules</h2>
+            <h2>1. 加载消息以测试规则</h2>
 
             <div className="stream-loader">
               <LoaderTabs messageId={messageId}
@@ -178,7 +178,7 @@ class StreamRulesEditor extends React.Component {
               <Button bsStyle="success"
                       className="show-stream-rule"
                       onClick={this._onAddStreamRule}>
-                Add stream rule
+                添加流规则
               </Button>
               { showStreamRuleForm && (
                 <StreamRuleForm title="New Stream Rule"
@@ -188,7 +188,7 @@ class StreamRulesEditor extends React.Component {
               ) }
             </div>
 
-            <h2>2. Manage stream rules</h2>
+            <h2>2. 管理流规则 </h2>
 
             <MatchingTypeSwitcher stream={stream} onChange={this.loadData} />
             <Panel bsStyle={styles}>
@@ -201,7 +201,7 @@ class StreamRulesEditor extends React.Component {
 
             <p>
               <LinkContainer to={Routes.STREAMS}>
-                <Button bsStyle="success">I&apos;m done!</Button>
+                <Button bsStyle="success">确定</Button>
               </LinkContainer>
             </p>
           </Col>

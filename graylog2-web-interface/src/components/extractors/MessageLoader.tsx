@@ -36,7 +36,7 @@ const LoadMessageForm = ({ loadMessage, children, loading }: LoadMessageFormProp
       <Button bsStyle="info"
               disabled={loading}
               type="submit">
-        {loading ? 'Loading message...' : 'Load message'}
+        {loading ? '加载消息...' : '加载消息'}
       </Button>
     </form>
   </div>

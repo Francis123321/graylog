@@ -120,7 +120,7 @@ class LoaderTabs extends React.Component {
       const { inputs, selectedInputId } = this.props;
 
       messageLoaders.push(
-        <Tab key="recent" eventKey={this.TAB_KEYS.recent} title="Recent Message" style={{ marginBottom: 10 }}>
+        <Tab key="recent" eventKey={this.TAB_KEYS.recent} title="最近的消息" style={{ marginBottom: 10 }}>
           <RecentMessageLoader inputs={inputs}
                                selectedInputId={selectedInputId}
                                onMessageLoaded={this.onMessageLoaded} />
@@ -132,9 +132,9 @@ class LoaderTabs extends React.Component {
       const { messageId, index } = this.props;
 
       messageLoaders.push(
-        <Tab key="messageId" eventKey={this.TAB_KEYS.messageId} title="Message ID" style={{ marginBottom: 10 }}>
+        <Tab key="messageId" eventKey={this.TAB_KEYS.messageId} title="消息编号" style={{ marginBottom: 10 }}>
           <div style={{ marginTop: 5, marginBottom: 15 }}>
-            Please provide the id and index of the message that you want to load in this form:
+            请在此表单中提供您要加载的消息的 ID 和索引：
           </div>
           <MessageLoader messageId={messageId}
                          index={index}
