@@ -65,7 +65,7 @@ const ShareableEntityURL = ({ entityGRN }: Props) => {
   return (
     <Container>
       <VerticalCenter>
-        <b>Sharable URL:</b>
+        <b>被分享的网址:</b>
       </VerticalCenter>
       <URLColumn>
         <FormGroup>

@@ -107,6 +107,7 @@ import {
   UserTokensEditPage,
   UsersOverviewPage,
   ViewEventDefinitionPage,
+  TopologyPage
 } from 'pages';
 import RouterErrorBoundary from 'components/errors/RouterErrorBoundary';
 import usePluginEntities from 'views/logic/usePluginEntities';
@@ -169,6 +170,7 @@ const AppRouter = () => {
 
 
                       {/*yangzy_路由跳组件*/}
+                      <Route exact path={Routes.Topology} component={TopologyPage} />
                       <Route exact path={Routes.ALERTS.LIST} component={EventsPage} />
                       <Route exact path={Routes.ALERTS.DEFINITIONS.LIST} component={EventDefinitionsPage} />
                       <Route exact path={Routes.ALERTS.DEFINITIONS.CREATE} component={CreateEventDefinitionPage} />

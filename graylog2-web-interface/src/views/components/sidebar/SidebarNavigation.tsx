@@ -73,7 +73,12 @@ const HorizontalRuleWrapper = styled.div`
 const SidebarNavigation = ({ sections, activeSection, selectSidebarSection, sidebarIsPinned, toggleSidebar }: Props) => {
   const toggleIcon = activeSection ? 'chevron-left' : 'chevron-right';
   const activeSectionKey = activeSection?.key;
-
+  console.log(sections)
+  for (let i = sections.length - 1; i >= 0; i--) {
+    if (sections[i].key === 'viewDescription' || sections[i].key === 'highlighting') {
+      sections.splice(i, 1)
+    }
+  }
   return (
     <Container sidebarIsPinned={sidebarIsPinned} isOpen={!!activeSection}>
       <NavItem icon={toggleIcon}

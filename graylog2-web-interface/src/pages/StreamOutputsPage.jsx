@@ -66,15 +66,14 @@ const StreamOutputsPage = createReactClass({
           <ContentHeadRow className="content">
             <Col md={10}>
               <h1>
-                Outputs for Stream &raquo;{stream.title}&laquo;
+                输出流 &raquo;{stream.title}&laquo;
               </h1>
 
               <p className="description">
-                Graylog nodes can forward messages of streams via outputs. Launch or terminate as many outputs as you want here.
-                You can also reuse outputs that are already running for other streams.
+                Graylog 节点可以通过输出转发流的消息。 在此处启动或终止任意数量的输出。 您还可以重用已经为其他流运行的输出。
 
-                A global view of all configured outputs is available <Link to={Routes.SYSTEM.OUTPUTS}>here</Link>.
-                You can find output plugins on <a href="https://marketplace.graylog.org/" rel="noopener noreferrer" target="_blank">the Graylog Marketplace</a>.
+                <Link to={Routes.SYSTEM.OUTPUTS}>此处</Link>提供所有配置输出的全局视图。
+                您可以在<a href="https://marketplace.graylog.org/" rel="noopener noreferrer" target="_blank">the Graylog Marketplace</a>上找到输出插件。
               </p>
 
               <SupportLink>

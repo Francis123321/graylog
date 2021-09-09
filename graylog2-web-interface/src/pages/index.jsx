@@ -43,6 +43,7 @@ const EnterprisePage = loadAsync(() => import('./EnterprisePage'));
 const EventDefinitionsPage = loadAsync(() => import('./EventDefinitionsPage'));
 const EventNotificationsPage = loadAsync(() => import('./EventNotificationsPage'));
 const EventsPage = loadAsync(() => import('./EventsPage'));
+const TopologyPage = loadAsync(() => import('./TopologyPage'));
 const ExportExtractorsPage = loadAsync(() => import('pages/ExportExtractorsPage'));
 const ExtractorsPage = loadAsync(() => import('./ExtractorsPage'));
 const GettingStartedPage = loadAsync(() => import('./GettingStartedPage'));
@@ -190,4 +191,5 @@ export {
   UserEditPage,
   UserTokensEditPage,
   ViewEventDefinitionPage,
+  TopologyPage
 };

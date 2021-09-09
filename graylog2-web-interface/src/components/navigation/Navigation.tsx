@@ -135,6 +135,11 @@ const Navigation = ({ location }: Props) => {
             <NavItem>仪表盘</NavItem>
           </LinkContainer>
 
+
+          <LinkContainer to={Routes.Topology}>
+            <NavItem>拓扑</NavItem>
+          </LinkContainer>
+
           {pluginNavigations}
 
           <SystemMenu />

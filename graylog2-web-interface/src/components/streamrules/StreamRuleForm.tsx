@@ -206,7 +206,7 @@ class StreamRuleForm extends React.Component<Props, State> {
       case String(this.MATCH_INPUT):
         return '';
       default:
-        return <TypeAheadFieldInput id="field-input" type="text" required label="Field" name="field" defaultValue={field} onChange={this.handleChange} autoFocus />;
+        return <TypeAheadFieldInput id="field-input" type="text" required label="字段" name="field" defaultValue={field} onChange={this.handleChange} autoFocus />;
     }
   };
 
@@ -225,37 +225,37 @@ class StreamRuleForm extends React.Component<Props, State> {
                           onCancel={onClose}
                           onModalClose={onClose}
                           onSubmitForm={this._onSubmit}
-                          submitButtonText="Save"
+                          submitButtonText="保存"
                           formProps={{ id: 'StreamRuleForm' }}>
         <div>
           <Col md={8}>
             {fieldBox}
-            <Input id="Type" data-testid="rule-type-selection" type="select" required label="Type" name="type" value={type} onChange={this.handleChange}>
+            <Input id="Type" data-testid="rule-type-selection" type="select" required label="类型" name="type" value={type} onChange={this.handleChange}>
               {streamRuleTypes}
             </Input>
             {valueBox}
-            <Input id="Inverted" type="checkbox" label="Inverted" name="inverted" checked={inverted} onChange={this.handleChange} />
+            <Input id="Inverted" type="checkbox" label="值" name="inverted" checked={inverted} onChange={this.handleChange} />
 
-            <Input id="Description" type="textarea" label="Description (optional)" name="description" value={description} onChange={this.handleChange} />
+            <Input id="Description" type="textarea" label="说明（可选）" name="description" value={description} onChange={this.handleChange} />
 
             <p>
-              <strong>Result:</strong>
+              <strong>结果：</strong>
               {' '}
               <HumanReadableStreamRule streamRule={streamRule} streamRuleTypes={ruleTypes} inputs={inputs} />
             </p>
           </Col>
           <Col md={4}>
             <Well bsSize="small" className="matcher-github">
-              The server will try to convert to strings or numbers based on the matcher type as well as it can.
+              服务器将尝试根据匹配器类型尽可能地转换为字符串或数字。
 
               <br /><br />
               <Icon name="github" type="brand" />&nbsp;
               <a href={`https://github.com/Graylog2/graylog2-server/tree/${Version.getMajorAndMinorVersion()}/graylog2-server/src/main/java/org/graylog2/streams/matchers`}
                  target="_blank"
-                 rel="noopener noreferrer"> Take a look at the matcher code on GitHub
+                 rel="noopener noreferrer"> 看一下GitHub上的matcher代码
               </a>
               <br /><br />
-              Regular expressions use Java syntax. <DocumentationLink page={DocsHelper.PAGES.STREAMS}
+              正则表达式使用 Java 语法。 <DocumentationLink page={DocsHelper.PAGES.STREAMS}
                                                                       title="More information"
                                                                       text={<Icon name="lightbulb" type="regular" />} />
             </Well>

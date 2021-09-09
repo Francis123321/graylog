@@ -24,6 +24,7 @@ const Routes = {
   STARTPAGE: '/',
   NOTFOUND: '/notfound',
   SEARCH: '/search',
+  Topology: '/topology',
   STREAMS: '/streams',
   LEGACY_ALERTS: {
     LIST: '/legacy/alerts',

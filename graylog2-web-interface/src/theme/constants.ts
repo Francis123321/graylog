@@ -19,11 +19,16 @@ const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-s
 export type ThemeMode = 'teint' | 'noir';
 export type PreferencesThemeMode = 'themeMode';
 
+// yangzy_会根据localStorage决定显示什么，但是如果不让用localStorage，就由DEFAULT_THEME_MODE决定
+if (!localStorage.getItem('themeMode')) {
+  localStorage.themeMode = 'noir'
+}
+
 const PREFERENCES_THEME_MODE: PreferencesThemeMode = 'themeMode';
 const ROOT_FONT_SIZE = 14;
 const THEME_MODE_LIGHT = 'teint';
 const THEME_MODE_DARK = 'noir';
-const DEFAULT_THEME_MODE: ThemeMode = prefersDarkMode ? THEME_MODE_DARK : THEME_MODE_LIGHT;
+const DEFAULT_THEME_MODE: ThemeMode = !prefersDarkMode ? THEME_MODE_DARK : THEME_MODE_LIGHT;
 const THEME_MODES: Array<ThemeMode> = [THEME_MODE_LIGHT, THEME_MODE_DARK];
 
 export {

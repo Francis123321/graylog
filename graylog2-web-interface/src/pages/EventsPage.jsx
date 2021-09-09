@@ -31,41 +31,37 @@ const EventsPage = ({ location }) => {
 
   return (
     <DocumentTitle title="Alerts &amp; Events1">
-      {/*<span>*/}
-        {/*<PageHeader title="Alerts &amp; Events2">*/}
-          {/*<span>*/}
-            {/*Define Events through different conditions. Add Notifications to Events that require your attention*/}
-            {/*to create Alerts.*/}
-          {/*</span>*/}
-          {/*<span>*/}
-            {/*Graylog&apos;s new Alerting system let you define more flexible and powerful rules. Learn more in the{' '}*/}
-            {/*<DocumentationLink page={DocsHelper.PAGES.ALERTS}*/}
-                               {/*text="documentation" />*/}
-          {/*</span>*/}
-        {/**/}
-          {/*<ButtonToolbar>*/}
-            {/*<LinkContainer to={Routes.ALERTS.LIST}>*/}
-              {/*<Button bsStyle="info">Alerts &amp; Events</Button>*/}
-            {/*</LinkContainer>*/}
-            {/*<LinkContainer to={Routes.ALERTS.DEFINITIONS.LIST}>*/}
-              {/*<Button bsStyle="info">Event Definitions</Button>*/}
-            {/*</LinkContainer>*/}
-            {/*<LinkContainer to={Routes.ALERTS.NOTIFICATIONS.LIST}>*/}
-              {/*<Button bsStyle="info">Notifications</Button>*/}
-            {/*</LinkContainer>*/}
-          {/*</ButtonToolbar>*/}
-        {/*</PageHeader>*/}
+      <span>
+        <PageHeader title="Alerts &amp; Events2">
+          <span>
+            Define Events through different conditions. Add Notifications to Events that require your attention
+            to create Alerts.
+          </span>
+          <span>
+            Graylog&apos;s new Alerting system let you define more flexible and powerful rules. Learn more in the{' '}
+            <DocumentationLink page={DocsHelper.PAGES.ALERTS}
+                               text="documentation" />
+          </span>
 
-        {/*<Row className="content">*/}
-          {/*<Col md={12}>*/}
-            {/*<EventsContainer key={filteredSourceStream} streamId={filteredSourceStream} />*/}
-          {/*</Col>*/}
-        {/*</Row>*/}
-      {/*</span>*/}
+          <ButtonToolbar>
+            <LinkContainer to={Routes.ALERTS.LIST}>
+              <Button bsStyle="info">Alerts &amp; Events</Button>
+            </LinkContainer>
+            <LinkContainer to={Routes.ALERTS.DEFINITIONS.LIST}>
+              <Button bsStyle="info">Event Definitions</Button>
+            </LinkContainer>
+            <LinkContainer to={Routes.ALERTS.NOTIFICATIONS.LIST}>
+              <Button bsStyle="info">Notifications</Button>
+            </LinkContainer>
+          </ButtonToolbar>
+        </PageHeader>
 
-      {/*yangzy_tabContent*/}
-      <div style={{height:'100%','borderRadius': '4px','backgroundColor': '#fff',
-        border: '1px solid #cdcdcd', 'marginBottom': '10px'}}>123</div>
+        <Row className="content">
+          <Col md={12}>
+            <EventsContainer key={filteredSourceStream} streamId={filteredSourceStream} />
+          </Col>
+        </Row>
+      </span>
     </DocumentTitle>
   );
 };
