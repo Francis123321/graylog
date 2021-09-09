@@ -66,14 +66,13 @@ const StreamsPage = createReactClass({
     return (
       <DocumentTitle title="Streams">
         <div>
-          <PageHeader title="Streams">
+          <PageHeader title="流">
             <span>
-              You can route incoming messages into streams by applying rules against them. Messages matching
-              the rules of a stream are routed into it. A message can also be routed into multiple streams.
+              您可以通过应用规则来将传入的消息路由到流中。 匹配流规则的消息被路由到其中。 一条消息也可以路由到多个流中。
             </span>
 
             <span>
-              Read more about streams in the <DocumentationLink page={DocsHelper.PAGES.STREAMS} text="documentation" />.
+              在<DocumentationLink page={DocsHelper.PAGES.STREAMS} text="文档" />中阅读有关流的更多信息。
             </span>
 
             <IfPermitted permissions="streams:create">

@@ -116,10 +116,10 @@ class StreamForm extends React.Component {
     if (this.props.indexSets) {
       return (
         <Input id="index-set-selector"
-               label="Index Set"
-               help="Messages that match this stream will be written to the configured index set.">
+               label="索引集"
+               help="与此流匹配的消息将写入配置的索引集。">
           <Select inputId="index-set-selector"
-                  placeholder="Select index set"
+                  placeholder="选择索引集"
                   options={this._formatSelectOptions()}
                   matchProp="label"
                   onChange={this._onIndexSetSelect}
@@ -144,28 +144,28 @@ class StreamForm extends React.Component {
         <Input id="Title"
                type="text"
                required
-               label="Title"
+               label="标题"
                name="title"
                value={title}
                onChange={this.handleChange}
-               placeholder="A descriptive name of the new stream"
+               placeholder="新流的描述性名称"
                autoFocus />
         <Input id="Description"
                type="text"
                required
-               label="Description"
+               label="描述"
                name="description"
                value={description}
                onChange={this.handleChange}
-               placeholder="What kind of messages are routed into this stream?" />
+               placeholder="什么样的消息被路由到这个流中？" />
         {this._indexSetSelect()}
         <Input id="RemoveFromDefaultStream"
                type="checkbox"
-               label="Remove matches from &lsquo;All messages&rsquo; stream"
+               label="从”所有消息流“中删除匹配项 "
                name="removeMatchesFromDefaultStream"
                checked={removeMatchesFromDefaultStream}
                onChange={this.handleChange}
-               help={<span>Remove messages that match this stream from the &lsquo;All messages&rsquo; stream which is assigned to every message by default.</span>} />
+               help={<span>从默认情况下分配给每条消息的”所有消息流“中删除与此流匹配的消息。 </span>} />
       </BootstrapModalForm>
     );
   }
