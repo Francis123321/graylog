@@ -199,14 +199,13 @@ class Events extends React.Component {
     return (
       <Row>
         <Col md={6} mdOffset={3} lg={4} lgOffset={4}>
-          <EmptyEntity title="Looks like you didn't define any Events yet">
+          <EmptyEntity title="看起来你还没有定义任何事件">
             <p>
-              Create Event Definitions that are able to search, aggregate or correlate Messages and other
-              Events, allowing you to record significant Events in Graylog and alert on them.
+              创建能够搜索、聚合或关联消息和其他事件的事件定义，允许您在 Graylog 中记录重要事件并对其发出警报。
             </p>
             <IfPermitted permissions="eventdefinitions:create">
               <LinkContainer to={Routes.ALERTS.DEFINITIONS.CREATE}>
-                <Button bsStyle="success">Get Started!</Button>
+                <Button bsStyle="success">开始吧！</Button>
               </LinkContainer>
             </IfPermitted>
           </EmptyEntity>

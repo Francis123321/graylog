@@ -32,26 +32,25 @@ const EventsPage = ({ location }) => {
   return (
     <DocumentTitle title="Alerts &amp; Events1">
       <span>
-        <PageHeader title="Alerts &amp; Events2">
+        <PageHeader title="警报和事件">
           <span>
-            Define Events through different conditions. Add Notifications to Events that require your attention
-            to create Alerts.
+            通过不同的条件定义事件。 向需要您注意以创建警报的事件添加通知。
           </span>
           <span>
-            Graylog&apos;s new Alerting system let you define more flexible and powerful rules. Learn more in the{' '}
+            Graylog 的新警报系统让您可以定义更灵活、更强大的规则。 在{' '}
             <DocumentationLink page={DocsHelper.PAGES.ALERTS}
-                               text="documentation" />
+                               text="文档" />中了解更多信息
           </span>
 
           <ButtonToolbar>
             <LinkContainer to={Routes.ALERTS.LIST}>
-              <Button bsStyle="info">Alerts &amp; Events</Button>
+              <Button bsStyle="info">警报和事件</Button>
             </LinkContainer>
             <LinkContainer to={Routes.ALERTS.DEFINITIONS.LIST}>
-              <Button bsStyle="info">Event Definitions</Button>
+              <Button bsStyle="info">事件定义</Button>
             </LinkContainer>
             <LinkContainer to={Routes.ALERTS.NOTIFICATIONS.LIST}>
-              <Button bsStyle="info">Notifications</Button>
+              <Button bsStyle="info">通知</Button>
             </LinkContainer>
           </ButtonToolbar>
         </PageHeader>
