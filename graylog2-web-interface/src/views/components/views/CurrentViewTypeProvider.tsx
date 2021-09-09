@@ -30,7 +30,7 @@ type Props = {
 const CurrentViewTypeProvider = ({ type, children }: Props) => <ViewTypeContext.Provider value={type}>{children}</ViewTypeContext.Provider>;
 
 CurrentViewTypeProvider.propTypes = {
-  type: PropTypes.oneOf<ViewType>(['SEARCH', 'DASHBOARD']).isRequired,
+  type: PropTypes.oneOf<ViewType>(['搜索', '仪表盘']).isRequired,
   children: PropTypes.node.isRequired,
 };
 

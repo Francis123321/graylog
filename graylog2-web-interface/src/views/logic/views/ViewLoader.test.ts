@@ -41,7 +41,7 @@ jest.mock('views/stores/ViewStore', () => ({
 
 const viewJson: ViewJson = {
   id: 'foo',
-  type: 'SEARCH',
+  type: '搜索',
   title: 'Foo',
   summary: 'summary',
   description: 'Foo',
@@ -69,7 +69,7 @@ describe('ViewLoader', () => {
       expect(result).toEqual(
         View.builder()
           .id('foo')
-          .type('SEARCH')
+          .type('搜索')
           .title('Foo')
           .summary('summary')
           .description('Foo')

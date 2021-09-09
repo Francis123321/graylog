@@ -75,7 +75,7 @@ describe('EditWidgetFrame', () => {
       .config({})
       .build();
     const renderSUT = () => render((
-      <ViewTypeContext.Provider value="DASHBOARD">
+      <ViewTypeContext.Provider value="仪表盘">
         <WidgetContext.Provider value={widget}>
           <EditWidgetFrame onCancel={() => {}} onFinish={() => {}}>
             <>Hello World!</>

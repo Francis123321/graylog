@@ -68,7 +68,7 @@ jest.mock('routing/withParams', () => (x) => x);
 describe('ShowViewPage', () => {
   const viewJson = {
     id: 'foo',
-    type: 'DASHBOARD',
+    type: '仪表盘',
     title: 'Foo',
     summary: 'summary',
     description: 'Foo',
