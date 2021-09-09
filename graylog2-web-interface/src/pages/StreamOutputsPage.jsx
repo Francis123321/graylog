@@ -77,9 +77,9 @@ const StreamOutputsPage = createReactClass({
               </p>
 
               <SupportLink>
-                <i>Removing</i> an output removes it from this stream but it will still be in the list of available outputs.
-                Deleting an output <i>globally</i> will remove it from this and all other streams and terminate it.
-                You can see all defined outputs in details at the {' '} <Link to={Routes.SYSTEM.OUTPUTS}>global output list</Link>.
+                <i>删除</i>输出会将其从此流中删除，但它仍将位于可用输出列表中。
+                <i>全局</i>删除输出会将其从该流和所有其他流中删除并终止它。
+                您可以在{' '} <Link to={Routes.SYSTEM.OUTPUTS}>全局输出列表</Link>中详细查看所有定义的输出。
               </SupportLink>
             </Col>
           </ContentHeadRow>

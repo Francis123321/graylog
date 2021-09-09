@@ -70,7 +70,7 @@ class AssignOutputDropdown extends React.Component {
                   type="button"
                   disabled={selectedOutput === this.PLACEHOLDER}
                   onClick={this._handleClick}>
-            Assign existing Output
+            分配现有输出
           </Button>
         </div>
       </div>

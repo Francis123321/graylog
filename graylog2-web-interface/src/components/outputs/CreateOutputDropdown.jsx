@@ -41,7 +41,7 @@ class CreateOutputDropdown extends React.Component {
             {outputTypes}
           </select>
                     &nbsp;
-          <Button bsStyle="success" disabled={this.state.typeName === this.PLACEHOLDER} onClick={this._openModal}>Launch new output</Button>
+          <Button bsStyle="success" disabled={this.state.typeName === this.PLACEHOLDER} onClick={this._openModal}>启动新输出 </Button>
         </div>
 
         <ConfigurationForm ref={(configurationForm) => { this.configurationForm = configurationForm; }}
