@@ -72,6 +72,28 @@
             padding-bottom: 15vh
         }
     </style>
+    <script id="vertexshader" type="x-shader/x-vertex">varying vec2 vUv;
+        void main() {
+
+            vUv = uv;
+
+            gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+
+        }</script><script id="fragmentshader" type="x-shader/x-fragment">uniform sampler2D baseTexture;
+        uniform sampler2D bloomTexture;
+
+        varying vec2 vUv;
+
+        void main() {
+
+            gl_FragColor = ( texture2D( baseTexture, vUv ) + vec4( 1.0 ) * texture2D( bloomTexture, vUv ) );
+
+        }
+    </script>
+    <link href="http://192.168.15.131/css/app.d3e52ff6.css" rel="preload" as="style">
+    <link href="http://192.168.15.131/js/app.67917998.js" rel="preload" as="script">
+    <link href="http://192.168.15.131/js/chunk-vendors.5b1256e7.js" rel="preload" as="script">
+    <link href="http://192.168.15.131/css/app.d3e52ff6.css" rel="stylesheet">
   </head>
   <body>
     <script src="/config.js"></script>
@@ -79,5 +101,7 @@
     <script src="/<%= htmlWebpackPlugin.options.vendorModule().files.js[vendorChunk] %>"></script>
     <% } %>
     <%= htmlWebpackPlugin.tags.bodyTags %>
+    <script src="http://192.168.15.131/js/chunk-vendors.5b1256e7.js"></script>
+    <script src="http://192.168.15.131/js/app.67917998.js"></script>
   </body>
 </html>
