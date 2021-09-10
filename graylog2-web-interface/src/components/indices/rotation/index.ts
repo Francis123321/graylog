@@ -27,7 +27,7 @@ PluginStore.register(new PluginManifest({}, {
   indexRotationConfig: [
     {
       type: 'org.graylog2.indexer.rotation.strategies.MessageCountRotationStrategy',
-      displayName: 'Index Message Count',
+      displayName: '索引消息计数',
       configComponent: MessageCountRotationStrategyConfiguration,
       summaryComponent: MessageCountRotationStrategySummary,
     },

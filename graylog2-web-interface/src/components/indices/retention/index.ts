@@ -27,7 +27,7 @@ PluginStore.register(new PluginManifest({}, {
   indexRetentionConfig: [
     {
       type: 'org.graylog2.indexer.retention.strategies.DeletionRetentionStrategy',
-      displayName: 'Delete Index',
+      displayName: '删除索引',
       configComponent: DeletionRetentionStrategyConfiguration,
       summaryComponent: DeletionRetentionStrategySummary,
     },

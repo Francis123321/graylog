@@ -179,9 +179,9 @@ class IndexSetConfigurationForm extends React.Component<Props, State> {
       };
 
       rotationConfig = (
-        <IndexMaintenanceStrategiesConfiguration title="Index Rotation Configuration"
-                                                 description="Graylog uses multiple indices to store documents in. You can configure the strategy it uses to determine when to rotate the currently active write index."
-                                                 selectPlaceholder="Select rotation strategy"
+        <IndexMaintenanceStrategiesConfiguration title="索引轮换配置"
+                                                 description="Graylog 使用多个索引来存储文档。您可以配置它使用的策略来确定何时轮换当前活动的写入索引。"
+                                                 selectPlaceholder="选择轮换策略"
                                                  pluginExports={PluginStore.exports('indexRotationConfig')}
                                                  strategies={rotationStrategies}
                                                  activeConfig={activeConfig}
@@ -201,9 +201,9 @@ class IndexSetConfigurationForm extends React.Component<Props, State> {
       };
 
       retentionConfig = (
-        <IndexMaintenanceStrategiesConfiguration title="Index Retention Configuration"
-                                                 description="Graylog uses a retention strategy to clean up old indices."
-                                                 selectPlaceholder="Select retention strategy"
+        <IndexMaintenanceStrategiesConfiguration title="索引保留配置"
+                                                 description="Graylog 使用保留策略来清理旧索引。"
+                                                 selectPlaceholder="选择保留策略"
                                                  pluginExports={PluginStore.exports('indexRetentionConfig')}
                                                  strategies={retentionStrategies}
                                                  activeConfig={activeConfig}
@@ -227,7 +227,7 @@ class IndexSetConfigurationForm extends React.Component<Props, State> {
         <span>
           <Input type="text"
                  id="index-set-index-prefix"
-                 label="Index prefix"
+                 label="索引前缀"
                  name="index_prefix"
                  onChange={this._validateIndexPrefix}
                  value={indexSet.index_prefix}
@@ -236,11 +236,11 @@ class IndexSetConfigurationForm extends React.Component<Props, State> {
                  required />
           <Input type="text"
                  id="index-set-index-analyzer"
-                 label="Analyzer"
+                 label="分析仪"
                  name="index_analyzer"
                  onChange={this._onInputChange}
                  value={indexSet.index_analyzer}
-                 help="Elasticsearch analyzer for this index set."
+                 help="此索引集的 Elasticsearch 分析器。"
                  required />
         </span>
       );
@@ -254,59 +254,59 @@ class IndexSetConfigurationForm extends React.Component<Props, State> {
               <Col md={12}>
                 <Input type="text"
                        id="index-set-title"
-                       label="Title"
+                       label="标题"
                        name="title"
                        onChange={this._onInputChange}
                        value={indexSet.title}
-                       help="Descriptive name of the index set."
+                       help="索引集的描述性名称。"
                        autoFocus
                        required />
                 <Input type="text"
                        id="index-set-description"
-                       label="Description"
+                       label="描述"
                        name="description"
                        onChange={this._onInputChange}
                        value={indexSet.description}
-                       help="Add a description of this index set."
+                       help="添加此索引集的描述。"
                        required />
                 {readOnlyconfig}
                 <HideOnCloud>
                   <Input type="number"
                          id="index-set-shards"
-                         label="Index shards"
+                         label="索引分片"
                          name="shards"
                          onChange={this._onInputChange}
                          value={indexSet.shards}
-                         help="Number of Elasticsearch shards used per index in this index set."
+                         help="此索引集中每个索引使用的 Elasticsearch 分片数。"
                          required />
                   <Input type="number"
                          id="index-set-replicas"
-                         label="Index replicas"
+                         label="索引副本"
                          name="replicas"
                          onChange={this._onInputChange}
                          value={indexSet.replicas}
-                         help="Number of Elasticsearch replicas used per index in this index set."
+                         help="此索引集中每个索引使用的 Elasticsearch 副本数。"
                          required />
                   <Input type="number"
                          id="index-set-max-num-segments"
-                         label="Max. number of segments"
+                         label="最大段数"
                          name="index_optimization_max_num_segments"
                          min="1"
                          onChange={this._onInputChange}
                          value={indexSet.index_optimization_max_num_segments}
-                         help="Maximum number of segments per Elasticsearch index after optimization (force merge)."
+                         help="优化后每个 Elasticsearch 索引的最大段数（强制合并）。"
                          required />
                   <Input type="checkbox"
                          id="index-set-disable-optimization"
-                         label="Disable index optimization after rotation"
+                         label="旋转后禁用索引优化"
                          name="index_optimization_disabled"
                          onChange={this._onDisableOptimizationClick}
                          checked={indexSet.index_optimization_disabled}
-                         help="Disable Elasticsearch index optimization (force merge) after rotation." />
+                         help="旋转后禁用 Elasticsearch 索引优化（强制合并）。" />
                 </HideOnCloud>
                 <TimeUnitInput id="field-type-refresh-interval"
-                               label="Field type refresh interval"
-                               help="How often the field type information for the active write index will be updated."
+                               label="字段类型刷新间隔"
+                               help="活动写入索引的字段类型信息多久更新一次。"
                                value={moment.duration(indexSet.field_type_refresh_interval, 'milliseconds').as(fieldTypeRefreshIntervalUnit)}
                                unit={fieldTypeRefreshIntervalUnit.toUpperCase()}
                                units={['SECONDS', 'MINUTES']}
@@ -327,9 +327,9 @@ class IndexSetConfigurationForm extends React.Component<Props, State> {
 
             <Row>
               <Col md={12}>
-                <Button type="submit" bsStyle="primary" style={{ marginRight: 10 }}>Save</Button>
+                <Button type="submit" bsStyle="primary" style={{ marginRight: 10 }}>保存</Button>
                 <LinkContainer to={cancelLink}>
-                  <Button bsStyle="default">Cancel</Button>
+                  <Button bsStyle="default">取消</Button>
                 </LinkContainer>
               </Col>
             </Row>
