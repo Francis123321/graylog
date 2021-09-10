@@ -46,7 +46,7 @@ const StreamSelect = ({ onChange, value, streams }: Props) => {
               onChange={onChange}
               options={options}
               clearable={false}
-              placeholder="There are no decorators configured for any stream."
+              placeholder="没有为任何流配置装饰器。"
               value={value} />
     </SelectContainer>
   );

@@ -55,7 +55,7 @@ class CreateEventDefinitionPage extends React.Component {
 
   render() {
     const { eventDefinitionTitle } = this.state;
-    const pageTitle = eventDefinitionTitle ? `New Event Definition "${eventDefinitionTitle}"` : 'New Event Definition';
+    const pageTitle = eventDefinitionTitle ? `New Event Definition "${eventDefinitionTitle}"` : '新事件定义';
 
     const { currentUser } = this.props;
 
@@ -68,27 +68,27 @@ class CreateEventDefinitionPage extends React.Component {
         <span>
           <PageHeader title={pageTitle}>
             <span>
-              Event Definitions allow you to create Alerts from different Conditions and alert on them.
+              事件定义允许您从不同的条件创建警报并对它们发出警报。
             </span>
 
             <span>
-              Graylog&apos;s new Alerting system let you define more flexible and powerful rules. Learn more in the{' '}
+              Graylog 的新警报系统让您可以定义更灵活、更强大的规则。在
               <DocumentationLink page={DocsHelper.PAGES.ALERTS}
-                                 text="documentation" />
+                                 text="文档" />中了解更多信息
             </span>
 
             <ButtonToolbar>
               <LinkContainer to={Routes.ALERTS.LIST}>
-                <Button bsStyle="info">Alerts & Events</Button>
+                <Button bsStyle="info">警报和事件</Button>
               </LinkContainer>
               <IfPermitted permissions="eventdefinitions:read">
                 <LinkContainer to={Routes.ALERTS.DEFINITIONS.LIST}>
-                  <Button bsStyle="info">Event Definitions</Button>
+                  <Button bsStyle="info">事件定义</Button>
                 </LinkContainer>
               </IfPermitted>
               <IfPermitted permissions="eventnotifications:read">
                 <LinkContainer to={Routes.ALERTS.NOTIFICATIONS.LIST}>
-                  <Button bsStyle="info">Notifications</Button>
+                  <Button bsStyle="info">通知</Button>
                 </LinkContainer>
               </IfPermitted>
             </ButtonToolbar>

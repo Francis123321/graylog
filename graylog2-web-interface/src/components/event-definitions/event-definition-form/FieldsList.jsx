@@ -24,7 +24,7 @@ import { DataTable } from 'components/common';
 
 import styles from './FieldsList.css';
 
-const HEADERS = ['Field Name', 'Is Key?', 'Value Source', 'Data Type', 'Configuration', 'Actions'];
+const HEADERS = ['字段名称', '是否配置密钥?', '价值来源', '数据类型', '配置', '操作'];
 
 class FieldsList extends React.Component {
   static propTypes = {
@@ -96,10 +96,10 @@ class FieldsList extends React.Component {
         <td className={styles.actions}>
           <ButtonToolbar>
             <Button bsStyle="primary" bsSize="xsmall" onClick={this.handleRemoveClick(fieldName)}>
-              Remove Field
+              删除字段
             </Button>
             <Button bsStyle="info" bsSize="xsmall" onClick={this.handleEditClick(fieldName)}>
-              Edit
+              编辑
             </Button>
           </ButtonToolbar>
         </td>
@@ -113,7 +113,7 @@ class FieldsList extends React.Component {
     const fieldNames = Object.keys(fields).sort(naturalSort);
     const addCustomFieldButton = (
       <Button bsStyle="success" onClick={this.handleAddFieldClick}>
-        Add Custom Field
+        添加自定义字段
       </Button>
     );
 
@@ -121,7 +121,7 @@ class FieldsList extends React.Component {
       return (
         <>
           <p>
-            This Event does not have any custom Fields yet.
+            此事件还没有任何自定义字段。
           </p>
           {addCustomFieldButton}
         </>

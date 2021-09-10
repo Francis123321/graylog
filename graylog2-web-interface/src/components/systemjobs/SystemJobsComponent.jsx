@@ -46,10 +46,9 @@ const SystemJobsComponent = ({ jobs }) => {
   return (
     <Row className="content">
       <Col md={12}>
-        <h2>System jobs</h2>
+        <h2>系统作业</h2>
         <p className="description">
-          A system job is a long-running task a graylog-server node executes for maintenance reasons. Some jobs
-          provide progress information or can be stopped.
+          系统作业是灰色日志服务器节点出于维护原因执行的长时间运行的任务。 某些作业提供进度信息或可以停止。
         </p>
 
         <SystemJobsList jobs={jobList} />

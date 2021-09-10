@@ -56,19 +56,18 @@ const TimesList = createReactClass({
     return (
       <Row className="content">
         <Col md={12}>
-          <h2>Time configuration</h2>
+          <h2>时间配置</h2>
 
           <p className="description">
-            Dealing with timezones can be confusing. Here you can see the timezone applied to different components of your system.
-            You can check timezone settings of specific graylog-server nodes on their respective detail page.
+            处理时区可能会令人困惑。 在这里，您可以看到应用于系统不同组件的时区。 您可以在其各自的详细信息页面上检查特定 graylog-server 节点的时区设置。
           </p>
 
           <dl className="system-dl">
-            <dt>User <em>{currentUser.username}</em>:</dt>
+            <dt>用户 <em>{currentUser.username}</em>:</dt>
             <dd><Timestamp dateTime={time} format={timeFormat} /></dd>
-            <dt>Your web browser:</dt>
+            <dt>您的网络浏览器:</dt>
             <dd><Timestamp dateTime={time} format={timeFormat} tz="browser" /></dd>
-            <dt>Graylog server:</dt>
+            <dt>Graylog 服务器:</dt>
             <dd><Timestamp dateTime={time} format={timeFormat} tz={serverTimezone} /></dd>
           </dl>
         </Col>

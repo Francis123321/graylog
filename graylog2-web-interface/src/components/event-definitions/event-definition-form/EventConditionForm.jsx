@@ -104,30 +104,29 @@ class EventConditionForm extends React.Component {
     return (
       <Row>
         <Col md={7} lg={6}>
-          <h2 className={commonStyles.title}>Event Condition</h2>
+          <h2 className={commonStyles.title}>事件条件</h2>
 
           <p>
-            Configure how Graylog should create Events of this kind. You can later use those Events as input on other
-            Conditions, making it possible to build powerful Conditions based on others.
+            配置 Graylog 应如何创建此类事件。 您可以稍后将这些事件用作其他条件的输入，从而可以基于其他条件构建强大的条件。
           </p>
 
           <FormGroup controlId="event-definition-priority" validationState={validation.errors.config ? 'error' : null}>
-            <ControlLabel>Condition Type</ControlLabel>
-            <Select placeholder="Select a Condition Type"
+            <ControlLabel>条件类型</ControlLabel>
+            <Select placeholder="选择条件类型"
                     options={this.formattedEventDefinitionTypes()}
                     value={eventDefinition.config.type}
                     onChange={this.handleEventDefinitionTypeChange}
                     clearable={false}
                     required />
             <HelpBlock>
-              {lodash.get(validation, 'errors.config[0]', 'Choose the type of Condition for this Event.')}
+              {lodash.get(validation, 'errors.config[0]', '选择此事件的条件类型。')}
             </HelpBlock>
           </FormGroup>
         </Col>
 
         <Col md={5} lg={5} lgOffset={1}>
           <HelpPanel className={styles.conditionTypesInfo}
-                     title="Available Conditions">
+                     title="可用条件">
             {this.renderConditionTypeDescriptions()}
           </HelpPanel>
         </Col>

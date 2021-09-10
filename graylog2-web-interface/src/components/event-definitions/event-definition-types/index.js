@@ -24,10 +24,9 @@ PluginStore.register(new PluginManifest({}, {
   eventDefinitionTypes: [
     {
       type: 'aggregation-v1',
-      displayName: 'Filter & Aggregation',
+      displayName: '过滤和聚合',
       sortOrder: 0, // Sort before conditions working on events
-      description: 'Create Events from log messages by filtering them and (optionally) '
-        + 'aggregating their results to match a given condition. These Events can be used as input for a Correlation Rule.',
+      description: '通过过滤日志消息并（可选）聚合它们的结果以匹配给定条件，从日志消息创建事件。 这些事件可用作相关规则的输入。',
       formComponent: FilterAggregationFormContainer,
       summaryComponent: FilterAggregationSummary,
       defaultConfig: FilterAggregationForm.defaultConfig,

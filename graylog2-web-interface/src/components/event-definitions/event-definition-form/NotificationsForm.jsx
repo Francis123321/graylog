@@ -115,12 +115,12 @@ class NotificationsForm extends React.Component {
         <Col md={6} lg={5}>
           <span className={styles.manageNotifications}>
             <LinkContainer to={Routes.ALERTS.NOTIFICATIONS.LIST} target="_blank">
-              <Button bsStyle="link" bsSize="small">Manage Notifications <Icon name="external-link-alt" /></Button>
+              <Button bsStyle="link" bsSize="small">管理通知 <Icon name="external-link-alt" /></Button>
             </LinkContainer>
           </span>
-          <h2 className={commonStyles.title}>Notifications <small>(optional)</small></h2>
+          <h2 className={commonStyles.title}>通知 <small>(可选)</small></h2>
           <p>
-            Is this Event important enough that requires your attention? Make it an Alert by adding Notifications to it.
+            这个事件是否足够重要，需要你的关注？ 通过向其添加通知使其成为警报。
           </p>
 
           <NotificationList eventDefinition={eventDefinition}

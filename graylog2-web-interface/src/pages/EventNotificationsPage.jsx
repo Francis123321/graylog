@@ -26,25 +26,24 @@ const EventNotificationsPage = () => {
   return (
     <DocumentTitle title="Notifications">
       <span>
-        <PageHeader title="Notifications">
+        <PageHeader title="通知">
           <span>
-            Notifications alert you of any configured Event when they occur. Graylog can send Notifications directly
-            to you or to other systems you use for that purpose.
+            通知会在发生任何配置的事件时提醒您。 Graylog 可以直接向您或您为此目的使用的其他系统发送通知。
           </span>
 
           <span>
-            Remember to assign Notifications while creating or editing an Event Definition.
+            请记住在创建或编辑事件定义时分配通知。
           </span>
 
           <ButtonToolbar>
             <LinkContainer to={Routes.ALERTS.LIST}>
-              <Button bsStyle="info">Alerts & Events</Button>
+              <Button bsStyle="info">警报和事件</Button>
             </LinkContainer>
             <LinkContainer to={Routes.ALERTS.DEFINITIONS.LIST}>
-              <Button bsStyle="info">Event Definitions</Button>
+              <Button bsStyle="info">事件定义</Button>
             </LinkContainer>
             <LinkContainer to={Routes.ALERTS.NOTIFICATIONS.LIST}>
-              <Button bsStyle="info">Notifications</Button>
+              <Button bsStyle="info">通知</Button>
             </LinkContainer>
           </ButtonToolbar>
         </PageHeader>

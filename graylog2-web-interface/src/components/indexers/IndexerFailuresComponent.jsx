@@ -81,11 +81,10 @@ class IndexerFailuresComponent extends React.Component {
     return (
       <Row className="content">
         <Col md={12}>
-          <h2>Indexer failures</h2>
+          <h2>索引器故障</h2>
 
           <SmallSupportLink>
-            Every message that was not successfully indexed will be logged as an indexer failure. You can learn more about this feature in the{' '}
-            <DocumentationLink page={DocsHelper.PAGES.INDEXER_FAILURES} text="Graylog documentation" />.
+            每条未成功索引的消息都将记录为索引器故障。 您可以在<DocumentationLink page={DocsHelper.PAGES.INDEXER_FAILURES} text="Graylog文档" />中了解有关此功能的更多信息。
           </SmallSupportLink>
 
           {content}

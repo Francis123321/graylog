@@ -82,24 +82,24 @@ const DecoratorsConfigUpdate = ({ streams, decorators, types, show = false, onCa
                            showModal={show}
                            onHide={_onCancel}>
       <Modal.Header closeButton>
-        <Modal.Title>Update Default Decorators Configuration</Modal.Title>
+        <Modal.Title>更新默认装饰器配置</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <p>Select the stream for which you want to change the set of default decorators.</p>
+        <p>选择要更改其默认装饰器集的流。</p>
         <StreamSelect onChange={setCurrentStream} value={currentStream} streams={streams} />
 
         <IfPermitted permissions="decorators:create">
-          <p>Select the type to create a new decorator for this stream:</p>
+          <p>选择类型以为此流创建新的装饰器：</p>
           <AddDecoratorButton stream={currentStream} nextOrder={nextOrder} decoratorTypes={types} onCreate={onCreate} showHelp={false} />
         </IfPermitted>
 
-        <p>Use drag and drop to change the execution order of the decorators.</p>
+        <p>使用拖放来更改装饰器的执行顺序。</p>
 
         <DecoratorList decorators={decoratorItems} onReorder={onReorder} />
       </Modal.Body>
       <Modal.Footer>
-        <Button type="button" onClick={_onCancel}>Cancel</Button>
-        <Button bsStyle="primary" onClick={onSubmit}>Save</Button>
+        <Button type="button" onClick={_onCancel}>取消</Button>
+        <Button bsStyle="primary" onClick={onSubmit}>保存</Button>
       </Modal.Footer>
     </BootstrapModalWrapper>
   );

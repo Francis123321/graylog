@@ -39,30 +39,27 @@ const CreateEventDefinitionPage = ({ currentUser }) => {
   return (
     <DocumentTitle title="New Notification">
       <span>
-        <PageHeader title="New Notification">
+        <PageHeader title="新通知 ">
           <span>
-            Notifications alert you of any configured Event when they occur. Graylog can send Notifications directly
-            to you or to other systems you use for that purpose.
+            通知会在发生任何配置的事件时提醒您。 Graylog 可以直接向您或您为此目的使用的其他系统发送通知
           </span>
 
           <span>
-            Graylog&apos;s new Alerting system let you define more flexible and powerful rules. Learn more in the{' '}
-            <DocumentationLink page={DocsHelper.PAGES.ALERTS}
-                               text="documentation" />
+            Graylog 的新警报系统让您可以定义更灵活、更强大的规则。 在<DocumentationLink page={DocsHelper.PAGES.ALERTS} text="文档" />中了解更多信息
           </span>
 
           <ButtonToolbar>
             <LinkContainer to={Routes.ALERTS.LIST}>
-              <Button bsStyle="info">Alerts & Events</Button>
+              <Button bsStyle="info">警报和事件</Button>
             </LinkContainer>
             <IfPermitted permissions="eventdefinitions:read">
               <LinkContainer to={Routes.ALERTS.DEFINITIONS.LIST}>
-                <Button bsStyle="info">Event Definitions</Button>
+                <Button bsStyle="info">事件定义</Button>
               </LinkContainer>
             </IfPermitted>
             <IfPermitted permissions="eventnotifications:read">
               <LinkContainer to={Routes.ALERTS.NOTIFICATIONS.LIST}>
-                <Button bsStyle="info">Notifications</Button>
+                <Button bsStyle="info">通知</Button>
               </LinkContainer>
             </IfPermitted>
           </ButtonToolbar>

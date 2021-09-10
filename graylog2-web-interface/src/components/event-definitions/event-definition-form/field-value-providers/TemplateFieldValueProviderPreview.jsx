@@ -25,18 +25,18 @@ class TemplateFieldValueProviderPreview extends React.Component {
 
   render() {
     return (
-      <Panel className={styles.templatePreview} header={<h3>Available Fields in Template</h3>}>
+      <Panel className={styles.templatePreview} header={<h3>模板中的可用字段</h3>}>
         <p>
-          Graylog lets you enrich generated Events with dynamic values. You can access Fields from the Event context{' '}
+          Graylog 使您可以使用动态值丰富生成的事件。 您可以从事件上下文访问字段{' '}
           {/* eslint-disable-next-line no-template-curly-in-string */}
-          with <code>{'${source.<fieldName>}'}</code>.
+          <code>{'${source.<fieldName>}'}</code>.
           <br />
-          Available Fields in the Template depend on the condition that created the Event:
+          模板中的可用字段取决于创建事件的条件：
         </p>
         <ul>
-          <li><b>Filter:</b> All Fields in the original log message</li>
-          <li><b>Aggregation:</b> Fields set in Group By with their original names</li>
-          <li><b>Correlation:</b> All Fields in the last matched and non-negated Event</li>
+          <li><b>筛选:</b> 原始日志消息中的所有字段</li>
+          <li><b>聚合:</b> 通过其原始名称给字段分组</li>
+          <li><b>相关性:</b> 最后一个匹配和非否定事件中的所有字段 </li>
         </ul>
       </Panel>
     );

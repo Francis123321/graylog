@@ -31,24 +31,23 @@ const SourcesList = styled.ul`
 
 const SupportSources = () => (
   <div className="support-sources">
-    <h2>Need help?</h2>
+    <h2>需要帮忙？ </h2>
     <p>
-      Do not hesitate to consult the Graylog community if your questions are not answered in the{' '}
-      <DocumentationLink page={DocsHelper.PAGES.WELCOME} text="documentation" />.
+      如果<DocumentationLink page={DocsHelper.PAGES.WELCOME} text="文档" />中没有回答您的问题，请随时咨询 Graylog 社区。
     </p>
 
     <SourcesList>
       <li>
         <Icon name="users" />&nbsp;
-        <a href="https://www.graylog.org/community-support/" target="_blank" rel="noopener noreferrer">Community support</a>
+        <a href="https://www.graylog.org/community-support/" target="_blank" rel="noopener noreferrer">社区支持 </a>
       </li>
       <li>
         <Icon name="github-alt" type="brand" />&nbsp;&nbsp;
-        <a href="https://github.com/Graylog2/graylog2-server/issues" target="_blank" rel="noopener noreferrer">Issue tracker</a>
+        <a href="https://github.com/Graylog2/graylog2-server/issues" target="_blank" rel="noopener noreferrer">问题跟踪器</a>
       </li>
       <li>
         <Icon name="heart" />&nbsp;
-        <a href="https://www.graylog.org/professional-support" target="_blank" rel="noopener noreferrer">Professional support</a>
+        <a href="https://www.graylog.org/professional-support" target="_blank" rel="noopener noreferrer">专业支持 </a>
       </li>
     </SourcesList>
   </div>

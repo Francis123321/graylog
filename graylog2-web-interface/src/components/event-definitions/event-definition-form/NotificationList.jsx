@@ -87,7 +87,7 @@ class NotificationList extends React.Component {
       });
     const addNotificationButton = (
       <Button bsStyle="success" onClick={onAddNotificationClick}>
-        Add Notification
+        添加通知
       </Button>
     );
 
@@ -95,7 +95,7 @@ class NotificationList extends React.Component {
       return (
         <>
           <p>
-            This Event is not configured to trigger any Notifications yet.
+            此事件尚未配置为触发任何通知。
           </p>
           {addNotificationButton}
         </>

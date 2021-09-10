@@ -111,19 +111,19 @@ class UrlWhiteListConfig extends React.Component<Props, State> {
 
     return (
       <div>
-        <h2>URL Whitelist Configuration  {disabled ? <small>(Disabled)</small> : <small>(Enabled)</small> }</h2>
+        <h2>URL白名单配置 {disabled ? <small>(已禁用)</small> : <small>(启用)</small> }</h2>
         <p>
-          When enabled, outgoing HTTP requests from Graylog servers, such as event notifications or HTTP-based data adapter requests, are validated against the whitelists configured here.
-          Because the HTTP requests are made from the Graylog servers, they might be able to reach more sensitive systems than an external user would have access to, including AWS EC2 metadata, which can contain keys and other secrets, Elasticsearch and others.
-          Whitelist administrative access is separate from data adapters and event notification configuration.
+          启用后，来自 Graylog 服务器的传出 HTTP 请求（例如事件通知或基于 HTTP 的数据适配器请求）将根据此处配置的白名单进行验证。
+          由于 HTTP 请求是从 Graylog 服务器发出的，因此它们可能能够访问比外部用户可以访问的更敏感的系统，包括 AWS EC2 元数据，其中可以包含密钥和其他机密、Elasticsearch 等。
+          白名单管理访问与数据适配器和事件通知配置分开。
         </p>
         <Table striped bordered condensed className="top-margin">
           <thead>
             <tr>
               <th>#</th>
-              <th>Title</th>
-              <th>URL</th>
-              <th>Type</th>
+              <th>标题</th>
+              <th>网址</th>
+              <th>类型</th>
             </tr>
           </thead>
           <tbody>
@@ -131,16 +131,16 @@ class UrlWhiteListConfig extends React.Component<Props, State> {
           </tbody>
         </Table>
         <IfPermitted permissions="urlwhitelist:write">
-          <Button bsStyle="info" bsSize="xs" onClick={this._openModal}>Update</Button>
+          <Button bsStyle="info" bsSize="xs" onClick={this._openModal}>修改</Button>
         </IfPermitted>
         <BootstrapModalForm ref={(configModal) => { this.configModal = configModal; }}
                             bsSize="lg"
-                            title="Update Whitelist Configuration"
+                            title="更新白名单配置"
                             onSubmitForm={this._saveConfig}
                             onModalClose={this._resetConfig}
                             submitButtonDisabled={!isValid}
                             submitButtonText="Save">
-          <h3>Whitelist URLs</h3>
+          <h3>白名单 URL</h3>
           <UrlWhiteListForm urls={entries} disabled={disabled} onUpdate={this._update} />
         </BootstrapModalForm>
       </div>
