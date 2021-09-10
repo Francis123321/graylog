@@ -53,22 +53,19 @@ const DashboardsPage = ({ dashboards: { list, pagination } }: Props) => {
   return (
     <DocumentTitle title="Dashboards">
       <span>
-        <PageHeader title="Dashboards">
+        <PageHeader title="仪表盘">
           <span>
-            Use dashboards to create specific views on your messages. Create a new dashboard here and add any graph or
-            chart you create in other parts of Graylog with one click.
+            使用仪表板为您的消息创建特定视图。 在此处创建一个新仪表板，然后一键添加您在 Graylog 的其他部分创建的任何图形或图表。
           </span>
 
           <span>
-            Take a look at the
-            {' '}<DocumentationLink page={DocsHelper.PAGES.DASHBOARDS} text="dashboard tutorial" />{' '}
-            for lots of other useful tips.
+            查看<DocumentationLink page={DocsHelper.PAGES.DASHBOARDS} text="仪表板教程" />，了解许多其他有用的提示。
           </span>
 
           <IfPermitted permissions="dashboards:create">
             <span>
               <LinkContainer to={Routes.pluginRoute('DASHBOARDS_NEW')}>
-                <Button bsStyle="success" bsSize="lg">Create new dashboard</Button>
+                <Button bsStyle="success" bsSize="lg">创建新仪表板</Button>
               </LinkContainer>
             </span>
           </IfPermitted>

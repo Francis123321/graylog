@@ -114,12 +114,11 @@ const EnterprisePage = createReactClass({
     return (
       <DocumentTitle title="Try Graylog Enterprise">
         <div>
-          <PageHeader title="Try Graylog Enterprise">
+          <PageHeader title="试用 Graylog Enterprise">
             {null}
 
             <span>
-              Graylog Enterprise adds commercial functionality to the Open Source Graylog core. You can learn more
-              about Graylog Enterprise on the <EnterpriseProductLink>product page</EnterpriseProductLink>.
+              Graylog Enterprise 向开源 Graylog 核心添加了商业功能。 您可以在<EnterpriseProductLink>产品页面 </EnterpriseProductLink>上了解有关 Graylog Enterprise 的更多信息。
             </span>
           </PageHeader>
 
@@ -130,36 +129,31 @@ const EnterprisePage = createReactClass({
             <IfPermitted permissions="freelicenses:create">
               <Row className="content">
                 <Col md={6}>
-                  <GraylogEnterpriseHeader>Graylog Enterprise</GraylogEnterpriseHeader>
+                  <GraylogEnterpriseHeader>Graylog 企业 </GraylogEnterpriseHeader>
                   <BiggerFontSize>
-                    <p><strong>Extend Graylog’s Open Source capabilities with a free trial of Graylog Enterprise for 30 days.</strong></p>
+                    <p><strong>通过 30 天的 Graylog Enterprise 免费试用扩展 Graylog 的开源功能。 </strong></p>
                     <p>
-                      Graylog Enterprise introduces productivity and compliance features designed to help organizations
-                      reduce risk while encouraging collaboration across a large number of users.
+                      Graylog Enterprise 引入了生产力和合规性功能，旨在帮助组织降低风险，同时鼓励大量用户之间的协作。
                     </p>
 
-                    <p>Graylog Enterprise includes:</p>
+                    <p>Graylog 企业包括 :</p>
 
                     <EnterpriseFeatureList>
-                      <li>Automated <DocumentationLink page="archiving.html" text={<strong>archiving</strong>} /> and retention</li>
-                      <li><DocumentationLink page="auditlog.html" text={<strong>Audit logs</strong>} /> of Graylog user activity</li>
+                      <li>自动<DocumentationLink page="archiving.html" text={<strong>归档</strong>} />和保留</li>
+                      <li>Graylog 用户活动的<DocumentationLink page="auditlog.html" text={<strong>审计日志</strong>} /></li>
                       <li>
-                        Alerts with <DocumentationLink page="alerts.html#filter-with-dynamic-lists-enterprise-feature" text={<strong>dynamic lists</strong>} />
-                        {' '}and <DocumentationLink page="alerts.html" text={<strong>correlation engine</strong>} /> for events
-                        to minimize the number of alerts that you need to create and maintain
+                        带有<DocumentationLink page="alerts.html#filter-with-dynamic-lists-enterprise-feature" text={<strong>动态列表</strong>} />和事件<DocumentationLink page="alerts.html" text={<strong>关联引擎</strong>} />的警报，可最大限度地减少您需要创建和维护的警报数量
                       </li>
                       <li>
-                        Customizable <DocumentationLink page="reporting.html" text={<strong>scheduled reporting</strong>} /> using dashboard widgets for sharing analysis outside Graylog
+                        使用仪表板小部件可自定义<DocumentationLink page="reporting.html" text={<strong>计划报告</strong>} />，以便在 Graylog 之外共享分析
                       </li>
-                      <li><DocumentationLink page="searching/parameters.html"
-                                             text={<strong>Parameterized search templates</strong>} /> enable you to
-                        combine and reuse queries
+                      <li>
+                        <DocumentationLink page="searching/parameters.html" text={<strong>参数化搜索模板</strong>} />使您能够组合和重用查询
                       </li>
-                      <li><DocumentationLink page="integrations/forwarder.html"
-                                             text={<strong>Data forwarder</strong>} /> to easily combine data from
-                        multiple Graylog instances
+                      <li>
+                        <DocumentationLink page="integrations/forwarder.html" text={<strong>数据转发器</strong>} />可轻松组合来自多个 Graylog 实例的数据
                       </li>
-                      <li>And more...</li>
+                      <li>更多...</li>
                     </EnterpriseFeatureList>
                   </BiggerFontSize>
                 </Col>

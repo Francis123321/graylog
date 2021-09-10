@@ -130,7 +130,7 @@ const DashboardSearchBar = ({ config, globalOverride, disableSearch = false, onE
                       <Field name="queryString">
                         {({ field: { name, value, onChange } }) => (
                           <StyledQueryInput value={value}
-                                            placeholder="Apply filter to all widgets"
+                                            placeholder="将过滤器应用于所有小部件 "
                                             onChange={(newQuery) => {
                                               onChange({ target: { value: newQuery, name } });
 
