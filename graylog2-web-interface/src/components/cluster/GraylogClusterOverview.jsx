@@ -89,9 +89,9 @@ const GraylogClusterOverview = createReactClass({
     if (nodes) {
       content = (
         <dl className="system-dl" style={{ marginBottom: 0 }}>
-          <dt>Cluster ID:</dt>
+          <dt>集群ID:</dt>
           <dd>{nodes.clusterId || 'Not available'}</dd>
-          <dt>Number of nodes:</dt>
+          <dt>节点数:</dt>
           <dd>{nodes.nodeCount}</dd>
         </dl>
       );
@@ -121,14 +121,14 @@ const GraylogClusterOverview = createReactClass({
 
     return (
       <>
-        <h3 ref={(container) => { this._container = container; }} style={{ marginBottom: 10 }}>Outgoing traffic {sumOutput}</h3>
+        <h3 ref={(container) => { this._container = container; }} style={{ marginBottom: 10 }}>出站流量 {sumOutput}</h3>
         {trafficGraph}
       </>
     );
   },
 
   renderHeader() {
-    return <h2 style={{ marginBottom: 10 }}>Graylog cluster</h2>;
+    return <h2 style={{ marginBottom: 10 }}>Graylog 集群</h2>;
   },
 
   renderDefaultLayout() {

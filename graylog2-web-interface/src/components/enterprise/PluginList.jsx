@@ -45,7 +45,7 @@ const PluginList = createReactClass({
 
     return (
       <>
-        <p>This is the status of Graylog Enterprise modules in this cluster:</p>
+        <p>这是该集群中 Graylog Enterprise 模块的状态:</p>
         <ul className={style.enterprisePlugins}>
           {enterprisePluginList}
         </ul>
