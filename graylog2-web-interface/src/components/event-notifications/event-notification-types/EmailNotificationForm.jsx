@@ -136,73 +136,73 @@ class EmailNotificationForm extends React.Component {
       <>
         <Input id="notification-subject"
                name="subject"
-               label="Subject"
+               label="主题 "
                type="text"
                bsStyle={validation.errors.subject ? 'error' : null}
-               help={lodash.get(validation, 'errors.subject[0]', 'The subject that should be used for the email notification.')}
+               help={lodash.get(validation, 'errors.subject[0]', '电子邮件通知应使用的主题。')}
                value={config.subject || ''}
                onChange={this.handleChange}
                required />
         <HideOnCloud>
           <Input id="notification-sender"
                  name="sender"
-                 label={<ControlLabel>Sender <small className="text-muted">(Optional)</small></ControlLabel>}
+                 label={<ControlLabel>发件人  <small className="text-muted">(可选)</small></ControlLabel>}
                  type="text"
                  bsStyle={validation.errors.sender ? 'error' : null}
                  help={lodash.get(validation, 'errors.sender[0]',
-                   'The email address that should be used as the notification sender. Leave it empty to use the default sender address.')}
+                   '应用作通知发件人的电子邮件地址。 将其留空以使用默认发件人地址。')}
                  value={config.sender || ''}
                  onChange={this.handleChange} />
         </HideOnCloud>
         <FormGroup controlId="notification-user-recipients"
                    validationState={validation.errors.recipients ? 'error' : null}>
-          <ControlLabel>User recipient(s) <small className="text-muted">(Optional)</small></ControlLabel>
+          <ControlLabel>用户收件人 <small className="text-muted">(可选)</small></ControlLabel>
           <MultiSelect id="notification-user-recipients"
                        value={Array.isArray(config.user_recipients) ? config.user_recipients.join(',') : ''}
-                       placeholder="Select user(s)..."
+                       placeholder="选择用户 ..."
                        options={this.formatUsers(users)}
                        onChange={this.handleRecipientsChange('user_recipients')} />
           <HelpBlock>
-            {lodash.get(validation, 'errors.recipients[0]', 'Select Graylog users that will receive this Notification.')}
+            {lodash.get(validation, 'errors.recipients[0]', '选择将收到此通知的 Graylog 用户。')}
           </HelpBlock>
         </FormGroup>
 
         <FormGroup controlId="notification-email-recipients"
                    validationState={validation.errors.recipients ? 'error' : null}>
-          <ControlLabel>Email recipient(s) <small className="text-muted">(Optional)</small></ControlLabel>
+          <ControlLabel>电子邮件收件人 <small className="text-muted">(可选)</small></ControlLabel>
           <MultiSelect id="notification-email-recipients"
                        value={Array.isArray(config.email_recipients) ? config.email_recipients.join(',') : ''}
                        addLabelText={'Add email "{label}"?'}
-                       placeholder="Type email address"
+                       placeholder="输入电子邮件地址 "
                        options={[]}
                        onChange={this.handleRecipientsChange('email_recipients')}
                        allowCreate />
           <HelpBlock>
-            {lodash.get(validation, 'errors.recipients[0]', 'Add email addresses that will receive this Notification.')}
+            {lodash.get(validation, 'errors.recipients[0]', '添加将接收此通知的电子邮件地址。')}
           </HelpBlock>
         </FormGroup>
         <FormGroup controlId="notification-body-template"
                    validationState={validation.errors.body ? 'error' : null}>
-          <ControlLabel>Body Template</ControlLabel>
+          <ControlLabel>正文模板</ControlLabel>
           <SourceCodeEditor id="notification-body-template"
                             mode="text"
                             theme="light"
                             value={config.body_template || ''}
                             onChange={this.handleBodyTemplateChange} />
           <HelpBlock>
-            {lodash.get(validation, 'errors.body[0]', 'The template that will be used to generate the email body.')}
+            {lodash.get(validation, 'errors.body[0]', '将用于生成电子邮件正文的模板。')}
           </HelpBlock>
         </FormGroup>
         <FormGroup controlId="notification-body-template"
                    validationState={validation.errors.body ? 'error' : null}>
-          <ControlLabel>HTML Body Template</ControlLabel>
+          <ControlLabel>HTML 正文模板</ControlLabel>
           <SourceCodeEditor id="notification-html-body-template"
                             mode="text"
                             theme="light"
                             value={config.html_body_template || ''}
                             onChange={this.handleHtmlBodyTemplateChange} />
           <HelpBlock>
-            {lodash.get(validation, 'errors.body[0]', 'The template that will be used to generate the email HTML body.')}
+            {lodash.get(validation, 'errors.body[0]', '将用于生成电子邮件 HTML 正文的模板。')}
           </HelpBlock>
         </FormGroup>
       </>

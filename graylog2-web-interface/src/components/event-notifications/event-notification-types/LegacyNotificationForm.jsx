@@ -125,21 +125,21 @@ class LegacyNotificationForm extends React.Component {
         <fieldset>
           <FormGroup controlId="notification-legacy-select"
                      validationState={validation.errors.callback_type ? 'error' : null}>
-            <ControlLabel>Choose Legacy Notification</ControlLabel>
+            <ControlLabel>选择旧通知</ControlLabel>
             <Select id="notification-legacy-select"
                     matchProp="label"
-                    placeholder="Select Legacy Notification"
+                    placeholder="选择旧通知"
                     onChange={this.handleSelectNotificationChange}
                     options={this.formatLegacyTypes(legacyTypes)}
                     value={callbackType} />
             <HelpBlock>
-              {lodash.get(validation, 'errors.callback_type[0]', 'Select a Legacy Notification to use on this Event Definition.')}
+              {lodash.get(validation, 'errors.callback_type[0]', '选择要在此事件定义上使用的旧通知。')}
             </HelpBlock>
           </FormGroup>
         </fieldset>
 
         <Alert bsStyle="danger" className={commonStyles.legacyNotificationAlert}>
-          Legacy alarm callbacks are deprecated and will be removed in Graylog 4.1. Please switch to the new notification types as soon as possible!
+          旧警报回调已弃用，并将在 Graylog 4.1 中删除。 请尽快切换到新的通知类型！
         </Alert>
 
         {content}
