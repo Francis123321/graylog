@@ -20,29 +20,52 @@ import PropTypes from 'prop-types';
 import { LinkContainer } from 'components/graylog/router';
 import { ButtonToolbar, Col, Row, Button } from 'components/graylog';
 import { DocumentTitle, IfPermitted, PageHeader } from 'components/common';
-import DocumentationLink from 'components/support/DocumentationLink';
-import EventsContainer from 'components/events/events/EventsContainer';
-import DocsHelper from 'util/DocsHelper';
-import Routes from 'routing/Routes';
+import createReactClass from 'create-react-class';
 import withLocation from 'routing/withLocation';
 
-const TopologyPage = ({ location }) => {
-  const filteredSourceStream = location.query.stream_id;
+// const TopologyPage = ({ location }) => {
+//   const filteredSourceStream = location.query.stream_id;
+//
+//   return (
+//     <DocumentTitle title="Topology">
+//       {/*yangzy_tabContent*/}
+//       {/*<div style={{height:'100%','borderRadius': '4px',*/}
+//         {/*border: '1px solid #cdcdcd', 'marginBottom': '10px'}}>123</div>*/}
+//
+//       <Row className="content" style={{height: '100%'}}>
+//         <Col md={12} style={{height: '100%'}}>
+//           <div id="topologyAppsContainer" style={{width:'100%',height:'100%'}}>1565456</div>
+//         </Col>
+//       </Row>
+//     </DocumentTitle>
+//   );
+// };
 
-  return (
-    <DocumentTitle title="Topology">
-      {/*yangzy_tabContent*/}
-      {/*<div style={{height:'100%','borderRadius': '4px',*/}
-        {/*border: '1px solid #cdcdcd', 'marginBottom': '10px'}}>123</div>*/}
+const TopologyPage = createReactClass({
+  componentDidMount() {
+    console.log('组件初始化了')
+    window.addNewVue().$mount('#topologyAppsContainer')
+    // vue里通过这个this调用getData方法
+    window.setReactThis(this)
 
-      <Row className="content" style={{height: '100%'}}>
-        <Col md={12} style={{height: '100%'}}>
-          <iframe width="100%" height='100%' src="topology/index.html" frameBorder="0"></iframe>
-        </Col>
-      </Row>
-    </DocumentTitle>
-  );
-};
+  },
+  getData: function (data) {
+    console.log("查询条件："+data)
+    window.setReactData('这是查询返回值')
+  },
+  render() {
+    return (
+      <DocumentTitle title="Topology">
+        {/*yangzy_tabContent*/}
+        <Row className="content" style={{height: '100%'}}>
+          <Col md={12} style={{height: '100%'}}>
+            <div id="topologyAppsContainer" style={{width:'100%',height:'100%'}}>1565456</div>
+          </Col>
+        </Row>
+      </DocumentTitle>
+    );
+  }
+})
 
 TopologyPage.propTypes = {
   location: PropTypes.object.isRequired,

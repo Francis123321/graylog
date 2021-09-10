@@ -25,7 +25,6 @@ import { themePropTypes } from 'theme';
 // Don't pass active prop, since `a` tag doesn't support it.
 // eslint-disable-next-line no-unused-vars
 function BrandComponent({ active, theme, ...props }) {
-  console.log(theme)
   if (theme.mode === 'noir') {
     return (
       <a {...props} className="navbar-brand" style={{padding:'10px 15px'}}>
