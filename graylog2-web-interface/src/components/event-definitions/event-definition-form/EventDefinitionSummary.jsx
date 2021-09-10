@@ -70,13 +70,13 @@ class EventDefinitionSummary extends React.Component {
   renderDetails = (eventDefinition) => {
     return (
       <>
-        <h3 className={commonStyles.title}>Details</h3>
+        <h3 className={commonStyles.title}>细节</h3>
         <dl>
-          <dt>Title</dt>
-          <dd>{eventDefinition.title || 'No title given'}</dd>
-          <dt>Description</dt>
-          <dd>{eventDefinition.description || 'No description given'}</dd>
-          <dt>Priority</dt>
+          <dt>标题</dt>
+          <dd>{eventDefinition.title || '没有给出标题'}</dd>
+          <dt>描述</dt>
+          <dd>{eventDefinition.description || '没有给出描述'}</dd>
+          <dt>优先事项 </dt>
           <dd>{lodash.upperFirst(EventDefinitionPriorityEnum.properties[eventDefinition.priority].name)}</dd>
         </dl>
       </>
@@ -99,7 +99,7 @@ class EventDefinitionSummary extends React.Component {
         config: config,
         currentUser: currentUser,
       })
-      : <p>Condition plugin <em>{config.type}</em> does not provide a summary.</p>
+      : <p>条件插件<em>{config.type}</em>不提供摘要。</p>
     );
 
     return (
@@ -149,9 +149,9 @@ class EventDefinitionSummary extends React.Component {
 
     return (
       <>
-        <h3 className={commonStyles.title}>Fields</h3>
+        <h3 className={commonStyles.title}>字段</h3>
         {fieldNames.length === 0
-          ? <p>No Fields configured for Events based on this Definition.</p>
+          ? <p>没有为基于此定义的事件配置字段。</p>
           : this.renderFieldList(fieldNames, fields, keys)}
       </>
     );
@@ -230,12 +230,12 @@ class EventDefinitionSummary extends React.Component {
 
     return (
       <>
-        <h3 className={commonStyles.title}>Notifications</h3>
+        <h3 className={commonStyles.title}>通知 </h3>
         <p>
           {warning}
         </p>
         {effectiveDefinitionNotifications.length === 0 && notificationsWithMissingPermissions.length <= 0
-          ? <p>This Event is not configured to trigger any Notifications.</p>
+          ? <p>此事件未配置为触发任何通知。</p>
           : (
             <>
               {this.renderNotificationSettings(notificationSettings)}
@@ -253,7 +253,7 @@ class EventDefinitionSummary extends React.Component {
     return (
       <Row className={styles.eventSummary}>
         <Col md={12}>
-          <h2 className={commonStyles.title}>Event Summary</h2>
+          <h2 className={commonStyles.title}>活动概要</h2>
           {showValidation && <EventDefinitionValidationSummary validation={validation} />}
           <Row>
             <Col md={5}>

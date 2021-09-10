@@ -152,7 +152,7 @@ class EventNotificationFormContainer extends React.Component {
       .then(
         (response) => {
           testResult.error = false;
-          testResult.message = 'Notification was executed successfully.';
+          testResult.message = '通知已成功执行。';
 
           return response;
         },
@@ -161,10 +161,10 @@ class EventNotificationFormContainer extends React.Component {
           const { body } = errorResponse.additional;
 
           if (errorResponse.status === 400 && body && body.failed) {
-            testResult.message = 'Validation failed, please correct any errors in the form before continuing.';
+            testResult.message = '验证失败，请在继续之前更正表单中的任何错误。';
             this.setState({ validation: body });
           } else {
-            testResult.message = errorResponse.responseMessage || 'Unknown error, please check your Graylog server logs.';
+            testResult.message = errorResponse.responseMessage || '未知错误，请检查您的 Graylog 服务器日志。';
           }
         },
       )

@@ -122,16 +122,16 @@ class EditEventDefinitionPage extends React.Component {
 
             <ButtonToolbar>
               <LinkContainer to={Routes.ALERTS.LIST}>
-                <Button bsStyle="info">Alerts & Events</Button>
+                <Button bsStyle="info">警报和事件</Button>
               </LinkContainer>
               <IfPermitted permissions="eventdefinitions:read">
                 <LinkContainer to={Routes.ALERTS.DEFINITIONS.LIST}>
-                  <Button bsStyle="info">Event Definitions</Button>
+                  <Button bsStyle="info">事件定义</Button>
                 </LinkContainer>
               </IfPermitted>
               <IfPermitted permissions="eventnotifications:read">
                 <LinkContainer to={Routes.ALERTS.NOTIFICATIONS.LIST}>
-                  <Button bsStyle="info">Notifications</Button>
+                  <Button bsStyle="info">通知</Button>
                 </LinkContainer>
               </IfPermitted>
             </ButtonToolbar>
