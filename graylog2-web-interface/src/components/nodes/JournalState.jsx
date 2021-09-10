@@ -58,7 +58,7 @@ const JournalState = createReactClass({
 
   render() {
     if (this._isLoading()) {
-      return <Spinner text="Loading journal metrics..." />;
+      return <Spinner text="加载日志指标..." />;
     }
 
     const { nodeId } = this.props;
@@ -66,16 +66,14 @@ const JournalState = createReactClass({
     const metrics = MetricsExtractor.getValuesForNode(nodeMetrics, this.metricNames);
 
     if (Object.keys(metrics).length === 0) {
-      return <span>Journal metrics unavailable.</span>;
+      return <span>日志指标不可用。</span>;
     }
 
     return (
       <span>
-        The journal contains <strong>{numeral(metrics.entriesUncommitted).format('0,0')} unprocessed messages</strong> in {metrics.segments}
-        {' '}<Pluralize value={metrics.segments} singular="segment" plural="segments" />.{' '}
-        <strong>{numeral(metrics.append).format('0,0')} messages</strong> appended, <strong>
-          {numeral(metrics.read).format('0,0')} messages
-        </strong> read in the last second.
+        日志在 1 个段中包含<strong>{numeral(metrics.entriesUncommitted).format('0,0')}个未处理的消息</strong>。
+        附加了<strong>{numeral(metrics.append).format('0,0')}条消息</strong>，
+        最后一秒读取了<strong>{numeral(metrics.read).format('0,0')}条消息</strong>。
       </span>
     );
   },

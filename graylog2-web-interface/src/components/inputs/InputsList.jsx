@@ -204,7 +204,7 @@ const InputsList = createReactClass({
                         placeholder="Filter by title" />
             <br />
             <h2>
-              Global inputs
+              全球投入
               &nbsp;
               <small>{this.state.globalInputs.length} configured{this._nodeAffix()}</small>
             </h2>
@@ -215,7 +215,7 @@ const InputsList = createReactClass({
             <br />
             <br />
             <h2>
-              Local inputs
+              本地输入
               &nbsp;
               <small>{this.state.localInputs.length} configured{this._nodeAffix()}</small>
             </h2>
