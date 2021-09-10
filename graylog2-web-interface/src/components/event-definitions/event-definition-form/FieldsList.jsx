@@ -113,7 +113,7 @@ class FieldsList extends React.Component {
     const fieldNames = Object.keys(fields).sort(naturalSort);
     const addCustomFieldButton = (
       <Button bsStyle="success" onClick={this.handleAddFieldClick}>
-        Add Custom Field
+        添加自定义字段
       </Button>
     );
 
@@ -121,7 +121,7 @@ class FieldsList extends React.Component {
       return (
         <>
           <p>
-            This Event does not have any custom Fields yet.
+            此事件还没有任何自定义字段。
           </p>
           {addCustomFieldButton}
         </>

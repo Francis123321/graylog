@@ -54,35 +54,35 @@ class EventDetailsForm extends React.Component {
     return (
       <Row>
         <Col md={7} lg={6}>
-          <h2 className={commonStyles.title}>Event Details</h2>
+          <h2 className={commonStyles.title}>活动详情</h2>
           <fieldset>
             <Input id="event-definition-title"
                    name="title"
-                   label="Title"
+                   label="标题"
                    type="text"
                    bsStyle={validation.errors.title ? 'error' : null}
-                   help={lodash.get(validation, 'errors.title[0]', 'Title for this Event Definition, Events and Alerts created from it.')}
+                   help={lodash.get(validation, 'errors.title[0]', '此事件定义的标题、从中创建的事件和警报。')}
                    value={eventDefinition.title}
                    onChange={this.handleChange}
                    required />
 
             <Input id="event-definition-description"
                    name="description"
-                   label={<span>Description <small className="text-muted">(Optional)</small></span>}
+                   label={<span>说明 <small className="text-muted">（可选）</small></span>}
                    type="textarea"
-                   help="Longer description for this Event Definition."
+                   help="此事件定义的详细说明。"
                    value={eventDefinition.description}
                    onChange={this.handleChange}
                    rows={2} />
 
             <FormGroup controlId="event-definition-priority">
-              <ControlLabel>Priority</ControlLabel>
+              <ControlLabel>优先事项</ControlLabel>
               <Select options={priorityOptions}
                       value={lodash.toString(eventDefinition.priority)}
                       onChange={this.handlePriorityChange}
                       clearable={false}
                       required />
-              <HelpBlock>Choose the priority for Events created from this Definition.</HelpBlock>
+              <HelpBlock>选择从此定义创建的事件的优先级。</HelpBlock>
             </FormGroup>
           </fieldset>
         </Col>

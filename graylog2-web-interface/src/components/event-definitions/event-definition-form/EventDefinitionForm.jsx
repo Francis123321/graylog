@@ -146,27 +146,27 @@ class EventDefinitionForm extends React.Component {
     const steps = [
       {
         key: STEP_KEYS[0],
-        title: 'Event Details',
+        title: '活动详情',
         component: <EventDetailsForm {...defaultStepProps} />,
       },
       {
         key: STEP_KEYS[1],
-        title: lodash.defaultTo(eventDefinitionType.displayName, 'Condition'),
+        title: lodash.defaultTo(eventDefinitionType.displayName, '情况'),
         component: <EventConditionForm {...defaultStepProps} />,
       },
       {
         key: STEP_KEYS[2],
-        title: 'Fields',
+        title: '字段',
         component: <FieldsForm {...defaultStepProps} />,
       },
       {
         key: STEP_KEYS[3],
-        title: 'Notifications',
+        title: '通知',
         component: <NotificationsForm {...defaultStepProps} notifications={notifications} defaults={defaults} />,
       },
       {
         key: STEP_KEYS[4],
-        title: 'Summary',
+        title: '概括',
         component: (
           <EventDefinitionSummary action={action}
                                   eventDefinition={eventDefinition}

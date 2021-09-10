@@ -107,16 +107,15 @@ class FieldsForm extends React.Component {
     return (
       <Row>
         <Col md={12}>
-          <h2 className={commonStyles.title}>Event Fields <small>(optional)</small></h2>
+          <h2 className={commonStyles.title}>事件字段<small>（可选）</small></h2>
           <p>
-            Include additional information in Events generated from this Event Definition by adding custom Fields. That
-            can help you search Events or having more context when receiving Notifications.
+            通过添加自定义字段，在从此事件定义生成的事件中包含其他信息。 这可以帮助您在接收通知时搜索事件或获得更多上下文。
           </p>
 
           {errors.length > 0 && (
             <Alert bsStyle="danger" className={commonStyles.validationSummary}>
-              <h4>Fields with errors</h4>
-              <p>Please correct the following errors before saving this Event Definition:</p>
+              <h4>有错误的字段</h4>
+              <p>请在保存此事件定义之前更正以下错误：</p>
               <ul>
                 {errors.map((error) => {
                   return <li key={error}>{error}</li>;
