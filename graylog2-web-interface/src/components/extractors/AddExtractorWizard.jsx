@@ -51,15 +51,14 @@ class AddExtractorWizard extends React.Component {
     return (
       <Row className="content">
         <Col md={12}>
-          <h2 style={{ marginBottom: 5 }}>Add extractor</h2>
+          <h2 style={{ marginBottom: 5 }}>添加提取器</h2>
 
           <p>
-            Start by loading a message to have an example to work on. You can decide whether to load a recent message
-            received by this input, or manually select a message giving its ID.
+            首先加载一条消息来处理一个示例。 您可以决定是加载此输入接收到的最近消息，还是手动选择提供其 ID 的消息。
           </p>
           <p>
             <Button bsStyle="info" bsSize="small" onClick={this._showAddExtractorForm} disabled={this.state.showExtractorForm}>
-              Get started
+              开始
             </Button>
           </p>
 

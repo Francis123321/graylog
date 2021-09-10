@@ -49,14 +49,14 @@ class ImportExtractors extends React.Component {
         <Col md={12}>
           <Row>
             <Col md={12}>
-              <h2>Extractors JSON</h2>
+              <h2>JSON提取器</h2>
             </Col>
           </Row>
           <Row>
             <Col md={12}>
               <form onSubmit={this._onSubmit}>
                 <Input type="textarea" ref={(extractorsInput) => { this.extractorsInput = extractorsInput; }} id="extractor-export-textarea" rows={30} />
-                <Button type="submit" bsStyle="success">Add extractors to input</Button>
+                <Button type="submit" bsStyle="success">将提取器添加到输入</Button>
               </form>
             </Col>
           </Row>
