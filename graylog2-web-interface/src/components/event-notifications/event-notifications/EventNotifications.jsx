@@ -68,12 +68,11 @@ class EventNotifications extends React.Component {
         <Col md={4} mdOffset={4}>
           <EmptyEntity>
             <p>
-              Configure Event Notifications that can alert you when an Event occurs. You can also use Notifications
-              to integrate Graylog Alerts with an external alerting system you use.
+              配置可以在事件发生时提醒您的事件通知。 您还可以使用通知将 Graylog 警报与您使用的外部警报系统集成。
             </p>
             <IfPermitted permissions="eventnotifications:create">
               <LinkContainer to={Routes.ALERTS.NOTIFICATIONS.CREATE}>
-                <Button bsStyle="success">Get Started!</Button>
+                <Button bsStyle="success">开始!</Button>
               </LinkContainer>
             </IfPermitted>
           </EmptyEntity>

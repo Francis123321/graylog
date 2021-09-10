@@ -98,17 +98,17 @@ class FieldForm extends React.Component {
 
     requiredFields.forEach((requiredField) => {
       if (!lodash.get(this.state, requiredField)) {
-        errors[requiredField] = 'Field cannot be empty.';
+        errors[requiredField] = '字段不能为空。';
       }
     });
 
     if (isKey && (!lodash.isNumber(keyPosition) || Number(keyPosition) < 1)) {
-      errors.key_position = 'Field must be a positive number.';
+      errors.key_position = '字段必须是正数。';
     }
 
     pluginRequiredFields.forEach((requiredField) => {
       if (!lodash.get(config, `providers[0].${requiredField}`)) {
-        errors[requiredField] = 'Field cannot be empty.';
+        errors[requiredField] = '字段不能为空。';
       }
     });
 

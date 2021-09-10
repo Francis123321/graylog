@@ -94,23 +94,23 @@ class LookupTableFieldValueProviderForm extends React.Component {
       <Row className="row-sm">
         <Col md={7} lg={6}>
           <FormGroup controlId="lookup-provider-table" validationState={validation.errors.table_name ? 'error' : null}>
-            <ControlLabel>Select Lookup Table</ControlLabel>
+            <ControlLabel>选择查找表</ControlLabel>
             <Select name="event-field-table-name"
-                    placeholder="Select Lookup Table"
+                    placeholder="选择查找表 "
                     onChange={this.handleSelectChange('table_name')}
                     options={this.formatLookupTables(lookupTables)}
                     value={provider.table_name}
                     matchProp="label"
                     required />
             <HelpBlock>
-              {validation.errors.table_name || 'Select the Lookup Table Graylog should use to get the value.'}
+              {validation.errors.table_name || '选择 Graylog 用于获取值的查找表。'}
             </HelpBlock>
           </FormGroup>
 
           <FormGroup controlId="lookup-provider-table" validationState={validation.errors.key_field ? 'error' : null}>
-            <ControlLabel>Lookup Table Key Field</ControlLabel>
+            <ControlLabel>查找表关键字段</ControlLabel>
             <Select name="lookup-provider-key"
-                    placeholder="Select Field"
+                    placeholder="选择字段"
                     onChange={this.handleSelectChange('key_field')}
                     options={this.formatMessageFields(allFieldTypes)}
                     value={provider.key_field}
@@ -118,7 +118,7 @@ class LookupTableFieldValueProviderForm extends React.Component {
                     allowCreate
                     required />
             <HelpBlock>
-              {validation.errors.key_field || 'Message Field name whose value will be used as Lookup Table Key.'}
+              {validation.errors.key_field || '其值将用作查找表键的消息字段名称。'}
             </HelpBlock>
           </FormGroup>
         </Col>

@@ -134,7 +134,7 @@ class FieldsForm extends React.Component {
                   <Button bsStyle="link" bsSize="xsmall"><Icon name="question-circle" /></Button>
                 </OverlayTrigger>
               </dt>
-              <dd>{eventDefinition.key_spec.length > 0 ? eventDefinition.key_spec.join(', ') : 'No Keys configured yet.'}</dd>
+              <dd>{eventDefinition.key_spec.length > 0 ? eventDefinition.key_spec.join(', ') : '尚未配置密钥。'}</dd>
             </dl>
           )}
           <FieldsList fields={eventDefinition.field_spec}
