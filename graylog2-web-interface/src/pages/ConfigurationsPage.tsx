@@ -87,7 +87,7 @@ const ConfigurationsPage = () => {
 
   let Output = (
     <Col md={12}>
-      <Spinner text="Loading Configuration Panel..." />
+      <Spinner text="加载配置面板 ..." />
     </Col>
   );
 
@@ -140,9 +140,9 @@ const ConfigurationsPage = () => {
   return (
     <DocumentTitle title="Configurations">
       <span>
-        <PageHeader title="Configurations">
+        <PageHeader title="配置">
           <span>
-            You can configure system settings for different sub systems on this page.
+            您可以在此页面上为不同的子系统配置系统设置。
           </span>
         </PageHeader>
 
@@ -153,8 +153,8 @@ const ConfigurationsPage = () => {
         {pluginSystemConfigs.length > 0 && (
         <Row className="content">
           <Col md={12}>
-            <h2>Plugins</h2>
-            <p className="description">Configuration for installed plugins.</p>
+            <h2>插件 </h2>
+            <p className="description">已安装插件的配置。</p>
             <hr className="separator" />
             <div className="top-margin">
               <PluginConfigRows configuration={configuration} systemConfigs={pluginSystemConfigs} />

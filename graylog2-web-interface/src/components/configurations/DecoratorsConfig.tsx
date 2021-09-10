@@ -73,12 +73,12 @@ const DecoratorsConfig = () => {
 
   return (
     <div>
-      <h2>Decorators Configuration</h2>
-      <p>Select the stream for which you want to see the set of default decorators.</p>
+      <h2>装饰器配置 </h2>
+      <p>选择要查看其默认装饰器集的流。</p>
       <StreamSelect streams={streamOptions} onChange={setCurrentStream} value={currentStream} />
       <DecoratorList decorators={readOnlyDecoratorItems} disableDragging />
       <IfPermitted permissions="decorators:edit">
-        <Button bsStyle="info" bsSize="xs" onClick={openModal}>Update</Button>
+        <Button bsStyle="info" bsSize="xs" onClick={openModal}>修改</Button>
       </IfPermitted>
       <DecoratorsConfigUpdate ref={configModal}
                               streams={streams}

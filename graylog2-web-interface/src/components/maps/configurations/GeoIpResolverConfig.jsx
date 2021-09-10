@@ -115,29 +115,27 @@ const GeoIpResolverConfig = createReactClass({
 
     return (
       <div>
-        <h3>Geo-Location Processor</h3>
+        <h3>地理位置处理器</h3>
 
         <p>
-          The Geo-Location Processor plugin scans all messages for fields containing <strong>exclusively</strong> an
-          IP address, and puts their geo-location information (coordinates, ISO country code, and city name) into
-          different fields. Read more in the <DocumentationLink page="geolocation.html" text="Graylog documentation" />.
+          Geo-Location Processor 插件扫描所有消息以查找仅包含 IP 地址的字段，并将其地理位置信息（坐标、ISO 国家代码和城市名称）放入不同的字段中。 在<DocumentationLink page="geolocation.html" text="Graylog文档" />中阅读更多内容。
         </p>
 
         <dl className="deflist">
-          <dt>Enabled:</dt>
+          <dt>启用:</dt>
           <dd>{config.enabled === true ? 'yes' : 'no'}</dd>
-          <dt>Database type:</dt>
+          <dt>数据库类型:</dt>
           <dd>{this._activeDatabaseType(config.db_type)}</dd>
-          <dt>Database path:</dt>
+          <dt>数据库路径:</dt>
           <dd>{config.db_path}</dd>
         </dl>
 
         <IfPermitted permissions="clusterconfigentry:edit">
-          <Button bsStyle="info" bsSize="xs" onClick={this._openModal}>Update</Button>
+          <Button bsStyle="info" bsSize="xs" onClick={this._openModal}>修改</Button>
         </IfPermitted>
 
         <BootstrapModalForm ref={(geoIpConfigModal) => { this.geoIpConfigModal = geoIpConfigModal; }}
-                            title="Update Geo-Location Processor Configuration"
+                            title="更新地理位置处理器配置"
                             onSubmitForm={this._saveConfig}
                             onModalClose={this._resetConfig}
                             submitButtonText="Save">
@@ -145,14 +143,14 @@ const GeoIpResolverConfig = createReactClass({
             <Input id="geolocation-enable-checkbox"
                    type="checkbox"
                    ref={(elem) => { this.inputs.configEnabled = elem; }}
-                   label="Enable Geo-Location processor"
+                   label="启用地理位置处理器 "
                    name="enabled"
                    checked={config.enabled}
                    onChange={this._onCheckboxClick('enabled', 'configEnabled')} />
             <Input id="maxmind-db-select"
-                   label="Select the MaxMind database type"
-                   help="Select the MaxMind database type you want to use to extract geo-location information.">
-              <Select placeholder="Select MaxMind database type"
+                   label="选择 MaxMind 数据库类型"
+                   help="选择要用于提取地理位置信息的 MaxMind 数据库类型。">
+              <Select placeholder="选择 MaxMind 数据库类型 "
                       required
                       options={this._availableDatabaseTypes()}
                       matchProp="label"
@@ -161,8 +159,8 @@ const GeoIpResolverConfig = createReactClass({
             </Input>
             <Input id="maxmind-db-path"
                    type="text"
-                   label="Path to the MaxMind database"
-                   help={<span>You can download a free version of the database from <a href="https://dev.maxmind.com/geoip/geoip2/geolite2/" target="_blank" rel="noopener noreferrer">MaxMind</a>.</span>}
+                   label="MaxMind 数据库的路径"
+                   help={<span>您可以从<a href="https://dev.maxmind.com/geoip/geoip2/geolite2/" target="_blank" rel="noopener noreferrer">MaxMind</a>下载免费版本的数据库。</span>}
                    name="db_path"
                    value={config.db_path}
                    onChange={this._onUpdate('db_path')} />

@@ -49,11 +49,10 @@ const IndexerClusterHealth = createReactClass({
     return (
       <Row className="content">
         <Col md={12}>
-          <h2>Elasticsearch cluster</h2>
+          <h2>弹性搜索集群</h2>
 
           <SmallSupportLink>
-            The possible Elasticsearch cluster states and more related information is available in the{' '}
-            <DocumentationLink page={DocsHelper.PAGES.CONFIGURING_ES} text="Graylog documentation" />.
+            <DocumentationLink page={DocsHelper.PAGES.CONFIGURING_ES} text="Graylog文档" />中提供了可能的 Elasticsearch 集群状态和更多相关信息。
           </SmallSupportLink>
 
           {content}

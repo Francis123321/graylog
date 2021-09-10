@@ -221,26 +221,26 @@ const UrlWhiteListForm = ({ urls, onUpdate, disabled }: Props) => {
     <>
       <Input type="checkbox"
              id="whitelist-disabled"
-             label="Disable Whitelist"
+             label="禁用白名单"
              checked={config.disabled}
              onChange={() => setConfig({ ...config, disabled: !config.disabled })}
-             help="Disable the whitelist functionality. Warning: Disabling this option will allow users to enter any URL in Graylog entities, which may pose a security risk." />
-      <Button bsSize="sm" onClick={(event) => _onAdd(event)}>Add Url</Button>
+             help="禁用白名单功能。 警告：禁用此选项将允许用户在 Graylog 实体中输入任何 URL，这可能会带来安全风险。" />
+      <Button bsSize="sm" onClick={(event) => _onAdd(event)}>添加网址</Button>
       <StyledTable striped bordered>
         <thead>
           <tr>
             <th>#</th>
-            <th>Title</th>
-            <th>URL</th>
-            <th>Type</th>
-            <th>Actions</th>
+            <th>标题</th>
+            <th>网址</th>
+            <th>类型 </th>
+            <th>操作</th>
           </tr>
         </thead>
         <tbody>
           {_getSummary()}
         </tbody>
       </StyledTable>
-      <Button bsSize="sm" onClick={(event) => _onAdd(event)}>Add Url</Button>
+      <Button bsSize="sm" onClick={(event) => _onAdd(event)}>添加网址</Button>
     </>
   );
 };

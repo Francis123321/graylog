@@ -221,11 +221,10 @@ class NotificationsFactory {
         };
       case 'outdated_version':
         return {
-          title: 'You are running an outdated Graylog version.',
+          title: '您运行的是过时的 Graylog 版本。',
           description: (
             <span>
-              The most recent stable Graylog version is <em>{notification.details.current_version}</em>.
-              Get it from <a href="https://www.graylog.org/" target="_blank">https://www.graylog.org/</a>.
+            最新的稳定版 Graylog 是 <em>{notification.details.current_version}</em>。 从<a href="https://www.graylog.org/" target="_blank">https://www.graylog.org/</a>获取。
             </span>
           ),
         };

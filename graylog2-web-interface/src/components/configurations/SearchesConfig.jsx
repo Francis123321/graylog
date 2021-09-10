@@ -217,33 +217,32 @@ class SearchesConfig extends React.Component {
 
     return (
       <div>
-        <h2>Search Configuration</h2>
+        <h2>搜索配置</h2>
 
         <dl className="deflist">
-          <dt>Query time range limit</dt>
+          <dt>查询时间范围限制</dt>
           <dd>{limit}</dd>
-          <dd>The maximum time users can query data in the past. This prevents users from accidentally creating queries which
-            span a lot of data and would need a long time and many resources to complete (if at all).
+          <dd>用户可以查询过去数据的最长时间。 这可以防止用户意外创建跨越大量数据并且需要很长时间和大量资源才能完成的查询（如果有的话）。
           </dd>
         </dl>
 
         <Row>
           <Col md={6}>
-            <strong>Relative time range options</strong>
+            <strong>相对时间范围选项</strong>
             <TimeRangeOptionsSummary options={config.relative_timerange_options} />
           </Col>
           <Col md={6}>
-            <strong>Surrounding time range options</strong>
+            <strong>周围时间范围选项</strong>
             <TimeRangeOptionsSummary options={config.surrounding_timerange_options} />
           </Col>
           <Col md={6}>
 
-            <strong>Surrounding search filter fields</strong>
+            <strong>周围的搜索过滤器字段 </strong>
             <ul>
               {filterFields}
             </ul>
 
-            <strong>UI analysis disabled for fields</strong>
+            <strong>对字段禁用 UI 分析</strong>
             <ul>
               {analysisDisabledFieldsListItems}
             </ul>
@@ -252,19 +251,19 @@ class SearchesConfig extends React.Component {
 
         </Row>
         <IfPermitted permissions="clusterconfigentry:edit">
-          <Button bsStyle="info" bsSize="xs" onClick={this._openModal}>Update</Button>
+          <Button bsStyle="info" bsSize="xs" onClick={this._openModal}>修改</Button>
         </IfPermitted>
 
         <BootstrapModalForm ref={this.searchesConfigModal}
-                            title="Update Search Configuration"
+                            title="更新搜索配置"
                             onSubmitForm={this._saveConfig}
                             onModalClose={this._resetConfig}
                             submitButtonText="Save">
           <fieldset>
-            <label htmlFor="query-limit-checkbox">Relative Timerange Options</label>
+            <label htmlFor="query-limit-checkbox">相对时间范围选项</label>
             <Input id="query-limit-checkbox"
                    type="checkbox"
-                   label="Enable query limit"
+                   label="启用查询限制"
                    name="enabled"
                    checked={limitEnabled}
                    onChange={this._onChecked} />
@@ -280,28 +279,28 @@ class SearchesConfig extends React.Component {
             <TimeRangeOptionsForm options={relativeTimeRangeOptionsUpdate || _buildTimeRangeOptions(config.relative_timerange_options)}
                                   update={this._onRelativeTimeRangeOptionsUpdate}
                                   validator={_relativeTimeRangeValidator}
-                                  title="Relative Timerange Options"
-                                  help={<span>Configure the available options for the <strong>relative</strong> time range selector as <strong>ISO8601 duration</strong></span>} />
+                                  title="相对时间范围选项"
+                                  help={<span>将<strong>相对</strong>时间范围选择器的可用选项配置为<strong>ISO8601 持续时间</strong></span>} />
             <TimeRangeOptionsForm options={surroundingTimeRangeOptionsUpdate || _buildTimeRangeOptions(config.surrounding_timerange_options)}
                                   update={this._onSurroundingTimeRangeOptionsUpdate}
                                   validator={_surroundingTimeRangeValidator}
-                                  title="Surrounding Timerange Options"
-                                  help={<span>Configure the available options for the <strong>surrounding</strong> time range selector as <strong>ISO8601 duration</strong></span>} />
+                                  title="周围时间范围选项"
+                                  help={<span>将<strong>周围</strong>时间范围选择器的可用选项配置为<strong>ISO8601 持续时间</strong></span>} />
 
             <Input id="filter-fields-input"
                    type="text"
-                   label="Surrounding search filter fields"
+                   label="周围的搜索过滤器字段"
                    onChange={this._onFilterFieldsUpdate}
                    value={surroundingFilterFields || filterFieldsString}
-                   help="A ',' separated list of message fields that will be used as filter for the surrounding messages query."
+                   help="一个“,”分隔的消息字段列表，将用作周围消息查询的过滤器。 "
                    required />
 
             <Input id="disabled-fields-input"
                    type="text"
-                   label="Disabled analysis fields"
+                   label="禁用的分析字段 "
                    onChange={this._onAnalysisDisabledFieldsUpdate}
                    value={analysisDisabledFields || analysisDisabledFieldsString}
-                   help="A ',' separated list of message fields for which analysis features like QuickValues will be disabled in the web UI."
+                   help="将在 Web UI 中禁用 QuickValues 等分析功能的消息字段列表，以“,”分隔。"
                    required />
           </fieldset>
         </BootstrapModalForm>

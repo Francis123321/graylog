@@ -174,15 +174,15 @@ const MessageProcessorsConfig = createReactClass({
   render() {
     return (
       <div>
-        <h2>Message Processors Configuration</h2>
-        <p>The following message processors are executed in order. Disabled processors will be skipped.</p>
+        <h2>消息处理器配置 </h2>
+        <p>以下消息处理器按顺序执行。 禁用的处理器将被跳过。</p>
 
         <Table striped bordered condensed className="top-margin">
           <thead>
             <tr>
               <th>#</th>
-              <th>Processor</th>
-              <th>Status</th>
+              <th>处理器 </th>
+              <th>地位 </th>
             </tr>
           </thead>
           <tbody>
@@ -191,25 +191,25 @@ const MessageProcessorsConfig = createReactClass({
         </Table>
 
         <IfPermitted permissions="clusterconfigentry:edit">
-          <Button bsStyle="info" bsSize="xs" onClick={this._openModal}>Update</Button>
+          <Button bsStyle="info" bsSize="xs" onClick={this._openModal}>修改</Button>
         </IfPermitted>
 
         <BootstrapModalForm ref={(configModal) => { this.configModal = configModal; }}
-                            title="Update Message Processors Configuration"
+                            title="更新消息处理器配置 "
                             onSubmitForm={this._saveConfig}
                             onModalClose={this._resetConfig}
                             submitButtonText="Save">
-          <h3>Order</h3>
-          <p>Use drag and drop to change the execution order of the message processors.</p>
+          <h3>命令</h3>
+          <p>使用拖放来更改消息处理器的执行顺序。</p>
           <SortableList items={this._sortableItems()} onMoveItem={this._updateSorting} displayOverlayInPortal />
 
-          <h3>Status</h3>
-          <p>Change the checkboxes to change the status of a message processor.</p>
+          <h3>地位</h3>
+          <p>更改复选框以更改消息处理器的状态。</p>
           <Table striped bordered condensed className="top-margin">
             <thead>
               <tr>
-                <th>Processor</th>
-                <th>Enabled</th>
+                <th>处理器</th>
+                <th>启用</th>
               </tr>
             </thead>
             <tbody>

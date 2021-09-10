@@ -31,11 +31,11 @@ const NotificationsList = createReactClass({
 
   _formatNotificationCount(count) {
     if (count === 0) {
-      return 'is no notification';
+      return '没有通知';
     }
 
     if (count === 1) {
-      return 'is one notification';
+      return '没有通知';
     }
 
     return `are ${count} notifications`;
@@ -61,7 +61,7 @@ const NotificationsList = createReactClass({
         </Alert>
       );
     } else {
-      title = `There ${this._formatNotificationCount(count)}`;
+      title = `这里${this._formatNotificationCount(count)}`;
 
       content = this.state.notifications.map((notification) => {
         return <Notification key={`${notification.type}-${notification.timestamp}`} notification={notification} />;
@@ -73,8 +73,7 @@ const NotificationsList = createReactClass({
         <Col md={12}>
           <h2>{title}</h2>
           <p className="description">
-            Notifications are triggered by Graylog and indicate a situation you should act upon. Many notification
-            types will also provide a link to the Graylog documentation if you need more information or assistance.
+            通知由 Graylog 触发并指示您应该采取行动的情况。 如果您需要更多信息或帮助，许多通知类型还将提供指向 Graylog 文档的链接。
           </p>
 
           {content}
