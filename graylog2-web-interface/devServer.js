@@ -30,8 +30,8 @@ const webpackConfig = require('./webpack.bundled');
 const DEFAULT_HOST = '192.168.15.249';
 const DEFAULT_PORT = 9000;
 // const DEFAULT_PORT = 8080;
-// const DEFAULT_API_URL = 'http://139.9.105.125:9000';
-const DEFAULT_API_URL = 'http://192.168.15.213:9000';
+const DEFAULT_API_URL = 'http://139.9.105.125:9000';
+// const DEFAULT_API_URL = 'http://192.168.15.213:9000';
 
 const app = express();
 const vendorConfig = webpackConfig[0];
