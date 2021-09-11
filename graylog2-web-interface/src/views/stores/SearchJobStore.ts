@@ -23,6 +23,7 @@ import SearchExecutionState from 'views/logic/search/SearchExecutionState';
 import { singletonActions, singletonStore } from 'views/logic/singleton';
 import type { RefluxActions } from 'stores/StoreTypes';
 
+// yangzy_发post
 const executeQueryUrl = (id) => URLUtils.qualifyUrl(`/views/search/${id}/execute`);
 const jobStatusUrl = (jobId) => URLUtils.qualifyUrl(`/views/search/status/${jobId}`);
 
