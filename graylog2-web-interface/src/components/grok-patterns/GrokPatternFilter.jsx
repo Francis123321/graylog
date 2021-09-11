@@ -139,7 +139,7 @@ class GrokPatternFilter extends React.Component {
       <>
         <Input type="text"
                id="pattern-selector"
-               label="Filter pattern"
+               label="过滤模式"
                onChange={this._onPatternFilterChange}
                autoComplete="off"
                formGroupClassName={GrokPatternFilterStyle.filterFormGroup}

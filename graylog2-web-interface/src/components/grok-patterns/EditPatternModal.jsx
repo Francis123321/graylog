@@ -145,7 +145,7 @@ class EditPatternModal extends React.Component {
     let triggerButtonContent;
 
     if (create) {
-      triggerButtonContent = 'Create pattern';
+      triggerButtonContent = '创建模式';
     } else {
       triggerButtonContent = <span>Edit</span>;
     }
@@ -158,18 +158,18 @@ class EditPatternModal extends React.Component {
           {triggerButtonContent}
         </Button>
         <BootstrapModalForm ref={(modal) => { this.modal = modal; }}
-                            title={`${create ? 'Create' : 'Edit'} Grok Pattern ${name}`}
+                            title={`${create ? '创建' : '编辑'} 格罗克模式 ${name}`}
                             bsSize="large"
                             onSubmitForm={this._save}
                             submitButtonText="Save">
           <fieldset>
             <Input type="text"
                    id={this._getId('pattern-name')}
-                   label="Name"
+                   label="名称"
                    onChange={this._onNameChange}
                    value={name}
                    bsStyle={error ? 'error' : null}
-                   help={error ? errorMessage : "Under this name the pattern will be stored and can be used like: '%{THISNAME}' later on "}
+                   help={error ? errorMessage : "在这个名称下，模式将被存储，并且可以像这样使用： '%{THISNAME}' 稍后 "}
                    autoFocus
                    required />
             <GrokPatternInput onPatternChange={this._onPatternChange}
@@ -183,19 +183,19 @@ class EditPatternModal extends React.Component {
               )}
             <Input type="textarea"
                    id={this._getId('sampleData')}
-                   label="Sample Data"
-                   help="Here you can add sample data to test your pattern"
+                   label="样本数据"
+                   help="您可以在此处添加示例数据来测试您的模式"
                    onChange={this._onSampleDataChange}
                    value={sampleData} />
-            <Button bsStyle="info" onClick={this._testPattern}>Test with Sample Data</Button>
+            <Button bsStyle="info" onClick={this._testPattern}>使用样本数据进行测试</Button>
             <br />
             <br />
             <Input type="textarea"
                    id={this._getId('test_result')}
                    readOnly
                    rows={8}
-                   help="Will contain the result of your test in a JSON format"
-                   label="Test Result"
+                   help="将包含 JSON 格式的测试结果"
+                   label="测试结果"
                    value={testResult} />
           </fieldset>
         </BootstrapModalForm>
