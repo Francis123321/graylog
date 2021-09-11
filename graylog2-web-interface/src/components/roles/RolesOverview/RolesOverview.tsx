@@ -27,7 +27,7 @@ import { Col, Row } from 'components/graylog';
 import RolesOverviewItem from './RolesOverviewItem';
 import RolesFilter from './RolesFilter';
 
-const TABLE_HEADERS = ['Name', 'Description', 'Users', 'Actions'];
+const TABLE_HEADERS = ['名字', '描述', '用户', '操作'];
 const DEFAULT_PAGINATION = {
   page: 1,
   perPage: 10,
@@ -102,7 +102,7 @@ const RolesOverview = () => {
             {loading && <LoadingSpinner text="" delay={0} />}
           </Header>
           <p className="description">
-            Found {paginatedRoles.pagination.total} roles on the system.
+            在系统上找到 {paginatedRoles.pagination.total} 个角色。
           </p>
           <StyledPaginatedList activePage={page}
                                totalItems={paginatedRoles.pagination.total}
@@ -114,7 +114,7 @@ const RolesOverview = () => {
                        headerCellFormatter={_headerCellFormatter}
                        sortByKey="name"
                        rows={roles.toJS()}
-                       noDataText={<EmptyResult>No roles have been found.</EmptyResult>}
+                       noDataText={<EmptyResult>没有找到角色。</EmptyResult>}
                        customFilter={searchFilter}
                        dataRowFormatter={_rolesOverviewItem}
                        filterKeys={[]}

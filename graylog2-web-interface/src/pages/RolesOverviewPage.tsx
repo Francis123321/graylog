@@ -26,17 +26,15 @@ import DocumentationLink from 'components/support/DocumentationLink';
 
 const RolesOverviewPage = () => (
   <DocumentTitle title="Roles Overview">
-    <PageHeader title="Roles Overview">
-      <span>Overview of Graylog&apos;s roles. Roles allow granting capabilities to users, like creating dashboards or event definitions.</span>
+    <PageHeader title="角色概述">
+      <span>Graylog 的角色概述。 角色允许向用户授予功能，例如创建仪表板或事件定义。 </span>
 
       <span>
-        Learn more in the{' '}
-        <DocumentationLink page={DocsHelper.PAGES.USERS_ROLES}
-                           text="documentation" />
+        在<DocumentationLink page={DocsHelper.PAGES.USERS_ROLES} text="文档" />中了解更多信息
       </span>
 
       <LinkContainer to={Routes.SYSTEM.AUTHZROLES.OVERVIEW}>
-        <Button bsStyle="info">Roles Overview</Button>
+        <Button bsStyle="info">角色概述</Button>
       </LinkContainer>
     </PageHeader>
 

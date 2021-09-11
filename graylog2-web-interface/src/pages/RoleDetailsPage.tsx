@@ -37,7 +37,7 @@ type Props = {
 
 const PageTitle = ({ fullName }: { fullName: string | undefined | null }) => (
   <>
-    Role Details {fullName && (
+    角色详情 {fullName && (
       <>
         - <i>{fullName}</i>
       </>
@@ -58,15 +58,13 @@ const RoleDetailsPage = ({ params }: Props) => {
       <PageHeader title={<PageTitle fullName={loadedRole?.name} />}
                   subactions={<RoleActionLinks roleId={roleId} />}>
         <span>
-          Overview of details like name, description and assigned users.
+          详细信息概述，如名称、描述和分配的用户。
         </span>
         <span>
-          Learn more in the{' '}
-          <DocumentationLink page={DocsHelper.PAGES.USERS_ROLES}
-                             text="documentation" />
+          在<DocumentationLink page={DocsHelper.PAGES.USERS_ROLES} text="文档" />中了解更多信息
         </span>
         <LinkContainer to={Routes.SYSTEM.AUTHZROLES.OVERVIEW}>
-          <Button bsStyle="info">Roles Overview</Button>
+          <Button bsStyle="info">角色概述</Button>
         </LinkContainer>
       </PageHeader>
       <RoleDetails role={roleId === loadedRole?.id ? loadedRole : undefined} />
