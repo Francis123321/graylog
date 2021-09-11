@@ -22,29 +22,12 @@ import { ButtonToolbar, Col, Row, Button } from 'components/graylog';
 import { DocumentTitle, IfPermitted, PageHeader } from 'components/common';
 import createReactClass from 'create-react-class';
 import withLocation from 'routing/withLocation';
-
-// const TopologyPage = ({ location }) => {
-//   const filteredSourceStream = location.query.stream_id;
-//
-//   return (
-//     <DocumentTitle title="Topology">
-//       {/*yangzy_tabContent*/}
-//       {/*<div style={{height:'100%','borderRadius': '4px',*/}
-//         {/*border: '1px solid #cdcdcd', 'marginBottom': '10px'}}>123</div>*/}
-//
-//       <Row className="content" style={{height: '100%'}}>
-//         <Col md={12} style={{height: '100%'}}>
-//           <div id="topologyAppsContainer" style={{width:'100%',height:'100%'}}>1565456</div>
-//         </Col>
-//       </Row>
-//     </DocumentTitle>
-//   );
-// };
+import { SearchActions } from 'views/stores/SearchStore';
 
 const TopologyPage = createReactClass({
   componentDidMount() {
     console.log('组件初始化了')
-    window.addNewVue().$mount('#topologyAppsContainer')
+    // window.addNewVue().$mount('#topologyAppsContainer')
     // vue里通过这个this调用getData方法
     window.setReactThis(this)
 
@@ -52,6 +35,12 @@ const TopologyPage = createReactClass({
   getData: function (data) {
     console.log("查询条件："+data)
     window.setReactData('这是查询返回值')
+    // SearchActions.get('612498751e94a10ddf821acf').then(function (data) {
+    //   console.log(data)
+    // })
+    SearchActions.parameters(['612498751e94a10ddf821acf']).then(function (data) {
+      console.log(data)
+    })
   },
   render() {
     return (
@@ -59,7 +48,7 @@ const TopologyPage = createReactClass({
         {/*yangzy_tabContent*/}
         <Row className="content" style={{height: '100%'}}>
           <Col md={12} style={{height: '100%'}}>
-            <div id="topologyAppsContainer" style={{width:'100%',height:'100%'}}>1565456</div>
+            <div id="topologyAppsContainer" style={{width:'100%',height:'100%'}}>渲染中，请稍等...</div>
           </Col>
         </Row>
       </DocumentTitle>
