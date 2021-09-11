@@ -37,11 +37,11 @@ const UsernameFormGroup = ({ users }: Props) => {
   };
 
   return (
-    <FormikFormGroup label="Username"
+    <FormikFormGroup label="用户名"
                      name="username"
                      required
                      validate={_validate}
-                     help="Select a unique user name used to log in with." />
+                     help="选择用于登录的唯一用户名。" />
   );
 };
 

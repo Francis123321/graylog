@@ -27,18 +27,16 @@ import DocumentationLink from 'components/support/DocumentationLink';
 
 const UsersOverviewPage = () => (
   <DocumentTitle title="Users Overview">
-    <PageHeader title="Users Overview"
+    <PageHeader title="用户概览"
                 subactions={(
                   <LinkContainer to={Routes.SYSTEM.USERS.CREATE}>
-                    <Button bsStyle="success">Create User</Button>
+                    <Button bsStyle="success">创建用户</Button>
                   </LinkContainer>
                 )}>
-      <span>Overview of Graylog&apos;s registered users.</span>
+      <span>Graylog 注册用户概览。</span>
 
       <span>
-        Learn more in the{' '}
-        <DocumentationLink page={DocsHelper.PAGES.USERS_ROLES}
-                           text="documentation" />
+        在<DocumentationLink page={DocsHelper.PAGES.USERS_ROLES} text="文档" />中了解更多信息
       </span>
 
       <UserOverviewLinks />

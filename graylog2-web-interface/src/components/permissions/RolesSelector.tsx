@@ -113,13 +113,13 @@ const RolesSelector = ({ assignedRolesIds, onSubmit, identifier }: Props) => {
                       onChange={setSelectedRoleName}
                       optionRenderer={_renderRoleOption}
                       options={options}
-                      placeholder="Search for roles"
+                      placeholder="搜索角色"
                       multi
                       value={selectedRoleName} />
         <SubmitButton bsStyle="success"
                       onClick={_onSubmit}
                       disabled={isSubmitting || !selectedRoleName}
-                      title="Assign Role"
+                      title="分配角色"
                       type="button">
           Assign Role
         </SubmitButton>

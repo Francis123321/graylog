@@ -83,7 +83,7 @@ class IndexSetDeletionForm extends React.Component {
         <Row>
           <Col md={12}>
             <Alert bsStyle="danger">
-              Unable to delete the index set because it is the default index set!
+              无法删除索引集，因为它是默认索引集！
             </Alert>
           </Col>
         </Row>
@@ -100,7 +100,7 @@ class IndexSetDeletionForm extends React.Component {
           <Row>
             <Col md={12}>
               <Alert bsStyle="danger">
-                Unable to delete the index set because it has assigned streams. Remove stream assignments to be able to delete this index set.
+                无法删除索引集，因为它已分配流。 删除流分配以能够删除此索引集。
               </Alert>
             </Col>
           </Row>
@@ -122,7 +122,7 @@ class IndexSetDeletionForm extends React.Component {
           <Input id="remove-data-checkbox"
                  type="checkbox"
                  label="Remove all data for this index set?"
-                 help={<span>All indices related to this index set will be deleted from Elasticsearch.</span>}
+                 help={<span>所有与该索引集相关的索引都将从 Elasticsearch 中删除。</span>}
                  checked={this.state.deleteIndices}
                  onChange={this._onRemoveClick} />
         </Col>

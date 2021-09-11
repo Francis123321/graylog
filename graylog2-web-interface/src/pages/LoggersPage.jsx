@@ -24,11 +24,9 @@ class LoggersPage extends React.Component {
     return (
       <DocumentTitle title="Logging">
         <span>
-          <PageHeader title="Logging">
+          <PageHeader title="日志记录">
             <span>
-              This section controls logging of the Graylog architecture and allows you to change log
-              levels on the fly. Note that log levels are reset to their defaults after you restart
-              the affected service.
+              此部分控制 Graylog 架构的日志记录，并允许您即时更改日志级别。 请注意，在您重新启动受影响的服务后，日志级别将重置为其默认值。
             </span>
           </PageHeader>
           <LoggerOverview />
