@@ -75,38 +75,38 @@ const UserSyncStep = ({ help = {}, excludedFields = {}, formRef, onSubmit, onSub
       {({ isSubmitting, validateForm }) => (
         <Form className="form form-horizontal">
           <FormikFormGroup help={help.userSearchBase}
-                           label="Search Base DN"
+                           label="搜索基础 DN"
                            error={backendValidationErrors?.userSearchBase}
                            name="userSearchBase"
-                           placeholder="Search Base DN"
+                           placeholder="搜索基础 DN"
                            validate={validateField(FORM_VALIDATION.userSearchBase)} />
 
           <FormikFormGroup help={help.userSearchPattern}
-                           label="Search Pattern"
+                           label="搜索模式"
                            name="userSearchPattern"
                            error={backendValidationErrors?.userSearchPattern}
-                           placeholder="Search Pattern"
+                           placeholder="搜索模式"
                            validate={validateField(FORM_VALIDATION.userSearchPattern)} />
 
           <FormikFormGroup help={help.userNameAttribute}
-                           label="Name Attribute"
+                           label="名称属性"
                            name="userNameAttribute"
                            error={backendValidationErrors?.userNameAttribute}
-                           placeholder="Name Attribute"
+                           placeholder="名称属性"
                            validate={validateField(FORM_VALIDATION.userNameAttribute)} />
 
           <FormikFormGroup help={help.userFullNameAttribute}
-                           label="Full Name Attribute"
+                           label="全名属性"
                            name="userFullNameAttribute"
-                           placeholder="Full Name Attribute"
+                           placeholder="全名属性"
                            error={backendValidationErrors?.userFullNameAttribute}
                            validate={validateField(FORM_VALIDATION.userFullNameAttribute)} />
 
           {!excludedFields.userUniqueIdAttribute && (
             <FormikFormGroup help={help.userUniqueIdAttribute}
-                             label="ID Attribute"
+                             label="身份属性"
                              name="userUniqueIdAttribute"
-                             placeholder="ID Attribute"
+                             placeholder="身份属性"
                              error={backendValidationErrors?.userUniqueIdAttribute}
                              validate={validateField(FORM_VALIDATION.userUniqueIdAttribute)} />
           )}
@@ -114,8 +114,7 @@ const UserSyncStep = ({ help = {}, excludedFields = {}, formRef, onSubmit, onSub
           <Row>
             <Col sm={9} smOffset={3}>
               <Panel bsStyle="info">
-                Changing the static role assignment will only affect new users created via {stepsState.authBackendMeta.serviceTitle}!
-                Existing user accounts will be updated on their next login, or if you edit their roles manually.
+                更改静态角色分配只会影响通过{stepsState.authBackendMeta.serviceTitle}创建的新用户！ 现有用户帐户将在下次登录时更新，或者如果您手动编辑他们的角色。
               </Panel>
             </Col>
           </Row>
@@ -126,7 +125,7 @@ const UserSyncStep = ({ help = {}, excludedFields = {}, formRef, onSubmit, onSub
                      help={help.defaultRoles}
                      error={error ?? backendValidationErrors?.defaultRoles}
                      id="default-roles-select"
-                     label="Default Roles"
+                     label="默认角色"
                      labelClassName="col-sm-3"
                      wrapperClassName="col-sm-9">
                 <Select inputProps={{ 'aria-label': 'Search for roles' }}
@@ -134,7 +133,7 @@ const UserSyncStep = ({ help = {}, excludedFields = {}, formRef, onSubmit, onSub
                         onBlur={onBlur}
                         onChange={(selectedRoles) => onChange({ target: { value: selectedRoles, name } })}
                         options={rolesOptions}
-                        placeholder="Search for roles"
+                        placeholder="搜索角色"
                         value={value} />
               </Input>
             )}
@@ -144,7 +143,7 @@ const UserSyncStep = ({ help = {}, excludedFields = {}, formRef, onSubmit, onSub
             <Col sm={9} smOffset={3}>
               <Alert bsStyle="info">
                 <Icon name="info-circle" />{' '}
-                We recommend you test your user login in the sidebar panel to verify your settings.
+                我们建议您在侧边栏面板中测试您的用户登录以验证您的设置。
               </Alert>
             </Col>
           </Row>
@@ -155,12 +154,12 @@ const UserSyncStep = ({ help = {}, excludedFields = {}, formRef, onSubmit, onSub
             <Button disabled={isSubmitting}
                     onClick={() => _onSubmitAll(validateForm)}
                     type="button">
-              Finish & Save Identity Service
+              完成并保存身份服务
             </Button>
             <Button bsStyle="primary"
                     disabled={isSubmitting}
                     type="submit">
-              Next: Group Synchronization
+              下一步：群组同步
             </Button>
           </ButtonToolbar>
         </Form>

@@ -128,18 +128,18 @@ const ServerConfigStep = ({ formRef, help = {}, onSubmit, onSubmitAll, submitAll
       {({ isSubmitting, setFieldValue, values, validateForm }) => (
         <Form className="form form-horizontal">
           <FormikFormGroup help={help.title}
-                           label="Title"
+                           label="标题"
                            name="title"
                            placeholder="Title" />
 
           <FormikFormGroup help={help.description}
-                           label={<>Description <Opt /></>}
+                           label={<>描述 <Opt /></>}
                            type="textarea"
                            name="description"
-                           placeholder="Description" />
+                           placeholder="描述" />
 
           <Input id="uri-host"
-                 label="Server Address"
+                 label="服务器地址"
                  labelClassName="col-sm-3"
                  wrapperClassName="col-sm-9">
             <>
@@ -167,7 +167,7 @@ const ServerConfigStep = ({ formRef, help = {}, onSubmit, onSubmitAll, submitAll
                       <Input defaultChecked={value === 'none'}
                              formGroupClassName=""
                              id={name}
-                             label="None"
+                             label="没有"
                              onBlur={onBlur}
                              onChange={(e) => _onTransportSecurityChange(e, values, setFieldValue, onChange)}
                              type="radio"
@@ -183,7 +183,7 @@ const ServerConfigStep = ({ formRef, help = {}, onSubmit, onSubmitAll, submitAll
                       <Input defaultChecked={value === 'start_tls'}
                              formGroupClassName=""
                              id={name}
-                             label="StartTLS"
+                             label="启动TLS"
                              onBlur={onBlur}
                              onChange={(e) => _onTransportSecurityChange(e, values, setFieldValue, onChange)}
                              type="radio"
@@ -193,7 +193,7 @@ const ServerConfigStep = ({ formRef, help = {}, onSubmit, onSubmitAll, submitAll
                 </Field>
 
                 <FormikInput formGroupClassName=""
-                             label="Verify Certificates"
+                             label="验证证书"
                              name="verifyCertificates"
                              id="verifyCertificates"
                              type="checkbox" />
@@ -203,14 +203,14 @@ const ServerConfigStep = ({ formRef, help = {}, onSubmit, onSubmitAll, submitAll
           </Input>
           <FormikFormGroup help={help.systemUserDn}
                            error={backendValidationErrors?.systemUserDn}
-                           label={<>System User DN <Opt /></>}
+                           label={<>系统用户DN <Opt /></>}
                            name="systemUserDn"
                            validate={validateField(FORM_VALIDATION.systemUserDn)}
                            placeholder="System User DN" />
 
           {(backendHasPassword && values.systemUserPassword === undefined) ? (
             <Input id="systemPassword"
-                   label={<>System Password <Opt /></>}
+                   label={<>系统密码 <Opt /></>}
                    labelClassName="col-sm-3"
                    wrapperClassName="col-sm-9">
               <Button type="button" onClick={() => setFieldValue('systemUserPassword', '')}>
@@ -228,7 +228,7 @@ const ServerConfigStep = ({ formRef, help = {}, onSubmit, onSubmitAll, submitAll
                              label={<>System Password <Opt /></>}
                              name="systemUserPassword"
                              error={backendValidationErrors?.systemUserPassword}
-                             placeholder="System Password"
+                             placeholder="系统密码"
                              validate={validateField(FORM_VALIDATION.systemUserPassword)}
                              type="password" />
           )}
@@ -239,12 +239,12 @@ const ServerConfigStep = ({ formRef, help = {}, onSubmit, onSubmitAll, submitAll
             <Button disabled={isSubmitting}
                     onClick={() => _onSubmitAll(validateForm)}
                     type="button">
-              Finish & Save Service
+              完成并保存服务
             </Button>
             <Button bsStyle="primary"
                     disabled={isSubmitting}
                     type="submit">
-              Next: User Synchronization
+              下一步：用户同步
             </Button>
           </ButtonToolbar>
         </Form>

@@ -34,41 +34,39 @@ export const HELP = {
   // server config help
   systemUserDn: (
     <span>
-      The username for the initial connection to the LDAP server, e.g. <code>cn=admin,dc=example,dc=com</code>,
-      this might be optional depending on your LDAP server.
+      初始连接到 LDAP 服务器的用户名，例如 <code>cn=admin,dc=example,dc=com</code>，这可能是可选的，具体取决于您的 LDAP 服务器。
     </span>
   ),
-  systemUserPassword: 'The password for the initial connection to the LDAP server.',
+  systemUserPassword: '初始连接到 LDAP 服务器的密码。',
   // user sync help
   userSearchBase: (
     <span>
-      The base tree to limit the LDAP search query to, e.g. <code>cn=users,dc=example,dc=com</code>.
+      将 LDAP 搜索查询限制为的基本树，例如 <code>cn=users,dc=example,dc=com</code>。
     </span>
   ),
   userSearchPattern: (
     <span>
-      For example <code className="text-nowrap">{'(&(uid={0})(objectClass=inetOrgPerson))'}</code>.{' '}
-      The string <code>{'{0}'}</code> will be replaced by the entered username.
+      例如 <code className="text-nowrap">{'(&(uid={0})(objectClass=inetOrgPerson))'}</code>。 字符串 <code>{'{0}'}</code> 将替换为输入的用户名。
     </span>
   ),
   userNameAttribute: (
     <span>
-      Which LDAP attribute to use for the username of the user in Graylog, e.g <code>uid</code>.<br />
-      Try to load a test user in the sidebar section <i>User Login Test</i>, if you are unsure which attribute to use.
+      哪个 LDAP 属性用于 Graylog 中用户的用户名，例如<code>uid</code>。<br />
+      如果您不确定要使用哪个属性，请尝试在侧边栏部分<i>用户登录测试</i>中加载测试用户。
     </span>
   ),
   userFullNameAttribute: (
     <span>
-      Which LDAP attribute to use for the full name of a synchronized Graylog user, e.g. <code>cn</code>.<br />
+      哪个 LDAP 属性用于同步 Graylog 用户的全名，例如<code>cn</code>。
     </span>
   ),
   userUniqueIdAttribute: (
     <span>
-      Which LDAP attribute to use for the ID of a synchronized Graylog user, e.g. <code>entryUUID</code>.<br />
+      用于同步 Graylog 用户 ID 的 LDAP 属性，例如<code>entryUUID</code>。
     </span>
   ),
   defaultRoles: (
-    <span>The default Graylog roles synchronized user will obtain. All users need the <code>Reader</code> role, to use the Graylog web interface</span>
+    <span>同步用户将获得默认的 Graylog 角色。 所有用户都需要<code>Reader</code>角色，才能使用 Graylog Web 界面</span>
   ),
 };
 
