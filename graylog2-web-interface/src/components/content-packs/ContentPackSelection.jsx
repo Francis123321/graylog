@@ -112,7 +112,7 @@ class ContentPackSelection extends React.Component {
       .reduce((acc, entityGroup) => { return acc + selectedEntities[entityGroup].length; }, 0) <= 0;
 
     if (selectionEmpty) {
-      errors.selection = 'Select at least one entity.';
+      errors.selection = '至少选择一个实体。';
     }
 
     this.setState({ errors });
@@ -281,7 +281,7 @@ class ContentPackSelection extends React.Component {
       <div>
         <Row>
           <Col smOffset={1} lg={8}>
-            <h2>General Information</h2>
+            <h2>一般信息</h2>
             <br />
             <form className="content-selection-form" id="content-selection-form" onSubmit={(e) => { e.preventDefault(); }}>
               <fieldset>
@@ -291,8 +291,8 @@ class ContentPackSelection extends React.Component {
                        maxLength={250}
                        value={contentPack.name}
                        onChange={this._bindValue}
-                       label="Name"
-                       help="Required. Give a descriptive name for this content pack."
+                       label="姓名"
+                       help="必需。 为此内容包提供一个描述性名称。"
                        error={errors.name}
                        required />
                 <Input name="summary"
@@ -301,8 +301,8 @@ class ContentPackSelection extends React.Component {
                        maxLength={250}
                        value={contentPack.summary}
                        onChange={this._bindValue}
-                       label="Summary"
-                       help="Required. Give a short summary of the content pack."
+                       label="概括"
+                       help="必需。 提供内容包的简短摘要。"
                        error={errors.summary}
                        required />
                 <Input name="description"
@@ -311,16 +311,16 @@ class ContentPackSelection extends React.Component {
                        value={contentPack.description}
                        onChange={this._bindValue}
                        rows={6}
-                       label="Description"
-                       help="Give a long description of the content pack in markdown." />
+                       label="描述"
+                       help="在 Markdown 中详细描述内容包。" />
                 <Input name="vendor"
                        id="vendor"
                        type="text"
                        maxLength={250}
                        value={contentPack.vendor}
                        onChange={this._bindValue}
-                       label="Vendor"
-                       help="Required. Who did this content pack and how can they be reached, e.g. Name and email."
+                       label="小贩"
+                       help="必需。 谁制作了此内容包以及如何联系到他们，例如 姓名和电子邮件。"
                        error={errors.vendor}
                        required />
                 <Input name="url"
@@ -330,7 +330,7 @@ class ContentPackSelection extends React.Component {
                        value={contentPack.url}
                        onChange={this._bindValue}
                        label="URL"
-                       help="Where can I find the content pack. e.g. github url"
+                       help="在哪里可以找到内容包。 例如 github网址"
                        error={errors.url} />
               </fieldset>
             </form>
@@ -338,7 +338,7 @@ class ContentPackSelection extends React.Component {
         </Row>
         <Row>
           <Col smOffset={1} lg={8}>
-            <h2>Content Pack selection</h2>
+            <h2>内容包选择</h2>
             {edit && (
             <HelpBlock>You can select between installed entities from the server (<Icon name="server" />) or
               entities from the former content pack revision (<Icon name="archive" className={style.contentPackEntity} />).

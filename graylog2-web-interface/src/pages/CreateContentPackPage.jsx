@@ -103,19 +103,18 @@ const CreateContentPackPage = createReactClass({
     return (
       <DocumentTitle title="Content packs">
         <span>
-          <PageHeader title="Create content packs">
+          <PageHeader title="创建内容包">
             <span>
-              Content packs accelerate the set up process for a specific data source. A content pack can include inputs/extractors, streams, and dashboards.
+              内容包可加速特定数据源的设置过程。 内容包可以包括输入/提取器、流和仪表板。
             </span>
 
             <span>
-              Find more content packs in {' '}
-              <a href="https://marketplace.graylog.org/" target="_blank" rel="noopener noreferrer">the Graylog Marketplace</a>.
+              在<a href="https://marketplace.graylog.org/" target="_blank" rel="noopener noreferrer">Graylog市场</a>市场中查找更多内容包。
             </span>
 
             <div>
               <LinkContainer to={Routes.SYSTEM.CONTENTPACKS.LIST}>
-                <Button bsStyle="info">Content Packs</Button>
+                <Button bsStyle="info">内容包</Button>
               </LinkContainer>
             </div>
           </PageHeader>
