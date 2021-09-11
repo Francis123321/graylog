@@ -285,11 +285,11 @@ class CacheForm extends React.Component {
                 <Input type="text"
                        id="title"
                        name="title"
-                       label="Title"
+                       label="标题"
                        autoFocus
                        required
                        onChange={this._onChange}
-                       help="A short title for this cache."
+                       help="此缓存的简短标题。"
                        value={cache.title}
                        ref={(ref) => { this._input = ref; }}
                        labelClassName="col-sm-3"
@@ -298,9 +298,9 @@ class CacheForm extends React.Component {
                 <Input type="text"
                        id="description"
                        name="description"
-                       label="Description"
+                       label="描述"
                        onChange={this._onChange}
-                       help="Cache description."
+                       help="缓存描述。"
                        value={cache.description}
                        labelClassName="col-sm-3"
                        wrapperClassName="col-sm-9" />
@@ -308,10 +308,10 @@ class CacheForm extends React.Component {
                 <Input type="text"
                        id="name"
                        name="name"
-                       label="Name"
+                       label="名称"
                        required
                        onChange={this._onChange}
-                       help={this._validationMessage('name', 'The name that is being used to refer to this cache. Must be unique.')}
+                       help={this._validationMessage('name', '用于引用此缓存的名称。 必须是独一无二的。')}
                        bsStyle={this._validationState('name')}
                        value={cache.name}
                        labelClassName="col-sm-3"
@@ -321,7 +321,7 @@ class CacheForm extends React.Component {
               <fieldset>
                 <Row>
                   <Col mdOffset={3} md={9}>
-                    <Button type="submit" bsStyle="success">{create ? 'Create Cache' : 'Update Cache'}</Button>
+                    <Button type="submit" bsStyle="success">{create ? '创建缓存' : '更新缓存'}</Button>
                   </Col>
                 </Row>
               </fieldset>

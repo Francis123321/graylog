@@ -84,13 +84,13 @@ class CacheCreate extends React.Component {
           <Col lg={8}>
             <form className="form form-horizontal" onSubmit={() => {}}>
               <Input id="cache-type-select"
-                     label="Cache Type"
+                     label="缓存类型"
                      required
                      autoFocus
-                     help="The type of cache to configure."
+                     help="要配置的缓存类型。"
                      labelClassName="col-sm-3"
                      wrapperClassName="col-sm-9">
-                <Select placeholder="Select Cache Type"
+                <Select placeholder="选择缓存类型"
                         clearable={false}
                         options={sortedCaches}
                         matchProp="label"
@@ -105,7 +105,7 @@ class CacheCreate extends React.Component {
           <Col lg={12}>
             <CacheForm cache={cache}
                        type={type}
-                       title="Configure Cache"
+                       title="配置缓存"
                        create
                        saved={saved}
                        validationErrors={validationErrors}
