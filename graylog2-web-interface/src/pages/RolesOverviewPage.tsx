@@ -43,13 +43,13 @@ const RolesOverviewPage = () => (
     <Row className="content">
       <Col xs={12}>
         <Alert bsStyle="info">
-          <Icon name="info-circle" />{' '}<b>Granting Permissions</b><br />
-          With Graylog 4.0, we&apos;ve updated the permissions system and changed the purpose of roles.
-          The built-in roles still allow granting capabilities to users, like creating dashboards or viewing the archive catalog.
-          But they no longer grant permissions for a specific dashboard or stream. It is also not possible to create an own role.
-          Granting permissions for a specific entity can now be done by using its <b><Icon name="user-plus" /> Share</b> button. You can find the button e.g. on the entities overview page.
-          If you want to grant permissions for an entity to multiple users at once, you can use teams.
-          Learn more in the <DocumentationLink page={DocsHelper.PAGES.PERMISSIONS} text="documentation" />.
+          <Icon name="info-circle" />{' '}<b>授予权限</b><br />
+          在 Graylog 4.0 中，我们更新了权限系统并更改了角色的用途。
+          内置角色仍然允许向用户授予功能，例如创建仪表板或查看存档目录。
+          但他们不再授予特定仪表板或流的权限。 也无法创建自己的角色。
+          现在可以使用其 <b><Icon name="user-plus" /> Share</b> 按钮为特定实体授予权限。 您可以找到按钮，例如 在实体概览页面上。
+          如果您想一次向多个用户授予一个实体的权限，您可以使用团队。
+          在 <DocumentationLink page={DocsHelper.PAGES.PERMISSIONS} text="文件" /> 中了解更多信息。
         </Alert>
       </Col>
     </Row>

@@ -38,7 +38,7 @@ const DEFAULT_PAGINATION = {
   query: '',
 };
 
-const TABLE_HEADERS = ['', 'Full name', 'Username', 'E-Mail Address', 'Client Address', 'Enabled', 'Role', 'Actions'];
+const TABLE_HEADERS = ['', '全名', '用户名', '电子邮件地址 ', '客户地址', '启用', '角色', '操作'];
 
 const Container = styled.div`
   .data-table {

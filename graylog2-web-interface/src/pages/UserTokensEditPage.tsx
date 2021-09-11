@@ -39,7 +39,7 @@ type Props = {
 
 const PageTitle = ({ fullName }: { fullName: string | null | undefined }) => (
   <>
-    Edit Tokens Of User  {fullName && (
+    编辑用户令牌  {fullName && (
       <>
         - <i>{fullName}</i>
       </>
@@ -105,13 +105,11 @@ const UserEditPage = ({ params }: Props) => {
                                      userIsReadOnly={loadedUser?.readOnly ?? false} />
                   )}>
         <span>
-          You can create new tokens or delete old ones.
+          您可以创建新令牌或删除旧令牌。
         </span>
 
         <span>
-          Learn more in the{' '}
-          <DocumentationLink page={DocsHelper.PAGES.USERS_ROLES}
-                             text="documentation" />
+          在<DocumentationLink page={DocsHelper.PAGES.USERS_ROLES} text="文档" />中了解更多信息
         </span>
 
         <UserOverviewLinks />
@@ -119,7 +117,7 @@ const UserEditPage = ({ params }: Props) => {
 
       <Row className="content">
         <Col lg={8}>
-          <Headline>Create And Edit Tokens</Headline>
+          <Headline>创建和编辑令牌</Headline>
           {loadedUser ? (
             <TokenList tokens={tokens}
                        onDelete={_handleTokenDelete}

@@ -119,7 +119,7 @@ const TokenList = ({ creatingToken, deletingToken, onCreate, onDelete, tokens }:
         <ControlledTableList.Header />
         {effectiveTokens.length === 0 && (
           <ControlledTableList.Item>
-            <p>{query === '' ? 'No tokens to display.' : 'No tokens match the filter.'}</p>
+            <p>{query === '' ? '没有要显示的令牌。' : '没有令牌匹配过滤器。'}</p>
           </ControlledTableList.Item>
         )}
         {effectiveTokens.map((token) => {

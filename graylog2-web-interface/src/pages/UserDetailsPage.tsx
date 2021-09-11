@@ -35,7 +35,7 @@ type Props = {
 
 const PageTitle = ({ fullName }: {fullName: string}) => (
   <>
-    User Details {fullName && (
+    用户详情 {fullName && (
       <>
         - <i>{fullName}</i>
       </>
@@ -59,13 +59,11 @@ const UserDetailsPage = ({ params }: Props) => {
                                      userIsReadOnly={loadedUser?.readOnly ?? false} />
                   )}>
         <span>
-          Overview of details like profile information, settings, teams and roles.
+          个人资料信息、设置、团队和角色等详细信息概述。
         </span>
 
         <span>
-          Learn more in the{' '}
-          <DocumentationLink page={DocsHelper.PAGES.USERS_ROLES}
-                             text="documentation" />
+          在<DocumentationLink page={DocsHelper.PAGES.USERS_ROLES} text="文档" />中了解更多信息
         </span>
 
         <UserOverviewLinks />

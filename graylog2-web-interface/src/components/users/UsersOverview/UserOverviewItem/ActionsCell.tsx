@@ -48,7 +48,7 @@ const EditTokensAction = ({
                       bsStyle="info"
                       bsSize="xs"
                       title={`Edit tokens of user ${fullName}`}>
-      Edit tokens
+      编辑令牌
     </WrapperComponent>
   </LinkContainer>
 );
@@ -59,7 +59,7 @@ const ReadOnlyActions = ({ user }: { user: UserOverview }) => {
   return (
     <>
       <OverlayTrigger placement="left" overlay={tooltip}>
-        <Button bsSize="xs" bsStyle="info" disabled>System user</Button>
+        <Button bsSize="xs" bsStyle="info" disabled>系统用户</Button>
       </OverlayTrigger>
       &nbsp;
       <EditTokensAction user={user} wrapperComponent={Button} />

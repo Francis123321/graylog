@@ -79,7 +79,7 @@ const SharedEntitiesOverview = ({ entityType, searchPaginated, setLoading }: Pro
   return (
     <>
       <p className="description">
-        Found {total} entities which are shared with the {entityType}.
+        找到与 {entityType} 共享的 {total} 个实体。
       </p>
       <StyledPaginatedList activePage={page}
                            totalItems={total}
@@ -91,7 +91,7 @@ const SharedEntitiesOverview = ({ entityType, searchPaginated, setLoading }: Pro
                    )}
                    dataRowFormatter={(sharedEntity) => _sharedEntityOverviewItem(sharedEntity, context)}
                    filterKeys={[]}
-                   noDataText={<EmptyResult>No shared entities have been found.</EmptyResult>}
+                   noDataText={<EmptyResult>未找到共享实体。</EmptyResult>}
                    headers={TABLE_HEADERS}
                    id="shared-entities"
                    rowClassName="no-bm"
