@@ -28,9 +28,9 @@ class SizeBasedRotationStrategySummary extends React.Component {
     return (
       <div>
         <dl>
-          <dt>Index rotation strategy:</dt>
+          <dt>索引轮换策略:</dt>
           <dd>Index Size</dd>
-          <dt>Max index size:</dt>
+          <dt>最大索引大小:</dt>
           <dd>{this.props.config.max_size} bytes ({NumberUtils.formatBytes(this.props.config.max_size)})</dd>
         </dl>
       </div>

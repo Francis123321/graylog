@@ -78,15 +78,15 @@ const IndexSetsComponent = createReactClass({
     const actions = (
       <div>
         <LinkContainer to={Routes.SYSTEM.INDEX_SETS.CONFIGURATION(indexSet.id)}>
-          <Button bsStyle="info">Edit</Button>
+          <Button bsStyle="info">编辑</Button>
         </LinkContainer>
         {' '}
-        <DropdownButton title="More Actions" id={`index-set-dropdown-${indexSet.id}`} pullRight>
+        <DropdownButton title="更多操作" id={`index-set-dropdown-${indexSet.id}`} pullRight>
           <MenuItem onSelect={this._onSetDefault(indexSet)}
-                    disabled={!indexSet.writable || indexSet.default}>Set as default
+                    disabled={!indexSet.writable || indexSet.default}>设为默认
           </MenuItem>
           <MenuItem divider />
-          <MenuItem onSelect={this._onDelete(indexSet)}>Delete</MenuItem>
+          <MenuItem onSelect={this._onDelete(indexSet)}>删除</MenuItem>
         </DropdownButton>
       </div>
     );
@@ -153,7 +153,7 @@ const IndexSetsComponent = createReactClass({
 
     return (
       <div>
-        <h4><strong>Total:</strong> {this._formatStatsString(this.state.globalIndexSetStats)}</h4>
+        <h4><strong>总数:</strong> {this._formatStatsString(this.state.globalIndexSetStats)}</h4>
 
         <hr style={{ marginBottom: 0 }} />
 
@@ -162,7 +162,7 @@ const IndexSetsComponent = createReactClass({
                        onChange={this._onChangePaginatedList}
                        showPageSizeSelect={false}>
           <EntityList bsNoItemsStyle="info"
-                      noItemsText="There are no index sets to display"
+                      noItemsText="没有要显示的索引集"
                       items={this.state.indexSets.map((indexSet) => this._formatIndexSet(indexSet))} />
         </PaginatedList>
       </div>

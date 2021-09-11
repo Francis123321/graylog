@@ -84,18 +84,16 @@ const IndexSetConfigurationPage = createReactClass({
     return (
       <DocumentTitle title="Configure Index Set">
         <div>
-          <PageHeader title="Configure Index Set">
+          <PageHeader title="配置索引集">
             <span>
-              Modify the current configuration for this index set, allowing you to customize the retention, sharding,
-              and replication of messages coming from one or more streams.
+              修改此索引集的当前配置，允许您自定义来自一个或多个流的消息的保留、分片和复制。
             </span>
             <span>
-              You can learn more about the index model in the{' '}
-              <DocumentationLink page={DocsHelper.PAGES.INDEX_MODEL} text="documentation" />
+              您可以在<DocumentationLink page={DocsHelper.PAGES.INDEX_MODEL} text="文档" />中了解有关索引模型的更多信息
             </span>
             <span>
               <LinkContainer to={Routes.SYSTEM.INDICES.LIST}>
-                <Button bsStyle="info">Index sets overview</Button>
+                <Button bsStyle="info">索引集概述</Button>
               </LinkContainer>
             </span>
           </PageHeader>
