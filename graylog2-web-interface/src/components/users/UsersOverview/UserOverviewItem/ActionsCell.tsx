@@ -97,19 +97,19 @@ const EditActions = ({ user, user: { username, id, fullName, accountStatus, exte
       <IfPermitted permissions={[`users:edit:${username}`]}>
         <LinkContainer to={Routes.SYSTEM.USERS.edit(id)}>
           <Button id={`edit-user-${id}`} bsStyle="info" bsSize="xs" title={`Edit user ${fullName}`}>
-            Edit
+            编辑
           </Button>
         </LinkContainer>
       </IfPermitted>
       &nbsp;
-      <DropdownButton bsSize="xs" title="More actions" pullRight id={`delete-user-${id}`}>
+      <DropdownButton bsSize="xs" title="更多操作" pullRight id={`delete-user-${id}`}>
         <EditTokensAction user={user} wrapperComponent={MenuItem} />
         <IfPermitted permissions={[`users:edit:${username}`]}>
           { showEnableDisable && (
             <MenuItem id={`set-status-user-${id}`}
                       onClick={_toggleStatus}
                       title={`Set new account status for ${fullName}`}>
-              {accountStatus === 'enabled' ? 'Disable' : 'Enable'}
+              {accountStatus === 'enabled' ? '禁用' : '使用'}
             </MenuItem>
           ) }
           <MenuItem id={`delete-user-${id}`}
@@ -117,7 +117,7 @@ const EditActions = ({ user, user: { username, id, fullName, accountStatus, exte
                     bsSize="xs"
                     title={`Delete user ${fullName}`}
                     onClick={_deleteUser}>
-            Delete
+            删除
           </MenuItem>
         </IfPermitted>
       </DropdownButton>

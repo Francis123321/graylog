@@ -43,11 +43,11 @@ const EnterprisePluginNotFound = ({ featureName, wrapperClassName }: Props) => (
   <Panel bsStyle="info" className={wrapperClassName}>
     <Panel.Heading>
       <Header>
-        <HeaderIcon name="crown" />Enterprise Feature
+        <HeaderIcon name="crown" />企业特色
       </Header>
     </Panel.Heading>
     <Panel.Body>
-      To use the <b>{featureName}</b> functionality you need the <a href="https://www.graylog.org/products/enterprise" rel="noopener noreferrer" target="_blank">Graylog Enterprise license</a> and the <DocumentationLink page={DocsHelper.PAGES.ENTERPRISE_SETUP} text="Graylog Enterprise plugin" />.
+      要使用 <b>{featureName}</b> 功能，您需要 <a href="https://www.graylog.org/products/enterprise" rel="noopener noreferrer" target="_blank">Graylog 企业许可证</a> 和 <DocumentationLink page={DocsHelper.PAGES.ENTERPRISE_SETUP} text="Graylog 企业插件" />。
     </Panel.Body>
   </Panel>
 );
