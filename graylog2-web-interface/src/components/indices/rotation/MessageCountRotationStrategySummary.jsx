@@ -26,9 +26,9 @@ class MessageCountRotationStrategySummary extends React.Component {
     return (
       <div>
         <dl>
-          <dt>Index rotation strategy:</dt>
+          <dt>索引轮换策略:</dt>
           <dd>Message Count</dd>
-          <dt>Max docs per index:</dt>
+          <dt>每个索引的最大文档数:</dt>
           <dd>{this.props.config.max_docs_per_index}</dd>
         </dl>
       </div>

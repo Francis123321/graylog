@@ -47,8 +47,8 @@ class CreateOutputDropdown extends React.Component {
         <ConfigurationForm ref={(configurationForm) => { this.configurationForm = configurationForm; }}
                            key="configuration-form-output"
                            configFields={this.state.typeDefinition}
-                           title="Create new Output"
-                           helpBlock="Select a name of your new output that describes it."
+                           title="创建新输出"
+                           helpBlock="选择描述它的新输出的名称。"
                            typeName={this.state.typeName}
                            submitAction={this.props.onSubmit} />
       </div>

@@ -47,10 +47,10 @@ class ClosingRetentionStrategyConfiguration extends React.Component {
         <fieldset>
           <Input type="number"
                  id="max-number-of-indices"
-                 label="Max number of indices"
+                 label="最大索引数"
                  onChange={this._onInputUpdate('max_number_of_indices')}
                  value={this.state.max_number_of_indices}
-                 help={<span>Maximum number of indices to keep before <strong>closing</strong> the oldest ones</span>}
+                 help={<span>在<strong>关闭</strong>最旧的索引之前保留的最大索引数。</span>}
                  required />
         </fieldset>
       </div>

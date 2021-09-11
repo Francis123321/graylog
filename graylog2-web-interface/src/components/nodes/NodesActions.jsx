@@ -36,7 +36,7 @@ class NodesActions extends React.Component {
   };
 
   _toggleMessageProcessing = () => {
-    if (confirm(`You are about to ${this.props.systemOverview.is_processing ? 'pause' : 'resume'} message processing in this node. Are you sure?`)) {
+    if (confirm(`您将${this.props.systemOverview.is_processing ? '暂停' : '恢复'}此节点中的消息处理。 你确定吗？`)) {
       if (this.props.systemOverview.is_processing) {
         SystemProcessingStore.pause(this.props.node.node_id);
       } else {
@@ -47,14 +47,14 @@ class NodesActions extends React.Component {
 
   _changeLBStatus = (status) => {
     return () => {
-      if (confirm(`You are about to change the load balancer status for this node to ${status}. Are you sure?`)) {
+      if (confirm(`您即将将此节点的负载均衡器状态更改为${status}。 你确定吗？`)) {
         SystemLoadBalancerStore.override(this.props.node.node_id, status);
       }
     };
   };
 
   _shutdown = () => {
-    if (prompt('Do you really want to shutdown this node? Confirm by typing "SHUTDOWN".') === 'SHUTDOWN') {
+    if (prompt('你真的要关闭这个节点吗？ 输入“SHUTDOWN”进行确认。') === 'SHUTDOWN') {
       SystemShutdownStore.shutdown(this.props.node.node_id);
     }
   };
@@ -65,33 +65,33 @@ class NodesActions extends React.Component {
     return (
       <div className="item-actions">
         <LinkContainer to={Routes.SYSTEM.NODES.SHOW(this.props.node.node_id)}>
-          <Button bsStyle="info">Details</Button>
+          <Button bsStyle="info">细节</Button>
         </LinkContainer>
 
         <LinkContainer to={Routes.SYSTEM.METRICS(this.props.node.node_id)}>
-          <Button bsStyle="info">Metrics</Button>
+          <Button bsStyle="info">指标</Button>
         </LinkContainer>
 
         <ExternalLinkButton bsStyle="info" href={apiBrowserURI}>
-          API browser
+          API浏览器
         </ExternalLinkButton>
 
-        <DropdownButton title="More actions" id={`more-actions-dropdown-${this.props.node.node_id}`} pullRight>
+        <DropdownButton title="更多操作" id={`more-actions-dropdown-${this.props.node.node_id}`} pullRight>
           <IfPermitted permissions="processing:changestate">
             <MenuItem onSelect={this._toggleMessageProcessing}>
-              {this.props.systemOverview.is_processing ? 'Pause' : 'Resume'} message processing
+              {this.props.systemOverview.is_processing ? '暂停' : '恢复'}消息处理
             </MenuItem>
           </IfPermitted>
 
           <IfPermitted permissions="lbstatus:change">
-            <DropdownSubmenu title="Override LB status" left>
-              <MenuItem onSelect={this._changeLBStatus('ALIVE')}>ALIVE</MenuItem>
-              <MenuItem onSelect={this._changeLBStatus('DEAD')}>DEAD</MenuItem>
+            <DropdownSubmenu title="覆盖 LB 状态" left>
+              <MenuItem onSelect={this._changeLBStatus('ALIVE')}>激活</MenuItem>
+              <MenuItem onSelect={this._changeLBStatus('DEAD')}>死亡</MenuItem>
             </DropdownSubmenu>
           </IfPermitted>
 
           <IfPermitted permissions="node:shutdown">
-            <MenuItem onSelect={this._shutdown}>Graceful shutdown</MenuItem>
+            <MenuItem onSelect={this._shutdown}>正常关机</MenuItem>
           </IfPermitted>
 
           <IfPermitted permissions={['processing:changestate', 'lbstatus:change', 'node:shutdown']} anyPermissions>
@@ -103,18 +103,18 @@ class NodesActions extends React.Component {
           <HideOnCloud>
             <IfPermitted permissions="inputs:read">
               <LinkContainer to={Routes.node_inputs(this.props.node.node_id)}>
-                <MenuItem>Local message inputs</MenuItem>
+                <MenuItem>本地消息输入</MenuItem>
               </LinkContainer>
             </IfPermitted>
           </HideOnCloud>
           <IfPermitted permissions="threads:dump">
             <LinkContainer to={Routes.SYSTEM.THREADDUMP(this.props.node.node_id)}>
-              <MenuItem>Get thread dump</MenuItem>
+              <MenuItem>获取线程转储</MenuItem>
             </LinkContainer>
           </IfPermitted>
           <IfPermitted permissions="processbuffer:dump">
             <LinkContainer to={Routes.SYSTEM.PROCESSBUFFERDUMP(this.props.node.node_id)}>
-              <MenuItem>Get process-buffer dump</MenuItem>
+              <MenuItem>获取进程缓冲区转储</MenuItem>
             </LinkContainer>
           </IfPermitted>
         </DropdownButton>

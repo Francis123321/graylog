@@ -92,18 +92,16 @@ const IndexSetCreationPage = createReactClass({
     return (
       <DocumentTitle title="Create Index Set">
         <div>
-          <PageHeader title="Create Index Set">
+          <PageHeader title="创建索引集">
             <span>
-              Create a new index set that will let you configure the retention, sharding, and replication of messages
-              coming from one or more streams.
+              创建一个新的索引集，让您可以配置来自一个或多个流的消息的保留、分片和复制。
             </span>
             <span>
-              You can learn more about the index model in the{' '}
-              <DocumentationLink page={DocsHelper.PAGES.INDEX_MODEL} text="documentation" />
+              您可以在<DocumentationLink page={DocsHelper.PAGES.INDEX_MODEL} text="文档" />中了解有关索引模型的更多信息
             </span>
             <span>
               <LinkContainer to={Routes.SYSTEM.INDICES.LIST}>
-                <Button bsStyle="info">Index sets overview</Button>
+                <Button bsStyle="info">索引集概述</Button>
               </LinkContainer>
             </span>
           </PageHeader>
