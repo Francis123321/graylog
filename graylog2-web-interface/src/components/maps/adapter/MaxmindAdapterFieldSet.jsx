@@ -64,31 +64,31 @@ class MaxmindAdapterFieldSet extends React.Component {
         <Input type="text"
                id="path"
                name="path"
-               label="File path"
+               label="文件路径"
                autoFocus
                required
                onChange={this.props.handleFormEvent}
-               help={this.props.validationMessage('path', 'The path to the Maxmind\u2122 database file.')}
+               help={this.props.validationMessage('path', 'Maxmind\u2122 数据库文件的路径。')}
                bsStyle={this.props.validationState('path')}
                value={config.path}
                labelClassName="col-sm-3"
                wrapperClassName="col-sm-9" />
         <Input id="database-type-select"
-               label="Database type"
+               label="数据库类型"
                required
                autoFocus
-               help="Select the type of the database file"
+               help="选择数据库文件的类型"
                labelClassName="col-sm-3"
                wrapperClassName="col-sm-9">
-          <Select placeholder="Select the type of database file"
+          <Select placeholder="选择数据库文件的类型"
                   clearable={false}
                   options={databaseTypes}
                   matchProp="label"
                   onChange={this._onDbTypeSelect}
                   value={config.database_type} />
         </Input>
-        <TimeUnitInput label="Refresh file"
-                       help={'If enabled, the MaxMind\u2122 database file is checked for modifications and refreshed when it changed on disk.'}
+        <TimeUnitInput label="刷新文件"
+                       help={'如果启用，MaxMind\u2122 数据库文件将检查修改并在磁盘上更改时刷新。'}
                        update={this.updateCheckInterval}
                        value={config.check_interval}
                        unit={config.check_interval_unit || 'MINUTES'}

@@ -68,132 +68,123 @@ end`;
   return (
     <div>
       <p>
-        The HTTPJSONPath data adapter executes <em>HTTP GET</em> requests to lookup a key and parses the result based on
-        configured JSONPath expressions.
+        HTTPJSONPath 数据适配器执行 <em>HTTP GET</em> 请求以查找键并根据配置的 JSONPath 表达式解析结果。
       </p>
 
       <Alert style={{ marginBottom: 10 }} bsStyle="info">
-        Every lookup table result has two values. A <em>single value</em> and a <em>multi value</em>. The single
-        value will be used when the lookup result is expected to be a string, number or boolean. The multi value
-        will be used when the lookup result is expected to be a map or list.
+        每个查找表结果都有两个值。 <em>单值</em>和<em>多值</em>。 当查找结果预期为字符串、数字或布尔值时，将使用单个值。 当查找结果预期为地图或列表时，将使用 multi 值。
       </Alert>
 
-      <h3 style={{ marginBottom: 10 }}>Configuration</h3>
+      <h3 style={{ marginBottom: 10 }}>配置</h3>
 
-      <h5 style={{ marginBottom: 10 }}>Lookup URL</h5>
+      <h5 style={{ marginBottom: 10 }}>查找网址</h5>
       <p style={{ marginBottom: 10, padding: 0 }}>
-        The URL that will be used for the HTTP request. To use the <em>lookup key</em> in the URL, the
-        <code>{'${key}'}</code>
-        value can be used. This variable will be replaced by the actual key that is passed to a lookup function. <br />
-        (example: <code>{'https://example.com/api/lookup?key=${key}'}</code>)
+        将用于 HTTP 请求的 URL。 要在 URL 中使用 <em>查找键</em>，可以使用 <code>{'${key}'}</code> 值。 该变量将被传递给查找函数的实际键替换。 <br />
+        （示例：<code>{'https://example.com/api/lookup?key=${key}'}</code>）
       </p>
 
-      <h5 style={{ marginBottom: 10 }}>Single value JSONPath</h5>
+      <h5 style={{ marginBottom: 10 }}>单值 JSONPath </h5>
       <p style={{ marginBottom: 10, padding: 0 }}>
-        This JSONPath expression will be used to parse the <em>single value</em> of the lookup result.
-        (example: <code>$.user.full_name</code>)
+        此 JSONPath 表达式将用于解析查找结果的<em>单个值</em>。
+        （例如：<code>$.user.full_name</code>）
       </p>
 
-      <h5 style={{ marginBottom: 10 }}>Multi value JSONPath</h5>
+      <h5 style={{ marginBottom: 10 }}>多值 JSONPath</h5>
       <p style={{ marginBottom: 10, padding: 0 }}>
-        This JSONPath expression will be used to parse the <em>multi value</em> of the lookup result.
-        (example: <code>$.users[*]</code>)
-        The multi value JSONPath setting is <em>optional</em>. Without it, the single value is also present in the
-        multi value result.
+        此 JSONPath 表达式将用于解析查找结果的 <em>multi value</em>。 （例如：<code>$.users[*]</code>）
+        多值 JSONPath 设置是<em>可选</em>。 没有它，单值也会出现在多值结果中。
       </p>
 
-      <h5 style={{ marginBottom: 10 }}>HTTP User-Agent</h5>
+      <h5 style={{ marginBottom: 10 }}>HTTP 用户代理</h5>
       <p style={{ marginBottom: 10, padding: 0 }}>
-        This is the <em>User-Agent</em> header that will be used for the HTTP requests. You should include some
-        contact details so owners of the services you query know whom to contact if issues arise.
-        (like excessive API requests from your Graylog cluster)
+        这是将用于 HTTP 请求的 <em>User-Agent</em> 标头。 您应该提供一些联系方式，以便您查询的服务所有者知道在出现问题时与谁联系。
+        （比如来自 Graylog 集群的过多 API 请求）
       </p>
 
       <hr />
 
-      <h3 style={{ marginBottom: 10 }}>Example</h3>
+      <h3 style={{ marginBottom: 10 }}>例子</h3>
       <p>
-        This shows an example configuration and the values that will be returned from a lookup.<br />
-        The configured URL is <strong>{'https://example.com/api/users/${key}'}</strong> and the <code>{'${key}'}</code>
-        gets replaced by <strong>jane</strong> during the lookup request.
+        这显示了一个示例配置以及将从查找中返回的值。<br />
+        配置的 URL 是 <strong>{'https://example.com/api/users/${key}'}</strong> 并且 <code>{'${key}'}</code> 被替换 在查找请求期间由 <strong>jane</strong> 提供。
       </p>
       <p>
-        This is the resulting JSON document:
+        这是生成的 JSON 文档：
       </p>
       <pre>{exampleJSON}</pre>
 
       <Row>
         <Col md={4}>
-          <h5 style={{ marginBottom: 10 }}>Configuration</h5>
+          <h5 style={{ marginBottom: 10 }}>配置</h5>
           <p style={{ marginBottom: 10, padding: 0 }}>
-            Single value JSONPath: <code>$.user.full_name</code><br />
-            Multi value JSONPath: <em>empty</em><br />
+            单值 JSONPath: <code>$.user.full_name</code><br />
+            多值 JSONPath: <em>empty</em><br />
           </p>
         </Col>
         <Col md={8}>
           <h5 style={{ marginBottom: 10 }}>Result</h5>
           <p style={{ marginBottom: 10, padding: 0 }}>
-            Single value: <code>Jane Doe</code><br />
-            Multi value:
+            单值: <code>Jane Doe</code><br />
+            多值:
             <pre>{noMultiResult}</pre>
           </p>
         </Col>
       </Row>
       <Row>
         <Col md={4}>
-          <h5 style={{ marginBottom: 10 }}>Configuration</h5>
+          <h5 style={{ marginBottom: 10 }}>配置</h5>
           <p style={{ marginBottom: 10, padding: 0 }}>
-            Single value JSONPath: <code>$.user.full_name</code><br />
-            Multi value JSONPath: <code>$.user</code><br />
+            单值 JSONPath: <code>$.user.full_name</code><br />
+            多值 JSONPath: <code>$.user</code><br />
           </p>
         </Col>
         <Col md={8}>
-          <h5 style={{ marginBottom: 10 }}>Result</h5>
+          <h5 style={{ marginBottom: 10 }}>结果</h5>
           <p style={{ marginBottom: 10, padding: 0 }}>
-            Single value: <code>Jane Doe</code><br />
-            Multi value:
+            单值: <code>Jane Doe</code><br />
+            多值:
             <pre>{mapResult}</pre>
           </p>
         </Col>
       </Row>
       <Row>
         <Col md={4}>
-          <h5 style={{ marginBottom: 10 }}>Configuration</h5>
+          <h5 style={{ marginBottom: 10 }}>配置</h5>
           <p style={{ marginBottom: 10, padding: 0 }}>
-            Single value JSONPath: <code>$.user.contact.email</code><br />
-            Multi value JSONPath: <code>$.user.roles[*]</code><br />
+            单值 JSONPath: <code>$.user.contact.email</code><br />
+            多值 JSONPath: <code>$.user.roles[*]</code><br />
           </p>
         </Col>
         <Col md={8}>
-          <h5 style={{ marginBottom: 10 }}>Result</h5>
+          <h5 style={{ marginBottom: 10 }}>结果</h5>
           <p style={{ marginBottom: 10, padding: 0 }}>
-            Single value: <code>jane@example.com</code><br />
-            Multi value:
+            单值: <code>jane@example.com</code><br />
+            多值:
             <pre>{listResult}</pre>
           </p>
         </Col>
       </Row>
       <Row>
         <Col md={4}>
-          <h5 style={{ marginBottom: 10 }}>Configuration</h5>
+          <h5 style={{ marginBottom: 10 }}>配置</h5>
           <p style={{ marginBottom: 10, padding: 0 }}>
-            Single value JSONPath: <code>$.user.full_name</code><br />
-            Multi value JSONPath: <code>$.user.contact</code><br />
+            单值 JSONPath: <code>$.user.full_name</code><br />
+            多值 JSONPath: <code>$.user.contact</code><br />
           </p>
         </Col>
         <Col md={8}>
-          <h5 style={{ marginBottom: 10 }}>Result</h5>
+          <h5 style={{ marginBottom: 10 }}>结果</h5>
           <p style={{ marginBottom: 10, padding: 0 }}>
-            Single value: <code>Jane Doe</code><br />
-            Multi value:
+            单值: <code>Jane Doe</code><br />
+            多值:
             <pre>{smallMapResult}</pre>
           </p>
         </Col>
       </Row>
 
-      <h5 style={{ marginBottom: 10 }}>Pipeline Rule</h5>
+      <h5 style={{ marginBottom: 10 }}>管道规则</h5>
       <p>
-        This is an example pipeline rule that uses the example data from our last configuration example.
+        这是一个示例管道规则，它使用我们上一个配置示例中的示例数据。
       </p>
       <pre>{pipelineRule}</pre>
     </div>

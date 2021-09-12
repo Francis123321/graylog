@@ -47,30 +47,30 @@ class CSVFileAdapterDocumentation extends React.Component {
 
         <hr />
 
-        <h3 style={{ marginBottom: 10 }}>Example 1</h3>
+        <h3 style={{ marginBottom: 10 }}>示例 1</h3>
 
-        <h5 style={{ marginBottom: 10 }}>Configuration</h5>
+        <h5 style={{ marginBottom: 10 }}>配置</h5>
         <p style={{ marginBottom: 10, padding: 0 }}>
-          Separator: <code>,</code><br />
-          Quote character: <code>"</code><br />
-          Key column: <code>ipaddr</code><br />
-          Value column: <code>hostname</code>
+          分隔器: <code>,</code><br />
+          引用字符: <code>"</code><br />
+          重点栏目: <code>ipaddr</code><br />
+          值列: <code>hostname</code>
         </p>
 
-        <h5 style={{ marginBottom: 10 }}>CSV File</h5>
+        <h5 style={{ marginBottom: 10 }}>CSV文件</h5>
         <pre>{csvFile1}</pre>
 
-        <h3 style={{ marginBottom: 10 }}>Example 2</h3>
+        <h3 style={{ marginBottom: 10 }}>示例 2</h3>
 
-        <h5 style={{ marginBottom: 10 }}>Configuration</h5>
+        <h5 style={{ marginBottom: 10 }}>配置</h5>
         <p style={{ marginBottom: 10, padding: 0 }}>
-          Separator: <code>;</code><br />
-          Quote character: <code>'</code><br />
-          Key column: <code>ipaddr</code><br />
-          Value column: <code>hostname</code>
+          分隔器: <code>;</code><br />
+          引用字符: <code>'</code><br />
+          重点栏目: <code>ipaddr</code><br />
+          值列: <code>hostname</code>
         </p>
 
-        <h5 style={{ marginBottom: 10 }}>CSV File</h5>
+        <h5 style={{ marginBottom: 10 }}>CSV文件</h5>
         <pre>{csvFile2}</pre>
       </div>
     );
