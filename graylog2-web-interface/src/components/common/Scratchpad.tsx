@@ -197,10 +197,10 @@ const Scratchpad = () => {
         {!isSecurityWarningConfirmed && (
           <StyledAlert bsStyle="warning" bsSize="sm">
             <Icon name="exclamation-triangle" size="lg" />
-            <AlertNote>We recommend you do <strong>not</strong> store any sensitive information, such as passwords, in
-              this area.
+            <AlertNote>
+              我们建议您<strong>不要</strong>在此区域存储任何敏感信息，例如密码。
             </AlertNote>
-            <Button bsStyle="link" bsSize="sm" onClick={handleGotIt}>Got It!</Button>
+            <Button bsStyle="link" bsSize="sm" onClick={handleGotIt}>知道了!</Button>
           </StyledAlert>
         )}
 

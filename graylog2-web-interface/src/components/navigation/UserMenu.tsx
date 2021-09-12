@@ -41,8 +41,8 @@ const UserMenu = ({ fullName, readOnly = true, userId }: Props) => {
     ? Routes.SYSTEM.USERS.show(userId)
     : Routes.SYSTEM.USERS.edit(userId);
   const label = readOnly
-    ? 'Show profile'
-    : 'Edit profile';
+    ? '显示个人资料'
+    : '编辑个人资料';
 
   const onLogoutClicked = () => {
     SessionActions.logout.triggerPromise(SessionStore.getSessionId()).then(() => {

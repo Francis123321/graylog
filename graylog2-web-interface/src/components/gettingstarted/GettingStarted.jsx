@@ -160,9 +160,8 @@ class GettingStarted extends React.Component {
           <ContentHeadRow className="content">
             <Col mdPush={3} md={6} className="text-center" style={{ paddingBottom: '15px' }}>
               <span>
-                We could not load the{' '}
-                <a target="_blank" rel="noopener noreferrer" href="https://gettingstarted.graylog.org/assets/index.html">Graylog Getting Started Guide</a>.
-                Please open it directly with a browser that can access the public internet.
+                我们无法加载 <a target="_blank" rel="noopener noreferrer" href="https://gettingstarted.graylog.org/assets/index.html">Graylog 入门指南</a>。
+                请直接使用可以访问公共互联网的浏览器打开它。
               </span>
             </Col>
           </ContentHeadRow>
@@ -184,7 +183,7 @@ class GettingStarted extends React.Component {
           <Grid>
             <ContentHeadRow className="content">
               <Col mdPush={3} md={6} className="text-center" style={{ paddingBottom: '15px' }}>
-                <Spinner text="Loading Graylog Getting started guide ..." />
+                <Spinner text="加载 Graylog 入门指南 ..." />
               </Col>
             </ContentHeadRow>
           </Grid>
@@ -200,7 +199,7 @@ class GettingStarted extends React.Component {
                                 frameBorder="0"
                                 scrolling="yes"
                                 title="getting-started-content">
-            <p>Sorry, no iframes</p>
+            <p>抱歉，没有 iframe</p>
           </GettingStartedIframe>
         </>
       );
