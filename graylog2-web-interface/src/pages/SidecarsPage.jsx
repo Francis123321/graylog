@@ -40,18 +40,18 @@ const SidecarsPage = () => {
   return (
     <DocumentTitle title="Sidecars">
       <span>
-        <PageHeader title="Probes Overview">
+        <PageHeader title="探头概述">
           <span>
-            The Graylog sidecars can reliably forward contents of log files or Windows EventLog from your servers.
+            Graylog sidecar 可以可靠地从您的服务器转发日志文件或 Windows EventLog 的内容。
           </span>
 
           {canCreateSidecarUserTokens && (
             <>
               {sidecarUser ? (
                 <span>
-                  Do you need an API token for a sidecar?&ensp;
+                  您需要一个用于 sidecar 的 API 令牌吗？
                   <Link to={Routes.SYSTEM.USERS.TOKENS.edit(sidecarUser.id)}>
-                    Create or reuse a token for the <em>graylog-Probes</em> user
+                    为 <em>graylog-Probes</em> 用户创建或重用令牌
                   </Link>
                 </span>
               ) : <Spinner />}
@@ -60,13 +60,13 @@ const SidecarsPage = () => {
 
           <ButtonToolbar>
             <LinkContainer to={Routes.SYSTEM.SIDECARS.OVERVIEW}>
-              <Button bsStyle="info">Overview</Button>
+              <Button bsStyle="info">概述</Button>
             </LinkContainer>
             <LinkContainer to={Routes.SYSTEM.SIDECARS.ADMINISTRATION}>
-              <Button bsStyle="info">Administration</Button>
+              <Button bsStyle="info">行政</Button>
             </LinkContainer>
             <LinkContainer to={Routes.SYSTEM.SIDECARS.CONFIGURATION}>
-              <Button bsStyle="info">Configuration</Button>
+              <Button bsStyle="info">配置</Button>
             </LinkContainer>
           </ButtonToolbar>
         </PageHeader>

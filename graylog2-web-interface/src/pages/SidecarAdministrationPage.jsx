@@ -29,25 +29,24 @@ import withLocation from 'routing/withLocation';
 const SidecarAdministrationPage = ({ location: { query: { node_id: nodeId } } }) => (
   <DocumentTitle title="Collectors Administration">
     <span>
-      <PageHeader title="Collectors Administration">
+      <PageHeader title="收藏家管理">
         <span>
-          The Graylog collectors can reliably forward contents of log files or Windows EventLog from your servers.
+          Graylog 收集器可以可靠地从您的服务器转发日志文件或 Windows EventLog 的内容。
         </span>
 
         <span>
-          Read more about collectors and how to set them up in the
-          {' '}<DocumentationLink page={DocsHelper.PAGES.COLLECTOR_SIDECAR} text="Graylog documentation" />.
+          在 <DocumentationLink page={DocsHelper.PAGES.COLLECTOR_SIDECAR} text="Graylog 文档" /> 中阅读有关收集器以及如何设置收集器的更多信息。
         </span>
 
         <ButtonToolbar>
           <LinkContainer to={Routes.SYSTEM.SIDECARS.OVERVIEW}>
-            <Button bsStyle="info">Overview</Button>
+            <Button bsStyle="info">概述</Button>
           </LinkContainer>
           <LinkContainer to={Routes.SYSTEM.SIDECARS.ADMINISTRATION}>
-            <Button bsStyle="info">Administration</Button>
+            <Button bsStyle="info">行政</Button>
           </LinkContainer>
           <LinkContainer to={Routes.SYSTEM.SIDECARS.CONFIGURATION}>
-            <Button bsStyle="info">Configuration</Button>
+            <Button bsStyle="info">配置</Button>
           </LinkContainer>
         </ButtonToolbar>
       </PageHeader>

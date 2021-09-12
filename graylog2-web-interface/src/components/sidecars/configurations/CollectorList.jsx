@@ -67,13 +67,13 @@ const CollectorList = createReactClass({
           <Col md={12}>
             <div className="pull-right">
               <LinkContainer to={Routes.SYSTEM.SIDECARS.NEW_COLLECTOR}>
-                <Button bsStyle="success" bsSize="small">Create Log Collector</Button>
+                <Button bsStyle="success" bsSize="small">创建日志收集器</Button>
               </LinkContainer>
             </div>
-            <h2>Log Collectors <small>{total} total</small></h2>
+            <h2>日志收集器 <small>总数{total} </small></h2>
           </Col>
           <Col md={12}>
-            <p>Manage Log Collectors that you can configure and supervise through Graylog Sidecar and Graylog Web Interface.</p>
+            <p>管理您可以通过 Graylog Sidecar 和 Graylog Web Interface 配置和监督的日志收集器。</p>
           </Col>
         </Row>
 

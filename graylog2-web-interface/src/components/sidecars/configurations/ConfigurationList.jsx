@@ -69,15 +69,14 @@ class ConfigurationList extends React.Component {
           <Col md={12}>
             <div className="pull-right">
               <LinkContainer to={Routes.SYSTEM.SIDECARS.NEW_CONFIGURATION}>
-                <Button onClick={this.openModal} bsStyle="success" bsSize="small">Create Configuration</Button>
+                <Button onClick={this.openModal} bsStyle="success" bsSize="small">创建配置</Button>
               </LinkContainer>
             </div>
-            <h2>Configurations <small>{total} total</small></h2>
+            <h2>配置 <small>总数{total}</small></h2>
           </Col>
           <Col md={12}>
             <p>
-              These are the Configurations to use in your Collectors. Remember to apply new configurations to
-              Collectors in the Administration page.
+              这些是在您的收集器中使用的配置。 请记住将新配置应用于管理页面中的收集器。
             </p>
           </Col>
         </Row>

@@ -102,10 +102,10 @@ class SidecarRow extends React.Component {
         <td>
           <ButtonToolbar>
             <LinkContainer to={`${Routes.SYSTEM.SIDECARS.ADMINISTRATION}?node_id=${sidecar.node_id}`}>
-              <Button bsSize="xsmall" bsStyle="info">Manage Probes</Button>
+              <Button bsSize="xsmall" bsStyle="info">管理探针</Button>
             </LinkContainer>
             <LinkContainer to={Routes.search_with_query(`gl2_source_collector:${sidecar.node_id}`, 'relative', 604800)}>
-              <Button bsSize="xsmall" bsStyle="info">Show messages</Button>
+              <Button bsSize="xsmall" bsStyle="info">显示消息</Button>
             </LinkContainer>
           </ButtonToolbar>
         </td>
