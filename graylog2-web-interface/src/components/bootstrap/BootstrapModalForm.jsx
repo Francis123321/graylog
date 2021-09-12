@@ -102,9 +102,17 @@ class BootstrapModalForm extends React.Component {
       onSubmitForm(event);
     }
   };
-
+  isShowDownLoad = (downloadButtonText) =>{
+    if (downloadButtonText) {
+      return (
+        <Button type="button" bsStyle="success">{downloadButtonText}</Button>
+      );
+    } else {
+      return null
+    }
+  };
   render() {
-    const { backdrop, submitButtonDisabled, formProps, bsSize, onModalClose, cancelButtonText, show, submitButtonText, onModalOpen, title, children } = this.props;
+    const { backdrop, submitButtonDisabled, formProps, bsSize, onModalClose, cancelButtonText, show, submitButtonText, onModalOpen, title, children, downloadButtonText } = this.props;
     const body = (
       <div className="container-fluid">
         {children}
@@ -128,6 +136,7 @@ class BootstrapModalForm extends React.Component {
           </Modal.Body>
           <Modal.Footer>
             <Button type="button" onClick={this.onModalCancel}>{cancelButtonText}</Button>
+            {this.isShowDownLoad(downloadButtonText)}
             <Button type="submit" disabled={submitButtonDisabled} bsStyle="primary">{submitButtonText}</Button>
           </Modal.Footer>
         </form>

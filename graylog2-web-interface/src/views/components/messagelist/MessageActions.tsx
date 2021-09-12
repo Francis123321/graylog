@@ -17,6 +17,8 @@
 import * as React from 'react';
 import * as Immutable from 'immutable';
 
+import ThreatForm from './ThreatForm';
+import PCAPForm from './PCAPForm';
 import { LinkContainer } from 'components/graylog/router';
 import Routes from 'routing/Routes';
 import { ClipboardButton } from 'components/common';
@@ -82,18 +84,33 @@ const MessageActions = ({ index, id, fields, decorationStats, disabled, disableS
   );
 
   const showChanges = decorationStats && <Button onClick={toggleShowOriginal} active={showOriginal}>Show changes</Button>;
-
+  let threatForm1,PCAPForm1
+  const _onEdit = function() {
+    threatForm1.open();
+  };
+  const _onEdit2 = function() {
+    PCAPForm1.open();
+  };
+  const onUpdate = function () {
+    console.log('这里提交')
+  };
   return (
-    <ButtonGroup className="pull-right" bsSize="small">
-      {showChanges}
-      <Button href={messageUrl}>威胁情报分析</Button>
-      <Button href={messageUrl}>Download PCAP</Button>
-      <Button href={messageUrl}>Permalink</Button>
+    <span>
+      <ButtonGroup className="pull-right" bsSize="small">
+        {showChanges}
+          <Button onClick={_onEdit}>威胁情报分析</Button>
+        <Button onClick={_onEdit2}>下载PCAP</Button>
+        <Button href={messageUrl}>Permalink</Button>
 
-      <ClipboardButton title="Copy ID" text={id} bsSize="small" />
-      {surroundingSearchButton}
-      {disableTestAgainstStream ? null : _getTestAgainstStreamButton(streams, index, id)}
-    </ButtonGroup>
+        <ClipboardButton title="Copy ID" text={id} bsSize="small" />
+          {surroundingSearchButton}
+          {disableTestAgainstStream ? null : _getTestAgainstStreamButton(streams, index, id)}
+      </ButtonGroup>
+      {/*<StreamForm ref={(streamForm) => { streamForm1 = streamForm; }} title="编辑流"/>*/}
+      <ThreatForm ref={(threatForm) => { threatForm1 = threatForm; }} title="威胁情报分析" onSubmit={onUpdate} stream={streams} />
+      <PCAPForm ref={(PCAPForm) => { PCAPForm1 = PCAPForm; }} title="下载PCAP" onSubmit={onUpdate} stream={streams} />
+    </span>
+
   );
 };
 
