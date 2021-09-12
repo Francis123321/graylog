@@ -95,7 +95,7 @@ const BufferUsage = createReactClass({
     return (
       <div>
         <LinkContainer to={Routes.filtered_metrics(nodeId, this._metricFilter())}>
-          <Button bsSize="xsmall" className="pull-right">Metrics</Button>
+          <Button bsSize="xsmall" className="pull-right">指标</Button>
         </LinkContainer>
         <h3>{title}</h3>
         <NodeBufferUsage>

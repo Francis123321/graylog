@@ -69,27 +69,26 @@ class NodeOverview extends React.Component {
 
         <Row className="content">
           <Col md={12}>
-            <h2 style={{ marginBottom: 5 }}>Memory/Heap usage</h2>
+            <h2 style={{ marginBottom: 5 }}>内存/堆使用</h2>
             <JvmHeapUsage nodeId={node.node_id} />
           </Col>
         </Row>
 
         <Row className="content">
           <Col md={12}>
-            <h2>Buffers</h2>
+            <h2>缓冲器</h2>
             <p className="description">
-              Buffers are built to cache small amounts of messages for a very short time
-              (usually milliseconds) on their way through the different processors.
+              缓冲区用于在通过不同处理器的过程中在很短的时间内（通常为毫秒）缓存少量消息。
             </p>
             <Row>
               <Col md={4}>
-                <BufferUsage nodeId={node.node_id} title="Input buffer" bufferType="input" />
+                <BufferUsage nodeId={node.node_id} title="输入缓冲器" bufferType="input" />
               </Col>
               <Col md={4}>
-                <BufferUsage nodeId={node.node_id} title="Process buffer" bufferType="process" />
+                <BufferUsage nodeId={node.node_id} title="进程缓冲区" bufferType="process" />
               </Col>
               <Col md={4}>
-                <BufferUsage nodeId={node.node_id} title="Output buffer" bufferType="output" />
+                <BufferUsage nodeId={node.node_id} title="输出缓冲器" bufferType="output" />
               </Col>
             </Row>
           </Col>
@@ -97,13 +96,9 @@ class NodeOverview extends React.Component {
 
         <Row className="content">
           <Col md={12}>
-            <h2>Disk Journal</h2>
+            <h2>磁盘日志</h2>
             <p className="description">
-              Incoming messages are written to the disk journal to ensure they are kept safe in case of a server
-              failure. The journal also helps keeping Graylog working if any of the outputs is too slow to keep
-              up with the message rate or whenever there is a peak in incoming messages. It makes sure that
-              Graylog does not buffer all of those messages in main memory and avoids overly long garbage
-              collection pauses that way.
+              传入的消息被写入磁盘日志，以确保它们在服务器出现故障时保持安全。 如果任何输出太慢而无法跟上消息速率，或者每当传入消息出现峰值时，日志还有助于保持 Graylog 正常工作。 它确保 Graylog 不会在主内存中缓冲所有这些消息，并避免过长的垃圾收集暂停。
             </p>
             <JournalDetails nodeId={node.node_id} />
           </Col>
@@ -111,7 +106,7 @@ class NodeOverview extends React.Component {
 
         <Row className="content">
           <Col md={6}>
-            <h2>System</h2>
+            <h2>系统</h2>
             <SystemInformation node={node} systemInformation={systemOverview} jvmInformation={this.props.jvmInformation} />
           </Col>
           <Col md={6}>
@@ -122,7 +117,7 @@ class NodeOverview extends React.Component {
 
         <Row className="content">
           <Col md={12}>
-            <h2>Installed plugins <small>{pluginCount}</small></h2>
+            <h2>已安装的插件 <small>{pluginCount}</small></h2>
             <PluginsDataTable plugins={this.props.plugins} />
           </Col>
         </Row>
@@ -132,11 +127,11 @@ class NodeOverview extends React.Component {
             <HideOnCloud>
               <span className="pull-right">
                 <LinkContainer to={Routes.node_inputs(node.node_id)}>
-                  <Button bsStyle="success" bsSize="small">Manage inputs</Button>
+                  <Button bsStyle="success" bsSize="small">管理输入</Button>
                 </LinkContainer>
               </span>
             </HideOnCloud>
-            <h2 style={{ marginBottom: 15 }}>Available input types <small>{inputCount}</small></h2>
+            <h2 style={{ marginBottom: 15 }}>可用的输入类型 <small>{inputCount}</small></h2>
             <InputTypesDataTable inputDescriptions={this.props.inputDescriptions} />
           </Col>
         </Row>

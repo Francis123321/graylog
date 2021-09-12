@@ -30,7 +30,7 @@ const SidecarConfigurationPage = () => (
     <span>
       <PageHeader title="收集器配置">
         <span>
-          收集器 Sidecar 运行在您最喜欢的日志收集器旁边并为您配置。 您可以在此处管理 Sidecar 配置。
+          探针收集器运行在您最喜欢的日志收集器旁边并为您配置。 您可以在此处管理探针配置。
         </span>
 
         <span>

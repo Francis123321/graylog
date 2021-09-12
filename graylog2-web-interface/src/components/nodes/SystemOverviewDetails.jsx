@@ -66,16 +66,16 @@ class SystemOverviewDetails extends React.Component {
       <Row>
         <Col md={4}>
           <Alert bsStyle="info">
-            <span className="pull-right"> <DocumentationLink page={DocsHelper.PAGES.LOAD_BALANCERS} text="What does this mean?" /></span>
+            <span className="pull-right"> <DocumentationLink page={DocsHelper.PAGES.LOAD_BALANCERS} text="这是什么意思？" /></span>
             <Icon name="exchange-alt" />&nbsp;
-            Lifecycle state: <strong>{StringUtils.capitalizeFirstLetter(this.props.information.lifecycle)}</strong>
+            生命周期状态: <strong>{StringUtils.capitalizeFirstLetter(this.props.information.lifecycle)}</strong>
           </Alert>
         </Col>
         <Col md={4}>
           <Alert bsStyle={lbStatus === 'ALIVE' ? 'success' : 'danger'}>
-            <span className="pull-right"> <DocumentationLink page={DocsHelper.PAGES.LOAD_BALANCERS} text="What does this mean?" /></span>
+            <span className="pull-right"> <DocumentationLink page={DocsHelper.PAGES.LOAD_BALANCERS} text="这是什么意思？" /></span>
             <Icon name="heart" />&nbsp;
-            Marked as <strong>{lbStatus}</strong> for load balancers
+            对于负载平衡器标记为 <strong>{lbStatus}</strong>
           </Alert>
         </Col>
         <Col md={4}>
@@ -83,7 +83,7 @@ class SystemOverviewDetails extends React.Component {
             <IfPermitted permissions="processing:changestate">
               <span className="pull-right">
                 <Button onClick={this._toggleMessageProcessing} bsSize="xsmall" bsStyle={information.is_processing ? 'danger' : 'success'}>
-                  {information.is_processing ? 'Pause' : 'Resume'} processing
+                  {information.is_processing ? '暂停' : '恢复'} 加工
                 </Button>
               </span>
             </IfPermitted>
