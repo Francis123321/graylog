@@ -57,7 +57,7 @@ const StreamAlertConditions = createReactClass({
           </LinkContainer>
         </div>
         <h2>Conditions</h2>
-        <p className="description">Alert Conditions define when an Alert should be triggered for this Stream.</p>
+        <p className="description">警报条件定义何时应为此流触发警报。</p>
         <AlertConditionsList alertConditions={alertConditions}
                              availableConditions={this.props.availableConditions}
                              streams={[this.props.stream]}

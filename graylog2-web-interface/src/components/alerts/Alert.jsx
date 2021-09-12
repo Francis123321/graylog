@@ -97,7 +97,7 @@ class Alert extends React.Component {
           <dt>Reason:</dt>
           <dd>{alert.description}</dd>
           <dt>Type:</dt>
-          <dd>{conditionType.name || 'Unknown type. This usually means that the alert condition was deleted since the alert was triggered.'}</dd>
+          <dd>{conditionType.name || '未知类型。 这通常意味着自触发警报以来警报条件已被删除。'}</dd>
         </dl>
       </Col>
     );

@@ -148,8 +148,8 @@ const CreateAlertConditionInput = createReactClass({
         <Row>
           <Col md={6}>
             <form>
-              <Input id="stream-selector" label="Alert on stream" help="选择条件将用于触发警报的流。">
-                <Select placeholder="Select a stream"
+              <Input id="stream-selector" label="直播提醒" help="选择条件将用于触发警报的流。">
+                <Select placeholder="选择一个流"
                         options={formattedStreams}
                         onChange={this._onStreamChange}
                         value={selectedStream ? selectedStream.id : undefined} />
@@ -160,15 +160,15 @@ const CreateAlertConditionInput = createReactClass({
                      value={type}
                      onChange={this._onChange}
                      disabled={!selectedStream}
-                     label="Condition type"
+                     label="条件类型"
                      help="选择将使用的条件类型。">
-                <option value={this.PLACEHOLDER} disabled>Select a condition type</option>
+                <option value={this.PLACEHOLDER} disabled>选择条件类型</option>
                 {availableTypes}
               </Input>
               {conditionForm}
               {' '}
               <Button onClick={this._openForm} disabled={type === this.PLACEHOLDER} bsStyle="success">
-                Add alert condition
+                添加警报条件
               </Button>
             </form>
           </Col>

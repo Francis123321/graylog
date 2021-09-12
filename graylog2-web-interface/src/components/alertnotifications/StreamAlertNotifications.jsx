@@ -70,12 +70,12 @@ class StreamAlertNotifications extends React.Component {
       <div>
         <div className="pull-right">
           <LinkContainer to={Routes.new_alert_notification_for_stream(stream.id)}>
-            <Button bsStyle="success">Add new notification</Button>
+            <Button bsStyle="success">添加新通知</Button>
           </LinkContainer>
         </div>
         <h2>Notifications</h2>
         <p className="description">
-          Alert Notifications will be executed when a Condition belonging to this Stream is satisfied.
+          当满足属于此流的条件时，将执行警报通知。
         </p>
 
         <AlertNotificationsList alertNotifications={notifications}

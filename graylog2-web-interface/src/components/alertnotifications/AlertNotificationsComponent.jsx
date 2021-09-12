@@ -77,7 +77,7 @@ const AlertNotificationsComponent = createReactClass({
       <div>
         <div className="pull-right">
           <LinkContainer to={Routes.LEGACY_ALERTS.NEW_NOTIFICATION}>
-            <Button bsStyle="success">Add new notification</Button>
+            <Button bsStyle="success">添加新通知</Button>
           </LinkContainer>
         </div>
         <h2>Notifications</h2>

@@ -40,7 +40,7 @@ class UnknownAlertCondition extends React.Component {
     const content = (
       <Col md={12}>
         <Alert bsStyle="warning">
-          Could not resolve condition type. This is most likely caused by a missing plugin in your Graylog setup.
+          无法解析条件类型。 这很可能是由于您的 Graylog 设置中缺少插件造成的。
         </Alert>
       </Col>
     );

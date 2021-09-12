@@ -31,23 +31,23 @@ class UnknownAlertNotification extends React.Component {
 
     const actions = [
       <DropdownButton key="actions-button" title="Actions" pullRight id={`more-actions-dropdown-${notification.id}`}>
-        <MenuItem onSelect={this.props.onDelete}>Delete</MenuItem>
+        <MenuItem onSelect={this.props.onDelete}>删除</MenuItem>
       </DropdownButton>,
     ];
 
     const content = (
       <Col md={12}>
         <Alert bsStyle="warning">
-          Could not resolve notification type. This is most likely caused by a missing plugin in your Graylog setup.
+          无法解析通知类型。 这很可能是由于您的 Graylog 设置中缺少插件造成的。
         </Alert>
       </Col>
     );
 
     return (
       <EntityListItem key={`entry-list-${notification.id}`}
-                      title="Unknown notification"
+                      title="未知通知"
                       titleSuffix={`(${notification.type})`}
-                      description="Cannot be executed while the notification type is unknown"
+                      description="通知类型未知时无法执行"
                       actions={actions}
                       contentRow={content} />
     );

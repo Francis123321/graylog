@@ -152,8 +152,7 @@ const CreateAlertNotificationInput = createReactClass({
 
     const notificationTypeHelp = (
       <span>
-        Select the notification type that will be used. You can find more types in the{' '}
-        <a href="https://marketplace.graylog.org/" target="_blank" rel="noopener noreferrer">Graylog Marketplace</a>.
+        选择将使用的通知类型。 您可以在<a href="https://marketplace.graylog.org/" target="_blank" rel="noopener noreferrer">Graylog 市场</a>中找到更多类型。
       </span>
     );
 
@@ -167,15 +166,15 @@ const CreateAlertNotificationInput = createReactClass({
 
         <h2>Notification</h2>
         <p className="description">
-          Define the notification that will be triggered from the alert conditions in a stream.
+          定义将从流中的警报条件触发的通知。
         </p>
 
         <Row>
           <Col md={6}>
             <form>
               <Input id="stream-selector"
-                     label="Notify on stream"
-                     help="Select the stream that should use this notification when its alert conditions are triggered.">
+                     label="通知直播"
+                     help="选择在触发警报条件时应使用此通知的流。">
                 <Select placeholder="Select a stream"
                         options={formattedStreams}
                         onChange={this._onStreamChange}
@@ -187,7 +186,7 @@ const CreateAlertNotificationInput = createReactClass({
                      value={type}
                      onChange={this._onChange}
                      disabled={!selectedStream}
-                     label="Notification type"
+                     label="通知类型"
                      help={notificationTypeHelp}>
                 <option value={this.PLACEHOLDER} disabled>Select a notification type</option>
                 {availableTypes}
@@ -195,7 +194,7 @@ const CreateAlertNotificationInput = createReactClass({
               {notificationForm}
               {' '}
               <Button onClick={this._openForm} disabled={type === this.PLACEHOLDER} bsStyle="success">
-                Add alert notification
+                添加警报通知
               </Button>
             </form>
           </Col>

@@ -52,8 +52,7 @@ class AlertDetails extends React.Component {
           <Col md={12}>
             <h2>Alert timeline</h2>
             <p>
-              This is a timeline of events occurred during the alert, you can see more information about some events
-              below.
+              这是警报期间发生的事件的时间线，您可以在下面查看有关某些事件的更多信息。
             </p>
             <AlertTimeline alert={alert}
                            stream={stream}
@@ -66,7 +65,7 @@ class AlertDetails extends React.Component {
           <Col md={12}>
             <h2>Triggered notifications</h2>
             <p>
-              These are the notifications triggered during the alert, including the configuration they had at the time.
+              这些是警报期间触发的通知，包括他们当时的配置。
             </p>
             <AlarmCallbackHistoryOverview alertId={alert.id} streamId={alert.stream_id} />
           </Col>

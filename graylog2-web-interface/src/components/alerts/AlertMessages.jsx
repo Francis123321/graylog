@@ -154,7 +154,7 @@ class AlertMessages extends React.Component {
       return (
         <div>
           {title}
-          <Alert bsStyle="info">No search results found during the time of the alert.</Alert>
+          <Alert bsStyle="info">在警报期间未找到搜索结果。</Alert>
         </div>
       );
     }
@@ -170,8 +170,8 @@ class AlertMessages extends React.Component {
             <table className="table table-striped table-hover table-condensed">
               <thead>
                 <tr>
-                  <th>Timestamp</th>
-                  <th>Message</th>
+                  <th>时间戳</th>
+                  <th>信息</th>
                 </tr>
               </thead>
               <tbody>

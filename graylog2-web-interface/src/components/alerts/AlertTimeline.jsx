@@ -50,7 +50,7 @@ const AlertTimeline = createReactClass({
     if (this.state.histories.length === 0) {
       return [
         <dt key="history-title"><Timestamp dateTime={lastEventTime} /></dt>,
-        <dd key="history-desc">No notifications were configured for this alert</dd>,
+        <dd key="history-desc">没有为此警报配置通知</dd>,
       ];
     }
 
@@ -85,12 +85,12 @@ const AlertTimeline = createReactClass({
       // Old alert without a resolution_at field
       formattedResolution.push(
         <dt key="resolution-title"><Timestamp dateTime={this.props.alert.triggered_at} /></dt>,
-        <dd key="resolution-desc">This alert does not support resolution. It was marked as resolved when triggered.</dd>,
+        <dd key="resolution-desc">此警报不支持解决。 它在触发时被标记为已解决。</dd>,
       );
     } else if (this.props.alert.resolved_at) {
       formattedResolution.push(
         <dt key="resolution-title"><Timestamp dateTime={this.props.alert.resolved_at} /></dt>,
-        <dd key="resolution-desc">Condition is no longer satisfied, alert is marked as resolved</dd>,
+        <dd key="resolution-desc">条件不再满足，警报标记为已解决</dd>,
       );
     } else {
       const conditionParameters = this.props.alert.condition_parameters || {};
@@ -103,7 +103,7 @@ const AlertTimeline = createReactClass({
         <dt key="notifications-title"><Timestamp dateTime={new Date()} /></dt>,
         <dd key="notifications-desc">{notificationsText}</dd>,
         <dt key="resolution-title"><Timestamp dateTime={new Date()} /></dt>,
-        <dd key="resolution-desc">Condition is still satisfied, <strong>alert is unresolved</strong></dd>,
+        <dd key="resolution-desc">条件仍然满足，<strong>警报未解决</strong></dd>,
       );
     }
 
