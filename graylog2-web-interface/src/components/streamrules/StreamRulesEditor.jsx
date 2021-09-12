@@ -181,7 +181,7 @@ class StreamRulesEditor extends React.Component {
                 添加流规则
               </Button>
               { showStreamRuleForm && (
-                <StreamRuleForm title="New Stream Rule"
+                <StreamRuleForm title="新流规则"
                                 onClose={() => this.setState({ showStreamRuleForm: false })}
                                 streamRuleTypes={streamRuleTypes}
                                 onSubmit={this._onStreamRuleFormSubmit} />
