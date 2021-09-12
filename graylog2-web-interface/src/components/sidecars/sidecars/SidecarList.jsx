@@ -78,7 +78,7 @@ class SidecarList extends React.Component {
       'node_details.operating_system': 'Operating System',
       last_seen: 'Last Seen',
       node_id: 'Node Id',
-      sidecar_version: 'Sidecar Version',
+      sidecar_version: 'Probes Version',
     };
 
     return (
