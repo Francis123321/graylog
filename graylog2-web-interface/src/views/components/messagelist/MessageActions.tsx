@@ -86,6 +86,8 @@ const MessageActions = ({ index, id, fields, decorationStats, disabled, disableS
   return (
     <ButtonGroup className="pull-right" bsSize="small">
       {showChanges}
+      <Button href={messageUrl}>威胁情报分析</Button>
+      <Button href={messageUrl}>Download PCAP</Button>
       <Button href={messageUrl}>Permalink</Button>
 
       <ClipboardButton title="Copy ID" text={id} bsSize="small" />
