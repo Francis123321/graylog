@@ -49,7 +49,7 @@ const SidecarsPage = () => {
             <>
               {sidecarUser ? (
                 <span>
-                  您需要一个用于 sidecar 的 API 令牌吗？
+                  您需要一个用于探针的 API 令牌吗？
                   <Link to={Routes.SYSTEM.USERS.TOKENS.edit(sidecarUser.id)}>
                     为 <em>graylog-Probes</em> 用户创建或重用令牌
                   </Link>
