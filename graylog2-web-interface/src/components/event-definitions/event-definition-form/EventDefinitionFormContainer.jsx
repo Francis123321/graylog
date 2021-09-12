@@ -167,7 +167,7 @@ class EventDefinitionFormContainer extends React.Component {
     const isLoading = !entityTypes || !notifications.all || !eventsClusterConfig;
 
     if (isLoading) {
-      return <Spinner text="Loading Event information..." />;
+      return <Spinner text="加载事件信息..." />;
     }
 
     const defaults = { default_backlog_size: eventsClusterConfig.events_notification_default_backlog };
@@ -175,7 +175,7 @@ class EventDefinitionFormContainer extends React.Component {
     return (
       <>
         {isDirty && (
-          <ConfirmLeaveDialog question="Do you really want to abandon this page and lose your changes? This action cannot be undone." />
+          <ConfirmLeaveDialog question="您真的要放弃此页面并丢失您的更改吗？ 此操作无法撤消。" />
         )}
         <EventDefinitionForm action={action}
                              eventDefinition={eventDefinition}
