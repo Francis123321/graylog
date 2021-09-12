@@ -79,14 +79,14 @@ class DnsAdapterFieldSet extends React.Component {
 
     return (
       <fieldset>
-        <Input label="DNS Lookup Type"
+        <Input label="DNS 查询类型"
                id="lookup-type"
                required
                autoFocus
-               help="Select the type of DNS lookup to perform."
+               help="选择要执行的 DNS 查找类型。"
                labelClassName="col-sm-3"
                wrapperClassName="col-sm-9">
-          <Select placeholder="Select the type of DNS lookup"
+          <Select placeholder="选择 DNS 查找类型"
                   clearable={false}
                   options={lookupTypes}
                   matchProp="label"
@@ -96,11 +96,11 @@ class DnsAdapterFieldSet extends React.Component {
         <Input type="text"
                id="server_ips"
                name="server_ips"
-               label="DNS Server IP Address"
+               label="DNS 服务器 IP 地址"
                onChange={handleFormEvent}
                help={validationMessage(
                  'server_ips',
-                 'An optional comma-separated list of DNS server IP addresses.',
+                 '一个可选的以逗号分隔的 DNS 服务器 IP 地址列表。',
                )}
                bsStyle={validationState('server_ips')}
                value={config.server_ips}
@@ -109,19 +109,19 @@ class DnsAdapterFieldSet extends React.Component {
         <Input type="number"
                id="request_timeout"
                name="request_timeout"
-               label="DNS Request Timeout"
+               label="DNS 请求超时"
                required
                onChange={handleFormEvent}
                help={validationMessage(
                  'request_timeout',
-                 'DNS request timeout in milliseconds.',
+                 'DNS 请求超时（以毫秒为单位）。',
                )}
                bsStyle={validationState('request_timeout')}
                value={config.request_timeout}
                labelClassName="col-sm-3"
                wrapperClassName="col-sm-9" />
-        <TimeUnitInput label="Cache TTL Override"
-                       help="If enabled, the cache TTL will be overridden with the specified value."
+        <TimeUnitInput label="缓存 TTL 覆盖"
+                       help="如果启用，缓存 TTL 将被指定的值覆盖。"
                        update={this.updateCacheTTLOverride}
                        value={config.cache_ttl_override}
                        unit={config.cache_ttl_override_unit || 'MINUTES'}
