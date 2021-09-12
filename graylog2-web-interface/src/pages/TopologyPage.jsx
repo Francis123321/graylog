@@ -32,6 +32,10 @@ const TopologyPage = createReactClass({
     window.setReactThis(this)
 
   },
+  componentWillUnmount() {
+    window.destroyed3d()
+    console.log('componentWillUnmount')
+  },
   getData: function (data) {
     console.log("查询条件："+data)
     window.setReactData('这是查询返回值')
