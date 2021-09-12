@@ -30,18 +30,15 @@ const UserCreatePage = () => (
     <PageHeader title="Create New User"
                 subactions={(
                   <LinkContainer to={Routes.SYSTEM.USERS.CREATE}>
-                    <Button bsStyle="success">Create User</Button>
+                    <Button bsStyle="success">创建用户</Button>
                   </LinkContainer>
                 )}>
       <span>
-        Use this page to create new Graylog users. The users and their permissions created here are not limited
-        to the web interface but valid and required for the REST APIs of your Graylog server nodes, too.
+        使用此页面创建新的 Graylog 用户。 此处创建的用户及其权限不仅限于 Web 界面，而且对于您的 Graylog 服务器节点的 REST API 也是有效和必需的。
       </span>
 
       <span>
-        Learn more in the{' '}
-        <DocumentationLink page={DocsHelper.PAGES.USERS_ROLES}
-                           text="documentation" />
+        在<DocumentationLink page={DocsHelper.PAGES.USERS_ROLES} text="文档" />中了解更多信息
       </span>
 
       <UserOverviewLinks />

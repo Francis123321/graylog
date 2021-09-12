@@ -83,9 +83,9 @@ const PaginatedItemOverview = ({ onLoad, overrideList, onDeleteItem, queryHelper
                    pageSizes={pageSizes}
                    activePage={pagination.page}>
       <SearchForm onSearch={(newQuery) => setPagination({ ...pagination, page: INITIAL_PAGE, query: newQuery })}
-                  label="Filter"
+                  label="筛选"
                   wrapperClass="has-bm"
-                  placeholder="Enter query to filter"
+                  placeholder="输入要过滤的查询"
                   queryHelpComponent={queryHelper}
                   searchButtonLabel="Filter" />
       <div>

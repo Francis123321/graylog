@@ -27,12 +27,12 @@ const LoggersStore = Reflux.createStore({
   listenables: [LoggersActions],
   state: {
     availableLoglevels: [
-      'fatal',
-      'error',
-      'warn',
-      'info',
-      'debug',
-      'trace',
+      '致命的',
+      '错误',
+      '警告',
+      '信息',
+      '调试',
+      '痕迹',
     ],
   },
   init() {

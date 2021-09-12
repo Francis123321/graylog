@@ -44,16 +44,16 @@ const ProfileSection = ({
   };
 
   return (
-    <SectionComponent title="Profile">
-      <ReadOnlyFormGroup label="Username" value={username} />
-      {isOldUser() && <ReadOnlyFormGroup label="Full name" value={fullName} />}
-      <ReadOnlyFormGroup label="First Name" value={firstName} />
-      <ReadOnlyFormGroup label="Last Name" value={lastName} />
-      <ReadOnlyFormGroup label="E-Mail Address" value={email} />
-      <ReadOnlyFormGroup label="Client Address" value={clientAddress} />
-      <ReadOnlyFormGroup label="Last Activity" value={lastActivity} />
-      <ReadOnlyFormGroup label="Logged In" value={<LoggedInIcon active={sessionActive} />} />
-      <ReadOnlyFormGroup label="Enabled" value={accountStatus === 'enabled'} />
+    <SectionComponent title="轮廓">
+      <ReadOnlyFormGroup label="用户名" value={username} />
+      {isOldUser() && <ReadOnlyFormGroup label="全名" value={fullName} />}
+      <ReadOnlyFormGroup label="名字" value={firstName} />
+      <ReadOnlyFormGroup label="姓氏" value={lastName} />
+      <ReadOnlyFormGroup label="电子邮件地址" value={email} />
+      <ReadOnlyFormGroup label="客户地址" value={clientAddress} />
+      <ReadOnlyFormGroup label="上次活动" value={lastActivity} />
+      <ReadOnlyFormGroup label="登录" value={<LoggedInIcon active={sessionActive} />} />
+      <ReadOnlyFormGroup label="启用" value={accountStatus === 'enabled'} />
     </SectionComponent>
   );
 };

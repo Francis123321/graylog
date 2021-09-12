@@ -23,33 +23,32 @@ class CaffeineCacheDocumentation extends React.Component {
   render() {
     return (
       <div>
-        <p>The in-memory cache maintains recently used values from data adapters.</p>
-        <p>Please make sure your Graylog servers have enough heap to accomodate the cached entries and monitor the cache efficiency.</p>
+        <p>内存缓存维护来自数据适配器的最近使用的值。</p>
+        <p>请确保您的 Graylog 服务器有足够的堆来容纳缓存条目并监控缓存效率。</p>
 
         <Alert style={{ marginBottom: 10 }} bsStyle="info">
-          <h4 style={{ marginBottom: 10 }}>Implementation details</h4>
-          <p>The cache is local to each Graylog server, they do not share the entries.</p>
-          <p>For example, if you have two servers, they will maintain a completely independent cache from each other.</p>
+          <h4 style={{ marginBottom: 10 }}>实施细则</h4>
+          <p>缓存是每个 Graylog 服务器的本地缓存，它们不共享条目。</p>
+          <p>例如，如果您有两台服务器，它们将保持彼此完全独立的缓存。</p>
         </Alert>
 
         <hr />
 
-        <h3 style={{ marginBottom: 10 }}>Cache size</h3>
-        <p>Every cache has a maximum number of entries, unbounded caches are not supported.</p>
+        <h3 style={{ marginBottom: 10 }}>缓存大小</h3>
+        <p>每个缓存都有最大条目数，不支持无限缓存。</p>
 
-        <h3 style={{ marginBottom: 10 }}>Time-based expiration</h3>
+        <h3 style={{ marginBottom: 10 }}>基于时间的到期</h3>
 
-        <h5 style={{ marginBottom: 10 }}>Expire after access</h5>
+        <h5 style={{ marginBottom: 10 }}>访问后过期</h5>
         <p style={{ marginBottom: 10, padding: 0 }}>
-          The cache will remove entries after a fixed time since they have been used the last time.<br />
-          This results in the cache behaving as a space limited least recently used cache.
+          自上次使用以来，缓存将在固定时间后删除条目。<br />
+          这导致缓存表现为空间受限的最近最少使用的缓存。
         </p>
 
-        <h5 style={{ marginBottom: 10 }}>Expire after write</h5>
+        <h5 style={{ marginBottom: 10 }}>写入后过期</h5>
         <p style={{ marginBottom: 10, padding: 0 }}>
-          The cache will remove entries after a fixed time since they have been entered into the cache.<br />
-          This results in entries that are never older than the given time, which can be important for
-          regularly changing data, such as configuration state of external systems.
+          自从条目进入缓存以来，缓存将在固定时间后删除条目。<br />
+          这会导致条目永远不会超过给定时间，这对于定期更改数据（例如外部系统的配置状态）非常重要。
         </p>
 
       </div>

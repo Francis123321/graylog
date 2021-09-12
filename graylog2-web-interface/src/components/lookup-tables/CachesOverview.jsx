@@ -118,15 +118,15 @@ class CachesOverview extends React.Component {
         <Row className="content">
           <Col md={12}>
             <h2>
-              Configured lookup Caches
+              查找缓存配置
               <span>&nbsp;
-                <small>{pagination.total} total</small>
+                <small>总数{pagination.total}</small>
               </span>
             </h2>
             <PaginatedList onChange={this._onPageChange} totalItems={pagination.total}>
               <SearchForm onSearch={this._onSearch} onReset={this._onReset} useLoadingState>
                 <LinkContainer to={Routes.SYSTEM.LOOKUPTABLES.CACHES.CREATE}>
-                  <Button bsStyle="success" style={{ marginLeft: 5 }}>Create cache</Button>
+                  <Button bsStyle="success" style={{ marginLeft: 5 }}>创建缓存</Button>
                 </LinkContainer>
                 <OverlayTrigger trigger="click" rootClose placement="right" overlay={this._helpPopover()}>
                   <Button bsStyle="link" className={Styles.searchHelpButton}><Icon name="question-circle" fixedWidth /></Button>
@@ -135,13 +135,13 @@ class CachesOverview extends React.Component {
               <Table condensed hover className={Styles.overviewTable}>
                 <thead>
                   <tr>
-                    <th className={Styles.rowTitle}>Title</th>
-                    <th className={Styles.rowDescription}>Description</th>
-                    <th className={Styles.rowName}>Name</th>
-                    <th>Entries</th>
-                    <th>Hit rate</th>
-                    <th>Throughput</th>
-                    <th className={Styles.rowActions}>Actions</th>
+                    <th className={Styles.rowTitle}>标题</th>
+                    <th className={Styles.rowDescription}>描述</th>
+                    <th className={Styles.rowName}>名称</th>
+                    <th>入口</th>
+                    <th>命中率</th>
+                    <th>吞吐量</th>
+                    <th className={Styles.rowActions}>操作</th>
                   </tr>
                 </thead>
                 {cacheTableEntries}

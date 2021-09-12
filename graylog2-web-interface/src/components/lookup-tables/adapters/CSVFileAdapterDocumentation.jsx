@@ -33,15 +33,15 @@ class CSVFileAdapterDocumentation extends React.Component {
 
     return (
       <div>
-        <p>The CSV data adapter can read key value pairs from a CSV file.</p>
-        <p>Please make sure your CSV file is formatted according to your configuration settings.</p>
+        <p>CSV 数据适配器可以从 CSV 文件中读取键值对。</p>
+        <p>请确保根据您的配置设置格式化您的 CSV 文件。</p>
 
         <Alert style={{ marginBottom: 10 }} bsStyle="info">
-          <h4 style={{ marginBottom: 10 }}>CSV file requirements:</h4>
+          <h4 style={{ marginBottom: 10 }}>CSV 文件要求：</h4>
           <ul className="no-padding">
-            <li>The first line in the CSV file needs to be a list of field/column names</li>
-            <li>The file uses <strong>utf-8</strong> encoding</li>
-            <li>The file is readable by <strong>every</strong> Graylog server node</li>
+            <li>CSV 文件中的第一行需要是字段/列名称列表</li>
+            <li>文件使用<strong>utf-8</strong>编码</li>
+              <li><strong>每个</strong> Graylog 服务器节点都可以读取该文件 </li>
           </ul>
         </Alert>
 

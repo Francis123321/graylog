@@ -168,19 +168,19 @@ class LUTTablesPage extends React.Component {
     return (
       <DocumentTitle title="Lookup Tables">
         <span>
-          <PageHeader title="Lookup Tables">
-            <span>Lookup tables can be used in extractors, converters and processing pipelines to translate message fields or to enrich messages.</span>
+          <PageHeader title="查找表">
+            <span>查找表可用于提取器、转换器和处理管道，以转换消息字段或丰富消息。</span>
             {null}
             <span>
               <ButtonToolbar>
                 <LinkContainer to={Routes.SYSTEM.LOOKUPTABLES.OVERVIEW}>
-                  <Button bsStyle="info">Lookup Tables</Button>
+                  <Button bsStyle="info">查找表</Button>
                 </LinkContainer>
                 <LinkContainer to={Routes.SYSTEM.LOOKUPTABLES.CACHES.OVERVIEW}>
-                  <Button bsStyle="info">Caches</Button>
+                  <Button bsStyle="info">缓存</Button>
                 </LinkContainer>
                 <LinkContainer to={Routes.SYSTEM.LOOKUPTABLES.DATA_ADAPTERS.OVERVIEW}>
-                  <Button bsStyle="info">Data Adapters</Button>
+                  <Button bsStyle="info">数据适配器</Button>
                 </LinkContainer>
               </ButtonToolbar>
             </span>

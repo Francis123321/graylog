@@ -71,10 +71,10 @@ const SettingsSection = ({
     startpage,
   },
 }: Props) => (
-  <SectionComponent title="Settings">
-    <ReadOnlyFormGroup label="Sessions Timeout" value={_sessionTimeout(sessionTimeout)} />
-    <ReadOnlyFormGroup label="Timezone" value={timezone} />
-    <ReadOnlyFormGroup label="Startpage" value={<StartpageValue type={startpage?.type} id={startpage?.id} />} />
+  <SectionComponent title="设置">
+    <ReadOnlyFormGroup label="会话超时" value={_sessionTimeout(sessionTimeout)} />
+    <ReadOnlyFormGroup label="时区" value={timezone} />
+    <ReadOnlyFormGroup label="首页" value={<StartpageValue type={startpage?.type} id={startpage?.id} />} />
   </SectionComponent>
 );
 

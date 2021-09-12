@@ -57,23 +57,23 @@ class BulkLoadPatternModal extends React.Component {
   render() {
     return (
       <span>
-        <Button bsStyle="info" style={{ marginRight: 5 }} onClick={() => this.modal.open()}>Import pattern file</Button>
+        <Button bsStyle="info" style={{ marginRight: 5 }} onClick={() => this.modal.open()}>导入模式文件</Button>
 
         <BootstrapModalForm ref={(modal) => { this.modal = modal; }}
-                            title="Import Grok patterns from file"
+                            title="从文件导入 Grok 模式"
                             submitButtonText="Upload"
                             formProps={{ onSubmit: this._onSubmit }}>
           <Input id="pattern-file"
                  type="file"
                  ref={(patternFile) => { this.patternFile = patternFile; }}
                  name="patterns"
-                 label="Pattern file"
-                 help="A file containing Grok patterns, one per line. Name and patterns should be separated by whitespace."
+                 label="模式文件"
+                 help="一个包含 Grok 模式的文件，每行一个。 名称和模式应该用空格分隔。"
                  required />
           <Input id="replace-patterns-checkbox"
                  type="checkbox"
                  name="replace"
-                 label="Replace all existing patterns?"
+                 label="替换所有现有模式？"
                  onChange={(e) => this.setState({ replacePatterns: e.target.checked })} />
         </BootstrapModalForm>
       </span>

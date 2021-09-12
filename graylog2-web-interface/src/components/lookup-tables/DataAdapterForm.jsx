@@ -316,11 +316,11 @@ class DataAdapterForm extends React.Component {
                 <Input type="text"
                        id="title"
                        name="title"
-                       label="Title"
+                       label="标题"
                        autoFocus
                        required
                        onChange={this._onChange}
-                       help="A short title for this data adapter."
+                       help="此数据适配器的简短标题。"
                        value={dataAdapter.title}
                        labelClassName="col-sm-3"
                        ref={(ref) => { this._input = ref; }}
@@ -329,9 +329,9 @@ class DataAdapterForm extends React.Component {
                 <Input type="text"
                        id="description"
                        name="description"
-                       label="Description"
+                       label="描述"
                        onChange={this._onChange}
-                       help="Data adapter description."
+                       help="数据适配器描述。"
                        value={dataAdapter.description}
                        labelClassName="col-sm-3"
                        wrapperClassName="col-sm-9" />
@@ -339,18 +339,18 @@ class DataAdapterForm extends React.Component {
                 <Input type="text"
                        id="name"
                        name="name"
-                       label="Name"
+                       label="名称"
                        required
                        onChange={this._onChange}
                        help={this._validationMessage('name',
-                         'The name that is being used to refer to this data adapter. Must be unique.')}
+                         '用于引用此数据适配器的名称。 必须是独一无二的。')}
                        value={dataAdapter.name}
                        labelClassName="col-sm-3"
                        wrapperClassName="col-sm-9"
                        bsStyle={this._validationState('name')} />
 
-                <TimeUnitInput label="Custom Error TTL"
-                               help="Define a custom TTL for caching erroneous results. Otherwise the default of 5 seconds is used"
+                <TimeUnitInput label="自定义错误 TTL"
+                               help="定义用于缓存错误结果的自定义 TTL。 否则使用默认值 5 秒 "
                                update={this.updateCustomErrorTTL}
                                value={dataAdapter.custom_error_ttl}
                                unit={dataAdapter.custom_error_ttl_unit || 'MINUTES'}
@@ -363,8 +363,8 @@ class DataAdapterForm extends React.Component {
               <fieldset>
                 <Row>
                   <Col mdOffset={3} md={9}>
-                    <Button type="submit" bsStyle="success" disabled={isFormDisabled}>{create ? 'Create Adapter'
-                      : 'Update Adapter'}
+                    <Button type="submit" bsStyle="success" disabled={isFormDisabled}>{create ? '创建适配器'
+                      : '更新适配器'}
                     </Button>
                   </Col>
                 </Row>

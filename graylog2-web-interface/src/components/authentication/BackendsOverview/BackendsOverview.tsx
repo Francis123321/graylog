@@ -95,12 +95,12 @@ const BackendsOverview = () => {
   return (
     <Row className="content">
       <Col xs={12}>
-        <h2>Configured Authentication Services</h2>
+        <h2>配置的身份验证服务</h2>
         <Header>
           {loading && <LoadingSpinner text="" delay={0} />}
         </Header>
         <p className="description">
-          Found {paginatedBackends.pagination.total} configured authentication services on the system.
+          在系统上找到 {paginatedBackends.pagination.total} 配置的身份验证服务。
         </p>
         <PaginatedList onChange={(newPage, newPerPage) => setPagination({ ...pagination, page: newPage, perPage: newPerPage })}
                        totalItems={paginatedBackends.pagination.total}

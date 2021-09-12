@@ -144,13 +144,13 @@ class LookupTablesOverview extends React.Component {
         <Row className="content">
           <Col md={12}>
             <h2>
-              Configured lookup tables
-              <span>&nbsp;<small>{this.props.pagination.total} total</small></span>
+              查找表配置
+              <span>&nbsp;<small>总数{this.props.pagination.total}</small></span>
             </h2>
             <PaginatedList onChange={this._onPageChange} totalItems={this.props.pagination.total}>
               <SearchForm onSearch={this._onSearch} onReset={this._onReset} useLoadingState>
                 <LinkContainer to={Routes.SYSTEM.LOOKUPTABLES.CREATE}>
-                  <Button bsStyle="success" style={{ marginLeft: 5 }}>Create lookup table</Button>
+                  <Button bsStyle="success" style={{ marginLeft: 5 }}>创建查找表</Button>
                 </LinkContainer>
                 <OverlayTrigger trigger="click" rootClose placement="right" overlay={this._helpPopover()}>
                   <Button bsStyle="link" className={Styles.searchHelpButton}><Icon name="question-circle" fixedWidth /></Button>
@@ -159,12 +159,12 @@ class LookupTablesOverview extends React.Component {
               <Table condensed hover className={Styles.overviewTable}>
                 <thead>
                   <tr>
-                    <th className={Styles.rowTitle}>Title</th>
-                    <th className={Styles.rowDescription}>Description</th>
-                    <th className={Styles.rowName}>Name</th>
-                    <th className={Styles.rowCache}>Cache</th>
-                    <th className={Styles.rowAdapter}>Data Adapter</th>
-                    <th className={Styles.rowActions}>Actions</th>
+                    <th className={Styles.rowTitle}>标题</th>
+                    <th className={Styles.rowDescription}>描述</th>
+                    <th className={Styles.rowName}>名称</th>
+                    <th className={Styles.rowCache}>缓存</th>
+                    <th className={Styles.rowAdapter}>数据适配器</th>
+                    <th className={Styles.rowActions}>操作</th>
                   </tr>
                 </thead>
                 {lookupTables}

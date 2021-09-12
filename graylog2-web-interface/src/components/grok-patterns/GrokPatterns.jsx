@@ -182,7 +182,7 @@ class GrokPatterns extends React.Component {
   };
 
   render() {
-    const headers = ['Name', 'Pattern', 'Actions'];
+    const headers = ['姓名', '图案', '操作'];
     const { pagination, patterns } = this.state;
 
     const queryHelperComponent = (
@@ -195,10 +195,9 @@ class GrokPatterns extends React.Component {
 
     return (
       <div>
-        <PageHeader title="Grok patterns">
+        <PageHeader title="Grok 模式">
           <span>
-            This is a list of grok patterns you can use in your Graylog grok extractors. You can add
-            your own manually or import a whole list of patterns from a so called pattern file.
+            这是您可以在 Graylog grok 提取器中使用的 grok 模式列表。 您可以手动添加自己的模式或从所谓的模式文件中导入整个模式列表。
           </span>
           {null}
           <IfPermitted permissions="inputs:edit">

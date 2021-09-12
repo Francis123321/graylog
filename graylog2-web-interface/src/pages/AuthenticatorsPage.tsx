@@ -25,15 +25,13 @@ import DocsHelper from 'util/DocsHelper';
 
 const AuthenticatorsPage = () => (
   <DocumentTitle title="Authenticators Details">
-    <PageHeader title="Authenticators Details" subactions={<AuthenticatorActionLinks />}>
+    <PageHeader title="身份验证器详细信息" subactions={<AuthenticatorActionLinks />}>
       <span>
-        Configure the trusted header authentication.
+        配置可信头认证。
       </span>
 
       <span>
-        Learn more in the{' '}
-        <DocumentationLink page={DocsHelper.PAGES.AUTHENTICATORS}
-                           text="documentation" />
+        在<DocumentationLink page={DocsHelper.PAGES.AUTHENTICATORS} text="文档" />中了解更多信息
       </span>
 
       <AuthenticationOverviewLinks />

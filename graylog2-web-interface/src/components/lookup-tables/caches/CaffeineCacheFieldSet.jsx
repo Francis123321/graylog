@@ -56,24 +56,24 @@ class CaffeineCacheFieldSet extends React.Component {
         <Input type="text"
                id="max_size"
                name="max_size"
-               label="Maximum entries"
+               label="最大条目数"
                autoFocus
                required
                onChange={this.props.handleFormEvent}
-               help="The limit of the number of entries the cache keeps in memory."
+               help="缓存在内存中保留的条目数的限制。"
                value={config.max_size}
                labelClassName="col-sm-3"
                wrapperClassName="col-sm-9" />
-        <TimeUnitInput label="Expire after access"
-                       help="If enabled, entries are removed from the cache after the specified time from when they were last used."
+        <TimeUnitInput label="访问后过期"
+                       help="如果启用，条目会在上次使用后的指定时间后从缓存中删除。"
                        update={this.updateAfterAccess}
                        value={config.expire_after_access}
                        unit={config.expire_after_access_unit || 'SECONDS'}
                        defaultEnabled={config.expire_after_access > 0}
                        labelClassName="col-sm-3"
                        wrapperClassName="col-sm-9" />
-        <TimeUnitInput label="Expire after write"
-                       help="If enabled, entries are removed from the cache after the specified time from when they were first used."
+        <TimeUnitInput label="写入后过期"
+                       help="如果启用，条目会在首次使用后的指定时间后从缓存中删除。"
                        update={this.updateAfterWrite}
                        value={config.expire_after_write}
                        unit={config.expire_after_write_unit || 'SECONDS'}

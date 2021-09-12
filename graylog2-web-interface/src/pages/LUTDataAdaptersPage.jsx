@@ -165,19 +165,19 @@ class LUTDataAdaptersPage extends React.Component {
     return (
       <DocumentTitle title="Lookup Tables - Data Adapters">
         <span>
-          <PageHeader title="Data adapters for Lookup Tables">
-            <span>Data adapters provide the actual values for lookup tables</span>
+          <PageHeader title="查找表的数据适配器">
+            <span>数据适配器为查找表提供实际值</span>
             {null}
             <span>
               <ButtonToolbar>
                 <LinkContainer to={Routes.SYSTEM.LOOKUPTABLES.OVERVIEW}>
-                  <Button bsStyle="info">Lookup Tables</Button>
+                  <Button bsStyle="info">查找表</Button>
                 </LinkContainer>
                 <LinkContainer to={Routes.SYSTEM.LOOKUPTABLES.CACHES.OVERVIEW}>
-                  <Button bsStyle="info">Caches</Button>
+                  <Button bsStyle="info">缓存</Button>
                 </LinkContainer>
                 <LinkContainer to={Routes.SYSTEM.LOOKUPTABLES.DATA_ADAPTERS.OVERVIEW}>
-                  <Button bsStyle="info">Data Adapters</Button>
+                  <Button bsStyle="info">数据适配器</Button>
                 </LinkContainer>
               </ButtonToolbar>
             </span>

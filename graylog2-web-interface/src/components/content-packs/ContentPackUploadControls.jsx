@@ -93,18 +93,18 @@ class ContentPackUploadControls extends React.Component {
                 active={isOpen}
                 id="upload-content-pack-button"
                 bsStyle="success"
-                onClick={this._openModal}>Upload
+                onClick={this._openModal}>上传
         </Button>
         <BootstrapModalForm onModalClose={() => { this.setState({ isOpen: false }); }}
                             ref={(node) => { this.uploadModal = node; }}
                             onSubmitForm={this._save}
-                            title="Upload Content Pack"
+                            title="上传内容包"
                             submitButtonText="Upload">
           <Input ref={(node) => { this.uploadInput = node; }}
                  id="upload-content-pack"
-                 label="Choose File"
+                 label="选择文件"
                  type="file"
-                 help="Choose Content Pack from disk" />
+                 help="从磁盘选择内容包" />
         </BootstrapModalForm>
       </span>
     );
