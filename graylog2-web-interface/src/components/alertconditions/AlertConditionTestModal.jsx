@@ -68,7 +68,7 @@ class AlertConditionTestModal extends React.Component {
               error: true,
               error_messages: [{
                 type: 'Unexpected error',
-                message: 'Could not test Condition, please try again or check your server logs for more information.',
+                message: '无法测试条件，请重试或检查您的服务器日志以获取更多信息。',
               }],
             },
           });
@@ -80,7 +80,7 @@ class AlertConditionTestModal extends React.Component {
   renderErroneousCondition = (testResults) => {
     return (
       <span>
-        <p><b>There was an error testing the Condition.</b></p>
+        <p><b>测试条件时出错。</b></p>
         <p>
           <ul className={style.errorMessages}>
             {testResults.error_messages.map(({ message, type }) => (
@@ -108,7 +108,7 @@ class AlertConditionTestModal extends React.Component {
       <div>
         <Icon name="bell-slash" className={style.testResultIcon} />
         <p className={style.testResultText}>
-          Condition was <b>not</b> satisfied and an Alert would <b>not</b> be triggered.
+          条件<b>不</b>被满足并且警报将<b>不</b>被触发。
         </p>
       </div>
     );
