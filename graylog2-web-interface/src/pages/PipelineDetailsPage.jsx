@@ -142,7 +142,7 @@ const PipelineDetailsPage = createReactClass({
     let title;
 
     if (this._isNewPipeline(params.pipelineId)) {
-      title = 'New pipeline';
+      title = '新管道';
     } else {
       title = <span>Pipeline <em>{pipeline.title}</em></span>;
     }
@@ -170,25 +170,23 @@ const PipelineDetailsPage = createReactClass({
         <div>
           <PageHeader title={title}>
             <span>
-              Pipelines let you transform and process messages coming from streams. Pipelines consist of stages where
-              rules are evaluated and applied. Messages can go through one or more stages.
+             管道使您可以转换和处理来自流的消息。 管道由评估和应用规则的阶段组成。 消息可以经过一个或多个阶段。
             </span>
             <span>
-              After each stage is completed, you can decide if messages matching all or one of the rules continue to
-              the next stage.
+              在每个阶段完成后，您可以决定是匹配所有规则还是其中一个规则的消息继续到下一阶段。
             </span>
 
             <span>
               <LinkContainer to={Routes.SYSTEM.PIPELINES.OVERVIEW}>
-                <Button bsStyle="info">Manage pipelines</Button>
+                <Button bsStyle="info">管理管道</Button>
               </LinkContainer>
               &nbsp;
               <LinkContainer to={Routes.SYSTEM.PIPELINES.RULES}>
-                <Button bsStyle="info">Manage rules</Button>
+                <Button bsStyle="info">管理规则</Button>
               </LinkContainer>
               &nbsp;
               <LinkContainer to={Routes.SYSTEM.PIPELINES.SIMULATOR}>
-                <Button bsStyle="info">Simulator</Button>
+                <Button bsStyle="info">模拟器</Button>
               </LinkContainer>
             </span>
           </PageHeader>

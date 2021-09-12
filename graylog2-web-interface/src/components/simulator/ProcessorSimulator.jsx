@@ -102,7 +102,7 @@ class ProcessorSimulator extends React.Component {
 
     const streamHelp = (
       <span>
-        Select a stream to use during simulation, the <em>{this.defaultStream.title}</em> stream is used by default.
+        选择在模拟期间使用的流，默认使用 <em>{this.defaultStream.title}</em> 流。
       </span>
     );
 
@@ -110,12 +110,10 @@ class ProcessorSimulator extends React.Component {
       <div>
         <Row>
           <Col md={12}>
-            <h1>Load a message</h1>
+            <h1>加载消息</h1>
             <p>
-              Build an example message that will be used in the simulation.{' '}
-              <strong>No real messages stored in Graylog will be changed. All actions are purely simulated on the
-                temporary input you provide below.
-              </strong>
+              构建将在模拟中使用的示例消息。{' '}
+              <strong>不会更改 Graylog 中存储的真实消息。 所有操作都完全根据您在下面提供的临时输入进行模拟。</strong>
             </p>
             <Row className="row-sm">
               <Col md={7}>

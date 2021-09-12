@@ -73,12 +73,12 @@ class SidecarList extends React.Component {
   formatSidecarList = (sidecars) => {
     const { onSortChange, sort } = this.props;
     const sidecarCollection = {
-      node_name: 'Name',
-      'node_details.status.status': 'Status',
-      'node_details.operating_system': 'Operating System',
-      last_seen: 'Last Seen',
-      node_id: 'Node Id',
-      sidecar_version: 'Probes Version',
+      node_name: '名称',
+      'node_details.status.status': '地位',
+      'node_details.operating_system': '操作系统',
+      last_seen: '最后一次露面',
+      node_id: '节点 ID',
+      sidecar_version: '探头版本',
     };
 
     return (
@@ -110,7 +110,7 @@ class SidecarList extends React.Component {
   render() {
     const { sidecars, onlyActive, pagination, query, onQueryChange, onPageChange, toggleShowInactive } = this.props;
     const sidecarRows = sidecars.map((sidecar) => <SidecarRow key={sidecar.node_id} sidecar={sidecar} />);
-    const showOrHideInactive = (onlyActive ? 'Include' : 'Hide');
+    const showOrHideInactive = (onlyActive ? '包括' : '隐藏');
     const sidecarList = (sidecarRows.length > 0 ? this.formatSidecarList(sidecarRows) : this.formatEmptyListAlert());
 
     return (
@@ -122,7 +122,7 @@ class SidecarList extends React.Component {
             <Button bsStyle="primary"
                     onClick={toggleShowInactive}
                     className={style.inactiveSidecarsButton}>
-              {showOrHideInactive} inactive sidecars
+              {showOrHideInactive} 不活跃的探针
             </Button>
           </SidecarSearchForm>
         </div>

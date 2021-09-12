@@ -82,21 +82,20 @@ export default class RuleMetricsConfig extends React.Component {
 
     return (
       <BootstrapModalForm ref={(modal) => { this.modal = modal; }}
-                          title="Rule Metrics Configuration"
+                          title="规则指标配置"
                           onSubmitForm={this.saveConfiguration}
                           onModalClose={onClose}
                           show
                           submitButtonText="Save">
         <Alert bsStyle="warning">
-          Rule metrics should only be enabled to debug a performance issue because collecting the
-          metrics will slow down message processing and increase memory usage.
+          应仅启用规则指标来调试性能问题，因为收集指标会减慢消息处理速度并增加内存使用量。
         </Alert>
         <fieldset>
           <Input type="radio"
                  id="metrics-enabled"
                  name="metrics_enabled"
                  value="true"
-                 label="Enable rule metrics"
+                 label="启用规则指标"
                  onChange={this.handleChange}
                  checked={nextConfig.metrics_enabled} />
 
@@ -104,31 +103,31 @@ export default class RuleMetricsConfig extends React.Component {
                  id="metrics-disabled"
                  name="metrics_enabled"
                  value="false"
-                 label="Disable rule metrics"
+                 label="禁用规则指标"
                  onChange={this.handleChange}
                  checked={!nextConfig.metrics_enabled} />
         </fieldset>
         <p>
-          When enabled the system metrics will update two timers for every rule execution.
+          启用后，系统指标将为每个规则执行更新两个计时器。
         </p>
-        <strong>Rule evaluation timer</strong>
+        <strong>规则评估计时器</strong>
         <p>
-          This timer measures the duration for the rule condition. (everything inside the <code>when</code> statement)
+          此计时器测量规则条件的持续时间。 （<code>when</code> 语句中的所有内容）
         </p>
         <p>
-          Example metric name with rule ID placeholder:<br />
+          带有规则 ID 占位符的指标名称示例：<br />
           <code>org.graylog.plugins.pipelineprocessor.ast.Rule.[rule-id].trace.evaluate.duration</code><br />
-          Example metric name with rule ID, pipeline ID and stage number placeholders:<br />
+          带有规则 ID、管道 ID 和阶段编号占位符的指标名称示例：<br />
           <code>org.graylog.plugins.pipelineprocessor.ast.Rule.[rule-id].[pipeline-id].[stage-num].trace.evaluate.duration</code>
         </p>
-        <strong>Rule execution timer</strong>
+        <strong>规则执行计时器</strong>
         <p>
-          This timer measures the duration for the rule execution. (everything inside the <code>then</code> statement)
+          此计时器测量规则执行的持续时间。 （<code>then</code> 语句中的所有内容）
         </p>
         <p>
-          Example metric name with rule ID placeholder:<br />
+          带有规则 ID 占位符的指标名称示例：<br />
           <code>org.graylog.plugins.pipelineprocessor.ast.Rule.[rule-id].trace.execute.duration</code><br />
-          Example metric name with rule ID, pipeline ID and stage number placeholders:<br />
+          带有规则 ID、管道 ID 和阶段编号占位符的示例指标名称：<br />
           <code>org.graylog.plugins.pipelineprocessor.ast.Rule.[rule-id].[pipeline-id].[stage-num].trace.execute.duration</code>
         </p>
       </BootstrapModalForm>
