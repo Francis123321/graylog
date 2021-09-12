@@ -27,7 +27,7 @@ import UserOverviewLinks from 'components/users/navigation/UserOverviewLinks';
 
 const UserCreatePage = () => (
   <DocumentTitle title="Create New User">
-    <PageHeader title="Create New User"
+    <PageHeader title="创建新用户"
                 subactions={(
                   <LinkContainer to={Routes.SYSTEM.USERS.CREATE}>
                     <Button bsStyle="success">创建用户</Button>
