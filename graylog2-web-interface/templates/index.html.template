@@ -93,10 +93,10 @@
 
         }
     </script>
-    <link href="http://192.168.15.131/css/app.a74bd351.css" rel="preload" as="style">
-    <link href="http://192.168.15.131/js/app.a05c19d3.js" rel="preload" as="script">
+    <link href="http://192.168.15.131/css/app.497d8786.css" rel="preload" as="style">
+    <link href="http://192.168.15.131/js/app.1514e8f7.js" rel="preload" as="script">
     <link href="http://192.168.15.131/js/chunk-vendors.5b1256e7.js" rel="preload" as="script">
-    <link href="http://192.168.15.131/css/app.a74bd351.css" rel="stylesheet">
+    <link href="http://192.168.15.131/css/app.497d8786.css" rel="stylesheet">
   </head>
   <body>
     <script src="/config.js"></script>
@@ -105,6 +105,6 @@
     <% } %>
     <%= htmlWebpackPlugin.tags.bodyTags %>
     <script src="http://192.168.15.131/js/chunk-vendors.5b1256e7.js"></script>
-    <script src="http://192.168.15.131/js/app.a05c19d3.js"></script>
+    <script src="/app.1514e8f7.js"></script>
   </body>
 </html>
