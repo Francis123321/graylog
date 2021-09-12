@@ -24,11 +24,14 @@ import createReactClass from 'create-react-class';
 import withLocation from 'routing/withLocation';
 import { SearchActions } from 'views/stores/SearchStore';
 
+let vueInstance;
 const TopologyPage = createReactClass({
   componentDidMount() {
     console.log('组件初始化了')
     // vue里通过这个this调用getData方法
-    window.addNewVue().$mount('#topologyAppsContainer')
+    vueInstance = null
+    vueInstance = window.addNewVue()
+    vueInstance.$mount('#topologyAppsContainer')
     window.setReactThis(this)
 
   },

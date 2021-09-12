@@ -232,7 +232,8 @@ if (TARGET === 'start') {
         GRAYLOG_API_URL: JSON.stringify(process.env.GRAYLOG_API_URL || process.env.GRAYLOG_HTTP_PUBLISH_URI),
         IS_CLOUD: process.env.IS_CLOUD,
       }),
-      new CopyWebpackPlugin({ patterns: [{ from: 'config.js' }] }),
+      // yangzy_打包静态文件到项目
+      new CopyWebpackPlugin({ patterns: [{ from: 'config.js' },{ from: 'topologyBox/app.1514e8f7.js' }] }),
       new webpack.HotModuleReplacementPlugin(),
     ],
   });
