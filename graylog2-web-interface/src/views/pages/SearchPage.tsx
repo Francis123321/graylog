@@ -30,6 +30,7 @@ type Props = {
 const SearchPage = ({ loadNewView = defaultLoadNewView, loadView = defaultLoadView }: Props) => (
   <NewViewLoaderContext.Provider value={loadNewView}>
     <ViewLoaderContext.Provider value={loadView}>
+      {/*yangzy_加载栏目权限控制*/}
       <IfUserHasAccessToAnyStream>
         <Search />
       </IfUserHasAccessToAnyStream>
