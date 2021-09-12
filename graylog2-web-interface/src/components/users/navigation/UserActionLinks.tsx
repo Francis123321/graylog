@@ -37,7 +37,7 @@ const UserActionLinks = ({ userId, userIsReadOnly }: Props) => (
     {!userIsReadOnly && (
       <LinkContainer to={Routes.SYSTEM.USERS.edit(userId)}>
         <Button bsStyle="success">
-          Edit User
+          编辑用户
         </Button>
       </LinkContainer>
     )}

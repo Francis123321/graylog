@@ -36,7 +36,7 @@ type Props = {
 
 const PageTitle = ({ fullName }: { fullName: string | null | undefined }) => (
   <>
-    Edit User {fullName && (
+    编辑用户 {fullName && (
       <>
         - <i>{fullName}</i>
       </>
@@ -70,13 +70,11 @@ const UserEditPage = ({ params }: Props) => {
                                      userIsReadOnly={readOnly} />
                   )}>
         <span>
-          You can change the user details and password here and assign roles and teams.
+          您可以在此处更改用户详细信息和密码并分配角色和团队。
         </span>
 
         <span>
-          Learn more in the{' '}
-          <DocumentationLink page={DocsHelper.PAGES.USERS_ROLES}
-                             text="documentation" />
+          在<DocumentationLink page={DocsHelper.PAGES.USERS_ROLES} text="文件" />中了解更多信息
         </span>
 
         <UserOverviewLinks />

@@ -35,7 +35,7 @@ const PreferencesSection = ({ user }: Props) => {
   const onSubmit = (data) => PreferencesActions.saveUserPreferences(user.username, data);
 
   return (
-    <SectionComponent title="Preferences">
+    <SectionComponent title="喜好">
       <Formik onSubmit={onSubmit}
               initialValues={user.preferences}>
         {({ isSubmitting, isValid }) => (
@@ -43,8 +43,8 @@ const PreferencesSection = ({ user }: Props) => {
             <Input id="timeout-controls"
                    labelClassName="col-sm-3"
                    wrapperClassName="col-sm-9"
-                   label="Search autocompletion">
-              <FormikFormGroup label="Enable autocompletion"
+                   label="搜索自动完成">
+              <FormikFormGroup label="启用自动完成"
                                name="enableSmartSearch"
                                formGroupClassName="form-group no-bm"
                                type="checkbox" />
@@ -53,8 +53,8 @@ const PreferencesSection = ({ user }: Props) => {
             <Input id="update-unfocused-controls"
                    labelClassName="col-sm-3"
                    wrapperClassName="col-sm-9"
-                   label="Update unfocused">
-              <FormikFormGroup label="Update unfocused"
+                   label="更新不专心">
+              <FormikFormGroup label="更新不专心"
                                name="updateUnfocussed"
                                formGroupClassName="form-group no-bm"
                                type="checkbox" />
@@ -63,28 +63,28 @@ const PreferencesSection = ({ user }: Props) => {
             <Input id="search-sidebar-controls"
                    labelClassName="col-sm-3"
                    wrapperClassName="col-sm-9"
-                   label="Search sidebar">
-              <FormikFormGroup label="Is pinned"
+                   label="搜索侧边栏">
+              <FormikFormGroup label="被固定"
                                name="searchSidebarIsPinned"
                                formGroupClassName="form-group no-bm"
                                type="checkbox"
-                               help="Can also be changed by using the search sidebar pin icon" />
+                               help="也可以使用搜索侧边栏图钉图标进行更改" />
             </Input>
 
             <Input id="dashboard-sidebar-controls"
                    labelClassName="col-sm-3"
                    wrapperClassName="col-sm-9"
-                   label="Dashboard sidebar">
-              <FormikFormGroup label="Is pinned"
+                   label="仪表板侧边栏">
+              <FormikFormGroup label="被固定"
                                name="dashboardSidebarIsPinned"
                                formGroupClassName="form-group no-bm"
                                type="checkbox"
-                               help="Can also be changed by using the dashboard sidebar pin icon" />
+                               help="也可以使用仪表板侧边栏图钉图标进行更改" />
             </Input>
 
-            <ReadOnlyFormGroup label="Theme mode"
+            <ReadOnlyFormGroup label="主题模式"
                                value={user.preferences?.[PREFERENCES_THEME_MODE] ?? 'Not configured'}
-                               help="Can be changed by using the toggle in the user dropdown" />
+                               help="可以通过使用用户下拉菜单中的切换进行更改" />
 
             <Row className="no-bm">
               <Col xs={12}>
@@ -93,7 +93,7 @@ const PreferencesSection = ({ user }: Props) => {
                           disabled={isSubmitting || !isValid}
                           title="Update Preferences"
                           type="submit">
-                    Update Preferences
+                    更新首选项
                   </Button>
                 </div>
               </Col>

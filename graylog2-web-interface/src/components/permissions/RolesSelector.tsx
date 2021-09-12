@@ -121,7 +121,7 @@ const RolesSelector = ({ assignedRolesIds, onSubmit, identifier }: Props) => {
                       disabled={isSubmitting || !selectedRoleName}
                       title="分配角色"
                       type="button">
-          Assign Role
+          分配角色
         </SubmitButton>
       </FormElements>
       <ErrorAlert runtimeError onClose={setError}>

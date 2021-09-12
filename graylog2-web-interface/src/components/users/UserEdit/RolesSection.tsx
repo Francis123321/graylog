@@ -91,8 +91,8 @@ const RolesSection = ({ user, onSubmit }: Props) => {
   };
 
   return (
-    <SectionComponent title="Roles" showLoading={loading}>
-      <h3>Assign Roles</h3>
+    <SectionComponent title="角色" showLoading={loading}>
+      <h3>分配角色</h3>
       <Container>
         <RolesSelector onSubmit={_onAssignRole} assignedRolesIds={user.roles} identifier={(role) => role.name} />
       </Container>
@@ -100,9 +100,9 @@ const RolesSection = ({ user, onSubmit }: Props) => {
       <ErrorAlert onClose={setErrors}>
         {errors}
       </ErrorAlert>
-      <h3>Selected Roles</h3>
+      <h3>选定的角色</h3>
       <Container>
-        <PaginatedItemOverview noDataText="No selected roles have been found."
+        <PaginatedItemOverview noDataText="未找到选定的角色。"
                                onLoad={_onLoad}
                                overrideList={paginatedRoles}
                                onDeleteItem={onDeleteRole}
