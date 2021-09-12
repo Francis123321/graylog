@@ -29,36 +29,36 @@ export const HELP = {
   // server config help
   systemUserDn: (
     <span>
-      The username for the initial connection to the Active Directory server, e.g. <code>ldapbind@some.domain</code>.<br />
-      This needs to match the <code>userPrincipalName</code> of that user.
+      初始连接到 Active Directory 服务器的用户名，例如 <code>ldapbind@some.domain</code>。<br />
+      这需要匹配该用户的 <code>userPrincipalName</code>。
     </span>
   ),
-  systemUserPassword: 'The password for the initial connection to the Active Directory server.',
+  systemUserPassword: '初始连接到 Active Directory 服务器的密码。',
   // user sync help
   userSearchBase: (
     <span>
-      The base tree to limit the Active Directory search query to, e.g. <code>cn=users,dc=example,dc=com</code>.
+      将 Active Directory 搜索查询限制为例如的基本树 <code>cn=users,dc=example,dc=com</code>。
     </span>
   ),
   userSearchPattern: (
     <span>
-      For example <code className="text-nowrap">{'(&(objectClass=user)(|(sAMAccountName={0})(userPrincipalName={0})))'}</code>.{' '}
-      The string <code>{'{0}'}</code> will be replaced by the entered username.
+      例如 <code className="text-nowrap">{'(&(objectClass=user)(|(sAMAccountName={0})(userPrincipalName={0})))'}</code>。
+      字符串 <code>{'{0}'}</code> 将替换为输入的用户名。
     </span>
   ),
   userNameAttribute: (
     <span>
-      Which Active Directory attribute to use for the full name of the user in Graylog, e.g. <code>userPrincipalName</code>.<br />
-      Try to load a test user in the sidebar section <i>User Login Test</i>, if you are unsure which attribute to use.
+      哪个 Active Directory 属性用于 Graylog 中用户的全名，例如 <code>userPrincipalName</code>。<br />
+      如果您不确定要使用哪个属性，请尝试在侧边栏部分 <i>用户登录测试</i> 中加载测试用户。
     </span>
   ),
   userFullNameAttribute: (
     <span>
-      Which Active Directory attribute to use for the full name of a synchronized Graylog user, e.g. <code>displayName</code>.<br />
+      哪个 Active Directory 属性用于同步的 Graylog 用户的全名，例如 <code>显示名称</code>。<br />
     </span>
   ),
   defaultRoles: (
-    <span>The default Graylog roles synchronized user will obtain. All users need the <code>Reader</code> role, to use the Graylog web interface</span>
+    <span>同步用户将获得默认的 Graylog 角色。 所有用户都需要 <code>Reader</code> 角色，才能使用 Graylog Web 界面</span>
   ),
 };
 

@@ -36,7 +36,7 @@ const _pageTitle = (authBackend) => {
     return <>Edit Authentication Service - <i>{backendTitle}</i></>;
   }
 
-  return 'Create Active Directory Authentication Service';
+  return '创建 Active Directory 身份验证服务';
 };
 
 const WizardPageHeader = ({ authenticationBackend: authBackend }: Props) => {
@@ -49,10 +49,9 @@ const WizardPageHeader = ({ authenticationBackend: authBackend }: Props) => {
                   <BackendActionLinks activeBackend={activeBackend}
                                       finishedLoading={finishedLoading} />
                 )}>
-      <span>Configure Graylog&apos;s authentication services of this Graylog cluster.</span>
+      <span>配置此 Graylog 集群的 Graylog 身份验证服务。</span>
       <span>
-        Read more authentication in the <DocumentationLink page={DocsHelper.PAGES.USERS_ROLES}
-                                                           text="documentation" />.
+        在<DocumentationLink page={DocsHelper.PAGES.USERS_ROLES} text="文件" />中阅读更多身份验证。
       </span>
       <AuthenticationOverviewLinks />
     </PageHeader>
