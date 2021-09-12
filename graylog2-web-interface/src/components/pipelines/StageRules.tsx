@@ -86,7 +86,7 @@ const StageRules = ({ pipeline, stage, rules }: Props) => {
                headerCellFormatter={(header) => (<th>{header}</th>)}
                rows={rules}
                dataRowFormatter={_ruleRowFormatter}
-               noDataText="This stage has no rules yet. Click on edit to add some."
+               noDataText="这个阶段还没有规则。 点击编辑添加一些。"
                filterLabel=""
                filterKeys={[]} />
   );

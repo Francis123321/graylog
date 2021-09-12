@@ -31,7 +31,7 @@ const Rule = ({ create, title }) => {
   let pageTitle;
 
   if (create) {
-    pageTitle = 'Create pipeline rule';
+    pageTitle = '创建管道规则';
   } else {
     pageTitle = <span>Pipeline rule <em>{title}</em></span>;
   }
@@ -40,27 +40,24 @@ const Rule = ({ create, title }) => {
     <div>
       <PageHeader title={pageTitle}>
         <span>
-          Rules are a way of applying changes to messages in Graylog. A rule consists of a condition and a list{' '}
-          of actions.{' '}
-          Graylog evaluates the condition against a message and executes the actions if the condition is satisfied.
+          规则是对 Graylog 中的消息应用更改的一种方式。 规则由条件和操作列表组成。 Graylog 根据消息评估条件，并在满足条件时执行操作。
         </span>
 
         <span>
-          Read more about Graylog pipeline rules in the <DocumentationLink page={DocsHelper.PAGES.PIPELINE_RULES}
-                                                                           text="documentation" />.
+          在 <DocumentationLink page={DocsHelper.PAGES.PIPELINE_RULES} text="文件" /> 中阅读有关 Graylog 管道规则的更多信息。
         </span>
 
         <span>
           <LinkContainer to={Routes.SYSTEM.PIPELINES.OVERVIEW}>
-            <Button bsStyle="info">Manage pipelines</Button>
+            <Button bsStyle="info">管理管道</Button>
           </LinkContainer>
             &nbsp;
           <LinkContainer to={Routes.SYSTEM.PIPELINES.RULES}>
-            <Button bsStyle="info">Manage rules</Button>
+            <Button bsStyle="info">管理规则</Button>
           </LinkContainer>
             &nbsp;
           <LinkContainer to={Routes.SYSTEM.PIPELINES.SIMULATOR}>
-            <Button bsStyle="info">Simulator</Button>
+            <Button bsStyle="info">模拟器</Button>
           </LinkContainer>
         </span>
       </PageHeader>

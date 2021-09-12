@@ -106,7 +106,7 @@ class RuleList extends React.Component {
       return <Button bsStyle="warning" onClick={this.toggleMetricsConfig}>Debug Metrics: ON</Button>;
     }
 
-    return <Button onClick={this.toggleMetricsConfig}>Debug Metrics</Button>;
+    return <Button onClick={this.toggleMetricsConfig}>调试指标</Button>;
   };
 
   render() {
@@ -129,7 +129,7 @@ class RuleList extends React.Component {
                    filterKeys={filterKeys}>
           <ButtonToolbar className="pull-right">
             <LinkContainer to={Routes.SYSTEM.PIPELINES.RULE('new')}>
-              <Button bsStyle="success">Create Rule</Button>
+              <Button bsStyle="success">创建规则</Button>
             </LinkContainer>
             {this.renderDebugMetricsButton(metricsConfig)}
           </ButtonToolbar>

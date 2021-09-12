@@ -50,19 +50,18 @@ const Stage = ({ stage, pipeline, isLastStage, onUpdate, onDelete }: Props) => {
   );
 
   const actions = [
-    <Button key={`delete-stage-${stage}`} bsStyle="primary" onClick={onDelete}>Delete</Button>,
+    <Button key={`delete-stage-${stage}`} bsStyle="primary" onClick={onDelete}>删除</Button>,
     <StageForm key={`edit-stage-${stage}`} pipeline={pipeline} stage={stage} save={onUpdate} />,
   ];
 
   let description;
 
   if (isLastStage) {
-    description = 'There are no further stages in this pipeline. Once rules in this stage are applied, the pipeline will have finished processing.';
+    description = '此管道中没有其他阶段。 一旦应用了此阶段的规则，管道将完成处理。';
   } else {
     description = (
       <span>
-        Messages satisfying <strong>{stage.match_all ? 'all rules' : 'at least one rule'}</strong>{' '}
-        in this stage, will continue to the next stage.
+        满足 <strong>{stage.match_all ? '所有规则' : '至少一个规则'}</strong> 在这个阶段，将继续到下一阶段。
       </span>
     );
   }

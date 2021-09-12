@@ -73,26 +73,26 @@ const RuleForm = ({ create }) => {
     <form onSubmit={handleSubmit}>
       <fieldset>
         <FormGroup id="ruleTitleInformation">
-          <ControlLabel>Title</ControlLabel>
-          <FormControl.Static>You can set the rule title in the rule source. See the quick reference for more information.</FormControl.Static>
+          <ControlLabel>标题</ControlLabel>
+          <FormControl.Static>您可以在规则源中设置规则标题。 有关更多信息，请参阅快速参考。</FormControl.Static>
         </FormGroup>
 
         {isDirty && (
-          <ConfirmLeaveDialog question="Do you really want to abandon this page and lose your changes? This action cannot be undone." />
+          <ConfirmLeaveDialog question="您真的要放弃此页面并丢失您的更改吗？ 此操作无法撤消。" />
         )}
 
         <Input type="textarea"
                id="description"
-               label="Description"
+               label="描述"
                onChange={handleDescriptionChange}
                autoFocus
                defaultValue={descriptionRef?.current?.value}
-               help="Rule description (optional)."
+               help="规则描述（可选）。"
                ref={descriptionRef} />
 
         <PipelinesUsingRule create={create} />
 
-        <Input id="rule-source-editor" label="Rule source" help="Rule source, see quick reference for more information.">
+        <Input id="rule-source-editor" label="规则来源" help="规则来源，请参阅快速参考以获取更多信息。">
           <SourceCodeEditor id={`source${create ? '-create' : '-edit'}`}
                             mode="pipeline"
                             onLoad={onAceLoaded}
@@ -105,9 +105,9 @@ const RuleForm = ({ create }) => {
       <Row>
         <Col md={12}>
           <div className="form-group">
-            <Button type="submit" bsStyle="primary" style={{ marginRight: 10 }}>Save &amp; Close</Button>
-            <Button type="button" bsStyle="info" style={{ marginRight: 10 }} onClick={handleApply}>Apply</Button>
-            <Button type="button" onClick={handleCancel}>Cancel</Button>
+            <Button type="submit" bsStyle="primary" style={{ marginRight: 10 }}>保存并且关闭</Button>
+            <Button type="button" bsStyle="info" style={{ marginRight: 10 }} onClick={handleApply}>申请</Button>
+            <Button type="button" onClick={handleCancel}>取消</Button>
           </div>
         </Col>
       </Row>

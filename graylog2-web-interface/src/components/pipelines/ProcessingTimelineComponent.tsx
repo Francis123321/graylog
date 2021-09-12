@@ -145,10 +145,10 @@ const ProcessingTimelineComponent = () => {
         </StreamListTD>
         <td>{_formatStages(pipeline, pipeline.stages)}</td>
         <td>
-          <Button bsStyle="primary" bsSize="xsmall" onClick={_deletePipeline(pipeline)}>Delete</Button>
+          <Button bsStyle="primary" bsSize="xsmall" onClick={_deletePipeline(pipeline)}>删除</Button>
           &nbsp;
           <LinkContainer to={Routes.SYSTEM.PIPELINES.PIPELINE(pipeline.id)}>
-            <Button bsStyle="info" bsSize="xsmall">Edit</Button>
+            <Button bsStyle="info" bsSize="xsmall">编辑</Button>
           </LinkContainer>
         </td>
       </tr>
@@ -158,7 +158,7 @@ const ProcessingTimelineComponent = () => {
   const addNewPipelineButton = (
     <div className="pull-right">
       <LinkContainer to={Routes.SYSTEM.PIPELINES.PIPELINE('new')}>
-        <Button bsStyle="success">Add new pipeline</Button>
+        <Button bsStyle="success">添加新管道</Button>
       </LinkContainer>
     </div>
   );
@@ -167,14 +167,14 @@ const ProcessingTimelineComponent = () => {
     return (
       <div>
         <StyledAlert>
-          <span>There are no pipelines configured in your system. Create one to start processing your messages.</span>
+          <span>您的系统中没有配置管道。 创建一个开始处理您的消息。</span>
           {addNewPipelineButton}
         </StyledAlert>
       </div>
     );
   }
 
-  const headers = ['Pipeline', 'Connected to Streams', 'Processing Timeline', 'Actions'];
+  const headers = ['管道', '连接到流', '处理时间表', '操作'];
 
   return (
     <div>

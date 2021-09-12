@@ -27,26 +27,25 @@ import DocsHelper from 'util/DocsHelper';
 const PipelinesOverviewPage = () => (
   <DocumentTitle title="Pipelines">
     <div>
-      <PageHeader title="Pipelines overview">
+      <PageHeader title="管道概述">
         <span>
-          Pipelines let you transform and process messages coming from streams. Pipelines consist of stages where
-          rules are evaluated and applied. Messages can go through one or more stages.
+          管道使您可以转换和处理来自流的消息。 管道由评估和应用规则的阶段组成。 消息可以经过一个或多个阶段。
         </span>
         <span>
-          Read more about Graylog pipelines in the <DocumentationLink page={DocsHelper.PAGES.PIPELINES} text="documentation" />.
+          在 <DocumentationLink page={DocsHelper.PAGES.PIPELINES} text="文件" /> 中阅读有关 Graylog 管道的更多信息。
         </span>
 
         <span>
           <LinkContainer to={Routes.SYSTEM.PIPELINES.OVERVIEW}>
-            <Button bsStyle="info">Manage pipelines</Button>
+            <Button bsStyle="info">管理管道</Button>
           </LinkContainer>
               &nbsp;
           <LinkContainer to={Routes.SYSTEM.PIPELINES.RULES}>
-            <Button bsStyle="info">Manage rules</Button>
+            <Button bsStyle="info">管理规则</Button>
           </LinkContainer>
               &nbsp;
           <LinkContainer to={Routes.SYSTEM.PIPELINES.SIMULATOR}>
-            <Button bsStyle="info">Simulator</Button>
+            <Button bsStyle="info">模拟器</Button>
           </LinkContainer>
         </span>
       </PageHeader>

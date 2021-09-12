@@ -56,9 +56,7 @@ const Pipeline = ({ pipeline, connections, streams, onConnectionsChange, onStage
     if (connections.length === 0) {
       return (
         <ConnectionWarning bsStyle="danger">
-          This pipeline is currently not connected to any streams. You have to connect a pipeline to at least one
-          stream to make it process incoming messages. Note that this is not required if you intend to use this
-          pipeline only for search result transformation using decorators.
+          此管道当前未连接到任何流。 您必须将管道连接到至少一个流以使其处理传入消息。 请注意，如果您打算将此管道仅用于使用装饰器的搜索结果转换，则这不是必需的。
         </ConnectionWarning>
       );
     }
@@ -99,9 +97,7 @@ const Pipeline = ({ pipeline, connections, streams, onConnectionsChange, onStage
 
     return (
       <span>
-        This pipeline is processing messages from the{' '}
-        <Pluralize singular="stream" plural="streams" value={connectedStreams.length} />{' '}
-        {streamList}.
+        此管道正在处理来自 <Pluralize single="stream" Multiple="streams" value={connectedStreams.length} /> {streamList} 的消息。
       </span>
     );
   };
@@ -137,13 +133,13 @@ const Pipeline = ({ pipeline, connections, streams, onConnectionsChange, onStage
                                      streams={streams}
                                      save={onConnectionsChange} />
           </div>
-          <h2>Pipeline connections</h2>
+          <h2>管道连接</h2>
           <StyledP>
             <PipelineConnectionsList pipeline={pipeline}
                                      connections={connections}
                                      streams={streams}
                                      streamsFormatter={_formatConnectedStreams}
-                                     noConnectionsMessage="Select streams that will be processed by this pipeline." />
+                                     noConnectionsMessage="选择将由此管道处理的流。" />
           </StyledP>
           <hr />
         </Col>
@@ -153,10 +149,9 @@ const Pipeline = ({ pipeline, connections, streams, onConnectionsChange, onStage
           <div className="pull-right">
             <StageForm key={stageKey} pipeline={pipeline} create save={_saveStage} />
           </div>
-          <h2>Pipeline Stages</h2>
+          <h2>管道阶段</h2>
           <StyledP>
-            Stages are groups of conditions and actions which need to run in order, and provide the necessary{' '}
-            control flow to decide whether or not to run the rest of a pipeline.
+            阶段是需要按顺序运行的条件和操作组，并提供必要的控制流来决定是否运行管道的其余部分。
           </StyledP>
         </Col>
       </StyledRow>

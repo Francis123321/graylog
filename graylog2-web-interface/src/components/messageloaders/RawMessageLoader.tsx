@@ -71,12 +71,12 @@ const ServerInputSelect = ({ inputs, selectedInputId, onInputSelect }: Subtract<
   return (
     <Input id="inputSelect"
            name="inputSelect"
-           label={<>Message input <small>(optional)</small></>}
-           help="Select the message input ID that should be assigned to the parsed message.">
+           label={<>留言输入 <small>(可选)</small></>}
+           help="选择应分配给已解析消息的消息输入 ID。">
       <Select inputId="inputSelect"
               name="inputSelect"
               aria-label="Message input"
-              placeholder="Select input"
+              placeholder="选择输入"
               options={_formatInputSelectOptions()}
               matchProp="label"
               onChange={onInputSelect}
@@ -305,7 +305,7 @@ const RawMessageLoader = ({ onMessageLoaded, inputIdSelector, codecTypes, inputs
             <Input id="message"
                    name="message"
                    type="textarea"
-                   label="Raw message"
+                   label="原始消息"
                    value={message}
                    onChange={_onMessageChange}
                    rows={3}
@@ -313,8 +313,8 @@ const RawMessageLoader = ({ onMessageLoaded, inputIdSelector, codecTypes, inputs
             <Input id="remoteAddress"
                    name="remoteAddress"
                    type="text"
-                   label={<span>Source IP address <small>(optional)</small></span>}
-                   help={`Remote IP address to use as message source. Graylog will use ${DEFAULT_REMOTE_ADDRESS} by default.`}
+                   label={<span>源IP地址 <small>(可选)</small></span>}
+                   help={`用作消息源的远程 IP 地址。 Graylog 默认使用 ${DEFAULT_REMOTE_ADDRESS}。`}
                    value={remoteAddress}
                    onChange={_onRemoteAddressChange} />
           </fieldset>
@@ -326,12 +326,12 @@ const RawMessageLoader = ({ onMessageLoaded, inputIdSelector, codecTypes, inputs
             <legend>Codec configuration</legend>
             <Input id="codec"
                    name="codec"
-                   label="Message codec"
-                   help="Select the codec that should be used to decode the message."
+                   label="消息编解码器"
+                   help="选择应该用于解码消息的编解码器。"
                    required>
               <Select id="codec"
                       aria-label="Message codec"
-                      placeholder="Select codec"
+                      placeholder="选择编解码器"
                       options={_formatSelectOptions()}
                       matchProp="label"
                       onChange={_onCodecSelect}
@@ -340,7 +340,7 @@ const RawMessageLoader = ({ onMessageLoaded, inputIdSelector, codecTypes, inputs
             {codecConfigurationOptions}
           </fieldset>
           <Button type="submit" bsStyle="info" disabled={_isSubmitDisabled}>
-            {loading ? 'Loading message...' : 'Load message'}
+            {loading ? '加载消息...' : '加载消息'}
           </Button>
         </form>
       </Col>

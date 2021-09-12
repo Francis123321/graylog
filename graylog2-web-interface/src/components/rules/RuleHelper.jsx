@@ -189,32 +189,29 @@ class RuleHelper extends React.Component {
     const pagedEntries = ruleDescriptors.slice((currentPage - 1) * pageSize, currentPage * pageSize);
 
     return (
-      <Panel header="Rules quick reference">
+      <Panel header="规则快速参考">
         <Row className="row-sm">
           <Col md={12}>
             <p className={RuleHelperStyle.marginQuickReferenceText}>
-              Read the <DocumentationLink page={DocsHelper.PAGES.PIPELINE_RULES}
-                                          text="full documentation" />{' '}
-              to gain a better understanding of how Graylog pipeline rules work.
+              阅读 <DocumentationLink page={DocsHelper.PAGES.PIPELINE_RULES} text="完整的文档" /> 以更好地了解 Graylog 管道规则的工作原理。
             </p>
           </Col>
         </Row>
         <Row className="row-sm">
           <Col md={12}>
             <Tabs id="functionsHelper" defaultActiveKey={1} animation={false}>
-              <Tab eventKey={1} title="Functions">
+              <Tab eventKey={1} title="职能">
                 <Row>
                   <Col sm={12}>
                     <p className={RuleHelperStyle.marginTab}>
-                      This is a list of all available functions in pipeline rules. Click on a row to see more information
-                      about the function parameters.
+                      这是管道规则中所有可用函数的列表。 单击一行可查看有关函数参数的更多信息。
                     </p>
                   </Col>
                 </Row>
                 <Row>
                   <Col sm={12}>
                     <SearchForm onSearch={this._filterDescriptors}
-                                label="Filter rules"
+                                label="过滤规则"
                                 topMargin={0}
                                 searchButtonLabel="Filter"
                                 onReset={this._onFilterReset} />
@@ -227,8 +224,8 @@ class RuleHelper extends React.Component {
                         <Table condensed>
                           <thead>
                             <tr>
-                              <th>Function</th>
-                              <th>Description</th>
+                              <th>功能</th>
+                              <th>描述</th>
                             </tr>
                           </thead>
                           {this._renderFunctions(pagedEntries)}
@@ -238,9 +235,9 @@ class RuleHelper extends React.Component {
                   </Col>
                 </Row>
               </Tab>
-              <Tab eventKey={2} title="Example">
+              <Tab eventKey={2} title="例子">
                 <p className={RuleHelperStyle.marginTab}>
-                  Do you want to see how a pipeline rule looks like? Take a look at this example:
+                  您想查看管道规则的样子吗？ 看看这个例子：
                 </p>
                 <pre className={`${RuleHelperStyle.marginTab} ${RuleHelperStyle.exampleFunction}`}>
                   {ruleTemplate}
