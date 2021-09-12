@@ -94,7 +94,9 @@ const Navigation = ({ location }: Props) => {
   if (enterpriseMenuIsMissing && isPermittedToEnterprise) {
     // no enterprise plugin menu, so we will add one
     pluginExports.push({
-      path: Routes.SYSTEM.ENTERPRISE,
+      // path: Routes.SYSTEM.ENTERPRISE,
+      // yangzy_修改探针tab指向
+      path: Routes.SYSTEM.SIDECARS.OVERVIEW,
       description: '探针',
     });
   }
