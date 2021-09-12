@@ -304,6 +304,7 @@ const ApiRoutes = {
     _buildUrl(url, queryString) {
       return `${url}?${Qs.stringify(queryString)}`;
     },
+    // yangzy_查es数据库
     search(type, query, timerange, streamId, limit, offset, sortField, sortOrder, decorate) {
       const url = `/search/universal/${type}`;
       const queryString = this._buildBaseQueryString(query, timerange, streamId);

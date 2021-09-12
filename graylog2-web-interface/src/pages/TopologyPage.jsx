@@ -27,8 +27,8 @@ import { SearchActions } from 'views/stores/SearchStore';
 const TopologyPage = createReactClass({
   componentDidMount() {
     console.log('组件初始化了')
-    // window.addNewVue().$mount('#topologyAppsContainer')
     // vue里通过这个this调用getData方法
+    window.addNewVue().$mount('#topologyAppsContainer')
     window.setReactThis(this)
 
   },
@@ -38,9 +38,6 @@ const TopologyPage = createReactClass({
     // SearchActions.get('612498751e94a10ddf821acf').then(function (data) {
     //   console.log(data)
     // })
-    SearchActions.parameters(['612498751e94a10ddf821acf']).then(function (data) {
-      console.log(data)
-    })
   },
   render() {
     return (
