@@ -248,7 +248,7 @@ if (TARGET.startsWith('build')) {
     mode: 'production',
     optimization: {
       minimizer: [new TerserPlugin({
-        sourceMap: true,
+        sourceMap: false, // 打包不生成map文件
         terserOptions: {
           compress: {
             warnings: false,
