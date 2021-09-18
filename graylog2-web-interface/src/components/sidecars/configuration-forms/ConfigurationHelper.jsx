@@ -39,38 +39,36 @@ class ConfigurationHelper extends React.Component {
 
     return (
       /* eslint-disable no-template-curly-in-string */
-      <Panel header="Collector Configuration Reference">
+      <Panel header="收集器配置参考">
 
         <Row className="row-sm">
           <Col md={12}>
             <Tabs id="configurationsHelper" defaultActiveKey={1} animation={false}>
-              <Tab eventKey={1} title="Runtime Variables">
+              <Tab eventKey={1} title="运行时变量">
                 <p className={ConfigurationHelperStyle.marginQuickReferenceText}>
-                  These variables will be filled with the runtime information from each Sidecar
+                  这些变量将填充来自每个探针的运行时信息
                 </p>
                 <TemplatesHelper />
               </Tab>
-              <Tab eventKey={2} title="Variables">
+              <Tab eventKey={2} title="变量">
                 <p className={ConfigurationHelperStyle.marginQuickReferenceText}>
-                  Use variables to share text snippets across multiple configurations.
+                  使用变量在多个配置之间共享文本片段。
                   <br />
-                  If your configuration format needs to use literals like <code>$&#123;foo&#125;</code>,
-                  which shall not act as a variable, you will have to write it as
-                  <code>$&#123;&apos;$&apos;&#125;&#123;foo&#125;</code>.
+                  如果你的配置格式需要使用像 <code>$&#123;foo&#125;</code> 这样的文字，它不能作为一个变量，你必须把它写成 <code>$&#123;&apos ;$&apos;&#125;&#123;foo&#125;</code>.
                 </p>
                 <ConfigurationVariablesHelper onVariableRename={onVariableRename} />
               </Tab>
-              <Tab eventKey={3} title="Reference">
+              <Tab eventKey={3} title="参考">
                 <Row className="row-sm">
                   <Col md={12}>
                     <p className={ConfigurationHelperStyle.marginQuickReferenceText}>
-                      We provide collector configuration templates to get you started.<br />
-                      For further information please refer to the official documentation of your collector.
+                      我们提供收集器配置模板来帮助您入门。<br />
+                      有关更多信息，请参阅收集器的官方文档。
                     </p>
                     <ul className={ConfigurationHelperStyle.ulStyle}>
-                      <li><a href="https://www.elastic.co/guide/en/beats/filebeat/current/index.html" target="_blank" rel="noopener noreferrer">Filebeat Reference</a> </li>
-                      <li><a href="https://www.elastic.co/guide/en/beats/winlogbeat/current/index.html" target="_blank" rel="noopener noreferrer">Winlogbeat Reference</a> </li>
-                      <li><a href="https://nxlog.co/docs/nxlog-ce/nxlog-reference-manual.html" target="_blank" rel="noopener noreferrer">NXLog Reference Manual</a> </li>
+                      <li><a href="https://www.elastic.co/guide/en/beats/filebeat/current/index.html" target="_blank" rel="noopener noreferrer">Filebeat 参考</a> </li>
+                      <li><a href="https://www.elastic.co/guide/en/beats/winlogbeat/current/index.html" target="_blank" rel="noopener noreferrer">Winlogbeat 参考</a> </li>
+                      <li><a href="https://nxlog.co/docs/nxlog-ce/nxlog-reference-manual.html" target="_blank" rel="noopener noreferrer">NXLog 参考手册</a> </li>
                     </ul>
                   </Col>
                 </Row>

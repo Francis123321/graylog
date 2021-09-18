@@ -180,7 +180,7 @@ const CollectorsAdministration = createReactClass({
         <Input ref={(c) => { this.selectAllInput = c; }}
                id="select-all-checkbox"
                type="checkbox"
-               label={selectedItems === 0 ? 'Select all' : `${selectedItems} selected`}
+               label={selectedItems === 0 ? '全选' : `${selectedItems} selected`}
                disabled={enabledCollectors.length === 0}
                checked={this.isAllSelected(enabledCollectors, selected)}
                onChange={this.toggleSelectAll}

@@ -73,7 +73,7 @@ describe('CopyToDashboardForm', () => {
                                                       widgetId="widget-id"
                                                       onCancel={onCancel}
                                                       onSubmit={() => {}} />);
-    const cancelButton = getByText('Cancel');
+    const cancelButton = getByText('取消');
 
     fireEvent.click(cancelButton);
 

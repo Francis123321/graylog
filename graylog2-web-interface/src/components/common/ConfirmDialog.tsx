@@ -86,8 +86,8 @@ ConfirmDialog.propTypes = {
 };
 
 ConfirmDialog.defaultProps = {
-  btnCancelText: 'Cancel',
-  btnConfirmText: 'Confirm',
+  btnCancelText: '取消',
+  btnConfirmText: '确认',
   btnConfirmDisabled: false,
   btnCancelDisabled: false,
   show: false,

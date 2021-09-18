@@ -153,9 +153,9 @@ class EditConfigurationVariableModal extends React.Component {
     let triggerButtonContent;
 
     if (create) {
-      triggerButtonContent = 'Create Variable';
+      triggerButtonContent = '创建变量';
     } else {
-      triggerButtonContent = <span>Edit</span>;
+      triggerButtonContent = <span>编辑</span>;
     }
 
     return (
@@ -175,7 +175,7 @@ class EditConfigurationVariableModal extends React.Component {
           <fieldset>
             <Input type="text"
                    id={this._getId('variable-name')}
-                   label="Name"
+                   label="名称"
                    name="name"
                    defaultValue={formData.name}
                    onChange={this._handleInputChange}
@@ -186,7 +186,7 @@ class EditConfigurationVariableModal extends React.Component {
                    required />
             <Input type="text"
                    id={this._getId('variable-description')}
-                   label={<span>Description <small className="text-muted">(Optional)</small></span>}
+                   label={<span>描述 <small className="text-muted">(可选)</small></span>}
                    name="description"
                    defaultValue={formData.description}
                    onChange={this._handleInputChange}
@@ -194,7 +194,7 @@ class EditConfigurationVariableModal extends React.Component {
                    spellCheck={false} />
             <Input type="textarea"
                    id={this._getId('variable-content')}
-                   label="Content"
+                   label="内容"
                    name="content"
                    rows="10"
                    className={ConfigurationHelperStyle.monoSpaceFont}

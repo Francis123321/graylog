@@ -90,8 +90,8 @@ class EventDefinitionForm extends React.Component {
       return (
         <div className="pull-right">
           <ButtonToolbar>
-            <Button onClick={onCancel}>Cancel</Button>
-            <Button bsStyle="primary" onClick={this.handleSubmit}>Done</Button>
+            <Button onClick={onCancel}>取消</Button>
+            <Button bsStyle="primary" onClick={this.handleSubmit}>完成</Button>
           </ButtonToolbar>
         </div>
       );
@@ -106,12 +106,12 @@ class EventDefinitionForm extends React.Component {
         <Button bsStyle="info"
                 onClick={() => this.handleStepChange(previousStep)}
                 disabled={activeStepIndex === 0}>
-          Previous
+          上一步
         </Button>
         <div className="pull-right">
           <Button bsStyle="info"
                   onClick={() => this.handleStepChange(nextStep)}>
-            Next
+            下一步
           </Button>
         </div>
       </div>

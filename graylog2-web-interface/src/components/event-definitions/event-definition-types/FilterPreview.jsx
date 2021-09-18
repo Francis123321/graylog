@@ -72,26 +72,23 @@ class FilterPreview extends React.Component {
   render() {
     const { isFetchingData, searchResult, errors, displayPreview } = this.props;
 
-    const renderedResults = isFetchingData ? <Spinner text="Loading filter preview..." /> : this.renderSearchResult(searchResult);
+    const renderedResults = isFetchingData ? <Spinner text="加载过滤器预览..." /> : this.renderSearchResult(searchResult);
 
     return (
       <>
         <HelpPanel collapsible
                    defaultExpanded={!displayPreview}
-                   title="How many Events will Filter & Aggregation create?">
+                   title="过滤和聚合将创建多少事件？">
           <p>
-            The Filter & Aggregation Condition will generate different number of Events, depending on how it is
-            configured:
+            过滤和聚合条件将生成不同数量的事件，具体取决于它的配置方式：
           </p>
           <ul>
-            <li><b>Filter:</b>&emsp;One Event per message matching the filter</li>
+            <li><b>过滤器：</b>&emsp;与过滤器匹配的每条消息一个事件 </li>
             <li>
-              <b>Aggregation without groups:</b>&emsp;One Event every time the aggregation result satisfies
-              the condition
+              <b>无组聚合：</b>&emsp;每次聚合结果满足条件时一个事件
             </li>
             <li>
-              <b>Aggregation with groups:</b>&emsp;One Event per group whose aggregation result satisfies
-              the condition
+              <b>分组聚合：</b>&emsp;每组一个事件，其聚合结果满足条件
             </li>
           </ul>
         </HelpPanel>
@@ -99,7 +96,7 @@ class FilterPreview extends React.Component {
         {displayPreview && (
           <Panel className={styles.filterPreview} bsStyle="default">
             <Panel.Heading>
-              <Panel.Title>Filter Preview</Panel.Title>
+              <Panel.Title>过滤预览</Panel.Title>
             </Panel.Heading>
             <Panel.Body>
               {errors.length > 0 ? <p className="text-danger">{errors[0].description}</p> : renderedResults}

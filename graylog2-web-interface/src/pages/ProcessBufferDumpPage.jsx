@@ -62,7 +62,7 @@ const ProcessBufferDumpPage = createReactClass({
 
     const title = (
       <span>
-        Process-buffer dump of node {node.short_node_id} / {node.hostname}
+        节点的进程缓冲区转储 {node.short_node_id} / {node.hostname}
         &nbsp;
         <small>Taken at {DateTime.now().toString(DateTime.Formats.COMPLETE)}</small>
       </span>

@@ -72,7 +72,7 @@ class RuntimeErrorPage extends React.Component {
             Error:
             <ToggleDetails className="pull-right">
               <Button bsStyle="link" tabIndex={0} onClick={this._toggleDetails}>
-                {showDetails ? 'Show less' : 'Show more'}
+                {showDetails ? '显示较少' : '展示更多'}
               </Button>
             </ToggleDetails>
           </dt>
@@ -82,7 +82,7 @@ class RuntimeErrorPage extends React.Component {
                 <ClipboardButton title={<Icon name="copy" fixedWidth />}
                                  bsSize="sm"
                                  text={`${error.message}\n${errorDetails}`}
-                                 buttonTitle="Copy error details to clipboard" />
+                                 buttonTitle="将错误详细信息复制到剪贴板 " />
               </div>
               {error.message}
               {showDetails && errorDetails}

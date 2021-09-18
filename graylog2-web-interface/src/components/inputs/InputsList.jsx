@@ -200,8 +200,8 @@ const InputsList = createReactClass({
             <SearchForm onSearch={this._onFilterInputs}
                         topMargin={0}
                         onReset={this._onFilterReset}
-                        searchButtonLabel="Filter"
-                        placeholder="Filter by title" />
+                        searchButtonLabel="筛选"
+                        placeholder="按标题过滤" />
             <br />
             <h2>
               全球投入
@@ -209,8 +209,8 @@ const InputsList = createReactClass({
               <small>{this.state.globalInputs.length} configured{this._nodeAffix()}</small>
             </h2>
             <EntityList bsNoItemsStyle="info"
-                        noItemsText={this.state.globalInputs.length <= 0 ? 'There are no global inputs.'
-                          : 'No global inputs match the filter'}
+                        noItemsText={this.state.globalInputs.length <= 0 ? '没有全局输入。'
+                          : '没有全局输入匹配过滤器'}
                         items={this.state.filteredGlobalInputs.map((input) => this._formatInput(input))} />
             <br />
             <br />
@@ -220,8 +220,8 @@ const InputsList = createReactClass({
               <small>{this.state.localInputs.length} configured{this._nodeAffix()}</small>
             </h2>
             <EntityList bsNoItemsStyle="info"
-                        noItemsText={this.state.localInputs.length <= 0 ? 'There are no local inputs.'
-                          : 'No local inputs match the filter'}
+                        noItemsText={this.state.localInputs.length <= 0 ? '没有本地输入。'
+                          : '没有本地输入与过滤器匹配'}
                         items={this.state.filteredLocalInputs.map((input) => this._formatInput(input))} />
           </Col>
         </InputListRow>

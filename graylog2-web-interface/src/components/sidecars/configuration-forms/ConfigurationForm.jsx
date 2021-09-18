@@ -273,8 +273,7 @@ const ConfigurationForm = createReactClass({
         <span>
           <FormControl.Static>{this._formatCollector(collector)}</FormControl.Static>
           <HelpBlock bsClass="warning">
-            <b>Note:</b> Log Collector cannot change while the Configuration is in use. Clone the Configuration
-            to test it using another Collector.
+            <b>注意:</b> 使用配置时，日志收集器无法更改。 克隆配置以使用另一个收集器对其进行测试。
           </HelpBlock>
         </span>
       );
@@ -288,7 +287,7 @@ const ConfigurationForm = createReactClass({
                 onChange={this._onCollectorChange}
                 placeholder="Collector"
                 required />
-        <HelpBlock>Choose the log collector this configuration is meant for.</HelpBlock>
+        <HelpBlock>选择此配置适用的日志收集器。</HelpBlock>
       </span>
     );
   },
@@ -306,34 +305,34 @@ const ConfigurationForm = createReactClass({
                    label="Name"
                    onChange={this._onNameChange}
                    bsStyle={this._validationState('name')}
-                   help={this._formatValidationMessage('name', 'Required. Name for this configuration')}
+                   help={this._formatValidationMessage('name', '必需的。 此配置的名称')}
                    value={formData.name || ''}
                    autoFocus
                    required />
 
             <FormGroup controlId="color">
-              <ControlLabel>Configuration color</ControlLabel>
+              <ControlLabel>配置颜色</ControlLabel>
               <div>
                 <ColorLabel color={formData.color} />
                 <div style={{ display: 'inline-block', marginLeft: 15 }}>
                   <ColorPickerPopover id="color"
                                       placement="right"
                                       color={formData.color}
-                                      triggerNode={<Button bsSize="xsmall">Change color</Button>}
+                                      triggerNode={<Button bsSize="xsmall">换颜色</Button>}
                                       onChange={this._formDataUpdate('color')} />
                 </div>
               </div>
-              <HelpBlock>Choose a color to use for this configuration.</HelpBlock>
+              <HelpBlock>选择用于此配置的颜色。</HelpBlock>
             </FormGroup>
 
             <FormGroup controlId="collector_id">
-              <ControlLabel>Collector</ControlLabel>
+              <ControlLabel>集电极</ControlLabel>
               {this._renderCollectorTypeField(formData.collector_id, collectors, configurationSidecars)}
             </FormGroup>
 
             <FormGroup controlId="template"
                        validationState={this._validationState('template')}>
-              <ControlLabel>Configuration</ControlLabel>
+              <ControlLabel>配置</ControlLabel>
               <SourceCodeEditor id="template"
                                 height={400}
                                 value={formData.template || ''}
@@ -342,16 +341,16 @@ const ConfigurationForm = createReactClass({
                       bsStyle="link"
                       bsSize="sm"
                       onClick={this._onShowSource}>
-                Preview
+                预览
               </Button>
               <Button className="pull-right"
                       bsStyle="link"
                       bsSize="sm"
                       onClick={this._onShowImports}>
-                Migrate
+                迁移
               </Button>
               <HelpBlock>
-                {this._formatValidationMessage('template', 'Required. Collector configuration, see quick reference for more information.')}
+                {this._formatValidationMessage('template', '必需的。 收集器配置，请参阅快速参考以获取更多信息。')}
               </HelpBlock>
             </FormGroup>
           </fieldset>
@@ -361,10 +360,10 @@ const ConfigurationForm = createReactClass({
               <FormGroup>
                 <ButtonToolbar>
                   <Button type="submit" bsStyle="primary" disabled={this._hasErrors()}>
-                    {action === 'create' ? 'Create' : 'Update'}
+                    {action === 'create' ? '创建' : '修改'}
                   </Button>
                   <Button type="button" onClick={this._onCancel}>
-                    {action === 'create' ? 'Cancel' : 'Back'}
+                    {action === 'create' ? '取消' : '返回'}
                   </Button>
                 </ButtonToolbar>
               </FormGroup>

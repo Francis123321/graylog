@@ -158,7 +158,7 @@ const BigDisplayModeConfiguration = ({ disabled, show, view }: Props) => {
                             view={view} />
       )}
       <MenuItem disabled={disabled} onSelect={() => setShowConfigurationModal(true)}>
-        <Icon name="desktop" /> Full Screen
+        <Icon name="desktop" /> 全屏
       </MenuItem>
     </>
   );

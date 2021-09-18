@@ -36,7 +36,7 @@ const handleSearch = (query, page, perPage) => DashboardsActions.search(query, p
 
 const handleViewDelete = (view) => {
   // eslint-disable-next-line no-alert
-  if (window.confirm(`Are you sure you want to delete "${view.title}"?`)) {
+  if (window.confirm(`你确定你要删除 "${view.title}"?`)) {
     return ViewManagementActions.delete(view);
   }
 

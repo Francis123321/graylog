@@ -44,7 +44,7 @@ const InputListItem = createReactClass({
   mixins: [PermissionsMixin, Reflux.connect(InputTypesStore)],
 
   _deleteInput() {
-    if (window.confirm(`Do you really want to delete input '${this.props.input.title}'?`)) {
+    if (window.confirm(`你真的要删除'${this.props.input.title}'这个输入吗?`)) {
       InputsActions.delete(this.props.input);
     }
   },
@@ -161,7 +161,7 @@ const InputListItem = createReactClass({
                    globalValue={input.global}
                    nodeValue={input.node}
                    configFields={definition.requested_configuration}
-                   title={`Editing Input ${input.title}`}
+                   title={`编辑输入 ${input.title}`}
                    titleValue={input.title}
                    typeName={input.type}
                    includeTitleField

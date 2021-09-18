@@ -34,7 +34,7 @@ type Props = {
 const DebugOverlay = ({ currentView, searches, show, onClose }: Props) => (
   <BootstrapModalWrapper showModal={show} onHide={onClose}>
     <Modal.Header closeButton>
-      <Modal.Title>Debug information</Modal.Title>
+      <Modal.Title>调试信息</Modal.Title>
     </Modal.Header>
     <Modal.Body>
       <textarea disabled
@@ -42,7 +42,7 @@ const DebugOverlay = ({ currentView, searches, show, onClose }: Props) => (
                 value={JSON.stringify({ currentView, searches }, null, 2)} />
     </Modal.Body>
     <Modal.Footer>
-      <Button type="button" onClick={() => onClose()} bsStyle="primary">Close</Button>
+      <Button type="button" onClick={() => onClose()} bsStyle="primary">关闭</Button>
     </Modal.Footer>
   </BootstrapModalWrapper>
 );

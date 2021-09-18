@@ -101,7 +101,7 @@ const ValueActions = ({ children, element, field, menuContainer, queryId, type, 
         </li>
 
         <MenuItem divider />
-        <MenuItem header>Actions</MenuItem>
+        <MenuItem header>操作</MenuItem>
         {valueActions}
       </OverlayDropdown>
       {overflowingComponentsValues}

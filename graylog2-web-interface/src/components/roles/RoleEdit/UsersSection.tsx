@@ -87,7 +87,7 @@ const UsersSection = ({ role: { id, name }, role }: Props) => {
       <ErrorAlert onClose={setErrors}>
         {errors}
       </ErrorAlert>
-      <h3>Selected Users</h3>
+      <h3>选定的用户</h3>
       <Container>
         <PaginatedItemOverview noDataText="未找到选定的用户。"
                                onLoad={_onLoad}

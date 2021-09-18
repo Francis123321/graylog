@@ -41,22 +41,20 @@ class StaticFieldForm extends React.Component {
   render() {
     return (
       <BootstrapModalForm ref={(modal) => { this.modal = modal; }}
-                          title="Add static field"
-                          submitButtonText="Add field"
+                          title="添加静态字段"
+                          submitButtonText="添加字段"
                           onSubmitForm={this._addStaticField}>
-        <p>Define a static field that is added to every message that comes in via this input. The field is not
-          overwritten If the message already has that key. Key must only contain alphanumeric characters or
-          underscores and not be a reserved field.
+        <p>定义一个静态字段，该字段将添加到通过此输入传入的每条消息中。 如果消息已具有该密钥，则不会覆盖该字段。 键只能包含字母数字字符或下划线，不能是保留字段。
         </p>
         <Input ref={(fieldName) => { this.fieldName = fieldName; }}
                type="text"
                id="field-name"
-               label="Field name"
+               label="字段名称"
                className="validatable"
                data-validate="alphanum_underscore"
                required
                autoFocus />
-        <Input ref={(fieldValue) => { this.fieldValue = fieldValue; }} type="text" id="field-value" label="Field value" required />
+        <Input ref={(fieldValue) => { this.fieldValue = fieldValue; }} type="text" id="field-value" label="字段值" required />
       </BootstrapModalForm>
     );
   }

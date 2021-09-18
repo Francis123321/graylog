@@ -165,7 +165,7 @@ const SavedSearchList = ({ toggleModal, deleteSavedSearch, activeSavedSearchId }
         </PaginatedList>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={toggleModal}>Cancel</Button>
+        <Button onClick={toggleModal}>取消</Button>
       </Modal.Footer>
     </Modal>
   );

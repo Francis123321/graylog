@@ -185,8 +185,8 @@ const HighlightForm = ({ onClose, rule }: Props) => {
                 <HighlightingColorForm field={selectedFieldType} />
               </Modal.Body>
               <Modal.Footer>
-                <Button type="button" onClick={onClose}>Cancel</Button>
-                <Button type="submit" disabled={!isValid} bsStyle="primary">Save</Button>
+                <Button type="button" onClick={onClose}>取消</Button>
+                <Button type="submit" disabled={!isValid} bsStyle="primary">保存</Button>
               </Modal.Footer>
             </Form>
           </BootstrapModalWrapper>
