@@ -94,7 +94,7 @@ const SearchExportStrategy: ExportStrategy = {
 };
 
 const DashboardExportStrategy: ExportStrategy = {
-  title: 'Export message table search results',
+  title: '导出消息表搜索结果',
   shouldEnableDownload: (showWidgetSelection, selectedWidget, selectedFields, loading) => !loading && !!selectedWidget && !!selectedFields && selectedFields.length > 0,
   shouldAllowWidgetSelection: (singleWidgetDownload, showWidgetSelection) => !singleWidgetDownload && !showWidgetSelection,
   shouldShowWidgetSelection: (singleWidgetDownload, selectedWidget) => !singleWidgetDownload && !selectedWidget,

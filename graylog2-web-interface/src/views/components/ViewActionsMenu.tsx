@@ -97,23 +97,23 @@ const ViewActionsMenu = ({ view, isNewView, metadata }) => {
       {saveAsViewOpen && (
         <ViewPropertiesModal show
                              view={view.toBuilder().newId().build()}
-                             title="Save new dashboard"
+                             title="保存新仪表板"
                              onClose={() => setSaveAsViewOpen(false)}
                              onSave={(newView) => onSaveAsView(newView)} />
       )}
       {editViewOpen && (
         <ViewPropertiesModal show
                              view={view}
-                             title="Editing dashboard"
+                             title="编辑仪表板"
                              onClose={() => setEditViewOpen(false)}
                              onSave={onSaveView} />
       )}
 
       {shareViewOpen && (
         <EntityShareModal entityId={view.id}
-                          entityType="dashboard"
+                          entityType="仪表盘"
                           entityTitle={view.title}
-                          description={`Search for a User or Team to add as collaborator on this ${viewTypeLabel}.`}
+                          description={`在此 ${viewTypeLabel} 上搜索要添加为协作者的用户或团队。`}
                           onClose={() => setShareViewOpen(false)} />
       )}
       {exportOpen && <ExportModal view={view} closeModal={() => setExportOpen(false)} />}

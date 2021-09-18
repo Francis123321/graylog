@@ -34,7 +34,7 @@ type Props = {
 const DebugOverlay = ({ currentView, searches, show, onClose }: Props) => (
   <BootstrapModalWrapper showModal={show} onHide={onClose}>
     <Modal.Header closeButton>
-      <Modal.Title>Debug information</Modal.Title>
+      <Modal.Title>调试信息</Modal.Title>
     </Modal.Header>
     <Modal.Body>
       <textarea disabled
