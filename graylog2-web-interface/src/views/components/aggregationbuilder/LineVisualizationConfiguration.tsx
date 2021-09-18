@@ -35,7 +35,7 @@ const LineVisualizationConfiguration = ({ config = LineVisualizationConfig.empty
   return (
     <>
       <span>Interpolation:</span>
-      <Select placeholder="Select Interpolation Mode"
+      <Select placeholder="选择插值模式"
               onChange={_onChange}
               options={interpolationOptions}
               value={_makeOption(config.interpolation)} />

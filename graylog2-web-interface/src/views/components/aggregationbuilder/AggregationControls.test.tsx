@@ -136,8 +136,8 @@ describe('AggregationControls', () => {
   });
 
   it('shows custom visualization config component', () => {
-    const CustomVisualizationConfigComponent = () => <div>This is a custom visualization config</div>;
-    const OtherCustomVisualizationConfigComponent = () => <div>This text should not be rendered</div>;
+    const CustomVisualizationConfigComponent = () => <div>这是一个自定义的可视化配置</div>;
+    const OtherCustomVisualizationConfigComponent = () => <div>不应呈现此文本</div>;
 
     asMock(PluginStore.exports).mockImplementation((type) => ({
       visualizationConfigTypes: [{

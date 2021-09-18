@@ -62,17 +62,17 @@ export default class SeriesConfiguration extends React.Component {
     const { name } = this.state;
     const { usedNames = [] } = this.props;
     const isValid = !usedNames.includes(trim(name));
-    const validationHint = isValid ? null : <> <strong>Name must be unique.</strong></>;
+    const validationHint = isValid ? null : <> <strong>名称必须是唯一的。</strong></>;
 
     return (
       <span>
         <FormGroup validationState={isValid ? null : 'error'}>
           <ControlLabel>Name</ControlLabel>
           <FormControl type="text" value={name} onChange={this._changeName} />
-          <HelpBlock>The name of the series as it appears in the chart.{validationHint}</HelpBlock>
+          <HelpBlock>出现在图表中的系列名称。{validationHint} </HelpBlock>
         </FormGroup>
         <div className="pull-right" style={{ marginBottom: '10px' }}>
-          <Button bsStyle="success" disabled={!isValid} onClick={this._onSubmit}>Done</Button>
+          <Button bsStyle="success" disabled={!isValid} onClick={this._onSubmit}>完毕</Button>
         </div>
       </span>
     );

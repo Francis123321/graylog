@@ -49,16 +49,16 @@ const _validateConfig = (config: HeatmapVisualizationConfig, setErrors): boolean
 
   if (zMin || zMax) {
     if (zMin >= zMax) {
-      errors.zmin = 'Min is bigger than Max';
+      errors.zmin = '最小值大于最大值';
     }
 
     if (zMax <= zMin) {
-      errors.zmin = 'Max is smaller than Min';
+      errors.zmin = '最大值小于最小值';
     }
 
     if (defaultValue) {
       if (defaultValue > zMax || defaultValue < zMin) {
-        errors.defaultValue = 'Default Value is out of range from Min and Max';
+        errors.defaultValue = '默认值超出 Min 和 Max 的范围';
       }
     }
   }

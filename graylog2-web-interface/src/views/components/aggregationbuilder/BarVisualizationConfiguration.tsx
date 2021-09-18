@@ -45,21 +45,20 @@ class BarVisualizationConfiguration extends React.Component<Props> {
 
   static options = {
     group: {
-      label: 'Group',
-      help: 'Every series is represented by its own bar in the chart.',
+      label: '团体',
+      help: '每个系列在图表中由自己的条形表示。',
     },
     stack: {
-      label: 'Stack',
-      help: 'All series are stacked upon each other resulting in one bar.',
+      label: '堆',
+      help: '所有系列相互堆叠，形成一个条形。',
     },
     relative: {
-      label: 'Relative',
-      help: 'All series are stacked upon each other resulting in one chart. But negative series are placed below zero.',
+      label: '相对的',
+      help: '所有系列相互叠加，形成一张图表。 但是负系列被放置在零以下。',
     },
     overlay: {
-      label: 'Overlay',
-      help: 'All series are placed as bars upon each other. To be able to see the bars the opacity is reduced to 75%.'
-        + ' It is recommended to use this option with not more than 3 series.',
+      label: '覆盖',
+      help: '所有系列都相互叠加。 为了能够看到条形，不透明度降低到 75%。建议在不超过 3 个系列的情况下使用此选项。',
     },
   };
 
@@ -84,7 +83,7 @@ class BarVisualizationConfiguration extends React.Component<Props> {
     return (
       <>
         <span>Mode:</span>
-        <HoverForHelp title="Help for bar chart mode">
+        <HoverForHelp title="条形图模式帮助">
           <ul>
             {modes.map((mode) => (
               <li key={mode}><h4>{BarVisualizationConfiguration.options[mode].label}</h4>
@@ -93,7 +92,7 @@ class BarVisualizationConfiguration extends React.Component<Props> {
             ))}
           </ul>
         </HoverForHelp>
-        <Select placeholder="None: click to add series"
+        <Select placeholder="无：点击添加系列"
                 onChange={this._onChange}
                 options={options}
                 value={this._wrapOption(config.barmode)} />

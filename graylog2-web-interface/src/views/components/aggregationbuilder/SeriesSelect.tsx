@@ -163,7 +163,7 @@ class SeriesSelect extends React.Component<Props, State> {
     };
 
     return (
-      <Select placeholder="None: click to add series"
+      <Select placeholder="无：点击添加系列"
               onChange={this._onChange}
               options={options}
               value={series.map(_wrapOption)}

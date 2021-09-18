@@ -58,16 +58,13 @@ class IndexerFailuresPage extends React.Component {
     return (
       <DocumentTitle title="Indexer failures">
         <span>
-          <PageHeader title="Indexer failures">
+          <PageHeader title="索引器故障">
             <span>
-              This is a list of message index attempts that failed. A failure means that a message you sent to Graylog was{' '}
-              properly processed but writing it to the Elasticsearch cluster failed. Note that the list is capped to a size{' '}
-              of 50 MB so it will contain a lot of failure logs but not necessarily all that ever occurred.
+              这是失败的消息索引尝试列表。 失败意味着您发送到 Graylog 的消息已正确处理，但将其写入 Elasticsearch 集群失败。 请注意，该列表的大小上限为 50 MB，因此它将包含大量失败日志，但不一定包含所有发生过的日志。
             </span>
 
             <span>
-              Collection containing a total of {numeral(this.state.total).format('0,0')} indexer failures. Read more about
-              this topic in the <DocumentationLink page={DocsHelper.PAGES.INDEXER_FAILURES} text="documentation" />.
+              包含总共{numeral(this.state.total).format('0,0')}个索引器故障的集合。 在<DocumentationLink page={DocsHelper.PAGES.INDEXER_FAILURES} text="文件" />中阅读有关此主题的更多信息。
             </span>
           </PageHeader>
           <Row className="content">

@@ -46,7 +46,7 @@ class IndexerFailuresComponent extends React.Component {
 
         <LinkContainer to={Routes.SYSTEM.INDICES.FAILURES}>
           <Button bsStyle="info" bsSize="xs" className="pull-right">
-            Show errors
+            显示错误
           </Button>
         </LinkContainer>
       </Alert>
@@ -55,10 +55,10 @@ class IndexerFailuresComponent extends React.Component {
 
   _formatTextForFailureCount = (count) => {
     if (count === 0) {
-      return 'No failed indexing attempts in the last 24 hours.';
+      return '在过去 24 小时内没有失败的索引尝试。';
     }
 
-    return <strong>There were {numeral(count).format('0,0')} failed indexing attempts in the last 24 hours.</strong>;
+    return <strong>在过去 24 小时内有 {numeral(count).format('0,0')} 次失败的索引尝试。</strong>;
   };
 
   _iconForFailureCount = (count) => {
