@@ -38,49 +38,49 @@ class SidecarSearchForm extends React.Component {
     const { query, onSearch, onReset, children } = this.props;
 
     const queryHelpPopover = (
-      <Popover id="search-query-help" className={style.popoverWide} title="Search Syntax Help">
-        <p><strong>Available search fields</strong></p>
+      <Popover id="search-query-help" className={style.popoverWide} title="搜索语法帮助">
+        <p><strong>可用的搜索字段</strong></p>
         <Table condensed>
           <thead>
             <tr>
-              <th>Field</th>
-              <th>Description</th>
+              <th>字段</th>
+              <th>描述</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>name</td>
-              <td>Sidecar name</td>
+              <td>名称</td>
+              <td>探针名称</td>
             </tr>
             <tr>
-              <td>status</td>
-              <td>Status of the sidecar as it appears in the list, i.e. running, failing, or unknown</td>
+              <td>地位</td>
+              <td>探针出现在列表中时的状态，即正在运行、失败或未知 </td>
             </tr>
             <tr>
-              <td>operating_system</td>
-              <td>Operating system the sidecar is running on</td>
+              <td>操作系统</td>
+              <td>Sidecar 运行的操作系统</td>
             </tr>
             <tr>
-              <td>last_seen</td>
-              <td>Date and time when the sidecar last communicated with Graylog</td>
+              <td>最后一次露面</td>
+              <td>探针上次与 Graylog 通信的日期和时间</td>
             </tr>
             <tr>
-              <td>node_id</td>
-              <td>Identifier of the sidecar</td>
+              <td>节点 ID</td>
+              <td>探针标识符</td>
             </tr>
             <tr>
-              <td>sidecar_version</td>
-              <td>Sidecar version</td>
+              <td>探针版本</td>
+              <td>探针版本</td>
             </tr>
           </tbody>
         </Table>
-        <p><strong>Examples</strong></p>
+        <p><strong>例子</strong></p>
         <p>
-          Find sidecars that did not communicate with Graylog since a date:<br />
+          查找自某个日期以来未与 Graylog 通信的探针：<br />
           <kbd>{'last_seen:<=2018-04-10'}</kbd><br />
         </p>
         <p>
-          Find sidecars with <code>failing</code> or <code>unknown</code> status:<br />
+          查找具有 <code>失败</code> 或 <code>未知</code> 状态的探针：<br />
           <kbd>status:failing status:unknown</kbd><br />
         </p>
       </Popover>
@@ -97,7 +97,7 @@ class SidecarSearchForm extends React.Component {
                   onSearch={onSearch}
                   onReset={onReset}
                   searchButtonLabel="Find"
-                  placeholder="Find sidecars"
+                  placeholder="查找探针"
                   queryWidth={400}
                   queryHelpComponent={queryHelp}
                   topMargin={0}

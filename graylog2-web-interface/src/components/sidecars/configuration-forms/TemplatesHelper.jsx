@@ -29,26 +29,26 @@ class TemplatesHelper extends React.Component {
         <Table responsive>
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Description</th>
+              <th>名称</th>
+              <th>描述</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td><code>{this._buildVariableName('operatingSystem')}</code></td>
-              <td>Name of the operating system the sidecar is running on, e.g. <code>&quot;Linux&quot;, &quot;Windows&quot;</code></td>
+              <td>运行边车的操作系统的名称，例如 <code>“Linux”、“Windows”</code> </td>
             </tr>
             <tr>
               <td><code>{this._buildVariableName('nodeName')}</code></td>
-              <td>The name of the sidecar, defaults to hostname if not set.</td>
+              <td>探针的名称，如果未设置，则默认为主机名。</td>
             </tr>
             <tr>
               <td><code>{this._buildVariableName('nodeId')}</code></td>
-              <td>UUID of the sidecar.</td>
+              <td>探针的 UUID。</td>
             </tr>
             <tr>
               <td><code>{this._buildVariableName('sidecarVersion')}</code></td>
-              <td>Version string of the running sidecar.</td>
+              <td>正在运行的探针的版本字符串。</td>
             </tr>
           </tbody>
         </Table>

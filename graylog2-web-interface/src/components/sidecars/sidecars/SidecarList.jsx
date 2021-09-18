@@ -104,7 +104,7 @@ class SidecarList extends React.Component {
     const { onlyActive } = this.props;
     const showInactiveHint = (onlyActive ? ' and/or click on "Include inactive sidecars"' : null);
 
-    return <Alert>There are no sidecars to show. Try adjusting your search filter{showInactiveHint}.</Alert>;
+    return <Alert>没有可显示的探针。 尝试调整您的搜索过滤器{showInactiveHint}。</Alert>;
   };
 
   render() {

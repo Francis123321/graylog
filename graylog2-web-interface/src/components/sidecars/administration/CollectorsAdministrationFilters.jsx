@@ -73,13 +73,13 @@ const CollectorsAdministrationFilters = createReactClass({
 
     return (
       <SelectPopover id="collector-filter"
-                     title="Filter by collector"
-                     triggerNode={<Button bsSize="small" bsStyle="link">Collector <span className="caret" /></Button>}
+                     title="按收集器过滤"
+                     triggerNode={<Button bsSize="small" bsStyle="link">集电极 <span className="caret" /></Button>}
                      items={collectorItems}
                      itemFormatter={collectorFormatter}
                      onItemSelect={filter}
                      selectedItems={collectorFilter ? [collectorFilter] : []}
-                     filterPlaceholder="Filter by collector" />
+                     filterPlaceholder="按收集器过滤" />
     );
   },
 
@@ -115,13 +115,13 @@ const CollectorsAdministrationFilters = createReactClass({
 
     return (
       <SelectPopover id="configuration-filter"
-                     title="Filter by configuration"
-                     triggerNode={<Button bsSize="small" bsStyle="link">Configuration <span className="caret" /></Button>}
+                     title="按配置过滤"
+                     triggerNode={<Button bsSize="small" bsStyle="link">配置 <span className="caret" /></Button>}
                      items={configurationItems}
                      itemFormatter={configurationFormatter}
                      onItemSelect={filter}
                      selectedItems={configurationFilter ? [configurationFilter] : []}
-                     filterPlaceholder="Filter by configuration" />
+                     filterPlaceholder="按配置过滤" />
     );
   },
 
@@ -138,12 +138,12 @@ const CollectorsAdministrationFilters = createReactClass({
 
     return (
       <SelectPopover id="os-filter"
-                     title="Filter by OS"
-                     triggerNode={<Button bsSize="small" bsStyle="link">OS <span className="caret" /></Button>}
+                     title="按操作系统过滤"
+                     triggerNode={<Button bsSize="small" bsStyle="link">操作系统 <span className="caret" /></Button>}
                      items={operatingSystems}
                      onItemSelect={filter}
                      selectedItems={osFilter ? [osFilter] : []}
-                     filterPlaceholder="Filter by OS" />
+                     filterPlaceholder="按操作系统过滤" />
     );
   },
 
@@ -157,13 +157,13 @@ const CollectorsAdministrationFilters = createReactClass({
 
     return (
       <SelectPopover id="status-filter"
-                     title="Filter by collector status"
-                     triggerNode={<Button bsSize="small" bsStyle="link">Collector Status <span className="caret" /></Button>}
+                     title="按收集器状态过滤"
+                     triggerNode={<Button bsSize="small" bsStyle="link">收集器状态 <span className="caret" /></Button>}
                      items={status}
                      itemFormatter={statusFormatter}
                      onItemSelect={filter}
                      selectedItems={statusFilter ? [statusFilter] : []}
-                     filterPlaceholder="Filter by collector status" />
+                     filterPlaceholder="按收集器状态过滤" />
     );
   },
 

@@ -95,15 +95,15 @@ const TokenList = ({ creatingToken, deletingToken, onCreate, onDelete, tokens }:
       {createdToken && (
         <StyledTokenPanel bsStyle="success">
           <Panel.Heading>
-            <Panel.Title>Token <em>{createdToken.name}</em> created!</Panel.Title>
+            <Panel.Title>令牌 <em>{createdToken.name}</em> 已创建！</Panel.Title>
           </Panel.Heading>
           <Panel.Body>
-            <p>This is your new token. Make sure to copy it now, you will not be able to see it again.</p>
+            <p>这是你的新令牌。 确保现在复制它，您将无法再次看到它。</p>
             <pre>
               {createdToken.token}
               <StyledCopyTokenButton title={<Icon name="clipboard" fixedWidth />} text={createdToken.token} bsSize="xsmall" />
             </pre>
-            <Button bsStyle="primary" onClick={() => setCreatedToken(undefined)}>Done</Button>
+            <Button bsStyle="primary" onClick={() => setCreatedToken(undefined)}>完毕</Button>
           </Panel.Body>
         </StyledTokenPanel>
       )}
@@ -139,7 +139,7 @@ const TokenList = ({ creatingToken, deletingToken, onCreate, onDelete, tokens }:
                           disabled={deletingToken === token.id}
                           bsStyle="primary"
                           onClick={deleteToken(token)}>
-                    {deletingToken === token.id ? <Spinner text="Deleting..." /> : 'Delete'}
+                    {deletingToken === token.id ? <Spinner text="删除..." /> : '删除'}
                   </Button>
                 </Col>
               </Row>

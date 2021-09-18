@@ -81,24 +81,24 @@ const SidecarEditConfigurationPage = createReactClass({
     return (
       <DocumentTitle title="Collector Configuration">
         <span>
-          <PageHeader title="Collector Configuration">
+          <PageHeader title="收集器配置">
             <span>
-              Some words about collector configurations.
+             关于收集器配置的一些话。
             </span>
 
             <span>
-              Read more about the Graylog Sidecar in the documentation.
+              在文档中阅读有关 Graylog Sidecar 的更多信息。
             </span>
 
             <ButtonToolbar>
               <LinkContainer to={Routes.SYSTEM.SIDECARS.OVERVIEW}>
-                <Button bsStyle="info">Overview</Button>
+                <Button bsStyle="info">概述</Button>
               </LinkContainer>
               <LinkContainer to={Routes.SYSTEM.SIDECARS.ADMINISTRATION}>
-                <Button bsStyle="info">Administration</Button>
+                <Button bsStyle="info">行政</Button>
               </LinkContainer>
               <LinkContainer to={Routes.SYSTEM.SIDECARS.CONFIGURATION}>
-                <Button bsStyle="info" className="active">Configuration</Button>
+                <Button bsStyle="info" className="active">配置</Button>
               </LinkContainer>
             </ButtonToolbar>
           </PageHeader>
