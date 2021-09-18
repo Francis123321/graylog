@@ -102,14 +102,14 @@ describe('SearchResult', () => {
 
     act(() => jest.advanceTimersByTime(500));
 
-    expect(getByText('Updating search results...')).not.toBeNull();
+    expect(getByText('更新搜索结果...')).not.toBeNull();
   });
 
   it('should hide loading indicator, when search is not loading', () => {
     asMock(SearchLoadingStateStore.getInitialState).mockReturnValueOnce({ isLoading: false });
     const { queryByText } = render(<SimpleSearchResult />);
 
-    expect(queryByText('Updating search results...')).toBeNull();
+    expect(queryByText('更新搜索结果...')).toBeNull();
   });
 
   it('should display info message when field types and search results exists, but no widgets are defined', () => {

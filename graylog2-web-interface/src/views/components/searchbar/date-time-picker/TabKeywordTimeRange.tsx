@@ -150,17 +150,18 @@ const TabKeywordTimeRange = ({ defaultValue, disabled, setValidatingKeyword }: P
       <Col sm={7}>
         <Panel>
           <Panel.Body>
-            <p><code>last month</code> searches between one month ago and now</p>
+            <p><code>上个月</code> 一个月前到现在的搜索量</p>
 
-            <p><code>4 hours ago</code> searches between four hours ago and now</p>
+            <p><code>4 小时前</code> 四小时前和现在之间的搜索</p>
 
-            <p><code>1st of april to 2 days ago</code> searches between 1st of April and 2 days ago</p>
+            <p><code>4 月 1 日至 2 天前</code> 4 月 1 日至 2 天前的搜索</p>
 
-            <p><code>yesterday midnight +0200 to today midnight +0200</code> searches between yesterday midnight and today midnight in timezone +0200 - will be 22:00 in UTC</p>
+            <p><code>昨天午夜 +0200 到今天午夜 +0200</code> 在时区 +0200 的昨天午夜和今天午夜之间搜索 - UTC 时间为 22:00 </p>
 
-            <p>Please consult the <DocumentationLink page={DocsHelper.PAGES.TIME_FRAME_SELECTOR}
-                                                     title="Keyword Time Range Documentation"
-                                                     text="documentation" /> for more details.
+            <p>
+              请查阅<DocumentationLink page={DocsHelper.PAGES.TIME_FRAME_SELECTOR}
+                                    title="Keyword Time Range Documentation"
+                                    text="文件" />了解更多详情。
             </p>
           </Panel.Body>
         </Panel>

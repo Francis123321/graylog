@@ -47,7 +47,7 @@ const StyledCol = styled(Col)`
 `;
 
 const SearchLoadingIndicator = connect(
-  ({ searchLoadingState }: IndicatorProps) => (searchLoadingState.isLoading && <LoadingIndicator text="Updating search results..." />),
+  ({ searchLoadingState }: IndicatorProps) => (searchLoadingState.isLoading && <LoadingIndicator text="更新搜索结果..." />),
   { searchLoadingState: SearchLoadingStateStore },
 );
 
