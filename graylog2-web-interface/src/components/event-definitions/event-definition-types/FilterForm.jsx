@@ -269,16 +269,15 @@ class FilterForm extends React.Component {
 
     return (
       <fieldset>
-        <h2 className={commonStyles.title}>Filter</h2>
-        <p>Add information to filter the log messages that are relevant for this Event Definition.</p>
+        <h2 className={commonStyles.title}>筛选</h2>
+        <p>添加信息以过滤与此事件定义相关的日志消息。</p>
         <Input id="filter-query"
                name="query"
-               label="Search Query"
+               label="搜索查询"
                type="text"
                help={(
                  <span>
-                   Search query that Messages should match. You can use the same syntax as in the Search page,
-                   including declaring Query Parameters from Lookup Tables by using the <code>$newParameter$</code> syntax.
+                   消息应匹配的搜索查询。 您可以使用与“搜索”页面中相同的语法，包括使用 <code>$newParameter$</code> 语法从查找表中声明查询参数。
                  </span>
                )}
                value={lodash.defaultTo(eventDefinition.config.query, '')}
@@ -287,17 +286,17 @@ class FilterForm extends React.Component {
         {this.renderQueryParameters()}
 
         <FormGroup controlId="filter-streams">
-          <ControlLabel>Streams <small className="text-muted">(Optional)</small></ControlLabel>
+          <ControlLabel>流 <small className="text-muted">(可选)</small></ControlLabel>
           <MultiSelect id="filter-streams"
                        matchProp="label"
                        onChange={(selected) => this.handleStreamsChange(selected === '' ? [] : selected.split(','))}
                        options={formattedStreams}
                        value={lodash.defaultTo(eventDefinition.config.streams, []).join(',')} />
-          <HelpBlock>Select streams the search should include. Searches in all streams if empty.</HelpBlock>
+          <HelpBlock>选择搜索应包括的流。 如果为空，则在所有流中搜索。</HelpBlock>
         </FormGroup>
 
         <FormGroup controlId="search-within" validationState={validation.errors.search_within_ms ? 'error' : null}>
-          <TimeUnitInput label="Search within the last"
+          <TimeUnitInput label="在最后搜索"
                          update={this.handleTimeRangeChange('search_within_ms')}
                          value={searchWithinMsDuration}
                          unit={searchWithinMsUnit}
@@ -310,7 +309,7 @@ class FilterForm extends React.Component {
         </FormGroup>
 
         <FormGroup controlId="execute-every" validationState={validation.errors.execute_every_ms ? 'error' : null}>
-          <TimeUnitInput label="Execute search every"
+          <TimeUnitInput label="执行搜索"
                          update={this.handleTimeRangeChange('execute_every_ms')}
                          value={executeEveryMsDuration}
                          unit={executeEveryMsUnit}
@@ -324,8 +323,8 @@ class FilterForm extends React.Component {
         <Input id="schedule-checkbox"
                type="checkbox"
                name="_is_scheduled"
-               label="Enable"
-               help="Should this event definition be executed automatically?"
+               label="能够"
+               help="这个事件定义应该自动执行吗？"
                checked={lodash.defaultTo(eventDefinition.config._is_scheduled, true)}
                onChange={this.handleConfigChange} />
       </fieldset>
