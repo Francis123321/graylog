@@ -61,9 +61,9 @@ const GroupByConfiguration = () => {
                                    checked={value}
                                    disabled={disableColumnRollup}>
               <RollupColumnsLabel>
-                Rollup Columns
+                汇总列
                 <RollupHoverForHelp title="Rollup Columns">
-                  When rollup is enabled, an additional trace totalling individual subtraces will be included.
+                  启用汇总后，将包括总计单个子跟踪的附加跟踪。
                 </RollupHoverForHelp>
               </RollupColumnsLabel>
             </RollupColumnsCheckbox>

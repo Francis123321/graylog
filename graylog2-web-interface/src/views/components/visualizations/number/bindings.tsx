@@ -27,27 +27,24 @@ type NumberVisualizationConfigFormValues = {
 
 const singleNumber: VisualizationType<NumberVisualizationConfig, NumberVisualizationConfigFormValues> = {
   type: NumberVisualization.type,
-  displayName: 'Single Number',
+  displayName: '单号',
   component: NumberVisualization,
   config: {
     fromConfig: (config: NumberVisualizationConfig | undefined) => ({ trend: config?.trend, trend_preference: config?.trendPreference }),
     toConfig: ({ trend = false, trend_preference }: NumberVisualizationConfigFormValues) => NumberVisualizationConfig.create(trend, trend_preference),
     fields: [{
       name: 'trend',
-      title: 'Trend',
+      title: '趋势',
       type: 'boolean',
-      description: 'Show trend information for this number.',
+      description: '显示此数字的趋势信息。',
       helpComponent: () => (
         <>
           <p>
-            If the user enables trending, a separate box is shown below the current value, indicating the direction of the change
-            by an icon as well as the absolute and the relative differences between the current value and the previous one.
+            如果用户启用趋势，则会在当前值下方显示一个单独的框，通过图标指示变化的方向以及当前值与前一个值之间的绝对和相对差异。
           </p>
 
           <p>
-            The previous value is calculated by performing two searches in the background, which are completely identical besides
-            the timerange. The timerange of the first search is identical to the one configured for this query/this widget,
-            the second one is the same timerange, but with an offset of the timerange length shifted to the past.
+            前一个值是通过在后台执行两次搜索来计算的，除了时间范围外，它们完全相同。 第一次搜索的时间范围与为此查询/此小部件配置的时间范围相同，第二次是相同的时间范围，但时间范围长度偏移到过去。
           </p>
         </>
       ),

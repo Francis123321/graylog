@@ -29,7 +29,7 @@ describe('GroupByElement', () => {
         values.groupBy.groupings = [grouping];
         const result = validate(values);
 
-        expect(result.groupBy.groupings[0].field).toBe('Field is required.');
+        expect(result.groupBy.groupings[0].field).toBe('字段是必需的。');
       });
 
       it('should not add an error if everything is fine', () => {
@@ -45,7 +45,7 @@ describe('GroupByElement', () => {
         values.groupBy.groupings = [grouping];
         const result = validate(values);
 
-        expect(result.groupBy.groupings[0].limit).toBe('Limit is required.');
+        expect(result.groupBy.groupings[0].limit).toBe('限制是必需的。');
       });
 
       it('should add an error if limit is smaller than 0', () => {
@@ -53,7 +53,7 @@ describe('GroupByElement', () => {
         values.groupBy.groupings = [grouping];
         const result = validate(values);
 
-        expect(result.groupBy.groupings[0].limit).toBe('Must be greater than 0.');
+        expect(result.groupBy.groupings[0].limit).toBe('必须大于 0。');
       });
     });
 
@@ -63,7 +63,7 @@ describe('GroupByElement', () => {
         values.groupBy.groupings = [grouping];
         const result = validate(values);
 
-        expect(result.groupBy.groupings[0].field).toBe('Field is required.');
+        expect(result.groupBy.groupings[0].field).toBe('字段是必需的。');
       });
 
       it('should not add an error if everything is fine', () => {
@@ -79,7 +79,7 @@ describe('GroupByElement', () => {
         values.groupBy.groupings = [grouping];
         const result = validate(values);
 
-        expect(result.groupBy.groupings[0].interval).toBe('Scaling is required.');
+        expect(result.groupBy.groupings[0].interval).toBe('需要缩放。');
       });
 
       it('should add an error if scaling out of range', () => {
@@ -87,7 +87,7 @@ describe('GroupByElement', () => {
         values.groupBy.groupings = [grouping];
         const result = validate(values);
 
-        expect(result.groupBy.groupings[0].interval).toBe('Must be greater than 0 and smaller or equals 10.');
+        expect(result.groupBy.groupings[0].interval).toBe('必须大于 0 且小于或等于 10。');
       });
 
       it('should add an error if value is out of range', () => {
@@ -95,7 +95,7 @@ describe('GroupByElement', () => {
         values.groupBy.groupings = [grouping];
         const result = validate(values);
 
-        expect(result.groupBy.groupings[0].interval).toBe('Must be greater than 0.');
+        expect(result.groupBy.groupings[0].interval).toBe('必须大于 0。');
       });
 
       it('should add an error if value is absent', () => {
@@ -103,7 +103,7 @@ describe('GroupByElement', () => {
         values.groupBy.groupings = [grouping];
         const result = validate(values);
 
-        expect(result.groupBy.groupings[0].interval).toBe('Value is required.');
+        expect(result.groupBy.groupings[0].interval).toBe('值是必需的。');
       });
     });
   });

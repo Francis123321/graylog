@@ -23,7 +23,7 @@ const validate = hasAtLeastOneMetric('Pie chart');
 
 const pieChart: VisualizationType = {
   type: PieVisualization.type,
-  displayName: 'Pie Chart',
+  displayName: '饼形图',
   component: PieVisualization,
   validate,
 };

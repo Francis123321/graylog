@@ -121,7 +121,7 @@ class MessageDetail extends React.Component {
 
     const rawTimestamp = message.fields.timestamp;
     const timestamp = [
-      <dt key={`dt-${rawTimestamp}`}>Timestamp</dt>,
+      <dt key={`dt-${rawTimestamp}`}>时间戳</dt>,
       <dd key={`dd-${rawTimestamp}`}><Timestamp dateTime={rawTimestamp} /></dd>,
     ];
 
@@ -165,7 +165,7 @@ class MessageDetail extends React.Component {
               {timestamp}
               {receivedBy}
 
-              <dt>Stored in index</dt>
+              <dt>存储在索引中</dt>
               <dd>{message.index ? message.index : 'Message is not stored'}</dd>
 
               { streamIds.size > 0 && <dt>Routed into streams</dt> }

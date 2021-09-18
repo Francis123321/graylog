@@ -45,18 +45,18 @@ const validateSorts = (values: WidgetConfigFormValues) => {
     const sortError: SortError = {};
 
     if (!sort.field || sort.field === '') {
-      sortError.field = 'Field is required.';
+      sortError.field = '字段是必需的。';
     }
 
     if (!sort.direction) {
-      sortError.direction = 'Direction is required.';
+      sortError.direction = '需要方向。';
     }
 
     const timeRowExists = !!values.groupBy?.groupings.find((g) => g.direction === 'row' && g.field.type === 'time');
     const nonDataTableVisExists = values.visualization && values.visualization.type !== 'table';
 
     if (timeRowExists && nonDataTableVisExists) {
-      sortError.field = 'Sort on non data table with time based row grouping does not work.';
+      sortError.field = '使用基于时间的行分组对非数据表进行排序不起作用。';
     }
 
     return sortError;
@@ -87,8 +87,8 @@ const formValueTypeToConfigType = (type: 'groupBy' | 'metric') => {
 };
 
 const SortElement: AggregationElement = {
-  title: 'Sort',
-  key: 'sort',
+  title: '种类',
+  key: '种类',
   order: 3,
   allowCreate: () => true,
   onCreate: (formValues) => ({

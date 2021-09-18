@@ -210,7 +210,7 @@ describe('AggregationWizard', () => {
 
     const newSortContainer = await screen.findByTestId('sort-element-0');
     const applyButton = await findWidgetConfigFormSubmitButton();
-    await waitFor(() => expect(within(newSortContainer).getByText('Direction is required.')).toBeInTheDocument());
+    await waitFor(() => expect(within(newSortContainer).getByText('需要方向。')).toBeInTheDocument());
     await waitFor(() => expect(expect(applyButton).toBeDisabled()));
   });
 

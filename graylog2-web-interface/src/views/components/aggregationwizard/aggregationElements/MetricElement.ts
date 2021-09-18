@@ -44,7 +44,7 @@ const validateMetrics = (values: WidgetConfigFormValues) => {
     const metricError: MetricError = {};
 
     if (!metric.function) {
-      metricError.function = 'Function is required.';
+      metricError.function = '函数是必需的。';
     }
 
     const isFieldRequired = metric.function && metric.function !== 'count';
@@ -91,8 +91,8 @@ const seriesToMetrics = (series: Array<Series>) => series.map((s: Series) => {
 });
 
 const MetricElement: AggregationElement = {
-  sectionTitle: 'Metrics',
-  title: 'Metric',
+  sectionTitle: '公制',
+  title: '公制',
   key: 'metrics',
   order: 2,
   allowCreate: () => true,

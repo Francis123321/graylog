@@ -103,7 +103,7 @@ describe('AggregationWizard', () => {
 
     await addElement('Metric');
 
-    await waitFor(() => expect(screen.getByText('Function is required.')).toBeInTheDocument());
+    await waitFor(() => expect(screen.getByText('函数是必需的。')).toBeInTheDocument());
   });
 
   it('should require metric field when metric function is not count', async () => {

@@ -40,7 +40,7 @@ describe('SortElement', () => {
       const values: WidgetConfigFormValues = { sort: [{ field: 'action', id: 'foob' }] };
       const result = validate(values);
 
-      expect(result.sort[0].direction).toBe('Direction is required.');
+      expect(result.sort[0].direction).toBe('需要方向。');
     });
 
     it('should show an error if a time based group by and a non datatable is present', () => {

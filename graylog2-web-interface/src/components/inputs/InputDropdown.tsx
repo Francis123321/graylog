@@ -97,7 +97,7 @@ const InputDropdown = ({ disabled, inputs, onLoadMessage, preselectedInputId, ti
                              value={selectedInput}
                              onChange={onSelectedInputChange}
                              placeholder={PLACEHOLDER}>
-          <option value={PLACEHOLDER}>Select an Input</option>
+          <option value={PLACEHOLDER}>选择输入</option>
           {inputOptions.toArray()}
         </StyledInputDropdown>
 

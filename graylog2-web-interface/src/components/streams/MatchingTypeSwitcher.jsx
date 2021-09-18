@@ -65,7 +65,7 @@ class MatchingTypeSwitcher extends React.Component {
     const { onChange, stream } = this.props;
 
     // eslint-disable-next-line no-alert
-    if (window.confirm('You are about to change how rules are applied to this stream, do you want to continue? Changes will take effect immediately.')) {
+    if (window.confirm('您即将更改规则应用于此流的方式，是否要继续？ 更改将立即生效。')) {
       StreamsStore.update(stream.id, { matching_type: newValue }, (response) => {
         onChange();
 

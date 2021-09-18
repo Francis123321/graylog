@@ -20,7 +20,7 @@ import DataTable from 'views/components/datatable/DataTable';
 
 const dataTable: VisualizationType = {
   type: DataTable.type,
-  displayName: 'Data Table',
+  displayName: '数据表',
   component: DataTable,
 };
 

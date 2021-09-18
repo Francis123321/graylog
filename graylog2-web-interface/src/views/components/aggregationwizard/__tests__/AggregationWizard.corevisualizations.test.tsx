@@ -255,12 +255,12 @@ describe('AggregationWizard/Core Visualizations', () => {
   describe('has visualization-specific validation for aggregation config', () => {
     it.each`
     visualization      | error
-    ${'Area Chart'}    | ${'Area chart requires at least one metric'}
-    ${'Bar Chart'}     | ${'Bar chart requires at least one metric'}
-    ${'Heatmap'}       | ${'Heatmap requires at least two groupings. At least one metric must be configured.'}
-    ${'Line Chart'}    | ${'Line chart requires at least one metric'}
-    ${'Pie Chart'}     | ${'Pie chart requires at least one metric'}
-    ${'Scatter Plot'}  | ${'Scatter plot requires at least one metric'}
+    ${'面积图'}    | ${'面积图至少需要一个指标'}
+    ${'条形图'}     | ${'条形图至少需要一个指标'}
+    ${'热图'}       | ${'热图至少需要两个分组。 必须至少配置一项指标。'}
+    ${'折线图'}    | ${'折线图至少需要一个指标'}
+    ${'饼形图'}     | ${'饼图至少需要一个指标'}
+    ${'散点图'}  | ${'散点图至少需要一个指标'}
   `('expects constraints for $visualization', async ({ visualization, error }: { visualization: string, error: string }) => {
       render(<SimpleAggregationWizard />);
 

@@ -23,7 +23,7 @@ const validate = hasAtLeastOneMetric('Scatter plot');
 
 const scatterChart: VisualizationType = {
   type: ScatterVisualization.type,
-  displayName: 'Scatter Plot',
+  displayName: '散点图',
   component: ScatterVisualization,
   capabilities: ['event-annotations'],
   validate,
