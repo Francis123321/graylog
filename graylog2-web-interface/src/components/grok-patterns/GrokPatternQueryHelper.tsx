@@ -20,29 +20,29 @@ import { Popover, Table } from 'components/graylog';
 
 const GrokPatternQueryHelper = () => (
   <Popover id="search-query-help" className="popover-wide" title="Search Syntax Help">
-    <p><strong>Available search fields</strong></p>
+    <p><strong>可用的搜索字段</strong></p>
     <Table condensed>
       <thead>
         <tr>
-          <th>Field</th>
-          <th>Description</th>
+          <th>字段</th>
+          <th>描述</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>name</td>
-          <td>The grok patterns name</td>
+          <td>名称</td>
+          <td>Grok 模式名称</td>
         </tr>
         <tr>
-          <td>pattern</td>
-          <td>The pattern of the grok pattern</td>
+          <td>图案</td>
+          <td>grok 图案的图案</td>
         </tr>
       </tbody>
     </Table>
-    <p><strong>Examples</strong></p>
+    <p><strong>例子 </strong></p>
     <p>
-      Find grok patterns containing COMMON in the pattern:<br />
-      <kbd>pattern:COMMON</kbd><br />
+      在模式中查找包含 COMMON 的 grok 模式：<br />
+      <kbd>图案：普通</kbd><br />
     </p>
   </Popover>
 );

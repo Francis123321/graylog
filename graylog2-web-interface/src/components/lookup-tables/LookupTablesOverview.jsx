@@ -78,43 +78,43 @@ class LookupTablesOverview extends React.Component {
   _helpPopover = () => {
     return (
       <Popover id="search-query-help" className={Styles.popoverWide} title="Search Syntax Help">
-        <p><strong>Available search fields</strong></p>
+        <p><strong>可用的搜索字段</strong></p>
         <Table condensed>
           <thead>
             <tr>
-              <th>Field</th>
-              <th>Description</th>
+              <th>字段</th>
+              <th>描述</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>id</td>
-              <td>Lookup Table ID</td>
+              <td>查找表 ID</td>
             </tr>
             <tr>
-              <td>title</td>
-              <td>The title of the lookup table</td>
+              <td>标题</td>
+              <td>查找表的标题</td>
             </tr>
             <tr>
-              <td>name</td>
-              <td>The reference name of the lookup table</td>
+              <td>名称</td>
+              <td>查找表的引用名称</td>
             </tr>
             <tr>
-              <td>description</td>
-              <td>The description of lookup table</td>
+              <td>描述</td>
+              <td>查找表说明</td>
             </tr>
           </tbody>
         </Table>
-        <p><strong>Examples</strong></p>
+        <p><strong>例子</strong></p>
         <p>
-          Find lookup tables by parts of their names:<br />
-          <kbd>name:geoip</kbd><br />
-          <kbd>name:geo</kbd>
+          按名称的部分查找查找表：<br />
+          <kbd>名称：geoip</kbd><br />
+          <kbd>名称:geo</kbd>
         </p>
         <p>
-          Searching without a field name matches against the <code>title</code> field:<br />
-          <kbd>geoip</kbd> <br />is the same as<br />
-          <kbd>title:geoip</kbd>
+          没有字段名称的搜索与 <code>标题</code> 字段匹配：<br />
+          <kbd>geoip</kbd> <br />是相同的<br />
+          <kbd>标题:geoip</kbd>
         </p>
       </Popover>
     );

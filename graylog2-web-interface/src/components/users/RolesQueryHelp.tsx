@@ -21,29 +21,29 @@ import { Icon } from 'components/common';
 
 const rolesQueryHelpPopover = (
   <Popover id="role-search-query-help" title="Search Syntax Help">
-    <p><strong>Available search fields</strong></p>
+    <p><strong>可用的搜索字段</strong></p>
     <Table condensed>
       <thead>
         <tr>
-          <th>Field</th>
-          <th>Description</th>
+          <th>字段</th>
+          <th>描述</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>name</td>
-          <td>Role name</td>
+          <td>名称</td>
+          <td>角色名称</td>
         </tr>
         <tr>
-          <td>description</td>
-          <td>Description of the Role</td>
+          <td>描述</td>
+          <td>角色描述</td>
         </tr>
       </tbody>
     </Table>
-    <p><strong>Examples</strong></p>
+    <p><strong>例子</strong></p>
     <p>
-      Find roles with a description containing creator:<br />
-      <kbd>description:creator</kbd><br />
+      查找描述包含创建者的角色：<br />
+      <kbd>描述：创造者</kbd><br />
     </p>
   </Popover>
 );

@@ -21,29 +21,29 @@ import { Icon } from 'components/common';
 
 const backendQueryHelperPopover = (
   <Popover id="user-search-query-help" title="Search Syntax Help">
-    <p><strong>Available search fields</strong></p>
+    <p><strong>可用的搜索字段</strong></p>
     <Table condensed>
       <thead>
         <tr>
-          <th>Field</th>
-          <th>Description</th>
+          <th>字段</th>
+          <th>描述</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>title</td>
-          <td>The title of a backend</td>
+          <td>标题</td>
+          <td>后端的标题</td>
         </tr>
         <tr>
-          <td>description</td>
-          <td>The description of a backends.</td>
+          <td>描述</td>
+          <td>后端的描述。</td>
         </tr>
       </tbody>
     </Table>
-    <p><strong>Examples</strong></p>
+    <p><strong>例子</strong></p>
     <p>
-      Find backends with a title containing LDAP:<br />
-      <kbd>title:LDAP</kbd><br />
+      查找标题包含 LDAP 的后端：<br />
+      <kbd>标题:LDAP</kbd><br />
     </p>
   </Popover>
 );

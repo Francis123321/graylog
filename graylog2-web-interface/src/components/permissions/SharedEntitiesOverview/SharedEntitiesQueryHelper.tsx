@@ -21,25 +21,25 @@ import { Icon } from 'components/common';
 
 const sharedEntitiesQueryHelperPopover = (
   <Popover id="shared-entities-search-query-help" title="Search Syntax Help">
-    <p><strong>Available search fields</strong></p>
+    <p><strong>可用的搜索字段</strong></p>
     <Table condensed>
       <thead>
         <tr>
-          <th>Field</th>
-          <th>Description</th>
+          <th>字段</th>
+          <th>描述</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>title</td>
-          <td>Title of a shared entity.</td>
+          <td>标题</td>
+          <td>共享实体的标题。</td>
         </tr>
       </tbody>
     </Table>
-    <p><strong>Examples</strong></p>
+    <p><strong>例子</strong></p>
     <p>
-      Find shared entities with a title containing security:<br />
-      <kbd>title:security</kbd><br />
+      查找标题包含安全性的共享实体：<br />
+      <kbd>标题：安全</kbd><br />
     </p>
   </Popover>
 );
