@@ -119,7 +119,7 @@ const GranteesList = ({ activeShares, onDelete, onCapabilityChange, entityType, 
           })}
         </List>
       ) : (
-        <Alert>This {entityType} has no collaborators.</Alert>
+        <Alert>此 {entityType} 没有合作者。</Alert>
       )}
       <PaginationWrapper>
         <StyledPagination totalPages={totalPages}
