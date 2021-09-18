@@ -218,8 +218,8 @@ class IndexSetConfigurationForm extends React.Component<Props, State> {
     if (create) {
       const indexPrefixHelp = (
         <span>
-          A <strong>unique</strong> prefix used in Elasticsearch indices belonging to this index set.
-          The prefix must start with a letter or number, and can only contain letters, numbers, &apos;_&apos;, &apos;-&apos; and &apos;+&apos;.
+          在属于该索引集的 Elasticsearch 索引中使用的<strong>唯一</strong>前缀。
+          前缀必须以字母或数字开头，并且只能包含字母、数字、‘_’、‘-’； 和‘+’。
         </span>
       );
 

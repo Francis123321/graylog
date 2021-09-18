@@ -57,7 +57,7 @@ const ThreadDumpPage = createReactClass({
 
     const title = (
       <span>
-        Thread dump of node {this.state.node.short_node_id} / {this.state.node.hostname}
+        节点的线程转储 {this.state.node.short_node_id} / {this.state.node.hostname}
         &nbsp;
         <small>Taken at {DateTime.now().toString(DateTime.Formats.COMPLETE)}</small>
       </span>
