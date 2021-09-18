@@ -117,9 +117,9 @@ class Stream extends React.Component {
 
   _onDelete= (stream) => {
     // eslint-disable-next-line no-alert
-    if (window.confirm('Do you really want to remove this stream?')) {
+    if (window.confirm('您真的要删除此流吗？')) {
       StreamsStore.remove(stream.id, (response) => {
-        UserNotification.success(`Stream '${stream.title}' was deleted successfully.`, 'Success');
+        UserNotification.success(`流 '${stream.title}' 已成功删除。`, '成功');
 
         return response;
       });
@@ -155,7 +155,7 @@ class Stream extends React.Component {
     const { stream } = this.props;
 
     // eslint-disable-next-line no-alert
-    if (window.confirm(`Do you really want to pause stream '${stream.title}'?`)) {
+    if (window.confirm(`你真的要暂停'${stream.title}'直播吗?`)) {
       this.setState({ loading: true });
 
       StreamsStore.pause(stream.id, (response) => response)

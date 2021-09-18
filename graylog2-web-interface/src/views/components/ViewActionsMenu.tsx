@@ -60,7 +60,7 @@ const ViewActionsMenu = ({ view, isNewView, metadata }) => {
     <>
       <MenuItem divider />
       <MenuItem onSelect={() => setDebugOpen(true)}>
-        <Icon name="code" /> Debug
+        <Icon name="code" /> 调试
       </MenuItem>
     </>
   );
@@ -70,12 +70,12 @@ const ViewActionsMenu = ({ view, isNewView, metadata }) => {
       <Button onClick={() => onSaveView(view)}
               disabled={isNewView || hasUndeclaredParameters || !allowedToEdit}
               data-testid="dashboard-save-button">
-        <Icon name="save" /> Save
+        <Icon name="save" /> 保存
       </Button>
       <Button onClick={() => setSaveAsViewOpen(true)}
               disabled={hasUndeclaredParameters}
               data-testid="dashboard-save-as-button">
-        <Icon name="copy" /> Save as
+        <Icon name="copy" /> 另存为
       </Button>
       <ShareButton entityType="dashboard"
                    entityId={view.id}
@@ -84,9 +84,9 @@ const ViewActionsMenu = ({ view, isNewView, metadata }) => {
                    disabledInfo={isNewView && 'Only saved dashboards can be shared.'} />
       <DropdownButton title={<Icon name="ellipsis-h" />} id="query-tab-actions-dropdown" pullRight noCaret>
         <MenuItem onSelect={() => setEditViewOpen(true)} disabled={isNewView || !allowedToEdit}>
-          <Icon name="edit" /> Edit metadata
+          <Icon name="edit" /> 编辑元数据
         </MenuItem>
-        <MenuItem onSelect={() => setExportOpen(true)}><Icon name="cloud-download-alt" /> Export</MenuItem>
+        <MenuItem onSelect={() => setExportOpen(true)}><Icon name="cloud-download-alt" /> 导出</MenuItem>
         {debugOverlay}
         <IfDashboard>
           <MenuItem divider />

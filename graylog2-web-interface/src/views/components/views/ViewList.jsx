@@ -30,9 +30,9 @@ const itemActionsFactory = (view, onViewDelete, setViewToShare) => {
   return (
     <ButtonToolbar>
       <ShareButton entityId={view.id} entityType="dashboard" onClick={() => setViewToShare(view)} />
-      <DropdownButton title="Actions" id={`view-actions-dropdown-${view.id}`} pullRight>
+      <DropdownButton title="操作" id={`view-actions-dropdown-${view.id}`} pullRight>
         <IfPermitted permissions={[`view:edit:${view.id}`, 'view:edit']} anyPermissions>
-          <MenuItem onSelect={onViewDelete(view)}>Delete</MenuItem>
+          <MenuItem onSelect={onViewDelete(view)}>删除</MenuItem>
         </IfPermitted>
       </DropdownButton>
     </ButtonToolbar>
@@ -96,7 +96,7 @@ const ViewList = ({ pagination, handleSearch, handleViewDelete, views }) => {
       { viewToShare && (
         <EntityShareModal entityId={viewToShare.id}
                           entityType="dashboard"
-                          description={`Search for a User or Team to add as collaborator on this ${ViewTypeLabel({ type: viewToShare.type })}.`}
+                          description={`在此 ${ViewTypeLabel({ type: viewToShare.type })} 上搜索要添加为协作者的用户或团队。`}
                           entityTitle={viewToShare.title}
                           onClose={() => setViewToShare(undefined)} />
       )}
@@ -113,7 +113,7 @@ const ViewList = ({ pagination, handleSearch, handleViewDelete, views }) => {
         </div>
         <EntityList items={items}
                     bsNoItemsStyle="success"
-                    noItemsText="There are no views present/matching the filter!" />
+                    noItemsText="没有视图存在/匹配过滤器！" />
       </PaginatedList>
     </>
   );
