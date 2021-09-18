@@ -60,7 +60,7 @@ const _getTestAgainstStreamButton = (streams, index, id) => {
   return (
     <DropdownButton pullRight
                     bsSize="small"
-                    title="Test against stream"
+                    title="对流进行测试"
                     id="select-stream-dropdown">
       {streamList || <MenuItem header>No streams available</MenuItem>}
     </DropdownButton>
@@ -100,9 +100,9 @@ const MessageActions = ({ index, id, fields, decorationStats, disabled, disableS
         {showChanges}
           <Button onClick={_onEdit}>威胁情报分析</Button>
         <Button onClick={_onEdit2}>下载PCAP</Button>
-        <Button href={messageUrl}>Permalink</Button>
+        <Button href={messageUrl}>永久链接</Button>
 
-        <ClipboardButton title="Copy ID" text={id} bsSize="small" />
+        <ClipboardButton title="复制ID" text={id} bsSize="small" />
           {surroundingSearchButton}
           {disableTestAgainstStream ? null : _getTestAgainstStreamButton(streams, index, id)}
       </ButtonGroup>

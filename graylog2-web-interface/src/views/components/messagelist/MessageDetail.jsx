@@ -95,7 +95,7 @@ class MessageDetail extends React.Component {
 
     return (
       <div>
-        <dt>Received by</dt>
+        <dt>接收人</dt>
         <dd>
           <em>{this._inputName(sourceInputId)}</em>{' '}
           on <NodeName nodeId={sourceNodeId} />
@@ -111,7 +111,7 @@ class MessageDetail extends React.Component {
       );
     }
 
-    return <span>{id} <Label bsStyle="warning">Not stored</Label></span>;
+    return <span>{id} <Label bsStyle="warning">未存储</Label></span>;
   };
 
   render() {
@@ -159,7 +159,7 @@ class MessageDetail extends React.Component {
       timestamp = [];
       const rawTimestamp = fields.timestamp;
 
-      timestamp.push(<dt key={`dt-${rawTimestamp}`}>Timestamp</dt>);
+      timestamp.push(<dt key={`dt-${rawTimestamp}`}>时间戳</dt>);
       timestamp.push(<dd key={`dd-${rawTimestamp}`}><Timestamp dateTime={rawTimestamp} /></dd>);
     }
 

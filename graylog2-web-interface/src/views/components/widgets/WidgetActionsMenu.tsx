@@ -184,26 +184,26 @@ const WidgetActionsMenu = ({
 
         <WidgetActionDropdown>
           <MenuItem onSelect={toggleEdit}>
-            Edit
+            编辑
           </MenuItem>
           <MenuItem onSelect={onDuplicate}>
-            Duplicate
+            复制
           </MenuItem>
           <IfSearch>
             <MenuItem onSelect={() => setShowCopyToDashboard(true)}>
-              Copy to Dashboard
+              复制到仪表板
             </MenuItem>
           </IfSearch>
-          {widget.isExportable && <MenuItem onSelect={() => setShowExport(true)}>Export</MenuItem>}
+          {widget.isExportable && <MenuItem onSelect={() => setShowExport(true)}>导出</MenuItem>}
           <IfDashboard>
             <MenuItem onSelect={() => setShowMoveWidgetToTab(true)}>
-              Move to Page
+              移至页面
             </MenuItem>
           </IfDashboard>
           <ExtraWidgetActions widget={widget} onSelect={() => {}} />
           <MenuItem divider />
           <MenuItem onSelect={() => _onDelete(widget.id, title)}>
-            Delete
+            删除
           </MenuItem>
         </WidgetActionDropdown>
 
