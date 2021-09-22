@@ -27,94 +27,91 @@ class NotificationsFactory {
     switch (notification.type) {
       case 'check_server_clocks':
         return {
-          title: 'Check the system clocks of your Graylog server nodes.',
+          title: '检查您的 Graylog 服务器节点的系统时钟。',
           description: (
             <span>
-            A Graylog server node detected a condition where it was deemed to be inactive immediately after being active.
-          This usually indicates either a significant jump in system time, e.g. via NTP, or that a second Graylog server node
-          is active on a system that has a different system time. Please make sure that the clocks of graylog2 systems are synchronized.
+            Graylog 服务器节点检测到一种情况，即它在活动后立即被视为不活动。
+        这通常表示系统时间的显着跳跃，例如 通过 NTP，或者第二个 Graylog 服务器节点在具有不同系统时间的系统上处于活动状态。
+        请确保 graylog2 系统的时钟同步。
             </span>
       ),
     };
   case 'deflector_exists_as_index':
     return {
-      title: 'Deflector exists as an index and is not an alias.',
+      title: 'Deflector 作为索引存在而不是别名。',
       description: (
         <span>
-        The deflector is meant to be an alias but exists as an index. Multiple failures of infrastructure can lead
-      to this. Your messages are still indexed but searches and all maintenance tasks will fail or produce incorrect
-      results. It is strongly recommend that you act as soon as possible.
+        偏转器是别名，但作为索引存在。 基础设施的多次故障可能导致这种情况。
+    您的消息仍会被编入索引，但搜索和所有维护任务将失败或产生不正确的结果。
+    强烈建议您尽快采取行动。
         </span>
   ),
   };
   case 'email_transport_configuration_invalid':
     return {
-      title: 'Email Transport Configuration is missing or invalid!',
+      title: '电子邮件传输配置丢失或无效！',
       description: (
         <span>
-        The configuration for the email transport subsystem has shown to be missing or invalid.
-        Please check the related section of your Graylog server configuration file.
-        This is the detailed error message: {notification.details.exception}
+        电子邮件传输子系统的配置已显示丢失或无效。
+        请检查您的 Graylog 服务器配置文件的相关部分。
+        这是详细的错误消息： {notification.details.exception}
         </span>
   ),
   };
   case 'email_transport_failed':
     return {
-      title: 'An error occurred while trying to send an email!',
+      title: '尝试发送电子邮件时发生错误！ ',
       description: (
         <span>
-        The Graylog server encountered an error while trying to send an email.
-        This is the detailed error message: {notification.details.exception}
+        Graylog 服务器在尝试发送电子邮件时遇到错误。
+        这是详细的错误消息： {notification.details.exception}
         </span>
   ),
   };
   case 'es_cluster_red':
     return {
-      title: 'Elasticsearch cluster unhealthy (RED)',
+      title: 'Elasticsearch 集群不健康 (RED) ',
       description: (
         <span>
-        The Elasticsearch cluster state is RED which means shards are unassigned.
-        This usually indicates a crashed and corrupt cluster and needs to be investigated. Graylog will write
-      into the local disk journal. Read how to fix this in {' '}
-        <DocumentationLink page={DocsHelper.PAGES.ES_CLUSTER_STATUS_RED} text="the Elasticsearch setup documentation." />
+        Elasticsearch 集群状态为 RED，这意味着未分配分片。
+        这通常表示集群崩溃和损坏，需要进行调查。 Graylog 将写入本地磁盘日志。
+        在 <DocumentationLink page={DocsHelper.PAGES.ES_CLUSTER_STATUS_RED} text="Elasticsearch 设置文档"/> 中阅读如何解决此问题。
       </span>
   ),
   };
   case 'es_open_files':
     return {
-      title: 'Elasticsearch nodes with too low open file limit',
+      title: '打开文件限制过低的 Elasticsearch 节点 ',
       description: (
         <span>
-        There are Elasticsearch nodes in the cluster that have a too low open file limit (current limit:{' '}
+        集群中有 Elasticsearch 节点打开文件限制过低 (当前限制:{' '}
         <em>{notification.details.max_file_descriptors}</em> on <em>{notification.details.hostname}</em>;
-    should be at least 64000) This will be causing problems
-    that can be hard to diagnose. Read how to raise the maximum number of open files in {' '}
-    <DocumentationLink page={DocsHelper.PAGES.ES_OPEN_FILE_LIMITS} text="the Elasticsearch setup documentation" />.
+    应该至少为 64000)
+    这将导致难以诊断的问题。
+    在 <DocumentationLink page={DocsHelper.PAGES.ES_OPEN_FILE_LIMITS} text="Elasticsearch 设置文档" /> 中阅读如何提高打开文件的最大数量。
   </span>
   ),
   };
   case 'es_unavailable':
     return {
-      title: 'Elasticsearch cluster unavailable',
+      title: 'Elasticsearch 集群不可用',
       description: (
         <span>
-        Graylog could not successfully connect to the Elasticsearch cluster. If you're using multicast, check that
-      it is working in your network and that Elasticsearch is accessible. Also check that the cluster name setting
-      is correct. Read how to fix this in {' '}
-        <DocumentationLink page={DocsHelper.PAGES.ES_CLUSTER_UNAVAILABLE}
-      text="the Elasticsearch setup documentation." />
+        Graylog 无法成功连接到 Elasticsearch 集群。
+    如果您使用的是多播，请检查它是否在您的网络中正常工作以及 Elasticsearch 是否可访问。
+    还要检查集群名称设置是否正确。
+    在 <DocumentationLink page={DocsHelper.PAGES.ES_CLUSTER_UNAVAILABLE} text="Elasticsearch 设置文档"/> 中阅读如何解决此问题。
       </span>
   ),
   };
   case 'gc_too_long':
     return {
-      title: 'Nodes with too long GC pauses',
+      title: 'GC 暂停时间过长的节点',
       description: (
         <span>
-        There are Graylog nodes on which the garbage collector runs too long.
-      Garbage collection runs should be as short as possible. Please check whether those nodes are healthy.
-      (Node: <em>{notification.node_id}</em>, GC duration: <em>{notification.details.gc_duration_ms} ms</em>,
-      GC threshold: <em>{notification.details.gc_threshold_ms} ms</em>)
+        存在垃圾收集器运行时间过长的 Graylog 节点。垃圾收集运行时间应尽可能短。请检查这些节点是否健康。
+      (节点: <em>{notification.node_id}</em>, GC 持续时间: <em>{notification.details.gc_duration_ms} ms</em>,
+      GC阈值: <em>{notification.details.gc_threshold_ms} ms</em>)
     </span>
   ),
   };
@@ -125,83 +122,78 @@ class NotificationsFactory {
     };
   case 'index_ranges_recalculation':
     return {
-      title: 'Index ranges recalculation required',
+      title: '需要重新计算索引范围',
       description: (
         <span>
-        The index ranges are out of sync. Please go to System/Indices and trigger a index range recalculation from
-    the Maintenance menu of {notification.details.index_sets ? (`the following index sets: ${notification.details.index_sets}`) : 'all index sets'}
+        索引范围不同步。
+    请转到系统/指数并从{notification.details.index_sets ? (`以下索引集: ${notification.details.index_sets}`) : '所有索引集'}的维护菜单触发指数范围重新计算
   </span>
   ),
   };
   case 'input_failed_to_start':
     return {
-      title: 'An input has failed to start',
+      title: '输入无法启动',
       description: (
         <span>
-        Input {notification.details.input_id} has failed to start on node {notification.node_id} for this reason:
-      »{notification.details.reason}«. This means that you are unable to receive any messages from this input.
-      This is mostly an indication for a misconfiguration or an error.
-    <HideOnCloud>
-    You can click <Link to={Routes.SYSTEM.INPUTS}>here</Link> to solve this.
+        由于这个原因，输入 {notification.details.input_id} 未能在节点 {notification.node_id} 上启动:»{notification.details.reason}«.
+    这意味着您无法从该输入接收任何消息。这主要是错误配置或错误的指示。
+  <HideOnCloud>
+    你可以点击<Link to={Routes.SYSTEM.INPUTS}>这里</Link>来解决这个问题。
       </HideOnCloud>
       </span>
   ),
   };
   case 'input_failure_shutdown':
     return {
-      title: 'An input has shut down due to failures',
+      title: '由于故障，输入已关闭',
       description: (
         <span>
-        Input {notification.details.input_title} has shut down on node {notification.node_id} for this reason:
-      »{notification.details.reason}«. This means that you are unable to receive any messages from this input.
-      This is often an indication of persistent network failures.
-      You can click {' '} <Link to={Routes.SYSTEM.INPUTS}>here</Link> to see the input.
+        由于这个原因，输入 {notification.details.input_title} 已在节点 {notification.node_id} 上关闭:»{notification.details.reason}«.
+    这意味着您无法从该输入接收任何消息。这通常表示网络持续故障。
+      您可以单击<Link to={Routes.SYSTEM.INPUTS}>此处</Link> 查看输入。
       </span>
   ),
   };
   case 'journal_uncommitted_messages_deleted':
     return {
-        title: 'Uncommited messages deleted from journal',
+        title: '从日志中删除未提交的消息',
         description: (
           <span>
-          Some messages were deleted from the Graylog journal before they could be written to Elasticsearch. Please
-        verify that your Elasticsearch cluster is healthy and fast enough. You may also want to review your Graylog
-        journal settings and set a higher limit. (Node: <em>{notification.node_id}</em>)
+          某些消息在写入 Elasticsearch 之前已从 Graylog 日志中删除。请验证您的 Elasticsearch 集群是否健康且速度足够快。
+    您可能还想查看您的 Graylog 日志设置并设置更高的限制。 (节点: <em>{notification.node_id}</em>)
       </span>
   ),
   };
   case 'journal_utilization_too_high':
     return {
-      title: 'Journal utilization is too high',
+      title: '期刊利用率太高',
       description: (
         <span>
-        Journal utilization is too high and may go over the limit soon. Please verify that your Elasticsearch cluster
-      is healthy and fast enough. You may also want to review your Graylog journal settings and set a higher limit.
-      (Node: <em>{notification.node_id}</em>)
+        日记帐利用率太高，可能很快就会超过限制。请验证您的 Elasticsearch 集群是否健康且速度足够快。
+    您可能还想查看您的 Graylog 日志设置并设置更高的限制。
+      (节点: <em>{notification.node_id}</em>)
     </span>
   ),
   };
   case 'multi_master':
     return {
-      title: 'Multiple Graylog server masters in the cluster',
+      title: '集群中有多个Graylog server master',
       description: (
         <span>
-        There were multiple Graylog server instances configured as master in your Graylog cluster. The cluster handles
-      this automatically by launching new nodes as slaves if there already is a master but you should still fix this.
-        Check the graylog.conf of every node and make sure that only one instance has is_master set to true. Close this
-      notification if you think you resolved the problem. It will pop back up if you start a second master node again.
+        在您的 Graylog 集群中有多个 Graylog 服务器实例配置为主服务器。如果已经有一个主节点，集群会通过启动新节点作为从节点来自动处理这个问题，但你仍然应该解决这个问题。
+        检查每个节点的 graylog.conf 并确保只有一个实例将 is_master 设置为 true。如果您认为问题已解决，请关闭此通知。如果您再次启动第二个主节点，它将重新弹出。
         </span>
   ),
   };
   case 'no_input_running':
     return {
-      title: 'There is a node without any running inputs.',
+      title: '有一个没有任何运行输入的节点。',
       description: (
         <span>
-        There is a node without any running inputs. This means that you are not receiving any messages from this
-      node at this point in time. This is most probably an indication of an error or misconfiguration.
+        有一个没有任何运行输入的节点。这意味着此时您没有收到来自该节点的任何消息。
+    这很可能是错误或配置错误的指示。
         <HideOnCloud>
-        You can click <Link to={Routes.SYSTEM.INPUTS}>here</Link> to solve this.
+    你可以点击<Link to={Routes.SYSTEM.INPUTS}>这里</Link>来解决这个问题。
       </HideOnCloud>
       </span>
   ),
