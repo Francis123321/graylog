@@ -98,7 +98,7 @@ const RolesOverview = () => {
       <Row className="content">
         <Col xs={12}>
           <Header>
-            <h2>Roles</h2>
+            <h2>角色</h2>
             {loading && <LoadingSpinner text="" delay={0} />}
           </Header>
           <p className="description">
