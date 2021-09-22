@@ -119,8 +119,8 @@ const AlertNotification = createReactClass({
     );
 
     const description = (stream
-      ? <span>Executed once per triggered alert condition in stream <em>{stream.title}</em>. {toggleConfigurationLink}</span>
-      : <span>Not executed, as it is not connected to a stream. {toggleConfigurationLink}</span>);
+      ? <span>在流 <em>{stream.title}</em> 中每个触发的警报条件执行一次。 {toggleConfigurationLink} </span>
+      : <span>未执行，因为它未连接到流。 {toggleConfigurationLink} </span>);
 
     const actions = stream && (
       <IfPermitted permissions={`streams:edit:${stream.id}`}>
@@ -137,12 +137,12 @@ const AlertNotification = createReactClass({
                           id={`more-actions-dropdown-${notification.id}`}>
             {!isStreamView && (
               <LinkContainer to={Routes.stream_alerts(stream.id)}>
-                <MenuItem>Alerting overview for Stream</MenuItem>
+                <MenuItem>Stream 的警报概述</MenuItem>
               </LinkContainer>
             )}
-            <MenuItem onSelect={this._onEdit}>Edit</MenuItem>
+            <MenuItem onSelect={this._onEdit}>编辑</MenuItem>
             <MenuItem divider />
-            <MenuItem onSelect={this._onDelete}>Delete</MenuItem>
+            <MenuItem onSelect={this._onDelete}>删除</MenuItem>
           </DropdownButton>
         </>
       </IfPermitted>

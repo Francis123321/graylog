@@ -172,7 +172,7 @@ class URLWhiteListFormModal extends React.Component<Props, State> {
       return (
         <>
           <IfPermitted permissions="urlwhitelist:write">
-            <Button bsStyle="info" bsSize="xs" onClick={this._openModal}>Add to URL Whitelist</Button>
+            <Button bsStyle="info" bsSize="xs" onClick={this._openModal}>添加到网址白名单</Button>
           </IfPermitted>
           <BootstrapModalForm ref={this.configModal}
                               bsSize="lg"
@@ -180,8 +180,8 @@ class URLWhiteListFormModal extends React.Component<Props, State> {
                               onSubmitForm={this._saveConfig}
                               onModalClose={this._resetConfig}
                               submitButtonDisabled={!isValid}
-                              submitButtonText="Save">
-            <h3>Whitelist URLs</h3>
+                              submitButtonText="保存">
+            <h3>白名单 URL</h3>
             <UrlWhiteListForm urls={entries} disabled={disabled} onUpdate={this._update} />
           </BootstrapModalForm>
         </>

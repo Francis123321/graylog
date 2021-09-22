@@ -93,14 +93,14 @@ class ContentPackVersions extends React.Component {
         <td>{pack.rev}</td>
         <td className="text-right">
           <ButtonToolbar className="pull-right">
-            <Button bsStyle="success" bsSize="small" onClick={() => { downloadRef.open(); }}>Download</Button>
+            <Button bsStyle="success" bsSize="small" onClick={() => { downloadRef.open(); }}>下载</Button>
             <DropdownButton id={`action-${pack.rev}`} bsStyle="info" title="Actions" bsSize="small">
-              <MenuItem onClick={openFunc}>Install</MenuItem>
+              <MenuItem onClick={openFunc}>安装</MenuItem>
               <LinkContainer to={Routes.SYSTEM.CONTENTPACKS.edit(encodeURIComponent(pack.id), encodeURIComponent(pack.rev))}>
-                <MenuItem>Create New From Revision</MenuItem>
+                <MenuItem>从修订版创建新版本</MenuItem>
               </LinkContainer>
               <MenuItem divider />
-              <MenuItem onClick={() => { onDeletePack(pack.id, pack.rev); }}>Delete</MenuItem>
+              <MenuItem onClick={() => { onDeletePack(pack.id, pack.rev); }}>删除</MenuItem>
               {installModal}
             </DropdownButton>
           </ButtonToolbar>
@@ -132,7 +132,7 @@ class ContentPackVersions extends React.Component {
     const modal = (
       <BootstrapModalWrapper ref={(node) => { modalRef = node; }} bsSize="large">
         <Modal.Header closeButton>
-          <Modal.Title>Install</Modal.Title>
+          <Modal.Title>安装</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <ContentPackInstall ref={(node) => { installRef = node; }}
@@ -142,8 +142,8 @@ class ContentPackVersions extends React.Component {
         <Modal.Footer>
           <div className="pull-right">
             <ButtonToolbar>
-              <Button bsStyle="primary" onClick={onInstall}>Install</Button>
-              <Button onClick={closeModal}>Close</Button>
+              <Button bsStyle="primary" onClick={onInstall}>安装</Button>
+              <Button onClick={closeModal}>关闭</Button>
             </ButtonToolbar>
           </div>
         </Modal.Footer>
