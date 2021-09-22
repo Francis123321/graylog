@@ -271,14 +271,13 @@ class NotificationsFactory {
   };
   case 'es_node_disk_watermark_low':
     return {
-      title: 'Elasticsearch nodes disk usage above low watermark',
+      title: 'Elasticsearch 节点磁盘使用率高于低水位线',
       description: (
         <span>
-        There are Elasticsearch nodes in the cluster running out of disk space, their disk usage is above the low watermark.{' '}
-    For this reason Elasticsearch will not allocate new shards to the affected nodes.{' '}
-    The affected nodes are: [{notification.details.nodes}]{' '}
-    Check <a href="https://www.elastic.co/guide/en/elasticsearch/reference/master/disk-allocator.html" target="_blank">https://www.elastic.co/guide/en/elasticsearch/reference/master/disk-allocator.html</a>{' '}
-    for more details.
+        集群中有 Elasticsearch 节点磁盘空间不足，它们的磁盘使用率高于低水位线。{' '}
+        因此，Elasticsearch 不会向受影响的节点分配新的分片。{' '}
+        受影响的节点是： [{notification.details.nodes}]{' '}
+        点击<a href="https://www.elastic.co/guide/en/elasticsearch/reference/master/disk-allocator.html" target="_blank">https://www.elastic.co/guide/en/elasticsearch/reference/master/disk-allocator.html</a>{' '}查看更多细节。
     </span>
   ),
   };

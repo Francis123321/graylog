@@ -57,7 +57,7 @@ const NotificationsList = createReactClass({
       content = (
         <Alert bsStyle="success" className="notifications-none">
           <Icon name="check-circle" />{' '}
-          &nbsp;No notifications
+          &nbsp;没有通知
         </Alert>
       );
     } else {
