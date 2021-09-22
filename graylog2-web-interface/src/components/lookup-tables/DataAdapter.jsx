@@ -87,11 +87,11 @@ class DataAdapter extends React.Component {
           </h2>
           <ConfigSummaryDefinitionListWrapper>
             <dl>
-              <dt>Description</dt>
+              <dt>描述</dt>
               <dd>{dataAdapter.description || <em>No description.</em>}</dd>
             </dl>
           </ConfigSummaryDefinitionListWrapper>
-          <h4>Configuration</h4>
+          <h4>配置</h4>
           <ConfigSummaryDefinitionListWrapper>
             {React.createElement(summary, { dataAdapter: dataAdapter })}
           </ConfigSummaryDefinitionListWrapper>
@@ -100,8 +100,8 @@ class DataAdapter extends React.Component {
           </LinkContainer>
         </Col>
         <Col md={6}>
-          <h3>Test lookup</h3>
-          <p>You can manually trigger the data adapter using this form. The data will be not cached.</p>
+          <h3>测试查找</h3>
+          <p>您可以使用此表单手动触发数据适配器。 数据不会被缓存。</p>
           <form onSubmit={this._lookupKey}>
             <fieldset>
               <Input type="text"
@@ -117,7 +117,7 @@ class DataAdapter extends React.Component {
           </form>
           { lookupResult && (
             <div>
-              <h4>Lookup result</h4>
+              <h4>查找结果</h4>
               <pre>{JSON.stringify(lookupResult, null, 2)}</pre>
             </div>
           )}

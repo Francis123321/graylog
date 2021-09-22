@@ -93,7 +93,7 @@ const ForwarderInputSelect = ({ onInputSelect }: Pick<InputSelectProps, 'onInput
       <ForwarderInputDropdown onLoadMessage={onInputSelect}
                               label="Forwarder Input selection (optional)"
                               autoLoadMessage />
-      <p className="description">Select an Input profile from the list below then select an then select an Input.</p>
+      <p className="description">从下面的列表中选择一个输入配置文件，然后选择一个然后选择一个输入。</p>
     </>
   );
 };
@@ -112,16 +112,16 @@ const InputSelect = ({ inputs, selectedInputId, onInputSelect, show }: InputSele
 
   return ForwarderInputDropdown ? (
     <fieldset>
-      <legend>Input selection (optional)</legend>
+      <legend>输入选择（可选）</legend>
       <Input id="inputTypeSelect"
              type="select"
-             label="Select an Input type (optional)"
-             help="Select the Input type you want to load the message from."
+             label="选择输入类型（可选）"
+             help="选择要从中加载消息的输入类型。"
              value={selectedInputType ?? 'placeholder'}
              onChange={(e) => setSelectedInputType(e.target.value)}>
-        <option value="placeholder" disabled>Select an Input type</option>
-        <option value="server">Server Input</option>
-        <option value="forwarder">Forwarder Input</option>
+        <option value="placeholder" disabled>选择输入类型</option>
+        <option value="server">服务器输入</option>
+        <option value="forwarder">转发器输入</option>
       </Input>
 
       {selectedInputType === 'server' && (

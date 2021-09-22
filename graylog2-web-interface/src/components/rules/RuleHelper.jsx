@@ -104,10 +104,10 @@ class RuleHelper extends React.Component {
               <Table condensed striped hover>
                 <thead>
                   <tr>
-                    <th>Parameter</th>
-                    <th>Type</th>
-                    <th>Required</th>
-                    <th>Description</th>
+                    <th>范围</th>
+                    <th>类型</th>
+                    <th>必需</th>
+                    <th>描述</th>
                   </tr>
                 </thead>
                 <tbody>

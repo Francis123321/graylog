@@ -94,7 +94,7 @@ class ContentPackVersions extends React.Component {
         <td className="text-right">
           <ButtonToolbar className="pull-right">
             <Button bsStyle="success" bsSize="small" onClick={() => { downloadRef.open(); }}>下载</Button>
-            <DropdownButton id={`action-${pack.rev}`} bsStyle="info" title="Actions" bsSize="small">
+            <DropdownButton id={`action-${pack.rev}`} bsStyle="info" title="操作" bsSize="small">
               <MenuItem onClick={openFunc}>安装</MenuItem>
               <LinkContainer to={Routes.SYSTEM.CONTENTPACKS.edit(encodeURIComponent(pack.id), encodeURIComponent(pack.rev))}>
                 <MenuItem>从修订版创建新版本</MenuItem>
@@ -155,7 +155,7 @@ class ContentPackVersions extends React.Component {
 
   render() {
     const { contentPackRevisions: { contentPacks } } = this.props;
-    const headers = ['Select', 'Revision', 'Action'];
+    const headers = ['选择', '修订', '行动'];
 
     return (
       <DataTable id="content-packs-versions"
