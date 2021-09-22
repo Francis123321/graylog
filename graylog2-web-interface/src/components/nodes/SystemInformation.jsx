@@ -76,15 +76,15 @@ class SystemInformation extends React.Component {
 
     return (
       <StyledDl>
-        <dt>Hostname:</dt>
+        <dt>主机名:</dt>
         <dd>{hostname}</dd>
-        <dt>Node ID:</dt>
+        <dt>节点 ID:</dt>
         <dd>{node.node_id}</dd>
-        <dt>Version:</dt>
+        <dt>版本:</dt>
         <dd>{version}, codename <em>{codename}</em></dd>
-        <dt>JVM:</dt>
+        <dt>虚拟机:</dt>
         <dd>{jvmInformationText}</dd>
-        <dt>Time:</dt>
+        <dt>时间:</dt>
         <dd><Timestamp dateTime={time} format={DateTime.Formats.DATETIME_TZ} tz={timezone} /></dd>
       </StyledDl>
     );

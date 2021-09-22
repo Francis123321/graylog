@@ -48,7 +48,7 @@ class NodeOverview extends React.Component {
     let pluginCount;
 
     if (this.props.plugins) {
-      pluginCount = `${this.props.plugins.length} plugins installed`;
+      pluginCount = `安装了${this.props.plugins.length}个插件`;
     }
 
     let inputCount;
@@ -56,7 +56,7 @@ class NodeOverview extends React.Component {
     if (this.props.inputStates) {
       const runningInputs = this.props.inputStates.filter((inputState) => inputState.state.toUpperCase() === 'RUNNING');
 
-      inputCount = `${runningInputs.length} inputs running on this node`;
+      inputCount = `在此节点上运行${runningInputs.length}个输入`;
     }
 
     return (

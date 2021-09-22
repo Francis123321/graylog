@@ -96,12 +96,12 @@ const AlertCondition = createReactClass({
                         id={`more-actions-dropdown-${alertCondition.id}`}>
           {!isStreamView && (
             <LinkContainer to={Routes.stream_alerts(stream.id)}>
-              <MenuItem>Alerting overview for Stream</MenuItem>
+              <MenuItem>Stream 的警报概述</MenuItem>
             </LinkContainer>
           )}
-          <MenuItem onSelect={this._onEdit}>Edit</MenuItem>
+          <MenuItem onSelect={this._onEdit}>编辑</MenuItem>
           <MenuItem divider />
-          <MenuItem onSelect={this._onDelete}>Delete</MenuItem>
+          <MenuItem onSelect={this._onDelete}>删除</MenuItem>
         </DropdownButton>,
       ];
     }

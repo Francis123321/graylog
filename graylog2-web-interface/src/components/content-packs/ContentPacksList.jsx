@@ -144,19 +144,19 @@ class ContentPacksList extends React.Component {
             <Col md={3} className="text-right">
               {updateButton}
               &nbsp;
-              <Button bsStyle="info" bsSize="small" onClick={openFunc}>Install</Button>
+              <Button bsStyle="info" bsSize="small" onClick={openFunc}>安装</Button>
               {installModal}
               &nbsp;
-              <DropdownButton id={`more-actions-${item.id}`} title="More Actions" bsSize="small" pullRight>
+              <DropdownButton id={`more-actions-${item.id}`} title="更多操作" bsSize="small" pullRight>
                 <LinkContainer to={Routes.SYSTEM.CONTENTPACKS.show(item.id)}>
-                  <MenuItem>Show</MenuItem>
+                  <MenuItem>展示</MenuItem>
                 </LinkContainer>
                 <LinkContainer to={Routes.SYSTEM.CONTENTPACKS.edit(encodeURIComponent(item.id), encodeURIComponent(item.rev))}>
-                  <MenuItem>Create New Version</MenuItem>
+                  <MenuItem>创建新版本</MenuItem>
                 </LinkContainer>
-                <MenuItem onSelect={() => { downloadRef.open(); }}>Download</MenuItem>
+                <MenuItem onSelect={() => { downloadRef.open(); }}>下载</MenuItem>
                 <MenuItem divider />
-                <MenuItem onSelect={() => { onDeletePack(item.id); }}>Delete All Versions</MenuItem>
+                <MenuItem onSelect={() => { onDeletePack(item.id); }}>删除所有版本</MenuItem>
               </DropdownButton>
               {downloadModal}
             </Col>

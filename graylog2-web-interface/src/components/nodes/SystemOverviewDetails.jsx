@@ -34,7 +34,7 @@ class SystemOverviewDetails extends React.Component {
   };
 
   _toggleMessageProcessing = () => {
-    if (confirm(`You are about to ${this.props.information.is_processing ? 'pause' : 'resume'} message processing in this node. Are you sure?`)) {
+    if (confirm(`你即将 ${this.props.information.is_processing ? '暂停' : '恢复'} 此节点中的消息处理。 你确定吗？`)) {
       if (this.props.information.is_processing) {
         SystemProcessingStore.pause(this.props.node.node_id);
       } else {
@@ -57,7 +57,7 @@ class SystemOverviewDetails extends React.Component {
     } else {
       processingStatus = (
         <span>
-          <Icon name="exclamation-triangle" />&nbsp; Node is <strong>not</strong> processing messages
+          <Icon name="exclamation-triangle" />&nbsp; 节点<strong>不</strong>处理消息
         </span>
       );
     }
