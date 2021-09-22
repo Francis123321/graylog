@@ -200,63 +200,57 @@ class NotificationsFactory {
   };
   case 'no_master':
     return {
-      title: 'There was no master Graylog server node detected in the cluster.',
+      title: '在集群中没有检测到主 Graylog 服务器节点。',
       description: (
         <span>
-        Certain operations of Graylog server require the presence of a master node, but no such master was started.
-        Please ensure that one of your Graylog server nodes contains the setting <code>is_master = true</code> in its
-    configuration and that it is running. Until this is resolved index cycling will not be able to run, which
-    means that the index retention mechanism is also not running, leading to increased index sizes. Certain
-    maintenance functions as well as a variety of web interface pages (e.g. Dashboards) are unavailable.
+        Graylog 服务器的某些操作需要有一个主节点，但没有启动这样的主节点。
+        请确保您的 Graylog 服务器节点之一在其配置中包含设置 <code>is_master = true</code> 并且它正在运行。
+    在此解决之前，索引循环将无法运行，这意味着索引保留机制也未运行，从而导致索引大小增加。
+    某些维护功能以及各种 Web 界面页面（例如仪表板）不可用。
     </span>
   ),
   };
   case 'outdated_version':
     return {
-      title: 'You are running an outdated Graylog version.',
       title: '您运行的是过时的 Graylog 版本。',
       description: (
         <span>
-        The most recent stable Graylog version is <em>{notification.details.current_version}</em>.
-      Get it from <a href="https://www.graylog.org/" target="_blank">https://www.graylog.org/</a>.
     最新的稳定版 Graylog 是 <em>{notification.details.current_version}</em>。 从<a href="https://www.graylog.org/" target="_blank">https://www.graylog.org/</a>获取。
     </span>
   ),
   };
   case 'output_disabled':
     return {
-      title: 'Output disabled',
+      title: '输出禁用',
       description: (
         <span>
-        The output with the id {notification.details.outputId} in stream "{notification.details.streamTitle}"
-        (id: {notification.details.streamId}) has been disabled for {notification.details.faultPenaltySeconds}
-      seconds because there were {notification.details.faultCount} failures.
-    (Node: <em>{notification.node_id}</em>, Fault threshold: <em>{notification.details.faultCountThreshold}</em>)
+        流“{notification.details.streamTitle}”（id：{notification.details.streamId}）中 ID 为 {notification.details.outputId} 的输出已被禁用
+    {notification.details.faultPenaltySeconds} 秒，因为有 { Notification.details.faultCount} 次失败。
+    (节点: <em>{notification.node_id}</em>, 故障阈值: <em>{notification.details.faultCountThreshold}</em>)
   </span>
   ),
   };
   case 'output_failing':
     return {
-      title: 'Output failing',
+      title: '输出失败',
       description: (
         <span>
-        The output "{notification.details.outputTitle}" (id: {notification.details.outputId})
-  in stream "{notification.details.streamTitle}" (id: {notification.details.streamId})
-    is unable to send messages to the configured destination.
+        流“{notification.details.streamTitle}”（id：{notification.details.streamId}）中的输出“{notification.details.outputTitle}”
+  （id：{notification.details.outputId}）无法将消息发送到 配置的目的地。
     <br />
-    The error message from the output is: <em>{notification.details.errorMessage}</em>
+    输出的错误消息是：<em>{notification.details.errorMessage}</em>
     </span>
   ),
   };
   case 'stream_processing_disabled':
     return {
-      title: 'Processing of a stream has been disabled due to excessive processing time.',
+      title: '由于处理时间过长，流的处理已被禁用。',
       description: (
         <span>
-        The processing of stream <em>{notification.details.stream_title} ({notification.details.stream_id})</em> has taken too long for{' '}
-    {notification.details.fault_count} times. To protect the stability of message processing,
-      this stream has been disabled. Please correct the stream rules and reenable the stream.
-      Check <DocumentationLink page={DocsHelper.PAGES.STREAM_PROCESSING_RUNTIME_LIMITS} text="the documentation" />{' '}
+        流 <em>{notification.details.stream_title} ({notification.details.stream_id})</em> 的处理时间太长了 {notification.details.fault_count} 次。
+      为保护消息处理的稳定性，此流已被禁用。
+    请更正流规则并重新启用流。
+    查看 <DocumentationLink page={DocsHelper.PAGES.STREAM_PROCESSING_RUNTIME_LIMITS} text="文件 " /> 了解更多详情。
     for more details.
     </span>
   ),
@@ -275,27 +269,27 @@ class NotificationsFactory {
   };
   case 'es_node_disk_watermark_high':
     return {
-      title: 'Elasticsearch nodes disk usage above high watermark',
+      title: 'Elasticsearch 节点磁盘使用率高于高水位线',
       description: (
         <span>
-        There are Elasticsearch nodes in the cluster with almost no free disk, their disk usage is above the high watermark.{' '}
-    For this reason Elasticsearch will attempt to relocate shards away from the affected nodes.{' '}
-    The affected nodes are: [{notification.details.nodes}]{' '}
-    Check <a href="https://www.elastic.co/guide/en/elasticsearch/reference/master/disk-allocator.html" target="_blank">https://www.elastic.co/guide/en/elasticsearch/reference/master/disk-allocator.html</a>{' '}
-    for more details.
+        集群中有Elasticsearch节点，几乎没有空闲磁盘，磁盘使用率高于高水位线。{' '}
+    出于这个原因，Elasticsearch 将尝试将分片从受影响的节点重新定位。{' '}
+    受影响的节点是： [{notification.details.nodes}]{' '}
+    点击 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/master/disk-allocator.html" target="_blank">https://www.elastic.co/guide/en/elasticsearch/reference/master/disk-allocator.html</a>{' '}
+    了解更多详情。
     </span>
   ),
   };
   case 'es_node_disk_watermark_flood_stage':
     return {
-      title: 'Elasticsearch nodes disk usage above flood stage watermark',
+      title: 'Elasticsearch 节点磁盘使用率高于洪水阶段水印',
       description: (
         <span>
-        There are Elasticsearch nodes in the cluster without free disk, their disk usage is above the flood stage watermark.{' '}
-      For this reason Elasticsearch enforces a read-only index block on all indexes having any of their shards in any of the{' '}
-    affected nodes. The affected nodes are: [{notification.details.nodes}]{' '}
-    Check <a href="https://www.elastic.co/guide/en/elasticsearch/reference/master/disk-allocator.html" target="_blank">https://www.elastic.co/guide/en/elasticsearch/reference/master/disk-allocator.html</a>{' '}
-    for more details.
+        集群中有没有空闲磁盘的Elasticsearch节点，它们的磁盘使用率在洪水阶段水印以上。{' '}
+    出于这个原因，Elasticsearch 对在任何受影响节点中具有任何分片的所有索引强制执行只读索引块。
+    受影响的节点是： [{notification.details.nodes}]{' '}
+    点击 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/master/disk-allocator.html" target="_blank">https://www.elastic.co/guide/en/elasticsearch/reference/master/disk-allocator.html</a>{' '}
+    了解更多详情。
     </span>
   ),
   };
@@ -303,17 +297,15 @@ class NotificationsFactory {
     const { initial_version: initialVersion, current_version: currentVersion } = notification.details;
 
     return {
-      title: 'Elasticsearch version is incompatible',
+      title: 'Elasticsearch 版本不兼容',
       description: (
         <span>
-        The Elasticsearch version which is currently running ({currentVersion}) has a different major version than
-      the one the Graylog master node was started with ({initialVersion}).{' '}
-      This will most probably result in errors during indexing or searching. Graylog requires a full restart after an
-      Elasticsearch upgrade from one major version to another.
+        当前运行的 Elasticsearch 版本 ({currentVersion}) 与启动 Graylog 主节点的主版本 ({initialVersion}) 具有不同的主要版本。{' '}
+    这很可能会在索引或搜索过程中导致错误。在 Elasticsearch 从一个主要版本升级到另一个主要版本后，Graylog 需要完全重启。
         <br />
-        For details, please see our notes about{' '}
+    有关详细信息，请参阅我们关于
         <DocumentationLink page={DocsHelper.PAGES.ROLLING_ES_UPGRADE}
-      text="rolling Elasticsearch upgrades." />
+      text="滚动 Elasticsearch 升级" />的说明。
 
       </span>
   ),
