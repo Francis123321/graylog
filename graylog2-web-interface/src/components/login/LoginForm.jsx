@@ -64,6 +64,8 @@ const LoginForm = ({ onErrorChange }) => {
       if (!promise.isCancelled()) {
         setIsLoading(false);
       }
+      // yangzy_登录时跳转拓扑页
+      window.location.href = window.location.href + 'topology';
     });
   };
 

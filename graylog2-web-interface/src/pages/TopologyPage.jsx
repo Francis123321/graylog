@@ -23,8 +23,13 @@ import { DocumentTitle, IfPermitted, PageHeader } from 'components/common';
 import createReactClass from 'create-react-class';
 import withLocation from 'routing/withLocation';
 import { SearchActions } from 'views/stores/SearchStore';
+import fetch from 'logic/rest/FetchProvider';
+import * as URLUtils from 'util/URLUtils';
+import {qualifyUrl} from "../util/URLUtils";
 
 let vueInstance;
+const executeQueryUrl = (id) => URLUtils.qualifyUrl(`/views/search/${id}`);
+const viewsIdUrl = (id) => qualifyUrl(`/views/${id}`);
 const TopologyPage = createReactClass({
   componentDidMount() {
     console.log('组件初始化了')
@@ -42,7 +47,12 @@ const TopologyPage = createReactClass({
   getData: function (data) {
     console.log("查询条件："+data)
     window.setReactData('这是查询返回值')
-    // SearchActions.get('612498751e94a10ddf821acf').then(function (data) {
+    // 获取数据
+    // fetch('POST', executeQueryUrl('6145481642f29818e3cae14a'), JSON.stringify({"level":991})).then(function (data) {
+    //   console.log(data)
+    // })
+    // 保存数据
+    // fetch('PUT', viewsIdUrl('6145481642f29818e3cae14a'), JSON.stringify({"level":991})).then(function (data) {
     //   console.log(data)
     // })
   },

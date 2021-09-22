@@ -21,6 +21,8 @@ import { qualifyUrl } from 'util/URLUtils';
 import ApiRoutes from 'routing/ApiRoutes';
 import { Builder } from 'logic/rest/FetchProvider';
 import ActionsProvider from 'injection/ActionsProvider';
+import history from 'util/History';
+import Routes from 'routing/Routes';
 
 const SessionActions = ActionsProvider.getActions('Session');
 
@@ -61,6 +63,7 @@ const SessionStore = Reflux.createStore({
     SessionActions.logout.promise(promise);
   },
 
+  // yangzy_打开网页后判断sessionId是否有效（如果有效默认跳转拓扑页）
   validate() {
     const sessionId = Store.get('sessionId');
     const username = Store.get('username');
@@ -85,6 +88,8 @@ const SessionStore = Reflux.createStore({
       .finally(() => {
         this.validatingSession = false;
         this._propagateState();
+        // 这里
+        // history.push(Routes.Topology);
       });
 
     SessionActions.validate.promise(promise);
