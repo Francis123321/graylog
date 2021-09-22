@@ -41,7 +41,7 @@ const ViewDescription = ({ results, viewMetadata }: Props) => {
   const resultsSection = (
     <>
       <SectionSubheadline>
-        Execution
+        执行
       </SectionSubheadline>
       <p>
 
@@ -63,18 +63,18 @@ const ViewDescription = ({ results, viewMetadata }: Props) => {
     <>
       {(!viewMetadata.summary || !viewMetadata.description) && (
         <SectionInfo>
-          To add a description and summary for this {viewTypeLabel} click on the <Icon name="ellipsis-h" /> icon in the search bar to open its action menu. The action menu includes the option &quot;Edit metadata&quot;.
+          要为此 {viewTypeLabel} 添加描述和摘要，请单击搜索栏中的 <Icon name="ellipsis-h" /> 图标以打开其操作菜单。 动作菜单包括选项“编辑元数据”。
         </SectionInfo>
       )}
       {resultsSection}
       <SectionSubheadline>
-        Search
+        搜索
       </SectionSubheadline>
       <p>
-        {viewMetadata.summary || <i>This {viewTypeLabel} has no summary.</i>}
+        {viewMetadata.summary || <i>此 {viewTypeLabel} 没有摘要。</i>}
       </p>
       <p>
-        {viewMetadata.description || <i>This {viewTypeLabel} has no description.</i>}
+        {viewMetadata.description || <i>此 {viewTypeLabel} 没有描述。</i>}
       </p>
     </>
   );

@@ -54,7 +54,7 @@ const BooleanOperatorSelector = ({ initialText, operator, onOperatorChange }) =>
                   clearable={false} />
         </BooleanOperatorSelect>
         <FormGroup>
-          <FormControl.Static> of the following rules:</FormControl.Static>
+          <FormControl.Static> 以下规则：</FormControl.Static>
         </FormGroup>
       </OperatorSelector>
     </Col>

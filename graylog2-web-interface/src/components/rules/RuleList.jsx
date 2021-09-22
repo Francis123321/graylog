@@ -125,7 +125,7 @@ class RuleList extends React.Component {
                    rows={rules}
                    filterBy="Title"
                    dataRowFormatter={this._ruleInfoFormatter}
-                   filterLabel="Filter Rules"
+                   filterLabel="过滤规则"
                    filterKeys={filterKeys}>
           <ButtonToolbar className="pull-right">
             <LinkContainer to={Routes.SYSTEM.PIPELINES.RULE('new')}>
