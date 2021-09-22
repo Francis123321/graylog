@@ -40,25 +40,25 @@ class EmailNotificationSummary extends React.Component {
       <CommonNotificationSummary {...this.props}>
         <>
           <tr>
-            <td>Sender</td>
+            <td>发件人</td>
             <td>{notification.config.sender}</td>
           </tr>
           <tr>
-            <td>Subject</td>
+            <td>主题</td>
             <td>{notification.config.subject}</td>
           </tr>
           <tr>
-            <td>User recipients</td>
-            <td>{notification.config.user_recipients.join(', ') || 'No users will receive this notification.'}</td>
+            <td>用户收件人</td>
+            <td>{notification.config.user_recipients.join(', ') || '没有用户会收到此通知。'}</td>
           </tr>
           <tr>
-            <td>Email recipients</td>
+            <td>电子邮件收件人</td>
             <td>
-              {notification.config.email_recipients.join(', ') || 'No email addresses are configured to receive this notification.'}
+              {notification.config.email_recipients.join(', ') || '没有配置电子邮件地址来接收此通知。'}
             </td>
           </tr>
           <tr>
-            <td>Email Body</td>
+            <td>电子邮件正文</td>
             <td>
               <Well bsSize="small" className={styles.bodyPreview}>
                 {notification.config.body_template || <em>Empty body</em>}
@@ -66,7 +66,7 @@ class EmailNotificationSummary extends React.Component {
             </td>
           </tr>
           <tr>
-            <td>Email HTML Body</td>
+            <td>电子邮件 HTML 正文</td>
             <td>
               <Well bsSize="small" className={styles.bodyPreview}>
                 {notification.config.html_body_template || <em>Empty HTML body</em>}
