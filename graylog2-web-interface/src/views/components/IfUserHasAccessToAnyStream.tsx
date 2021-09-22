@@ -27,6 +27,6 @@ type Props = {
 export default ({ children }: Props) => {
   const streams = useContext(StreamsContext);
   // yangzy_栏目权限控制
-  console.log(streams)
+  // console.log(streams)
   return (streams && streams.length > 0 ? children : <UserHasNoStreamAccess />);
 };
