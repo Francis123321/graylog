@@ -315,21 +315,18 @@ class NotificationsFactory {
     const authServiceLink = <Link to={Routes.SYSTEM.AUTHENTICATION.BACKENDS.show(authServiceId)}>Authentication Service</Link>;
 
     return {
-        title: 'Legacy LDAP/Active Directory configuration has been migrated to an Authentication Service',
+        title: '旧 LDAP/Active Directory 配置已迁移到身份验证服务',
         description: (
           <span>
-          The legacy LDAP/Active Directory configuration of this system has been upgraded to a new {authServiceLink}.
-          Since the new {authServiceLink} requires some information that is not present in the legacy
-        configuration, the {authServiceLink} <strong>requires a manual review</strong>!
+          此系统的旧 LDAP/Active Directory 配置已升级到新的 {authServiceLink}。
+          由于新的 {authServiceLink} 需要一些旧配置中不存在的信息，因此 {authServiceLink} <strong>需要人工审核</strong>！
       <br />
       <br />
-      <strong>After reviewing the {authServiceLink} it must be enabled to allow LDAP or Active Directory users
-    to log in again!
+      <strong>查看 {authServiceLink} 后，必须启用它以允许 LDAP 或 Active Directory 用户再次登录！
     </strong>
     <br />
     <br />
-    Please check the <DocumentationLink page={DocsHelper.PAGES.UPGRADE_GUIDE} text="upgrade guide" />
-    for more details.
+    请点击<DocumentationLink page={DocsHelper.PAGES.UPGRADE_GUIDE} text="升级指南" />查看更多细节。
     </span>
   ),
   };
