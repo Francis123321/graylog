@@ -57,7 +57,7 @@ class DataAdaptersOverview extends React.Component {
 
   _helpPopover = () => {
     return (
-      <Popover id="search-query-help" className={Styles.popoverWide} title="Search Syntax Help">
+      <Popover id="search-query-help" className={Styles.popoverWide} title="搜索语法帮助">
         <p><strong>可用的搜索字段</strong></p>
         <Table condensed>
           <thead>

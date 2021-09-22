@@ -20,7 +20,7 @@ import { OverlayTrigger, Popover, Table, Button } from 'components/graylog';
 import { Icon } from 'components/common';
 
 const backendQueryHelperPopover = (
-  <Popover id="user-search-query-help" title="Search Syntax Help">
+  <Popover id="user-search-query-help" title="搜索语法帮助">
     <p><strong>可用的搜索字段</strong></p>
     <Table condensed>
       <thead>

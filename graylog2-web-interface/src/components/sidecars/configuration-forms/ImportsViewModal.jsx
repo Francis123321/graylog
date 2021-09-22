@@ -117,7 +117,7 @@ class ImportsViewModal extends React.Component {
       return (
         <Alert bsStyle="info">
           <Icon name="info-circle" />&nbsp;
-          There are no configuration uploads available. Please go to <strong>System -&gt; Collectors (legacy) -&gt; Details -&gt; Import Configuration</strong> and import your first configuration. You need at least Sidecar version 0.1.8 to make this feature available.
+          没有可用的配置上传。 请转到<strong>系统 -> 收藏家（遗留）-> 详细信息-> 导入配置</strong>并导入您的第一个配置。 您至少需要 Sidecar 0.1.8 版才能使用此功能。
         </Alert>
       );
     }
@@ -143,14 +143,14 @@ class ImportsViewModal extends React.Component {
     return (
       <BootstrapModalWrapper bsSize="large" ref={(c) => { this.uploadsModal = c; }}>
         <Modal.Header closeButton>
-          <Modal.Title><span>Imports from the old Collector system</span></Modal.Title>
-          Edit the imported configuration after pressing the Apply button by hand. Dynamic values like the node ID can be replaced with the variables system, e.g. <code>{this._buildVariableName('nodeId')}</code>
+          <Modal.Title><span>从旧的收集器系统导入</span></Modal.Title>
+          手动按下应用按钮后编辑导入的配置。 节点 ID 等动态值可以替换为变量系统，例如 <code>{this._buildVariableName('nodeId')}</code>
         </Modal.Header>
         <Modal.Body>
           {this._formatModalBody()}
         </Modal.Body>
         <Modal.Footer>
-          <Button type="button" onClick={this.hide}>Close</Button>
+          <Button type="button" onClick={this.hide}>关闭</Button>
         </Modal.Footer>
       </BootstrapModalWrapper>
     );
