@@ -138,7 +138,7 @@ const GeoIpResolverConfig = createReactClass({
                             title="更新地理位置处理器配置"
                             onSubmitForm={this._saveConfig}
                             onModalClose={this._resetConfig}
-                            submitButtonText="Save">
+                            submitButtonText="保存">
           <fieldset>
             <Input id="geolocation-enable-checkbox"
                    type="checkbox"

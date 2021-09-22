@@ -67,7 +67,7 @@ describe('QueryTitleEditModal', () => {
 
     openModal(modalRef);
     const titleInput = getByDisplayValue('CurrentTitle');
-    const saveButton = getByText('Save');
+    const saveButton = getByText('保存');
 
     fireEvent.change(titleInput, { target: { value: 'NewTitle' } });
     fireEvent.click(saveButton);

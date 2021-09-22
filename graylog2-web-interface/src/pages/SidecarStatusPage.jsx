@@ -81,23 +81,22 @@ class SidecarStatusPage extends React.Component {
         <span>
           <PageHeader title={<span>Sidecar <em>{sidecar.node_name} status</em></span>}>
             <span>
-              A status overview of the Graylog Sidecar.
+              Graylog Sidecar 的状态概览。
             </span>
 
             <span>
-              Read more about sidecars and how to set them up in the
-              {' '}<DocumentationLink page={DocsHelper.PAGES.COLLECTOR_STATUS} text="Graylog documentation" />.
+              在 <DocumentationLink page={DocsHelper.PAGES.COLLECTOR_STATUS} text="Graylog 文档" /> 中阅读有关 sidecar 以及如何设置它们的更多信息。
             </span>
 
             <ButtonToolbar>
               <LinkContainer to={Routes.SYSTEM.SIDECARS.OVERVIEW}>
-                <Button bsStyle="info" className="active">Overview</Button>
+                <Button bsStyle="info" className="active">概述</Button>
               </LinkContainer>
               <LinkContainer to={Routes.SYSTEM.SIDECARS.ADMINISTRATION}>
-                <Button bsStyle="info">Administration</Button>
+                <Button bsStyle="info">行政</Button>
               </LinkContainer>
               <LinkContainer to={Routes.SYSTEM.SIDECARS.CONFIGURATION}>
-                <Button bsStyle="info">Configuration</Button>
+                <Button bsStyle="info">配置</Button>
               </LinkContainer>
             </ButtonToolbar>
           </PageHeader>

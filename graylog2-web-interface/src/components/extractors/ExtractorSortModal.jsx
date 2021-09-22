@@ -95,8 +95,8 @@ class ExtractorSortModal extends React.Component {
           </Row>
         </Modal.Body>
         <Modal.Footer>
-          <Button type="button" onClick={this._cancel}>Close</Button>
-          <Button type="button" bsStyle="info" onClick={this._saveSorting}>Save</Button>
+          <Button type="button" onClick={this._cancel}>关闭</Button>
+          <Button type="button" bsStyle="info" onClick={this._saveSorting}>保存</Button>
         </Modal.Footer>
       </BootstrapModalWrapper>
     );

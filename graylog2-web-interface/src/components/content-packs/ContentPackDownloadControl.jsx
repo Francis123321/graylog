@@ -55,25 +55,24 @@ class ContentPackDownloadControl extends React.Component {
 
   render() {
     const infoText = (URLUtils.areCredentialsInURLSupported()
-      ? 'Please right click the download link below and choose "Save Link As..." to download the JSON file.'
-      : 'Please click the download link below. Your browser may ask for your username and password to '
-      + 'download the JSON file.');
+      ? '请右键单击下面的下载链接并选择“将链接另存为...”以下载 JSON 文件。'
+      : '请点击以下下载链接。 您的浏览器可能会要求您提供用户名和密码以下载 JSON 文件。');
 
     return (
       <BootstrapModalWrapper ref={(node) => { this.downloadModal = node; }} bsSize="large">
         <Modal.Header closeButton>
-          <Modal.Title>Download Content Pack</Modal.Title>
+          <Modal.Title>下载内容包</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <p>{infoText}</p>
           <p>
             <a href={this._getDownloadUrl()} target="_blank" rel="noopener noreferrer">
-              <Icon name="cloud-download-alt" />{' '}Download
+              <Icon name="cloud-download-alt" />{' '}下载
             </a>
           </p>
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={this._closeModal}>Close</Button>
+          <Button onClick={this._closeModal}>关闭</Button>
         </Modal.Footer>
       </BootstrapModalWrapper>
     );

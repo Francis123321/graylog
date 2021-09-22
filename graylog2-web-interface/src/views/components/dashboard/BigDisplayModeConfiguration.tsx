@@ -66,23 +66,23 @@ const ConfigurationModal = ({ onSave, view, show, onClose }: ConfigurationModalP
     <BootstrapModalForm bsSize="large"
                         onModalClose={onClose}
                         onSubmitForm={_onSave}
-                        submitButtonText="Save"
-                        title="Configuring Full Screen"
+                        submitButtonText="保存"
+                        title="配置全屏"
                         show={show}>
       <Input autoFocus
              id="refresh-interval"
              type="number"
              min="1"
              name="refresh-interval"
-             label="Refresh Interval"
-             help="After how many seconds should the dashboard refresh?"
+             label="刷新间隔"
+             help="仪表板应在多少秒后刷新？"
              onChange={({ target: { value } }) => setRefreshInterval(value ? Number.parseInt(value, 10) : value)}
              required
              step={1}
              value={refreshInterval} />
 
       <FormGroup>
-        <ControlLabel>Tabs</ControlLabel>
+        <ControlLabel>标签</ControlLabel>
         <ul>
           {availableTabs.map(([idx, title]) => (
             <li key={`${idx}-${title}`}>
@@ -95,7 +95,7 @@ const ConfigurationModal = ({ onSave, view, show, onClose }: ConfigurationModalP
           ))}
         </ul>
         <HelpBlock>
-          Select the query tabs to include in rotation.
+          选择要包括在轮换中的查询选项卡。
         </HelpBlock>
       </FormGroup>
 
@@ -103,8 +103,8 @@ const ConfigurationModal = ({ onSave, view, show, onClose }: ConfigurationModalP
              type="number"
              min="1"
              name="query-cycle-interval"
-             label="Tab cycle interval"
-             help="After how many seconds should the next tab be shown?"
+             label="制表周期间隔"
+             help="应该在多少秒后显示下一个选项卡？"
              onChange={({ target: { value } }) => setQueryCycleInterval(value ? Number.parseInt(value, 10) : value)}
              required
              step="1"

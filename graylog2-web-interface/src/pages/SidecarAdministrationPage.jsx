@@ -29,7 +29,7 @@ import withLocation from 'routing/withLocation';
 const SidecarAdministrationPage = ({ location: { query: { node_id: nodeId } } }) => (
   <DocumentTitle title="Collectors Administration">
     <span>
-      <PageHeader title="收藏家管理">
+      <PageHeader title="收集器管理">
         <span>
           Graylog 收集器可以可靠地从您的服务器转发日志文件或 Windows EventLog 的内容。
         </span>

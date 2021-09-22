@@ -46,15 +46,15 @@ const SidecarStatus = createReactClass({
 
     return (
       <dl className={`${commonStyles.deflist} ${commonStyles.topMargin}`}>
-        <dt>IP Address</dt>
+        <dt>IP地址</dt>
         <dd>{lodash.defaultTo(details.ip, 'Not available')}</dd>
-        <dt>Operating System</dt>
+        <dt>操作系统</dt>
         <dd>{lodash.defaultTo(details.operating_system, 'Not available')}</dd>
-        <dt>CPU Idle</dt>
+        <dt>CPU空闲</dt>
         <dd>{lodash.isNumber(metrics.cpu_idle) ? `${metrics.cpu_idle}%` : 'Not available' }</dd>
-        <dt>Load</dt>
+        <dt>加载</dt>
         <dd>{lodash.defaultTo(metrics.load_1, 'Not available')}</dd>
-        <dt>Volumes &gt; 75% full</dt>
+        <dt>卷 &gt; 75% 充分</dt>
         {metrics.disks_75 === undefined
           ? <dd>Not available</dd>
           : <dd>{metrics.disks_75.length > 0 ? metrics.disks_75.join(', ') : 'None'}</dd>}
@@ -64,17 +64,17 @@ const SidecarStatus = createReactClass({
 
   formatCollectorStatus(details, collectors) {
     if (!details || !collectors) {
-      return <p>Collectors status are currently unavailable. Please wait a moment and ensure the sidecar is correctly connected to the server.</p>;
+      return <p>收集器状态当前不可用。 请稍等片刻，确保探针正确连接到服务器。</p>;
     }
 
     if (!details.status) {
-      return <p>Did not receive collectors status, set the option <code>send_status: true</code> in the sidecar configuration to see this information.</p>;
+      return <p>没有收到收集器状态，在探针配置中设置选项<code>send_status: true</code>可以看到这个信息。</p>;
     }
 
     const collectorStatuses = details.status.collectors;
 
     if (collectorStatuses.length === 0) {
-      return <p>There are no collectors configured in this sidecar.</p>;
+      return <p>此探针中没有配置收集器。</p>;
     }
 
     const statuses = [];
@@ -149,13 +149,13 @@ const SidecarStatus = createReactClass({
       <div>
         <Row className="content">
           <Col md={12}>
-            <h2>Node details</h2>
+            <h2>节点详情</h2>
             {this.formatNodeDetails(sidecar.node_details)}
           </Col>
         </Row>
         <Row className="content">
           <Col md={12}>
-            <h2>Collectors status</h2>
+            <h2>收集器状态</h2>
             <div className={commonStyles.topMargin}>
               {this.formatCollectorStatus(sidecar.node_details, this.props.collectors)}
             </div>

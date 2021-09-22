@@ -86,7 +86,7 @@ export default class RuleMetricsConfig extends React.Component {
                           onSubmitForm={this.saveConfiguration}
                           onModalClose={onClose}
                           show
-                          submitButtonText="Save">
+                          submitButtonText="保存">
         <Alert bsStyle="warning">
           应仅启用规则指标来调试性能问题，因为收集指标会减慢消息处理速度并增加内存使用量。
         </Alert>

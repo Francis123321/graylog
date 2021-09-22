@@ -104,18 +104,18 @@ const ServerUnavailablePage = ({ server }) => {
       <ServerUnavailableStyles />
       <Modal show>
         <Modal.Header>
-          <Modal.Title><Icon name="exclamation-triangle" /> Server currently unavailable</Modal.Title>
+          <Modal.Title><Icon name="exclamation-triangle" />服务器当前不可用</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <div>
             <p>
-              We are experiencing problems connecting to the Graylog server running on <i>{qualifyUrl('')}</i>.
-              Please verify that the server is healthy and working correctly.
+              我们在连接到 <i>{qualifyUrl('')}</i> 上运行的 Graylog 服务器时遇到问题。
+              请验证服务器是否健康并正常工作。
             </p>
-            <p>You will be automatically redirected to the previous page once we can connect to the server.</p>
+            <p>一旦我们可以连接到服务器，您将被自动重定向到上一页。</p>
             <p>
-              Do you need a hand?{' '}
-              <a href="https://www.graylog.org/community-support" rel="noopener noreferrer" target="_blank">We can help you</a>.
+              您需要帮助么？{' '}
+              <a href="https://www.graylog.org/community-support" rel="noopener noreferrer" target="_blank">我们可以为您提供帮助</a>.
             </p>
             <div>
               <Button bsStyle="primary"
