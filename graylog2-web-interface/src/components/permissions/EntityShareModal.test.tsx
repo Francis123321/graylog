@@ -74,7 +74,7 @@ describe('EntityShareModal', () => {
   it('updates entity share state on submit', async () => {
     const { getByText } = render(<SimpleEntityShareModal />);
 
-    const submitButton = getByText('Save');
+    const submitButton = getByText('保存');
 
     fireEvent.click(submitButton);
 
@@ -193,7 +193,7 @@ describe('EntityShareModal', () => {
 
       await selectEvent.select(granteesSelect, john.title);
 
-      const submitButton = getByText('Save');
+      const submitButton = getByText('保存');
 
       fireEvent.click(submitButton);
 

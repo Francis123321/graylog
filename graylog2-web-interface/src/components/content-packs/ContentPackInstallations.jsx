@@ -50,13 +50,13 @@ class ContentPackInstallations extends React.Component {
     const showModal = (
       <BootstrapModalWrapper ref={(node) => { showModalRef = node; }} bsSize="large">
         <Modal.Header closeButton>
-          <Modal.Title>View Installation</Modal.Title>
+          <Modal.Title>查看安装</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <ContentPackInstallationView install={item} />
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={closeShowModal}>Close</Button>
+          <Button onClick={closeShowModal}>关闭</Button>
         </Modal.Footer>
       </BootstrapModalWrapper>
     );
@@ -73,12 +73,12 @@ class ContentPackInstallations extends React.Component {
               <Button bsStyle="primary"
                       bsSize="small"
                       onClick={() => { onUninstall(item.content_pack_id, item._id); }}>
-                Uninstall
+                卸载
               </Button>
               <Button bsStyle="info"
                       bsSize="small"
                       onClick={openShowModal}>
-                View
+                查看
               </Button>
               {showModal}
             </ButtonToolbar>

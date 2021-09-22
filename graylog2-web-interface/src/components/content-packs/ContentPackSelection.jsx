@@ -340,8 +340,8 @@ class ContentPackSelection extends React.Component {
           <Col smOffset={1} lg={8}>
             <h2>内容包选择</h2>
             {edit && (
-            <HelpBlock>You can select between installed entities from the server (<Icon name="server" />) or
-              entities from the former content pack revision (<Icon name="archive" className={style.contentPackEntity} />).
+            <HelpBlock>
+              您可以选择来自服务器的已安装实体 (<Icon name="server" />) 或来自先前内容包修订版的实体 (<Icon name="archive" className={style.contentPackEntity}  />).
             </HelpBlock>
             )}
           </Col>

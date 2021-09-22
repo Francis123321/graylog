@@ -175,11 +175,12 @@ const JournalDetails = createReactClass({
 
           {overcommittedWarning}
 
-          <strong>{numeral(metrics.entriesUncommitted).format('0,0')} unprocessed messages</strong>
-          {' '}are currently in the journal, in {metrics.segments} segments.<br />
-          <strong>{numeral(metrics.append).format('0,0')} messages</strong>
-          {' '}have been appended in the last second,{' '}
-          <strong>{numeral(metrics.read).format('0,0')} messages</strong> have been read in the last second.
+          当前在日志{metrics.segments}段中有
+          <strong>{numeral(metrics.entriesUncommitted).format('0,0')}条未处理的消息</strong>。
+          <br />
+          <strong>{numeral(metrics.append).format('0,0')} 条消息</strong>
+          已在最后一秒附加，
+          <strong>{numeral(metrics.read).format('0,0')} 条消息</strong> 已在最后一秒阅读。
         </Col>
       </Row>
     );
