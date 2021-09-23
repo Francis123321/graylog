@@ -62,7 +62,7 @@ const validateExpressionTree = (expression, series, validationTree = {}) => {
     case 'group':
       return { child: validateExpressionTree(expression.child, series, validationTree) };
     default:
-      return { message: 'Condition must be set' };
+      return { message: '必须设置条件' };
   }
 };
 
