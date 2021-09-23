@@ -233,7 +233,17 @@ if (TARGET === 'start') {
         IS_CLOUD: process.env.IS_CLOUD,
       }),
       // yangzy_打包静态文件到项目
-      new CopyWebpackPlugin({ patterns: [{ from: 'config.js' },{ from: 'topologyBox/app.1514e8f7.js' }] }),
+      new CopyWebpackPlugin({ patterns: [
+        { from: 'config.js' },
+        { from: 'topologyBox/css/app.8645503b.css', to: 'topologyApp/css' },
+        { from: 'topologyBox/js/app.a3fa53ba.js', to: 'topologyApp/js' },
+        { from: 'topologyBox/js/chunk-vendors.626e3c0f.js', to: 'topologyApp/js' },
+        { from: 'topologyBox/static/img/backgroundCover.png', to: 'topologyApp/static/img' },
+        { from: 'topologyBox/static/json/hostData.json', to: 'topologyApp/static/json' },
+        { from: 'topologyBox/static/model/host.fbx', to: 'topologyApp/static/model' },
+        { from: 'topologyBox/static/model/port.fbx', to: 'topologyApp/static/model' },
+        { from: 'topologyBox/static/video/background.mp4', to: 'topologyApp/static/video' },
+      ] }),
       new webpack.HotModuleReplacementPlugin(),
     ],
   });
@@ -263,6 +273,16 @@ if (TARGET.startsWith('build')) {
       new webpack.DefinePlugin({
         'process.env.NODE_ENV': JSON.stringify('production'),
       }),
+      new CopyWebpackPlugin({patterns: [
+          { from: 'topologyBox/css/app.8645503b.css', to: 'topologyApp/css' },
+          { from: 'topologyBox/js/app.a3fa53ba.js', to: 'topologyApp/js' },
+          { from: 'topologyBox/js/chunk-vendors.626e3c0f.js', to: 'topologyApp/js' },
+          { from: 'topologyBox/static/img/backgroundCover.png', to: 'topologyApp/static/img' },
+          { from: 'topologyBox/static/json/hostData.json', to: 'topologyApp/static/json' },
+          { from: 'topologyBox/static/model/host.fbx', to: 'topologyApp/static/model' },
+          { from: 'topologyBox/static/model/port.fbx', to: 'topologyApp/static/model' },
+          { from: 'topologyBox/static/video/background.mp4', to: 'topologyApp/static/video' },
+          ] })
     ],
   });
 }

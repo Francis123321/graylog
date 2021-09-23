@@ -117,10 +117,10 @@
 
         }
     </script>
-    <link href="http://192.168.15.131/css/app.8645503b.css" rel="preload" as="style">
-    <link href="http://192.168.15.131/js/app.a3fa53ba.js" rel="preload" as="script">
-    <link href="http://192.168.15.131/js/chunk-vendors.626e3c0f.js" rel="preload" as="script">
-    <link href="http://192.168.15.131/css/app.8645503b.css" rel="stylesheet">
+    <link href="topologyApp/css/app.8645503b.css" rel="preload" as="style">
+    <link href="topologyApp/js/app.a3fa53ba.js" rel="preload" as="script">
+    <link href="topologyApp/js/chunk-vendors.626e3c0f.js" rel="preload" as="script">
+    <link href="topologyApp/css/app.8645503b.css" rel="stylesheet">
   </head>
   <body>
     <script src="/config.js"></script>
@@ -128,7 +128,7 @@
     <script src="/<%= htmlWebpackPlugin.options.vendorModule().files.js[vendorChunk] %>"></script>
     <% } %>
     <%= htmlWebpackPlugin.tags.bodyTags %>
-    <script src="http://192.168.15.131/js/chunk-vendors.626e3c0f.js"></script>
-    <script src="http://192.168.15.131/js/app.a3fa53ba.js"></script>
+    <script src="topologyApp/js/chunk-vendors.626e3c0f.js"></script>
+    <script src="topologyApp/js/app.a3fa53ba.js"></script>
   </body>
 </html>

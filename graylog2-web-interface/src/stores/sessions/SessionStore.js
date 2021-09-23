@@ -89,7 +89,7 @@ const SessionStore = Reflux.createStore({
         this.validatingSession = false;
         this._propagateState();
         // 这里
-        // history.push(Routes.Topology);
+        history.push(Routes.Topology);
       });
 
     SessionActions.validate.promise(promise);
