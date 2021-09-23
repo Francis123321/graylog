@@ -57,7 +57,7 @@ const defaultExample = (
 );
 
 const queryHelpPopover = (commonFields, fieldMap, example, entityName) => (
-  <Popover id="team-search-query-help" title="Search Syntax Help">
+  <Popover id="team-search-query-help" title="搜索语法帮助">
     <p><strong>可用的搜索字段</strong></p>
     <Table condensed>
       <thead>

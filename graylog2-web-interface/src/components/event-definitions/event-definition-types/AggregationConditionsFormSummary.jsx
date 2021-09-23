@@ -37,18 +37,18 @@ const AggregationConditionsFormSummary = (props) => {
 
   return (
     <div>
-      <StyledPanel header="Condition summary">
+      <StyledPanel header="情况总结">
         {expressionValidation.isValid
-          ? <p className="text-success"><Icon name="check-square" />&nbsp;Condition is valid</p>
+          ? <p className="text-success"><Icon name="check-square" />&nbsp;条件有效</p>
           : (
             <p className="text-danger">
-              <Icon name="exclamation-triangle" />&nbsp;Condition is not valid
+              <Icon name="exclamation-triangle" />&nbsp;条件无效
               <StyledButton bsSize="xsmall" onClick={toggleShowValidation}>
-                {showInlineValidation ? 'Hide errors' : 'Show errors'}
+                {showInlineValidation ? '隐藏错误' : '显示错误'}
               </StyledButton>
             </p>
           )}
-        <b>Preview:</b> <AggregationConditionSummary series={series} conditions={conditions} />
+        <b>预览：</b> <AggregationConditionSummary series={series} conditions={conditions} />
       </StyledPanel>
     </div>
   );

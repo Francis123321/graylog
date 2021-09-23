@@ -69,15 +69,14 @@ class AggregationForm extends React.Component {
 
     return (
       <fieldset>
-        <h2 className={commonStyles.title}>Aggregation</h2>
+        <h2 className={commonStyles.title}>聚合</h2>
         <p>
-          Summarize log messages matching the Filter defined above by using a function. You can optionally group the
-          Filter results by identical field values.
+          使用函数汇总与上面定义的过滤器匹配的日志消息。 您可以选择按相同的字段值对筛选结果进行分组。
         </p>
         <Row>
           <Col lg={7}>
             <FormGroup controlId="group-by">
-              <ControlLabel>Group by Field(s) <small className="text-muted">(Optional)</small></ControlLabel>
+              <ControlLabel>按字段分组<small className="text-muted">(可选)</small></ControlLabel>
               <MultiSelect id="group-by"
                            matchProp="label"
                            onChange={(selected) => this.handleGroupByChange(selected === '' ? [] : selected.split(','))}
@@ -86,12 +85,9 @@ class AggregationForm extends React.Component {
                            value={lodash.defaultTo(eventDefinition.config.group_by, []).join(',')}
                            allowCreate />
               <HelpBlock>
-                Select Fields that Graylog should use to group Filter results when they have identical values.
-                {' '}<b>Example:</b><br />
-                Assuming you created a Filter with all failed log-in attempts in your network, Graylog could alert you
-                when there are more than 5 failed log-in attempts overall. Now, add <code>username</code> as Group by
-                Field and Graylog will alert you <em>for each <code>username</code></em> with more than 5 failed
-                log-in attempts.
+                选择字段，当它们具有相同的值时，Graylog 应使用这些字段对筛选结果进行分组。<b>示例：</b><br />
+                假设您创建了一个过滤器，其中包含网络中所有失败的登录尝试，Graylog 会在总登录尝试失败超过 5 次时提醒您。
+                现在，将 <code>username</code> 添加为 Group by Field，Graylog 会针对每个 <code>username</code><em> 提醒您</em>登录尝试超过5次失败。
               </HelpBlock>
             </FormGroup>
           </Col>

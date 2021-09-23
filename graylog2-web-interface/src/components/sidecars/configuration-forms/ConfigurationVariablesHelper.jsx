@@ -157,9 +157,9 @@ class ConfigurationVariablesHelper extends React.Component {
           <Table responsive>
             <thead>
               <tr>
-                <th>Name</th>
-                <th>Description</th>
-                <th className={ConfigurationHelperStyle.actionsColumn}>Actions</th>
+                <th>名称</th>
+                <th>描述</th>
+                <th className={ConfigurationHelperStyle.actionsColumn}>操作</th>
               </tr>
             </thead>
             <tbody>
@@ -170,14 +170,12 @@ class ConfigurationVariablesHelper extends React.Component {
 
         <BootstrapModalWrapper ref={(modal) => { this.errorModal = modal; }}>
           <Modal.Header>
-            <Modal.Title>Error deleting configuration variable <strong>$&#123;user.{variableToDelete.name}&#125;</strong></Modal.Title>
+            <Modal.Title>删除配置变量 <strong>$&#123;user.{variableToDelete.name}&#125;</strong> 时出错</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <Alert bsStyle="warning">
               <p>
-                Cannot delete this configuration variable as it is still in use. Please remove the variable from
-                the following configurations and try again.
-                {errorModalContent}
+                无法删除此配置变量，因为它仍在使用中。 请从以下配置中删除该变量，然后重试。 {errorModalContent}
               </p>
             </Alert>
           </Modal.Body>
@@ -190,7 +188,7 @@ class ConfigurationVariablesHelper extends React.Component {
                                title="Delete Configuration Variable?"
                                onConfirm={this._handleDeleteConfirm}
                                onCancel={this._closeErrorModal}>
-          <p>Are you sure you want to remove the configuration variable <strong>{variableToDelete.name}</strong>?</p>
+          <p>您确定要删除配置变量 <strong>{variableToDelete.name}</strong> 吗？</p>
         </BootstrapModalConfirm>
       </div>
     );

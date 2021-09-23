@@ -186,7 +186,7 @@ const ProcessingTimelineComponent = () => {
                  sortByKey="title"
                  rows={pipelines}
                  dataRowFormatter={_pipelineFormatter}
-                 filterLabel="Filter pipelines"
+                 filterLabel="过滤管道"
                  filterKeys={['title']} />
     </div>
   );

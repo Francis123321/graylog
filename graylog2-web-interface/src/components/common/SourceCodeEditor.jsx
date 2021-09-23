@@ -245,7 +245,7 @@ class SourceCodeEditor extends React.Component {
       value,
     } = this.props;
     const validCssWidth = lodash.isFinite(width) ? width : '100%';
-    const overlay = <StyledTooltip id="paste-button-tooltip" className="in">Press Ctrl+V (&#8984;V in macOS) or select Edit&thinsp;&rarr;&thinsp;Paste to paste from clipboard.</StyledTooltip>;
+    const overlay = <StyledTooltip id="paste-button-tooltip" className="in">按 Ctrl+V(&#8984;V in macOS)或选择编辑&thinsp;&rarr;&thinsp;粘贴以从剪贴板粘贴。</StyledTooltip>;
 
     return (
       <div>

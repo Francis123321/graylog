@@ -137,7 +137,7 @@ const SavedSearchList = ({ toggleModal, deleteSavedSearch, activeSavedSearchId }
           <ListContainer>
             {!loading && total === 0 && (
               <NoSavedSearches>
-                No saved searches found.
+                未找到已保存的搜索。
               </NoSavedSearches>
             )}
             {savedSearches?.length > 0 && (

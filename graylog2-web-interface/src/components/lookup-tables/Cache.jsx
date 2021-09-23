@@ -51,11 +51,11 @@ const Cache = ({ cache }) => {
         </h2>
         <ConfigSummaryDefinitionListWrapper>
           <dl>
-            <dt>Description</dt>
+            <dt>描述</dt>
             <dd>{cache.description || <em>No description.</em>}</dd>
           </dl>
         </ConfigSummaryDefinitionListWrapper>
-        <h4>Configuration</h4>
+        <h4>配置</h4>
         <ConfigSummaryDefinitionListWrapper>
           {React.createElement(summary, { cache: cache })}
         </ConfigSummaryDefinitionListWrapper>

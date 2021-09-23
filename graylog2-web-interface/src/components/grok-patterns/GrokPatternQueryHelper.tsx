@@ -19,7 +19,7 @@ import * as React from 'react';
 import { Popover, Table } from 'components/graylog';
 
 const GrokPatternQueryHelper = () => (
-  <Popover id="search-query-help" className="popover-wide" title="Search Syntax Help">
+  <Popover id="search-query-help" className="popover-wide" title="搜索语法帮助">
     <p><strong>可用的搜索字段</strong></p>
     <Table condensed>
       <thead>

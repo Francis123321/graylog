@@ -45,7 +45,7 @@ const ServerUnavailablePage = ({ server }) => {
     const noInformationMessage = (
       <div>
         <hr />
-        <p>There is no information available.</p>
+        <p>没有可用的信息。</p>
       </div>
     );
 
@@ -58,25 +58,25 @@ const ServerUnavailablePage = ({ server }) => {
     const errorDetails = [];
 
     if (error.message) {
-      errorDetails.push(<dt key="error-title">Error message</dt>, <dd key="error-desc">{error.message}</dd>);
+      errorDetails.push(<dt key="error-title">错误信息</dt>, <dd key="error-desc">{error.message}</dd>);
     }
 
     if (error.originalError) {
       const { originalError } = error;
 
       errorDetails.push(
-        <dt key="status-original-request-title">Original Request</dt>,
+        <dt key="status-original-request-title">原始请求</dt>,
         <dd key="status-original-request-content">{String(originalError.method)} {String(originalError.url)}</dd>,
       );
 
       errorDetails.push(
-        <dt key="status-code-title">Status code</dt>,
+        <dt key="status-code-title">状态码</dt>,
         <dd key="status-code-desc">{String(originalError.status)}</dd>,
       );
 
       if (typeof originalError.toString === 'function') {
         errorDetails.push(
-          <dt key="full-error-title">Full error message</dt>,
+          <dt key="full-error-title">完整的错误信息</dt>,
           <dd key="full-error-desc">{originalError.toString()}</dd>,
         );
       }
@@ -89,7 +89,7 @@ const ServerUnavailablePage = ({ server }) => {
     return (
       <div>
         <hr style={{ marginTop: 10, marginBottom: 10 }} />
-        <p>This is the last response we received from the server:</p>
+        <p>这是我们从服务器收到的最后一个响应：</p>
         <Well bsSize="small" style={{ whiteSpace: 'pre-line' }}>
           <dl style={{ marginBottom: 0 }}>
             {errorDetails}
@@ -122,7 +122,7 @@ const ServerUnavailablePage = ({ server }) => {
                       tabIndex={0}
                       onClick={_toggleDetails}
                       bsSize="sm">
-                {showDetails ? 'Less details' : 'More details'}
+                {showDetails ? '更少' : '更多'}
                 <StyledIcon name={showDetails ? 'chevron-up' : 'chevron-down'} />
               </Button>
               {_formatErrorMessage()}

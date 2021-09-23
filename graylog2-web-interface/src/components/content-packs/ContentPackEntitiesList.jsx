@@ -193,12 +193,12 @@ class ContentPackEntitiesList extends React.Component {
     const { filteredEntities } = this.state;
 
     const headers = readOnly
-      ? ['Title', 'Type', 'Description', 'Action']
-      : ['Title', 'Type', 'Description', 'Origin', 'Used Parameters', 'Action'];
+      ? ['标题', '类型', ' 描述', '操作']
+      : ['标题', '类型', '描述', '起源', '使用参数', '操作'];
 
     return (
       <div>
-        <h2>Entity list</h2>
+        <h2>实体清单</h2>
         <br />
         <SearchForm searchButtonLabel="Filter"
                     onSearch={this._filterEntities}

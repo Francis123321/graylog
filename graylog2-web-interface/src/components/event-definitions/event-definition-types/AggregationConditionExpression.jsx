@@ -191,7 +191,7 @@ class AggregationConditionExpression extends React.Component {
                   <ButtonToolbar>
                     <Button bsSize="sm" onClick={this.handleDeleteExpression}><Icon name="minus" fixedWidth /></Button>
                     <Button bsSize="sm" onClick={this.handleAddExpression}><Icon name="plus" fixedWidth /></Button>
-                    <Button bsSize="sm" onClick={this.handleAddGroup}>Add Group</Button>
+                    <Button bsSize="sm" onClick={this.handleAddGroup}>添加组</Button>
                   </ButtonToolbar>
                 </div>
               </FormGroup>
@@ -203,7 +203,7 @@ class AggregationConditionExpression extends React.Component {
     if (!parent && expression.expr !== 'group') {
       return (
         <>
-          <BooleanOperatorSelector initialText="Messages must meet"
+          <BooleanOperatorSelector initialText="消息必须满足"
                                    operator={this.getEffectiveGlobalGroupOperator()}
                                    onOperatorChange={this.handleOperatorChange} />
           <Clearfix />

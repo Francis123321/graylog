@@ -59,7 +59,7 @@ class Notification extends React.Component {
     const { notification } = this.props;
 
     // eslint-disable-next-line no-alert
-    if (window.confirm('Really delete this notification?')) {
+    if (window.confirm('真的要删除这条通知吗？')) {
       NotificationsActions.delete(notification.type);
     }
   };
