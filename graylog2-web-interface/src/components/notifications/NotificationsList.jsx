@@ -38,7 +38,7 @@ const NotificationsList = createReactClass({
       return '没有通知';
     }
 
-    return `are ${count} notifications`;
+    return `有 ${count} 条通知`;
   },
 
   render() {
@@ -52,7 +52,7 @@ const NotificationsList = createReactClass({
     let content;
 
     if (count === 0) {
-      title = 'No notifications';
+      title = '没有通知';
 
       content = (
         <Alert bsStyle="success" className="notifications-none">
