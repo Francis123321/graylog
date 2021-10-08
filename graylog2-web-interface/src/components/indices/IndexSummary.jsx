@@ -63,12 +63,12 @@ class IndexSummary extends React.Component {
       const { deleted } = sizes;
 
       if (count === 0 || count - deleted === 0) {
-        return 'Index does not contain any messages.';
+        return '索引不包含任何消息。';
       }
     }
 
     if (!this.props.indexRange) {
-      return 'Time range of index is unknown, because index range is not available. Please recalculate index ranges manually.';
+      return '索引的时间范围未知，因为索引范围不可用。 请手动重新计算索引范围。';
     }
 
     if (this.props.indexRange.begin === 0) {
@@ -85,10 +85,10 @@ class IndexSummary extends React.Component {
 
   _formatShowDetailsLink = () => {
     if (this.state.showDetails) {
-      return <span className="index-more-actions"><Icon name="caret-down" /> Hide Details / Actions</span>;
+      return <span className="index-more-actions"><Icon name="caret-down" /> 隐藏详细信息/操作</span>;
     }
 
-    return <span className="index-more-actions"><Icon name="caret-right" /> Show Details / Actions</span>;
+    return <span className="index-more-actions"><Icon name="caret-right" /> 显示详细信息/操作</span>;
   };
 
   _toggleShowDetails = (event) => {

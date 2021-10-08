@@ -42,25 +42,25 @@ class ShardMeter extends React.Component {
       <span>
         <h3 style={{ display: 'inline' }}>{this.props.title}</h3>
         <dl>
-          <dt>Index:</dt>
+          <dt>指数:</dt>
           <dd>{this._formatMeter(sm.index)}</dd>
 
-          <dt>Flush:</dt>
+          <dt>冲洗:</dt>
           <dd>{this._formatMeter(sm.flush)}</dd>
 
-          <dt>Merge:</dt>
+          <dt>走:</dt>
           <dd>{this._formatMeter(sm.merge)}</dd>
 
-          <dt>Query:</dt>
+          <dt>询问:</dt>
           <dd>{this._formatMeter(sm.search_query)}</dd>
 
-          <dt>Fetch:</dt>
+          <dt>拿来:</dt>
           <dd>{this._formatMeter(sm.search_fetch)}</dd>
 
-          <dt>Get:</dt>
+          <dt>得到:</dt>
           <dd>{this._formatMeter(sm.get)}</dd>
 
-          <dt>Refresh:</dt>
+          <dt>刷新:</dt>
           <dd>{this._formatMeter(sm.refresh)}</dd>
         </dl>
       </span>

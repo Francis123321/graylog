@@ -150,24 +150,22 @@ class IndexSetPage extends React.Component<Props, State> {
     const { indexSet, indexerOverview, indexerOverviewError, params: { indexSetId }, indexDetails: { indices: indexDetailsIndices, closedIndices: indexDetailsClosedIndices } } = this.props;
 
     const pageHeader = indexSet && (
-      <PageHeader title={`Index Set: ${indexSet.title}`}>
+      <PageHeader title={`索引集: ${indexSet.title}`}>
         <span>
-          This is an overview of all indices (message stores) in this index set Graylog is currently taking in account
-          for searches and analysis.
+          这是该索引集中的所有索引（消息存储）的概述 Graylog 目前正在考虑进行搜索和分析。
         </span>
 
         <span>
-          You can learn more about the index model in the{' '}
-          <DocumentationLink page={DocsHelper.PAGES.INDEX_MODEL} text="documentation" />
+          您可以在<DocumentationLink page={DocsHelper.PAGES.INDEX_MODEL} text="文件" />中了解有关索引模型的更多信息
         </span>
 
         <span>
           <LinkContainer to={Routes.SYSTEM.INDICES.LIST}>
-            <Button bsStyle="info">Index sets overview</Button>
+            <Button bsStyle="info">索引集概述</Button>
           </LinkContainer>
           &nbsp;
           <LinkContainer to={Routes.SYSTEM.INDEX_SETS.CONFIGURATION(indexSet.id, 'details')}>
-            <Button bsStyle="info">Edit Index Set</Button>
+            <Button bsStyle="info">编辑索引集</Button>
           </LinkContainer>
           &nbsp;
           <IndicesMaintenanceDropdown indexSetId={indexSetId} indexSet={indexSet} />
@@ -193,9 +191,8 @@ class IndexSetPage extends React.Component<Props, State> {
       indicesInfo = (
         <span>
           <Alert bsStyle="success" style={{ marginTop: '10' }}>
-            <Icon name="th" /> &nbsp;{this._totalIndexCount()} indices with a total of{' '}
-            {numeral(indexerOverview.counts.events).format('0,0')} messages under management,
-            current write-active index is <i>{deflectorInfo.current_target}</i>.
+            <Icon name="th" /> &nbsp;
+            {this._totalIndexCount()}个索引，共管理{numeral(indexerOverview.counts.events).format('0,0')}条消息，当前write-active索引是<i>{deflectorInfo.current_target}</i>。
           </Alert>
           <HideOnCloud>
             <IndexerClusterHealthSummary health={indexerOverview.indexer_cluster.health} />

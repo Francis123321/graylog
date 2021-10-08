@@ -64,7 +64,7 @@ const ShardRoutingWrap = styled.div(({ theme }) => css`
 const ShardRoutingOverview = ({ indexName, routing }) => {
   return (
     <ShardRoutingWrap>
-      <h3>Shard routing</h3>
+      <h3>分片路由</h3>
 
       <ul className="shards">
         {routing
@@ -74,9 +74,7 @@ const ShardRoutingOverview = ({ indexName, routing }) => {
       <br style={{ clear: 'both' }} />
 
       <div className="description">
-        Bold shards are primaries, others are replicas. Replicas are elected to primaries automatically
-        when primaries leave the cluster. Size and document counts only reflect primary shards and no
-        possible replica duplication.
+        粗体分片是主要分片，其他分片是复制品。 当主节点离开集群时，副本会自动被选为主节点。 大小和文档计数仅反映主分片，没有可能的副本重复。
       </div>
     </ShardRoutingWrap>
   );

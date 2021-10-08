@@ -80,17 +80,17 @@ const IndexDetails = ({ index, indexName, indexRange, indexSetId, isDeflector }:
     if (isDeflector) {
       return (
         <span>
-          <Button bsStyle="warning" bsSize="xs" disabled>Active write index cannot be closed</Button>{' '}
-          <Button bsStyle="danger" bsSize="xs" disabled>Active write index cannot be deleted</Button>
+          <Button bsStyle="warning" bsSize="xs" disabled>活动写索引无法关闭</Button>{' '}
+          <Button bsStyle="danger" bsSize="xs" disabled>无法删除活动写入索引</Button>
         </span>
       );
     }
 
     return (
       <span>
-        <Button bsStyle="warning" bsSize="xs" onClick={_onRecalculateIndex}>Recalculate index ranges</Button>{' '}
-        <Button bsStyle="warning" bsSize="xs" onClick={_onCloseIndex}>Close index</Button>{' '}
-        <Button bsStyle="danger" bsSize="xs" onClick={_onDeleteIndex}>Delete index</Button>
+        <Button bsStyle="warning" bsSize="xs" onClick={_onRecalculateIndex}>重新计算索引范围</Button>{' '}
+        <Button bsStyle="warning" bsSize="xs" onClick={_onCloseIndex}>关闭索引</Button>{' '}
+        <Button bsStyle="danger" bsSize="xs" onClick={_onDeleteIndex}>删除索引</Button>
       </span>
     );
   };
@@ -105,10 +105,10 @@ const IndexDetails = ({ index, indexName, indexRange, indexSetId, isDeflector }:
         {index.all_shards.documents.deleted} deleted messages
         <Row style={{ marginBottom: '10' }}>
           <Col md={4} className="shard-meters">
-            <ShardMeter title="Primary shard operations" shardMeter={index.primary_shards} />
+            <ShardMeter title="主分片操作" shardMeter={index.primary_shards} />
           </Col>
           <Col md={4} className="shard-meters">
-            <ShardMeter title="Total shard operations" shardMeter={index.all_shards} />
+            <ShardMeter title="总分片操作" shardMeter={index.all_shards} />
           </Col>
         </Row>
         <ShardRoutingOverview routing={index.routing} indexName={indexName} />
